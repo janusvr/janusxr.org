@@ -75,6 +75,7 @@
       elation.janusweb.init({
         url: ROOM_URL,
         container: viewport,
+        fullsize: true,
         homepage: document.location.href,
         showui: false,
         showchat: false,
