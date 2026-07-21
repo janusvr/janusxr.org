@@ -219,3 +219,59 @@ will 404 until redirects to existing material are configured; featured-worlds ga
 honest placeholders; the community chat link awaits confirmation of the right channel;
 native-client archive links point at the janusvr GitHub org pending a curated archive
 page.
+
+## 2026-07-21 — Phase 2: the reveal
+
+The page is now a room. Work began with a deep survey of the JanusWeb engine source
+(local checkout) to ground the integration in real APIs rather than guesses. Findings
+that shaped the build:
+
+- The engine's embedding story is exactly our architecture: include `janusweb.js`
+  (pinned: `https://web.janusxr.org/1.7.4/janusweb.js`, ~4.8 MB, loaded after first
+  paint), call `elation.janusweb.init({url, container, …})`, get back a scriptable
+  client. The engine's own build ships `<janus-viewer src="./index.html">` — "project
+  this document in 3D" — so the page-as-room pattern has first-party rails.
+- What exists: `player.disable()/enable()` (the document-mode/free-roam toggle),
+  `player.lookAtLERP` (orientation tweening), `<paragraph selector>` (HTML-to-texture
+  snapshots of live page DOM), `<websurface>` (live iframes on CSS3D planes),
+  `room_load_complete` and friends. What doesn't: scroll-driven cameras and viewpoint
+  systems exist only as prototype custom components (`pagescroll`, `scrollpath`), and
+  nothing auto-maps arbitrary page DOM onto surfaces. That host-page glue is what
+  Phase 2 built.
+- The engine auto-resolves unknown JML tags against the **custom component registry**
+  (currently the prototype components.json on baicoianu.com) — so the room uses
+  `<Water>` for the fountain today, and `triggerzone`, `layout`, `labelset` et al. are
+  available for the exhibits. The FIVARS 2026 world was surveyed as the state of the
+  art for modern Janus worlds: room-in-an-HTML-comment inside `<janus-viewer>`,
+  `uiconfig` for restyled engine UI, `assetsound` ambience, glb navmeshes, and
+  scripted onboarding (fast-travel directory, floor paths) — all patterns earmarked
+  for the theming/depth phases.
+
+What shipped:
+
+- **`room/lobby.html`** — the greybox landing room, every SPACE.md anchor present
+  under its contract name: plaza, entry corridor, monument (pedestal + rotating coin +
+  `<Water>` fountain), octagonal mezzanine ring with two ramps, five wings at their
+  bearings with wayfinding labels, `<Paragraph selector>` mounts snapshotting the live
+  document's sections onto wing walls, Vesta/JanusWeb portals in the Explore wing, and
+  invisible `vp-*` viewpoint markers.
+- **`js/reveal.js`** — the hydration and choreography layer: engine loads idle-time
+  after first paint (skipped entirely on no-WebGL or data-saver — the page stays 2D);
+  on `room_load_complete` the player is disabled, the `room-live` state fades the CSS
+  hero backdrop out in favor of the real room, and scrolling snaps the camera between
+  mezzanine viewpoints with an eased tween (instant under `prefers-reduced-motion`).
+  Viewpoint positions are read from the room's `vp-*` markers — the room is the source
+  of truth, the JS table is the fallback. Enter hands over the controls
+  (`player.enable()`, chat on, document hidden, exit chip appears); Escape or the chip
+  returns to the document exactly where you left it. Every engine touchpoint is
+  wrapped so failure at any step leaves a working 2D page.
+- Verified end-to-end in headless Chrome with software GL: the engine boots, the room
+  hydrates behind the document, and the hero framing shows the corridor → plaza →
+  monument sightline. Tier 0 re-verified in lynx — the new machinery adds nothing to
+  the no-JS reading.
+
+Deferred with intent: the scroll choreography should eventually become a finished
+`scrollsnap`/viewpoints custom component contributed back to janus-custom-components
+(the current host-page implementation is the prototype); `scrollpath` is the natural
+upgrade for curving the orbit around the plaza; onboarding triggerzones, ambience, and
+the PHOSPHOR uiconfig belong to the theming phase.

@@ -229,7 +229,9 @@ Until the new docs ship, these routes may redirect to the best existing material
 - **URLs**: each section has a stable anchor; free-roam position does not pollute the URL.
 - **This repo** is the canonical source for the landing page and its room, replacing the
   current janusxr.org static page. The JanusWeb engine is consumed as a dependency, not
-  vendored — loaded from the versioned builds hosted at web.janusxr.org.
+  vendored — loaded from the versioned builds hosted at web.janusxr.org. Currently
+  pinned: `https://web.janusxr.org/1.7.4/janusweb.js` (~4.8 MB — loaded async after
+  first paint, never on the critical path).
 
 ## 10. Deployment
 

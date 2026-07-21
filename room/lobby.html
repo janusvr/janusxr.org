@@ -1,0 +1,124 @@
+<!--
+  janusxr.org landing room — greybox (SPACE.md layout)
+  Plaza + five wings + mezzanine ring + entry corridor.
+  Bearings (south entry at 180°): whatis SW, explore N, get NE, build E, timeline SE.
+  Anchors carry js_id names per the SPACE.md contract; vp-* markers are invisible
+  and are read by js/reveal.js for the document-mode camera choreography.
+-->
+<html>
+<head><title>JanusXR — the lobby</title></head>
+<body>
+<FireBoxRoom>
+<Assets>
+  <AssetScript src="lobby.js" />
+</Assets>
+<Room js_id="plaza" pos="2 0.5 6" fwd="-0.2 0 -0.98" fog="true" fog_mode="exp" fog_density="0.006" fog_col="#0c0f0c">
+
+  <!-- ===== plaza & entry corridor ===== -->
+  <Object id="cube" js_id="plaza-floor" pos="0 -0.25 0" scale="34 0.5 34" col="#20261f" />
+  <Object id="cube" js_id="entry-corridor-floor" pos="0 -0.24 22" scale="7 0.48 18" col="#242b23" />
+  <Object id="cube" js_id="entry-corridor-wall-w" pos="-3.5 2.5 22" scale="0.4 5 18" col="#161b16" />
+  <Object id="cube" js_id="entry-corridor-wall-e" pos="3.5 2.5 22" scale="0.4 5 18" col="#161b16" />
+
+  <!-- ===== monument: coin + fountain (greybox) ===== -->
+  <Object id="cube" js_id="fountain-basin-a" pos="0 0.3 0" scale="6.5 0.6 6.5" col="#2c352c" />
+  <Object id="cube" js_id="fountain-basin-b" pos="0 0.3 0" scale="6.5 0.6 6.5" col="#2c352c"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <!-- real water via the component registry (auto-resolved by the engine) -->
+  <Water js_id="fountain-water" pos="0 0.55 0" scale="5.6 0.12 5.6" col="#153a2a" />
+  <Object id="cube" js_id="monument-pedestal" pos="0 2 0" scale="1.6 3.4 1.6" col="#1b221b" />
+  <Object id="cube" js_id="monument-coin" pos="0 6.2 0" scale="4.2 4.2 0.5" col="#43ff6e"
+          rotate_deg_per_sec="20" rotate_axis="0 1 0" lighting="false" />
+
+  <!-- ===== info booth (near spawn) ===== -->
+  <Object id="cube" js_id="booth-info" pos="4.5 1 4.5" scale="1.2 2 0.3" col="#1b221b"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Text js_id="booth-info-label" pos="4.5 2.4 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
+
+  <!-- ===== mezzanine ring (octagon, y=3.85) ===== -->
+  <Object id="cube" js_id="mezz-seg-1" pos="4.07 3.85 -9.82"  scale="3 0.3 8.8" col="#283028" xdir="-0.3827 0 0.9239" ydir="0 1 0" zdir="-0.9239 0 -0.3827" />
+  <Object id="cube" js_id="mezz-seg-2" pos="9.82 3.85 -4.07"  scale="3 0.3 8.8" col="#283028" xdir="-0.9239 0 0.3827" ydir="0 1 0" zdir="-0.3827 0 -0.9239" />
+  <Object id="cube" js_id="mezz-seg-3" pos="9.82 3.85 4.07"   scale="3 0.3 8.8" col="#283028" xdir="-0.9239 0 -0.3827" ydir="0 1 0" zdir="0.3827 0 -0.9239" />
+  <Object id="cube" js_id="mezz-seg-4" pos="4.07 3.85 9.82"   scale="3 0.3 8.8" col="#283028" xdir="-0.3827 0 -0.9239" ydir="0 1 0" zdir="0.9239 0 -0.3827" />
+  <Object id="cube" js_id="mezz-seg-5" pos="-4.07 3.85 9.82"  scale="3 0.3 8.8" col="#283028" xdir="0.3827 0 -0.9239" ydir="0 1 0" zdir="0.9239 0 0.3827" />
+  <Object id="cube" js_id="mezz-seg-6" pos="-9.82 3.85 4.07"  scale="3 0.3 8.8" col="#283028" xdir="0.9239 0 -0.3827" ydir="0 1 0" zdir="0.3827 0 0.9239" />
+  <Object id="cube" js_id="mezz-seg-7" pos="-9.82 3.85 -4.07" scale="3 0.3 8.8" col="#283028" xdir="0.9239 0 0.3827" ydir="0 1 0" zdir="-0.3827 0 0.9239" />
+  <Object id="cube" js_id="mezz-seg-8" pos="-4.07 3.85 -9.82" scale="3 0.3 8.8" col="#283028" xdir="0.3827 0 0.9239" ydir="0 1 0" zdir="-0.9239 0 0.3827" />
+
+  <!-- ramps to mezzanine (west near whatis, east near build), pitch ~20° rising north -->
+  <Object id="cube" js_id="mezz-ramp-w" pos="-9.8 1.9 9.5" scale="3 0.2 11.7" col="#2c352c"
+          xdir="-1 0 0" ydir="0 0.940 0.342" zdir="0 0.342 -0.940" />
+  <Object id="cube" js_id="mezz-ramp-e" pos="9.8 1.9 9.5" scale="3 0.2 11.7" col="#2c352c"
+          xdir="-1 0 0" ydir="0 0.940 0.342" zdir="0 0.342 -0.940" />
+
+  <!-- ===== wing: whatis (SW) ===== -->
+  <Object id="cube" js_id="wing-whatis-floor" pos="-16.26 -0.24 16.26" scale="8 0.48 18" col="#242b23"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-whatis-wall-a" pos="-13.29 2.5 19.23" scale="0.4 5 18" col="#161b16"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-whatis-wall-b" pos="-19.23 2.5 13.29" scale="0.4 5 18" col="#161b16"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-whatis-wall-end" pos="-22.63 2.5 22.63" scale="8.4 5 0.4" col="#161b16"
+          xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Text js_id="label-whatis" pos="-9.55 6 9.55" fwd="0.7071 0 -0.7071" col="#43ff6e" scale="2 2 1">WHAT IS</Text>
+  <Paragraph js_id="mount-whatis" selector="#whatis" pos="-21.92 3.2 21.92" fwd="0.7071 0 -0.7071" scale="8 6 1" />
+
+  <!-- ===== wing: explore (N, axial) ===== -->
+  <Object id="cube" js_id="wing-explore-floor" pos="0 -0.24 -23" scale="8 0.48 18" col="#242b23" />
+  <Object id="cube" js_id="wing-explore-wall-a" pos="-4.2 2.5 -23" scale="0.4 5 18" col="#161b16" />
+  <Object id="cube" js_id="wing-explore-wall-b" pos="4.2 2.5 -23" scale="0.4 5 18" col="#161b16" />
+  <Text js_id="label-explore" pos="0 6 -13.5" fwd="0 0 1" col="#43ff6e" scale="2 2 1">EXPLORE</Text>
+  <Link js_id="portal-vesta" pos="-2.5 1.6 -31.4" fwd="0 0 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+  <Link js_id="portal-janusweb" pos="2.5 1.6 -31.4" fwd="0 0 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+
+  <!-- ===== wing: get (NE) ===== -->
+  <Object id="cube" js_id="wing-get-floor" pos="16.26 -0.24 -16.26" scale="8 0.48 18" col="#242b23"
+          xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
+  <Object id="cube" js_id="wing-get-wall-a" pos="13.29 2.5 -19.23" scale="0.4 5 18" col="#161b16"
+          xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
+  <Object id="cube" js_id="wing-get-wall-b" pos="19.23 2.5 -13.29" scale="0.4 5 18" col="#161b16"
+          xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
+  <Object id="cube" js_id="wing-get-wall-end" pos="22.63 2.5 -22.63" scale="8.4 5 0.4" col="#161b16"
+          xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
+  <Text js_id="label-get" pos="9.55 6 -9.55" fwd="-0.7071 0 0.7071" col="#43ff6e" scale="2 2 1">GET</Text>
+  <Paragraph js_id="mount-get" selector="#get" pos="21.92 3.2 -21.92" fwd="-0.7071 0 0.7071" scale="8 6 1" />
+
+  <!-- ===== wing: build (E) ===== -->
+  <Object id="cube" js_id="wing-build-floor" pos="23 -0.24 0" scale="8 0.48 18" col="#242b23"
+          xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
+  <Object id="cube" js_id="wing-build-wall-a" pos="23 2.5 -4.2" scale="0.4 5 18" col="#161b16"
+          xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
+  <Object id="cube" js_id="wing-build-wall-b" pos="23 2.5 4.2" scale="0.4 5 18" col="#161b16"
+          xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
+  <Object id="cube" js_id="wing-build-wall-end" pos="32 2.5 0" scale="8.4 5 0.4" col="#161b16"
+          xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
+  <Text js_id="label-build" pos="13.5 6 0" fwd="-1 0 0" col="#43ff6e" scale="2 2 1">BUILD</Text>
+  <Paragraph js_id="mount-build" selector="#build-opensource" pos="31 3.2 0" fwd="-1 0 0" scale="8 6 1" />
+
+  <!-- ===== wing: timeline (SE) ===== -->
+  <Object id="cube" js_id="wing-timeline-floor" pos="16.26 -0.24 16.26" scale="8 0.48 18" col="#242b23"
+          xdir="0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-timeline-wall-a" pos="19.23 2.5 13.29" scale="0.4 5 18" col="#161b16"
+          xdir="0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-timeline-wall-b" pos="13.29 2.5 19.23" scale="0.4 5 18" col="#161b16"
+          xdir="0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 0.7071" />
+  <Object id="cube" js_id="wing-timeline-wall-end" pos="22.63 2.5 22.63" scale="8.4 5 0.4" col="#161b16"
+          xdir="0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 0.7071" />
+  <Text js_id="label-timeline" pos="9.55 6 9.55" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="2 2 1">TIMELINE</Text>
+  <Text js_id="label-timeline-past" pos="18.5 4.5 20.5" fwd="-0.7071 0 -0.7071" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
+  <Text js_id="label-timeline-future" pos="20.5 4.5 18.5" fwd="-0.7071 0 -0.7071" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+  <Paragraph js_id="mount-timeline" selector="#timeline-janus" pos="21.92 3.2 21.92" fwd="-0.7071 0 -0.7071" scale="8 6 1" />
+
+  <!-- ===== viewpoint markers (invisible; read by js/reveal.js) ===== -->
+  <Object id="cube" js_id="vp-hero"     pos="0 3.2 26"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-whatis"   pos="-8.13 5 8.13"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-explore"  pos="0 5 -11.5"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-get"      pos="8.13 5 -8.13"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-build"    pos="11.5 5 0"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-timeline" pos="8.13 5 8.13"   scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-overview" pos="0 26 10"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
+
+</Room>
+</FireBoxRoom>
+</body>
+</html>

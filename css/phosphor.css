@@ -405,6 +405,53 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   font-size: 0.85rem;
 }
 
+/* --- phase 2: the room behind the page ----------------------- */
+#room-viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.site-header, main, .site-footer { position: relative; z-index: 1; }
+
+/* room-live: engine hydrated; the world shows through the document */
+.room-live #room-viewport { visibility: visible; }
+.room-live .hero-scene { display: none; }        /* CSS backdrop replaced by the real room */
+.room-live .hero-content {
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  padding: 2rem;
+}
+.room-live .section {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(3px);
+  margin-bottom: 2.5rem;
+}
+.room-live .site-footer { background: color-mix(in srgb, var(--bg) 85%, transparent); }
+/* the engine adds its own body classes; never let it break document scroll */
+html.room-live, .room-live body { overflow: auto !important; }
+
+/* room-roam: free navigation; the document steps aside */
+.room-roam #room-viewport { pointer-events: auto; z-index: 200; }
+.room-roam .site-header, .room-roam main, .room-roam .site-footer { display: none; }
+.roam-exit {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 300;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+.roam-exit:hover { border-color: var(--green); box-shadow: var(--glow); }
+.room-roam .roam-exit { display: block; }
+
 /* --- motion & media ------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
