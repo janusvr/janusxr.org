@@ -275,3 +275,33 @@ Deferred with intent: the scroll choreography should eventually become a finishe
 (the current host-page implementation is the prototype); `scrollpath` is the natural
 upgrade for curving the orbit around the plaza; onboarding triggerzones, ambience, and
 the PHOSPHOR uiconfig belong to the theming phase.
+
+## 2026-07-21 — From cubes to architecture
+
+The greybox graduated from a pile of JML cubes to real geometry:
+`tools/build-lobby-glb.py` procedurally generates `room/models/lobby.glb` (~215 KB,
+12k tris) — circular plaza floor with an emissive phosphor ring inlay, arched mouths
+on every wing and the entry corridor, a true annulus mezzanine with rail and glowing
+handrail cap, sloped ramps, and the octagonal fountain basin with a glowing lip —
+plus `room/models/coin.glb`: the actual Janus mark from the site's SVG, stroked,
+extruded, and set in a circular rim. The generator is parametric and checked in, so
+the layout stays regenerable; the room file now owns only what isn't architecture
+(spawn, water, text, portals, mounts, viewpoint markers).
+
+Debugging notes for posterity:
+
+- The `<Water>` component defaults to a 1000×1000 ocean — the first render flooded
+  the entire plaza. `sizex`/`sizey` scope it to the basin.
+- The `<Paragraph>` translator runs its CSS selector against the *fetched room
+  document*, not the live host page — mounts in a separate room file need
+  `url="../index.html"` to snapshot the site's sections.
+- Headless verification of a live multiplayer engine is its own adventure: Chrome's
+  virtual-time budget never expires while the presence websocket keeps timers alive
+  (and software-GL frames make virtual time crawl), so the screenshot harness moved
+  to puppeteer with real wall-clock waits. Worth it: the smoke test showed
+  `[MultiplayerManager] connected` — the always-on presence requirement works, from
+  a headless browser in a CI-shaped environment, with zero configuration.
+
+Verified via puppeteer captures: hero framing with the coin spinning over the plaza,
+scroll-snap to the Build bay with the document translucent over the world, and the
+full Enter handoff — free-roam at spawn, collision holding, exit chip live.
