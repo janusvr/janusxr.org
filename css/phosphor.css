@@ -339,8 +339,8 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 .activity-feed li { margin-bottom: 0.35rem; color: var(--grey); }
 .activity-feed .sha { color: var(--green-dim); margin-right: 0.5em; }
 
-/* --- timeline: the station ----------------------------------- */
-.timeline-station { margin-top: 2rem; }
+/* --- travel: the station ----------------------------------- */
+.travel-station { margin-top: 2rem; }
 .tube, .station-platform {
   border: 1px solid var(--line);
   padding: 1.25rem 1.5rem;
@@ -362,14 +362,14 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 }
 .tube h3, .station-platform h3 { margin-top: 0; }
 .tube-note { color: var(--grey); font-size: 0.95rem; }
-.timeline-list { list-style: none; padding: 0; margin: 0; }
-.timeline-list li {
+.travel-list { list-style: none; padding: 0; margin: 0; }
+.travel-list li {
   padding: 0.55rem 0;
   border-top: 1px dotted var(--line);
   color: var(--grey);
 }
-.timeline-list li:first-child { border-top: 0; }
-.timeline-list strong { color: var(--white); }
+.travel-list li:first-child { border-top: 0; }
+.travel-list strong { color: var(--white); }
 .era {
   font-family: var(--mono);
   color: var(--green);

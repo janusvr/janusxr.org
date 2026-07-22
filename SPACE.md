@@ -243,11 +243,11 @@ view-source invitation.
 | # | Section | Viewpoint | Framing |
 |---|---------|-----------|---------|
 | 1 | Hero | `vp-hero` — entry threshold, elevated | Monument centered, Explore daylight beyond |
-| 2 | What is | `vp-whatis` — fountain orbit, SW | Obelisk + spectrum dioramas |
+| 2 | What is | `vp-learn` — fountain orbit, SW | Obelisk + spectrum dioramas |
 | 3 | Explore | `vp-explore` — fountain orbit, N | Departure gates, sky |
 | 4 | Get | `vp-get` — fountain orbit, NE | The Mirror, vault alcove edge |
 | 5 | Build | `vp-build` — fountain orbit, E | Three halls, open-source hall glowing beyond |
-| 6 | Timeline | `vp-timeline` — fountain orbit, SE | Station entrance, sign glowing |
+| 6 | Timeline | `vp-travel` — fountain orbit, SE | Station entrance, sign glowing |
 | 7 | Footer | `vp-overview` — rises above the plaza | Whole space at once — the map moment |
 
 The final pull-up is the bookend: after walking the content, the reader sees the whole
@@ -259,16 +259,16 @@ The layout ships as a semantically-named greybox; themes and DOM content bind to
 
 **Naming scheme** (kebab-case, stable, documented):
 
-- Volumes: `plaza`, `entry-corridor`, `wing-whatis`, `wing-explore`,
-  `wing-get`, `wing-build`, `wing-timeline`, `hall-build-editor`, `hall-build-markup`,
+- Volumes: `plaza`, `entry-corridor`, `wing-learn`, `wing-explore`,
+  `wing-get`, `wing-build`, `wing-travel`, `hall-build-editor`, `hall-build-markup`,
   `hall-build-scripting`, `gallery-build-infra`, `hall-build-opensource`,
-  `alcove-get-legacy`, `station-timeline`, `tube-timeline-past`, `tube-timeline-future`
-- Landmarks: `monument`, `fountain`, `weenie-whatis`, `weenie-get-mirror`,
-  `weenie-build`, `weenie-timeline-station`, `booth-info`, `plaque-colophon`
-- Viewpoints: `vp-hero`, `vp-whatis`, `vp-explore`, `vp-get`, `vp-build`,
-  `vp-timeline`, `vp-overview`, `spawn-main`
+  `alcove-get-legacy`, `station-travel`, `tube-travel-past`, `tube-travel-future`
+- Landmarks: `monument`, `fountain`, `weenie-learn`, `weenie-get-mirror`,
+  `weenie-build`, `weenie-travel-station`, `booth-info`, `plaque-colophon`
+- Viewpoints: `vp-hero`, `vp-learn`, `vp-explore`, `vp-get`, `vp-build`,
+  `vp-travel`, `vp-overview`, `spawn-main`
 - Content mounts: `mount-<dom-id>` — every mount corresponds 1:1 to a DOM element id in
-  the HTML document (`mount-whatis-spectrum` ⇄ `#whatis-spectrum`). **The DOM id is the
+  the HTML document (`mount-learn-spectrum` ⇄ `#learn-spectrum`). **The DOM id is the
   contract**; the engine maps that element's content onto the mount (CSS3D or
   HTML-to-texture per SPEC §4.1).
 - Portals: `portal-<destination-slug>` (`portal-vesta`, `portal-docs-jml`,

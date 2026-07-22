@@ -21,86 +21,88 @@
 
 <janus-viewer autostart="false" aria-hidden="true">
 <!--
-<Assets>
-  <AssetObject id="lobby" src="room/models/lobby.glb" />
-  <AssetObject id="coin" src="room/models/coin.glb" />
-  <AssetImage id="sky-front" src="room/skybox/front.png" />
-  <AssetImage id="sky-back"  src="room/skybox/back.png" />
-  <AssetImage id="sky-left"  src="room/skybox/left.png" />
-  <AssetImage id="sky-right" src="room/skybox/right.png" />
-  <AssetImage id="sky-up"    src="room/skybox/up.png" />
-  <AssetImage id="sky-down"  src="room/skybox/down.png" />
-  <AssetScript src="room/lobby.js" />
-</Assets>
-<Room js_id="plaza" pos="0 0 26" fwd="0 0 -1"
-      skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
-      skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
-      fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
+<FireBoxRoom>
+  <Assets>
+    <AssetObject id="lobby" src="room/models/lobby.glb" />
+    <AssetObject id="coin" src="room/models/coin.glb" />
+    <AssetImage id="sky-front" src="room/skybox/front.png" />
+    <AssetImage id="sky-back"  src="room/skybox/back.png" />
+    <AssetImage id="sky-left"  src="room/skybox/left.png" />
+    <AssetImage id="sky-right" src="room/skybox/right.png" />
+    <AssetImage id="sky-up"    src="room/skybox/up.png" />
+    <AssetImage id="sky-down"  src="room/skybox/down.png" />
+    <AssetScript src="room/lobby.js" />
+  </Assets>
+  <Room js_id="plaza" pos="0 0 26" fwd="0 0 -1"
+        skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
+        skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
+        fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
 
-    <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+      <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
 
-    <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-wing-whatis"   pos="-13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 0.5878" ydir="0 1 0" zdir="-0.5878 0 0.8090" />
-  <Object id="cube" js_id="col-wing-explore"  pos="-21.88 -0.24 -7.11" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.3090 0 0.9511" ydir="0 1 0" zdir="-0.9511 0 -0.3090" />
-  <Object id="cube" js_id="col-wing-get"      pos="0 -0.24 -23" scale="8 0.48 18" visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-wing-build"    pos="25.68 -0.24 -8.34" scale="12 0.48 26" visible="false" collision_id="cube" xdir="-0.3090 0 -0.9511" ydir="0 1 0" zdir="0.9511 0 -0.3090" />
-  <Object id="cube" js_id="col-wing-timeline" pos="13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 -0.5878" ydir="0 1 0" zdir="0.5878 0 0.8090" />
-  <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+      <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-wing-learn"   pos="-13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 0.5878" ydir="0 1 0" zdir="-0.5878 0 0.8090" />
+    <Object id="cube" js_id="col-wing-explore"  pos="-21.88 -0.24 -7.11" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.3090 0 0.9511" ydir="0 1 0" zdir="-0.9511 0 -0.3090" />
+    <Object id="cube" js_id="col-wing-get"      pos="0 -0.24 -23" scale="8 0.48 18" visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-wing-build"    pos="25.68 -0.24 -8.34" scale="12 0.48 26" visible="false" collision_id="cube" xdir="-0.3090 0 -0.9511" ydir="0 1 0" zdir="0.9511 0 -0.3090" />
+    <Object id="cube" js_id="col-wing-travel" pos="13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 -0.5878" ydir="0 1 0" zdir="0.5878 0 0.8090" />
+    <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
 
-    <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
-  <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
+      <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
+    <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
 
-    <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
+      <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
 
-    <Text js_id="obelisk-text" pos="-13.86 4.6 9.21" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="1.3 1.3 1">JanusXR is...</Text>
-    <Text js_id="label-whatis" pos="-7.94 4.9 10.92" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">LEARN</Text>
-  <Paragraph js_id="mount-whatis-is" selector="#whatis-is" css="css/phosphor.css" back_col="#0c0f0c" pos="-18.19 2.4 25.03" fwd="0.5878 0 -0.8090" scale="4.5 3.4 1" width="900" height="675" />
-  <Paragraph js_id="mount-whatis-inworld"   selector="#whatis-inworld"   css="css/phosphor.css" back_col="#0c0f0c" pos="-14.07 1.85 13.57" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-  <Paragraph js_id="mount-whatis-markup"    selector="#whatis-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="-16.71 1.85 17.22" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-  <Paragraph js_id="mount-whatis-scripting" selector="#whatis-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.21 1.85 20.65" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-  <Paragraph js_id="mount-whatis-decentralized" selector="#whatis-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-11.21 1.85 21.21" fwd="-0.8090 0 -0.5878" scale="2.6 1.8 1" width="640" height="430" />
+      <Text js_id="obelisk-text" pos="-13.86 4.6 9.21" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="1.3 1.3 1">JanusXR is...</Text>
+      <Text js_id="label-learn" pos="-7.94 4.9 10.92" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">LEARN</Text>
+    <Paragraph js_id="mount-learn-is" selector="#learn-is" css="css/phosphor.css" back_col="#0c0f0c" pos="-18.19 2.4 25.03" fwd="0.5878 0 -0.8090" scale="4.5 3.4 1" width="900" height="675" />
+    <Paragraph js_id="mount-learn-inworld"   selector="#learn-inworld"   css="css/phosphor.css" back_col="#0c0f0c" pos="-14.07 1.85 13.57" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-markup"    selector="#learn-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="-16.71 1.85 17.22" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-scripting" selector="#learn-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.21 1.85 20.65" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-11.21 1.85 21.21" fwd="-0.8090 0 -0.5878" scale="2.6 1.8 1" width="640" height="430" />
 
-    <Text js_id="label-explore" pos="-12.84 4.9 -4.17" fwd="0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
-  <Link js_id="portal-vesta" pos="-29.09 1.8 -12.08" fwd="0.9511 0 0.3090" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
-  <Link js_id="portal-janusweb" pos="-30.63 1.7 -7.32" fwd="0.9511 0 0.3090" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+      <Text js_id="label-explore" pos="-12.84 4.9 -4.17" fwd="0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
+    <Link js_id="portal-vesta" pos="-29.09 1.8 -12.08" fwd="0.9511 0 0.3090" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+    <Link js_id="portal-janusweb" pos="-30.63 1.7 -7.32" fwd="0.9511 0 0.3090" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
 
-    <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
-  <Text js_id="mirror-caption" pos="0 1.15 -31.1" fwd="0 0 1" col="#7dffa0" scale="0.8 0.8 1">you're already running it</Text>
-  <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -19.25" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
-  <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -23.75" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
-  <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-3.4 1.85 -28" fwd="1 0 0" scale="2.2 1.8 1" width="600" height="480" />
+      <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
+    <Text js_id="mirror-caption" pos="0 1.15 -31.1" fwd="0 0 1" col="#7dffa0" scale="0.8 0.8 1">you're already running it</Text>
+    <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -19.25" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
+    <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -23.75" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
+    <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-3.4 1.85 -28" fwd="1 0 0" scale="2.2 1.8 1" width="600" height="480" />
 
-    <Text js_id="label-build" pos="12.84 4.9 -4.17" fwd="-0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">BUILD</Text>
-  <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="37.38 2.4 -12.14" fwd="-0.9511 0 0.3090" scale="6 4.5 1" />
-  <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="27.45 3.1 -4.85" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
-  <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="26.25 3.1 -8.53" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
-  <Paragraph js_id="mount-build-scripting" selector="#build-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="25.05 3.1 -12.21" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
-  <Object id="cube" js_id="machine-core" pos="29.24 1.6 -13.57" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
-  <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="33.07 1.85 -16.37" fwd="0.3090 0 0.9511" scale="2.4 1.7 1" width="560" height="410" />
-  <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="20.67 1.85 -1.09" fwd="-0.3090 0 -0.9511" scale="2.6 1.6 1" width="660" height="400" />
+      <Text js_id="label-build" pos="12.84 4.9 -4.17" fwd="-0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">BUILD</Text>
+    <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="37.38 2.4 -12.14" fwd="-0.9511 0 0.3090" scale="6 4.5 1" />
+    <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="27.45 3.1 -4.85" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
+    <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="26.25 3.1 -8.53" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
+    <Paragraph js_id="mount-build-scripting" selector="#build-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="25.05 3.1 -12.21" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
+    <Object id="cube" js_id="machine-core" pos="29.24 1.6 -13.57" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
+    <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="33.07 1.85 -16.37" fwd="0.3090 0 0.9511" scale="2.4 1.7 1" width="560" height="410" />
+    <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="20.67 1.85 -1.09" fwd="-0.3090 0 -0.9511" scale="2.6 1.6 1" width="660" height="400" />
 
-    <Text js_id="label-timeline" pos="7.94 4.9 10.92" fwd="-0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">TRAVEL</Text>
-  <Text js_id="label-timeline-past" pos="15.09 4.5 23.15" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
-  <Text js_id="label-timeline-future" pos="17.35 4.5 21.51" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
-  <Text js_id="era-2010" pos="11.46 1.5 15.78" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2010 - Elation Engine</Text>
-  <Text js_id="era-2014" pos="13.52 1.5 18.61" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2014 - FireBox</Text>
-  <Text js_id="era-2019" pos="15.58 1.5 21.44" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2019 - JanusXR.org</Text>
-  <Paragraph js_id="mount-timeline-janus" selector="#timeline-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="12.93 2.8 17.80" fwd="-0.5878 0 -0.8090" cull_face="none" scale="3.6 2.8 1" width="780" height="600" />
-  <Paragraph js_id="mount-timeline-past"   selector="#timeline-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="14.00 1.85 25.06" fwd="0.8090 0 -0.5878" scale="2.4 2.1 1" width="560" height="500" />
-  <Paragraph js_id="mount-timeline-future" selector="#timeline-future" css="css/phosphor.css" back_col="#0c0f0c" pos="19.50 1.85 21.06" fwd="-0.8090 0 0.5878" scale="2.4 2.1 1" width="560" height="500" />
+      <Text js_id="label-travel" pos="7.94 4.9 10.92" fwd="-0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">TRAVEL</Text>
+    <Text js_id="label-travel-past" pos="15.09 4.5 23.15" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
+    <Text js_id="label-travel-future" pos="17.35 4.5 21.51" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+    <Text js_id="era-2010" pos="11.46 1.5 15.78" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2010 - Elation Engine</Text>
+    <Text js_id="era-2014" pos="13.52 1.5 18.61" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2014 - FireBox</Text>
+    <Text js_id="era-2019" pos="15.58 1.5 21.44" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2019 - JanusXR.org</Text>
+    <Paragraph js_id="mount-travel-janus" selector="#travel-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="12.93 2.8 17.80" fwd="-0.5878 0 -0.8090" cull_face="none" scale="3.6 2.8 1" width="780" height="600" />
+    <Paragraph js_id="mount-travel-past"   selector="#travel-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="14.00 1.85 25.06" fwd="0.8090 0 -0.5878" scale="2.4 2.1 1" width="560" height="500" />
+    <Paragraph js_id="mount-travel-future" selector="#travel-future" css="css/phosphor.css" back_col="#0c0f0c" pos="19.50 1.85 21.06" fwd="-0.8090 0 0.5878" scale="2.4 2.1 1" width="560" height="500" />
 
-      <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-whatis"   pos="-2.35 2 3.24"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-explore"  pos="-3.80 2 -1.24"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-get"      pos="0 2 -4"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-build"    pos="3.80 2 -1.24"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-timeline" pos="2.35 2 3.24"   scale="0.1 0.1 0.1" visible="false" collision_id="" />
-  <Object id="cube" js_id="vp-overview" pos="0 13 21"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
+        <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-learn"   pos="-2.35 2 3.24"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-explore"  pos="-3.80 2 -1.24"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-get"      pos="0 2 -4"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-build"    pos="3.80 2 -1.24"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-travel" pos="2.35 2 3.24"   scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-overview" pos="0 13 21"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
 
-</Room>
+  </Room>
+</FireBoxRoom>
 -->
 </janus-viewer>
 
@@ -110,11 +112,11 @@
     <span>JanusXR</span>
   </a>
   <nav class="site-nav" aria-label="Site">
-    <a href="#whatis">Learn</a>
+    <a href="#learn">Learn</a>
     <a href="#explore">Explore</a>
     <a href="#get">Get</a>
     <a href="#build">Build</a>
-    <a href="#timeline">Travel</a>
+    <a href="#travel">Travel</a>
     <a href="#footer">Ascend</a>
   </nav>
   <a class="btn btn-enter" href="https://web.janusxr.org/">Enter ▸</a>
@@ -137,7 +139,7 @@
     and entirely yours.</p>
     <p class="hero-actions">
       <a class="btn btn-enter btn-big" href="https://web.janusxr.org/">Enter ▸</a>
-      <a class="btn btn-ghost" href="#whatis">What is this?</a>
+      <a class="btn btn-ghost" href="#learn">What is this?</a>
     </p>
     <p class="hero-note">Runs right in your browser. No install, no account, no
     central authority.</p>
@@ -145,10 +147,10 @@
 </section>
 
 <!-- ======================================================= what is -->
-<section class="section" id="whatis" aria-labelledby="whatis-title">
-  <h2 id="whatis-title"><span class="prompt">&gt;</span> What is JanusXR?</h2>
+<section class="section" id="learn" aria-labelledby="learn-title">
+  <h2 id="learn-title"><span class="prompt">&gt;</span> What is JanusXR?</h2>
 
-  <div id="whatis-is" class="janusxr-is">
+  <div id="learn-is" class="janusxr-is">
     <p class="janusxr-is-line" aria-hidden="true">JanusXR is <span class="typer" id="janusxr-is-typer">an open source project</span><span class="cursor"></span></p>
     <ul class="janusxr-is-list" id="janusxr-is-list">
       <li>a game engine</li>
@@ -193,24 +195,24 @@
   very fancy websites. Standing around in a website with your friends is just the
   floor — your imagination is what defines the ceiling.</p>
 
-  <div id="whatis-spectrum" class="spectrum">
+  <div id="learn-spectrum" class="spectrum">
     <h3 class="visually-structural">One engine, three ways in</h3>
     <div class="cards">
-      <article class="card" id="whatis-inworld">
+      <article class="card" id="learn-inworld">
         <h4>Build in-world</h4>
         <p>Walk in and start placing blocks. The collaborative in-world editor lets you
         and your friends build together in real time — no code, no tools to install,
         no leaving the browser.</p>
         <p class="card-link"><a href="/docs/editor/">Editor guide →</a></p>
       </article>
-      <article class="card" id="whatis-markup">
+      <article class="card" id="learn-markup">
         <h4>Write markup</h4>
         <p>A whole world in a text file. Janus Markup Language (JML) describes rooms
         the way HTML describes pages — declarative, view-source-able, hostable
         anywhere you can host a file.</p>
         <p class="card-link"><a href="/docs/jml/">JML reference →</a></p>
       </article>
-      <article class="card" id="whatis-scripting">
+      <article class="card" id="learn-scripting">
         <h4>Script everything</h4>
         <p>Custom entities with event-driven logic, driven by JavaScript. Build full
         applications: live dashboards, simulations, games — anything the web can
@@ -220,7 +222,7 @@
     </div>
   </div>
 
-  <div id="whatis-decentralized" class="callout">
+  <div id="learn-decentralized" class="callout">
     <h3>Completely decentralized</h3>
     <p>Worlds are hosted like websites: anywhere, by anyone. Portals connect them the
     way links connect pages. There's no central server to shut down, no platform to
@@ -363,20 +365,20 @@
   </div>
 </section>
 
-<!-- ======================================================= timeline -->
-<section class="section" id="timeline" aria-labelledby="timeline-title">
-  <h2 id="timeline-title"><span class="prompt">&gt;</span> When are we?</h2>
+<!-- ======================================================= travel -->
+<section class="section" id="travel" aria-labelledby="travel-title">
+  <h2 id="travel-title"><span class="prompt">&gt;</span> When are we?</h2>
   <p>Janus is the middle of this story, not the end of it. Virtual worlds have been
   swinging between corporate platforms and open standards for half a century — this
   is our stop on a much longer line.</p>
 
-  <div class="timeline-station">
+  <div class="travel-station">
 
-    <div id="timeline-past" class="tube tube-past">
+    <div id="travel-past" class="tube tube-past">
       <h3>◂ The tube to the past</h3>
       <p class="tube-note">The line goes back further than you think. A few stops,
       with more being excavated:</p>
-      <ol class="timeline-list" reversed>
+      <ol class="travel-list" reversed>
         <li><span class="era">1978</span> <span class="tl-tag tag-open">open</span>
           <strong>MUD</strong> — text-only shared worlds, built at a university and
           given away. The pattern starts here: a world is just a server anyone can run.</li>
@@ -398,9 +400,9 @@
       </ol>
     </div>
 
-    <div id="timeline-janus" class="station-platform">
+    <div id="travel-janus" class="station-platform">
       <h3>◉ This station: Janus, 2010 – present</h3>
-      <ol class="timeline-list">
+      <ol class="travel-list">
         <li><span class="era">2010</span> <strong>Elation Engine</strong> —
           development begins on the JavaScript engine and web framework that still
           powers everything below.</li>
@@ -417,11 +419,11 @@
       </ol>
     </div>
 
-    <div id="timeline-future" class="tube tube-future">
+    <div id="travel-future" class="tube tube-future">
       <h3>The tube to the future ▸</h3>
       <p class="tube-note">Well-lit, under construction, and hiring. Some of what's
       on the line ahead:</p>
-      <ul class="timeline-list">
+      <ul class="travel-list">
         <li><span class="era">soon</span> <strong>The open web catches up</strong> —
         WebXR on every headset, WebGPU rendering, browsers that treat 3D as a first-class
         citizen.</li>
@@ -457,8 +459,8 @@
       <h3>Community</h3>
       <ul>
         <li><a href="https://github.com/jbaicoianu/janusweb">GitHub</a></li>
+        <li><a href="https://discord.gg/FXkjjVhtyv">Discord</a></li>
         <li><a href="https://www.reddit.com/r/janusVR/">Reddit</a></li>
-        <!-- TODO: chat/discord link once confirmed -->
       </ul>
     </div>
     <div>

@@ -61,7 +61,7 @@ PED_R = 0.9
 COIN_Y = 7.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
-WINGS = {'whatis': 216, 'explore': 288, 'get': 0, 'build': 72, 'timeline': 144}
+WINGS = {'learn': 216, 'explore': 288, 'get': 0, 'build': 72, 'travel': 144}
 # per-wing (width, length) overrides; build carries the most content
 WING_DIMS = {'build': (12.0, 26.0)}
 
@@ -359,7 +359,7 @@ for name, deg in WINGS.items():
         gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
         wing_place(grand, M_TRIM, -2.5, 0, 31.55, deg)
         wing_place(gate, M_TRIM, 2.5, 0, 31.55, deg)
-    elif name == 'timeline':
+    elif name == 'travel':
         # twin tunnel mouths on the end wall: future glows, the past is dim
         ring = extrude(Point(0, 0).buffer(1.6, resolution=24).difference(
             Point(0, 0).buffer(1.35, resolution=24)), 0.4)
@@ -399,7 +399,7 @@ for name, deg in WINGS.items():
         parts.append(place(trimesh.creation.box(extents=[w + 0.12, 0.06, w + 0.12]), M_TRIM_DIM,
                            at(local_x, h + 0.03, local_r), rot_y(-deg)))
 
-    if name == 'whatis':
+    if name == 'learn':
         # the spectrum dioramas: editor / markup / scripting, along one wall
         for lr in (18.0, 22.0, 26.0):
             plinth(-2.2, lr)
@@ -454,7 +454,7 @@ for name, deg in WINGS.items():
                                    at(sx * 4.6, 1.05, lr), rot_y(-deg)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM,
                                    at(sx * 4.6, 2.15, lr), rot_y(-deg)))
-    elif name == 'timeline':
+    elif name == 'travel':
         # station platform edge, glowing across the wing
         edge = box(-WING_W / 2 + 0.3, 2.6, WING_W / 2 - 0.3, 2.9)
         parts.append(place(xz(extrude(edge, 0.03)), M_TRIM_DIM, (c[0], 0, c[2]), R))
