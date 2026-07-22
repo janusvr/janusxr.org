@@ -25,7 +25,7 @@
     get:      { pos: [2.83, 2, -2.83], look: [19, 3, -19] },
     build:    { pos: [4, 2, 0],        look: [26, 3, 0] },
     timeline: { pos: [2.83, 2, 2.83],  look: [19, 3, 19] },
-    overview: { pos: [0, 26, 10],        look: [0, 0, 0] }
+    overview: { pos: [0, 13, 21],       look: [0, 0.9, 0] }   /* footer: high south, gazing at the fountain base */
   };
   var SECTION_VP = [
     ['hero', 'hero'], ['whatis', 'whatis'], ['explore', 'explore'],
