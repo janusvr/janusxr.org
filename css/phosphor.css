@@ -31,6 +31,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: 3.4rem;   /* clears the fixed header */
   font-family: var(--sans);
   font-size: 1.0625rem;
   line-height: 1.65;
@@ -87,8 +88,10 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 
 /* --- header -------------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   align-items: center;

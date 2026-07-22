@@ -61,12 +61,14 @@ central fountain.
               S  ← hero camera threshold
 ```
 
-Wing bearings (entry at south, 180°): What-is SW (225°) → Explore N (0°) → Get NE (45°)
-→ Build E (90°) → Timeline SE (135°). Document order sweeps the orbit **monotonically
-clockwise** — a three-quarter turn — with Explore sitting axially opposite the entry, so
-the hero framing looks past the monument silhouette into Explore's daylight (the most
-tempting sightline in the space). The first and last wings (What-is, Timeline) flank the
-entry corridor as bookends.
+Wing bearings (entry at south, 180°): evenly distributed at 72° — What-is (216°) →
+Explore (288°) → Get (0°, axial) → Build (72°) → Timeline (144°). Document order sweeps
+the orbit **monotonically clockwise** — a full turn less the entry gap — and the layout
+reads symmetric from above (the footer's aerial vantage made the earlier clustered
+bearings look lopsided, so they were redistributed). Get sits axially opposite the
+entry: the Mirror's "you're already running it" is what faces you down Main Street.
+The first and last wings (What-is, Timeline) still flank the entry corridor as
+bookends.
 
 ## 3. The entry sequence
 
@@ -137,20 +139,20 @@ its content sourced from the corresponding DOM section (§7).
   right. Decentralization placard: a constellation map of independently-hosted worlds
   linked by portals.
 
-### 5.2 Explore (N, axial)
+### 5.2 Explore (WNW)
 
-- **Weenie:** daylight itself — the only wing open to sky/horizon, visible from the
-  entry threshold past the monument. Portal glow at the mouth.
+- **Weenie:** daylight itself — the only wing open to sky/horizon. Portal glow at
+  the mouth.
 - **Exhibits:** **departure gates** — the numbered-doors tradition reborn: a colonnade
   of active portals to featured worlds, each with destination placard (name, author,
   URL — portals are just URLs; the placard says so). Vesta gets the grand gate.
   Curation TBD (SPEC open question); gates degrade gracefully to fewer entries.
 
-### 5.3 Get (NE)
+### 5.3 Get (N, axial)
 
 - **Weenie:** **the Mirror** — a large live surface showing the visitor's own view back
-  to them, captioned *"you're already running it."* The punchline of the whole section,
-  visible from the plaza.
+  to them, captioned *"you're already running it."* The punchline of the whole section —
+  and, sitting axially opposite the entry, the first thing framed down Main Street.
 - **Exhibits:** web client (you're in it — link out is a portal home), self-hosting the
   client and server. A side alcove — dressed as a small **museum vault** — holds the
   legacy native client: archived historical builds, alternative clients, era

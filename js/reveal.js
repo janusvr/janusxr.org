@@ -20,11 +20,11 @@
     /* section viewpoints orbit low around the fountain, each looking out
        through its wing's portal doorway */
     hero:     { pos: [0, 0, 26],        look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
-    whatis:   { pos: [-2.83, 2, 2.83], look: [-19, 3, 19] },
-    explore:  { pos: [0, 2, -4],       look: [0, 3, -26] },
-    get:      { pos: [2.83, 2, -2.83], look: [19, 3, -19] },
-    build:    { pos: [4, 2, 0],        look: [26, 3, 0] },
-    timeline: { pos: [2.83, 2, 2.83],  look: [19, 3, 19] },
+    whatis:   { pos: [-2.35, 2, 3.24],  look: [-11.17, 3, 15.37] },
+    explore:  { pos: [-3.80, 2, -1.24], look: [-18.07, 3, -5.87] },
+    get:      { pos: [0, 2, -4],        look: [0, 3, -19] },
+    build:    { pos: [3.80, 2, -1.24],  look: [18.07, 3, -5.87] },
+    timeline: { pos: [2.35, 2, 3.24],   look: [11.17, 3, 15.37] },
     overview: { pos: [0, 13, 21],       look: [0, 0.9, 0] }   /* footer: high south, gazing at the fountain base */
   };
   var SECTION_VP = [
@@ -129,6 +129,11 @@
   /* ---- document mode: scroll → camera ----------------------------------- */
 
   function currentSectionVP() {
+    /* at the very bottom, the last section wins even if it's too short to
+       ever cross the midline */
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+      return SECTION_VP[SECTION_VP.length - 1][1];
+    }
     var mid = window.innerHeight / 2;
     var pick = SECTION_VP[0][1];
     for (var i = 0; i < SECTION_VP.length; i++) {

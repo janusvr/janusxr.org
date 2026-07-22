@@ -61,7 +61,7 @@ PED_R = 0.9
 COIN_Y = 7.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
-WINGS = {'whatis': 225, 'explore': 0, 'get': 45, 'build': 90, 'timeline': 135}
+WINGS = {'whatis': 216, 'explore': 288, 'get': 0, 'build': 72, 'timeline': 144}
 
 def bearing_dir(deg):
     r = math.radians(deg)
@@ -269,7 +269,7 @@ def wedge(deg_center, deg_span, r0, r1):
     ann = Point(0, 0).buffer(r1, resolution=48).difference(Point(0, 0).buffer(r0, resolution=48))
     return ann.intersection(w)
 
-for bc in (270, 315):
+for bc in (252, 324):
     parts.append(place(xz(extrude(wedge(bc, 26, 7.1, 7.75), 0.45)), M_STRUCT))
     parts.append(place(xz(extrude(wedge(bc, 26, 7.7, 7.78), 0.47)), M_TRIM_DIM))
 
@@ -392,7 +392,7 @@ for name, deg in WINGS.items():
     if name != 'explore':
         cparts.append(place(xz(extrude(box(-WING_W / 2, WING_LEN / 2 - 0.4, WING_W / 2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
 
-for bc in (270, 315):   # bench proxies
+for bc in (252, 324):   # bench proxies
     bx, bz = polar(7.45, bc)
     cparts.append(place(trimesh.creation.box(extents=[3.6, 0.45, 0.7]), M_COL,
                         (bx, 0.225, bz), rot_y(-(bc + 90))))
