@@ -364,3 +364,26 @@ committed separately. The arc of it:
   fixed (which had put the mezzanine cut and the benches on the wrong sides), and
   a dt-in-milliseconds bug in the coin bob — the same units mistake the original
   home2 lobby script guarded against with a divide-by-1000. Traditions run deep.
+
+## 2026-07-22 — One document: the room moves inside the page
+
+The room markup moved from `room/lobby.html` into `index.html` itself — inside the
+`<janus-viewer>` element, wrapped in an HTML comment so the 2d page never renders
+it. The page is now literally its own room: one URL, one document, two readings.
+This also fixes the `<Paragraph selector>` mounts properly — they resolve against
+the same document the reader is looking at, instead of a separately-fetched room
+file (the `url="../index.html"` workaround is gone).
+
+Two things learned on the way:
+
+- **HTML comments don't nest.** The room markup's own section comments had to be
+  stripped when it moved inside the outer comment wrapper — an inner `-->` would
+  have terminated the whole thing and dumped raw JML into the visible page.
+- **The engine's `<janus-viewer>` parse path didn't survive the comment.** The
+  fireboxroom regex tradition tolerated comment-wrapped markup by accident of
+  extraction order (the regex plucks the block *out of* the comment); the newer
+  janus-viewer path extracts the whole element — comment markers included — and
+  DOMParser then treats the markup as a comment node: empty room, default sky,
+  the ocean again. Fixed upstream in janusweb's `room.js` (strip comment markers
+  in the janus-viewer branch, pending release); until the site pins a release
+  containing it, `reveal.js` carries a small parser shim, clearly marked TEMP.
