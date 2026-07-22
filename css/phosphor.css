@@ -426,7 +426,7 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   border: 1px solid var(--line);
   backdrop-filter: blur(3px);
-  margin-bottom: 2.5rem;
+  margin-bottom: 100rem;   /* long gaps between sections = time in the world between snaps */
 }
 .room-live .site-footer { background: color-mix(in srgb, var(--bg) 85%, transparent); }
 /* the engine adds its own body classes; never let it break document scroll */

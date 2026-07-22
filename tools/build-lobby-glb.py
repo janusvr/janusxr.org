@@ -39,6 +39,7 @@ M_FLOOR = mat('floor', [0.10, 0.12, 0.10])
 M_WALL = mat('wall', [0.085, 0.10, 0.085])
 M_STRUCT = mat('structure', [0.22, 0.26, 0.22])
 M_TRIM = mat('trim-phosphor', [0.05, 0.2, 0.09], emissive=[0.26, 1.0, 0.43], rough=0.5)
+M_TRIM_DIM = mat('trim-phosphor-dim', [0.04, 0.12, 0.06], emissive=[0.05, 0.22, 0.09], rough=0.6)
 M_COIN = mat('coin-phosphor', [0.07, 0.3, 0.12], emissive=[0.26, 1.0, 0.43], rough=0.4)
 
 # ---- layout parameters (must match room/lobby.html anchors) ----------------
@@ -97,12 +98,42 @@ def xz(poly_mesh):
 
 parts = []
 
-# ---- plaza floor: disc with phosphor ring inlay ----------------------------
+# ---- plaza floor: disc etched like a circuit board -------------------------
+import random as _rnd
+_rnd.seed(4444)
+
 disc = Point(0, 0).buffer(PLAZA_R, resolution=48)
 ring = Point(0, 0).buffer(4.9, resolution=48).difference(Point(0, 0).buffer(4.6, resolution=48))
 plaza = disc.difference(ring)
 parts.append(place(xz(extrude(plaza, FLOOR_T)), M_FLOOR, (0, -FLOOR_T, 0)))
 parts.append(place(xz(extrude(ring, FLOOR_T + 0.02)), M_TRIM, (0, -FLOOR_T, 0)))
+
+# faint concentric radar rings echoing the monument ring
+for rr in (8.2, 11.6, 15.2):
+    radar = Point(0, 0).buffer(rr + 0.08, resolution=48).difference(
+        Point(0, 0).buffer(rr - 0.08, resolution=48))
+    parts.append(place(xz(extrude(radar, 0.02)), M_TRIM_DIM))
+
+# PCB traces: radial runs with tangential jogs, ending in pads
+def polar(r, deg):
+    a = math.radians(deg)
+    return (r * math.sin(a), -r * math.cos(a))   # shapely XY == world X,-Z
+
+traces = []
+for k in range(26):
+    th = _rnd.uniform(0, 360)
+    r1 = 5.2
+    r2 = _rnd.uniform(6.5, 11.5)
+    th2 = th + _rnd.choice([-1, 1]) * _rnd.uniform(8, 24)
+    r3 = _rnd.uniform(12.5, 16.4)
+    pts = [polar(r1, th), polar(r2, th)]
+    steps = 6
+    for s in range(1, steps + 1):
+        pts.append(polar(r2, th + (th2 - th) * s / steps))
+    pts.append(polar(r3, th2))
+    traces.append(LineString(pts).buffer(0.06, resolution=4))
+    traces.append(Point(polar(r3, th2)).buffer(0.18, resolution=8))
+parts.append(place(xz(extrude(unary_union(traces), 0.02)), M_TRIM_DIM))
 
 # ---- entry corridor (south = +z; shapely +y maps to world -z through xz()) --
 z0, z1 = CORRIDOR_Z
@@ -148,10 +179,23 @@ for name, deg in WINGS.items():
         end = box(-WING_W / 2 - 0.2, WING_LEN / 2 - 0.4, WING_W / 2 + 0.2, WING_LEN / 2)
         parts.append(place(xz(extrude(end, WALL_H)), M_WALL, (c[0], 0, c[2]), R))
 
-    # arched mouth where the wing meets the plaza (r = 14)
-    mouth = face_center(extrude(arch_frame(WING_W + 1.2, 6.2, 6.0, 2.8), 0.45), 0.45)
+    # circular portal doorway where the wing meets the plaza (r = 14) —
+    # the coin's echo: every threshold out of the plaza is a portal ring
+    HOLE_R, HOLE_CY = 3.3, 2.7
+    pw = box(-(WING_W + 1.2) / 2, 0, (WING_W + 1.2) / 2, 6.4).difference(
+        Point(0, HOLE_CY).buffer(HOLE_R, resolution=36))
+    mouth = face_center(extrude(pw, 0.45), 0.45)
     mp = d * 14.0
     parts.append(place(mouth, M_STRUCT, (mp[0], 0, mp[2]), rot_y(180 - deg)))
+    liner = Point(0, HOLE_CY).buffer(HOLE_R + 0.14, resolution=36).difference(
+        Point(0, HOLE_CY).buffer(HOLE_R, resolution=36)).intersection(
+        box(-(WING_W + 1.2) / 2, 0.02, (WING_W + 1.2) / 2, 6.38))
+    parts.append(place(face_center(extrude(liner, 0.2), 0.2), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
+
+    # pergola rib beams over the wing interior
+    for ly in (-6.5, -3.5, -0.5, 2.5, 5.5, 8.0):
+        beam = box(-WING_W / 2 - 0.2, ly - 0.14, WING_W / 2 + 0.2, ly + 0.14)
+        parts.append(place(xz(extrude(beam, 0.35)), M_STRUCT, (c[0], WALL_H - 0.35, c[2]), R))
 
 # ---- mezzanine: annulus walkway + rail + ramps -----------------------------
 walk = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
@@ -186,6 +230,27 @@ parts.append(place(xz(extrude(lip, 0.05)), M_TRIM, (0, 0.9, 0)))
 parts.append(place(xz(extrude(ngon(1.35, rot=0), 0.8)), M_STRUCT))
 parts.append(place(xz(extrude(ngon(PED_R * 0.85, rot=0), 3.4)), M_STRUCT, (0, 0.8, 0)))
 
+# beacon: a thin light shaft rising from the pedestal through the coin into the
+# sky, with halo rings ascending above — the plaza's weenie, visible everywhere
+parts.append(place(xz(extrude(ngon(0.06, n=8), 36.0)), M_TRIM, (0, 4.2, 0)))
+for hy, hr in ((9.6, 1.5), (11.4, 1.1), (13.4, 0.75)):
+    halo = ngon(hr + 0.09, n=16, rot=0).difference(ngon(hr, n=16, rot=0))
+    parts.append(place(xz(extrude(halo, 0.08)), M_TRIM, (0, hy, 0)))
+
+# curved benches in the two path-less gaps (W and NW) — the social floor
+def wedge(deg_center, deg_span, r0, r1):
+    pts = [(0, 0)]
+    for s in range(13):
+        a = deg_center - deg_span / 2 + deg_span * s / 12
+        pts.append(polar(r1 + 1, a))
+    w = Polygon(pts)
+    ann = Point(0, 0).buffer(r1, resolution=48).difference(Point(0, 0).buffer(r0, resolution=48))
+    return ann.intersection(w)
+
+for bc in (270, 315):
+    parts.append(place(xz(extrude(wedge(bc, 26, 7.1, 7.75), 0.45)), M_STRUCT))
+    parts.append(place(xz(extrude(wedge(bc, 26, 7.7, 7.78), 0.47)), M_TRIM_DIM))
+
 # ---- info booth ------------------------------------------------------------
 booth = trimesh.creation.box(extents=[1.4, 2.2, 0.35])
 parts.append(place(booth, M_STRUCT, (4.5, 1.1, 4.5), rot_y(-45)))
@@ -219,6 +284,15 @@ for b in MID_BEARINGS:
     p2 = d * 15.6
     parts.append(place(xz(extrude(ngon(0.38, n=8), 5.6)), M_STRUCT, (p2[0], 0, p2[2])))
     parts.append(place(xz(extrude(ngon(0.55, n=8), 0.18)), M_TRIM, (p2[0], 5.6, p2[2])))
+    # banner fin hanging inward from the pillar top (house style: banners aloft)
+    l = np.array([d[2], 0.0, -d[0]])
+    fin = trimesh.creation.box(extents=[0.08, 2.6, 0.9])
+    yaw = math.degrees(math.atan2(d[0], -d[2]))
+    fp = d * 14.9
+    parts.append(place(fin, M_WALL, (fp[0], 4.1, fp[2]), rot_y(-yaw)))
+    edge = trimesh.creation.box(extents=[0.1, 2.6, 0.08])
+    ep = d * 14.42
+    parts.append(place(edge, M_TRIM_DIM, (ep[0], 4.1, ep[2]), rot_y(-yaw)))
 
 # ---- mezzanine outer rail --------------------------------------------------
 orail = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
@@ -311,6 +385,11 @@ for sx in (-1, 1):
     ramp = trimesh.creation.box(extents=[RAMP_W, MEZZ_T, length])
     t = trimesh.transformations.rotation_matrix(-pitch, [1, 0, 0])
     cparts.append(place(ramp, M_COL, (sx * 11.5, MEZZ_Y / 2 - MEZZ_T / 2, (15.5 + 4.0) / 2), t))
+
+for bc in (270, 315):   # bench proxies
+    bx, bz = polar(7.45, bc)
+    cparts.append(place(trimesh.creation.box(extents=[3.6, 0.45, 0.7]), M_COL,
+                        (bx, 0.225, bz), rot_y(-(bc + 90))))
 
 cparts.append(place(xz(extrude(ngon(BASIN_R), 0.9)), M_COL))          # basin: solid drum
 cparts.append(place(xz(extrude(ngon(PED_R, rot=0), 4.2)), M_COL))     # pedestal
