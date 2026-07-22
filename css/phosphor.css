@@ -122,8 +122,14 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   text-decoration: none;
   color: var(--grey);
   font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
 }
 .site-nav a:hover { color: var(--green-soft); }
+.site-nav a.active {
+  color: var(--green);
+  border-bottom-color: var(--green-dim);
+  text-shadow: var(--glow);
+}
 
 .btn {
   display: inline-block;

@@ -52,6 +52,39 @@ var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matche
   type(items[idx], 0);
 })();
 
+/* --- scroll spy: highlight the active section in the nav ------ */
+(function () {
+  var links = Array.prototype.slice.call(
+    document.querySelectorAll('.site-nav a[href^="#"]'));
+  if (!links.length) return;
+  var targets = links.map(function (a) {
+    return { link: a, el: document.getElementById(a.getAttribute('href').slice(1)) };
+  }).filter(function (t) { return t.el; });
+
+  function update() {
+    var mid = window.innerHeight / 2;
+    var current = null;
+    for (var i = 0; i < targets.length; i++) {
+      if (targets[i].el.getBoundingClientRect().top <= mid) current = targets[i];
+    }
+    var doc = document.documentElement;
+    if (window.scrollY + window.innerHeight >= doc.scrollHeight - 4) {
+      current = targets[targets.length - 1];
+    }
+    targets.forEach(function (t) {
+      t.link.classList.toggle('active', t === current);
+    });
+  }
+
+  var pending = false;
+  window.addEventListener('scroll', function () {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () { pending = false; update(); });
+  }, { passive: true });
+  update();
+})();
+
 /* --- live project activity from GitHub ----------------------- */
 (function () {
   var box = document.getElementById('build-activity');
