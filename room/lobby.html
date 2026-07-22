@@ -17,8 +17,34 @@
 </Assets>
 <Room js_id="plaza" pos="2 0.5 6" fwd="-0.2 0 -0.98" fog="true" fog_mode="exp" fog_density="0.006" fog_col="#0c0f0c">
 
-  <!-- ===== architecture ===== -->
-  <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" collision_id="lobby" />
+  <!-- ===== architecture (visual only — collision is the proxy boxes below) ===== -->
+  <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+
+  <!-- ===== collision proxies =====
+       Invisible primitive boxes. Mesh colliders (even low-poly ones) degenerate the
+       physics broadphase octree: large flat overlapping AABBs subdivide to max depth
+       and _collectPairs dominates the frame (profiled at 93% CPU, 0.2fps). Primitive
+       boxes with distinct AABBs stay on the fast path. -->
+  <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-wing-whatis"   pos="-16.26 -0.24 16.26" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+  <Object id="cube" js_id="col-wing-explore"  pos="0 -0.24 -23"       scale="8 0.48 18" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-wing-get"      pos="16.26 -0.24 -16.26" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
+  <Object id="cube" js_id="col-wing-build"    pos="23 -0.24 0"        scale="8 0.48 18" visible="false" collision_id="cube" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
+  <Object id="cube" js_id="col-wing-timeline" pos="16.26 -0.24 16.26" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 0.7071" />
+  <Object id="cube" js_id="col-mezz-1" pos="4.07 3.85 -9.82"  scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="-0.3827 0 0.9239" ydir="0 1 0" zdir="-0.9239 0 -0.3827" />
+  <Object id="cube" js_id="col-mezz-2" pos="9.82 3.85 -4.07"  scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="-0.9239 0 0.3827" ydir="0 1 0" zdir="-0.3827 0 -0.9239" />
+  <Object id="cube" js_id="col-mezz-3" pos="9.82 3.85 4.07"   scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="-0.9239 0 -0.3827" ydir="0 1 0" zdir="0.3827 0 -0.9239" />
+  <Object id="cube" js_id="col-mezz-4" pos="4.07 3.85 9.82"   scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="-0.3827 0 -0.9239" ydir="0 1 0" zdir="0.9239 0 -0.3827" />
+  <Object id="cube" js_id="col-mezz-5" pos="-4.07 3.85 9.82"  scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="0.3827 0 -0.9239" ydir="0 1 0" zdir="0.9239 0 0.3827" />
+  <Object id="cube" js_id="col-mezz-6" pos="-9.82 3.85 4.07"  scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="0.9239 0 -0.3827" ydir="0 1 0" zdir="0.3827 0 0.9239" />
+  <Object id="cube" js_id="col-mezz-7" pos="-9.82 3.85 -4.07" scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="0.9239 0 0.3827" ydir="0 1 0" zdir="-0.3827 0 0.9239" />
+  <Object id="cube" js_id="col-mezz-8" pos="-4.07 3.85 -9.82" scale="3 0.3 8.8" visible="false" collision_id="cube" xdir="0.3827 0 0.9239" ydir="0 1 0" zdir="-0.9239 0 0.3827" />
+  <Object id="cube" js_id="col-ramp-w" pos="-9.8 1.9 9.5" scale="3 0.2 11.7" visible="false" collision_id="cube" xdir="-1 0 0" ydir="0 0.940 0.342" zdir="0 0.342 -0.940" />
+  <Object id="cube" js_id="col-ramp-e" pos="9.8 1.9 9.5"  scale="3 0.2 11.7" visible="false" collision_id="cube" xdir="-1 0 0" ydir="0 0.940 0.342" zdir="0 0.342 -0.940" />
+  <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
 
   <!-- ===== monument ===== -->
   <Object id="coin" js_id="monument-coin" pos="0 6.2 0" rotate_deg_per_sec="20" rotate_axis="0 1 0" lighting="false" />

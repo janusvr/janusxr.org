@@ -197,6 +197,46 @@ os.makedirs(OUT_DIR, exist_ok=True)
 lobby_path = os.path.join(OUT_DIR, 'lobby.glb')
 lobby.export(lobby_path)
 
+# ---- collision mesh: same layout, coarse shapes, few tris ------------------
+# Mesh colliders are tested per-frame by physics; the visual mesh's 12k tris
+# stalled the engine to sub-1fps. This stays in the low hundreds.
+M_COL = mat('collision', [1.0, 0.0, 1.0])
+cparts = []
+
+cparts.append(place(xz(extrude(ngon(PLAZA_R, n=12), FLOOR_T)), M_COL, (0, -FLOOR_T, 0)))
+cparts.append(place(xz(extrude(box(-CORRIDOR_W / 2, -z1, CORRIDOR_W / 2, -(z0 - 2)), FLOOR_T)), M_COL, (0, -FLOOR_T, 0)))
+for sx in (-1, 1):
+    cparts.append(place(xz(extrude(box(sx * CORRIDOR_W / 2 - 0.2, -z1, sx * CORRIDOR_W / 2 + 0.2, -z0), WALL_H)), M_COL))
+
+for name, deg in WINGS.items():
+    d = bearing_dir(deg)
+    c = d * WING_R
+    R = rot_y(-deg)
+    cparts.append(place(xz(extrude(box(-WING_W / 2, -WING_LEN / 2, WING_W / 2, WING_LEN / 2), FLOOR_T)), M_COL, (c[0], -FLOOR_T, c[2]), R))
+    for sx in (-1, 1):
+        cparts.append(place(xz(extrude(box(sx * WING_W / 2 - 0.2, -WING_LEN / 2, sx * WING_W / 2 + 0.2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
+    if name != 'explore':
+        cparts.append(place(xz(extrude(box(-WING_W / 2, WING_LEN / 2 - 0.4, WING_W / 2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
+
+mezz_walk_c = ngon(MEZZ_R[1], n=12).difference(ngon(MEZZ_R[0], n=12))
+cparts.append(place(xz(extrude(mezz_walk_c, MEZZ_T)), M_COL, (0, MEZZ_Y - MEZZ_T, 0)))
+rail_c = ngon(MEZZ_R[0] + 0.12, n=12).difference(ngon(MEZZ_R[0], n=12))
+cparts.append(place(xz(extrude(rail_c, RAIL_H)), M_COL, (0, MEZZ_Y, 0)))
+for sx in (-1, 1):
+    ramp = trimesh.creation.box(extents=[RAMP_W, MEZZ_T, length])
+    t = trimesh.transformations.rotation_matrix(-pitch, [1, 0, 0])
+    cparts.append(place(ramp, M_COL, (sx * 11.5, MEZZ_Y / 2 - MEZZ_T / 2, (15.5 + 4.0) / 2), t))
+
+cparts.append(place(xz(extrude(ngon(BASIN_R), 0.9)), M_COL))          # basin: solid drum
+cparts.append(place(xz(extrude(ngon(PED_R, rot=0), 4.2)), M_COL))     # pedestal
+cparts.append(place(trimesh.creation.box(extents=[1.4, 2.2, 0.35]), M_COL, (4.5, 1.1, 4.5), rot_y(-45)))
+
+collision = trimesh.Scene()
+for i, p in enumerate(cparts):
+    collision.add_geometry(p, node_name=f'col-{i:03d}')
+collision_path = os.path.join(OUT_DIR, 'lobby-collision.glb')
+collision.export(collision_path)
+
 # ---- the coin: Janus mark stroked + extruded inside a rim ------------------
 paths, _ = svg2paths(SVG)
 strokes = []
@@ -229,7 +269,7 @@ for i, p in enumerate(coin_parts):
 coin_path = os.path.join(OUT_DIR, 'coin.glb')
 coin.export(coin_path)
 
-for path in (lobby_path, coin_path):
+for path in (lobby_path, coin_path, collision_path):
     scene = trimesh.load(path)
     tris = sum(len(g.faces) for g in scene.geometry.values())
     print(f'{os.path.relpath(path, ROOT)}: {len(scene.geometry)} meshes, {tris} tris, '

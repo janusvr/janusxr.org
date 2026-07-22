@@ -305,3 +305,32 @@ Debugging notes for posterity:
 Verified via puppeteer captures: hero framing with the coin spinning over the plaza,
 scroll-snap to the Build bay with the document translucent over the world, and the
 full Enter handoff — free-roam at spawn, collision holding, exit chip live.
+
+## 2026-07-21 — Postmortem: the physics collapse
+
+Playtesting the glTF room found the scene "collapsing" — the immediate suspicion was
+an object explosion. Measurement said otherwise: 1 engine instance, 23 room objects,
+200 scene nodes, all stable… at **0.2 frames per second**. Not too many objects — one
+catastphrophically expensive frame.
+
+A CPU profile named the culprit instantly: **93.5% of all time in `_collectPairs`**,
+the physics broadphase. The mechanism: the octree inserts each body into every leaf
+its AABB overlaps, and subdivides any leaf over capacity. The glTF room's mesh
+collider is a set of large, flat, mutually-overlapping shapes — a 34m plaza disc, a
+26m mezzanine ring, five wing slabs — which no amount of subdivision can separate.
+The tree subdivides to max depth across the entire overlap volume, and pair
+collection then walks an enormous tree doing string-keyed dedup per leaf. Triangle
+count was irrelevant: a 592-tri collision mesh was barely better (0.4fps) than the
+12k-tri visual mesh (0.2fps).
+
+The fix: **primitive proxy collision**. The glTF stays visual-only; ~20 invisible
+`collision_id="cube"` boxes (the original cube-greybox layout, which the octree
+separates cleanly since floors and mezzanine live in distinct y-slabs) carry all the
+physics. Result: 9.2fps under software rendering — identical to running with no
+collision at all. Physics is free again; free-roam verified standing on the proxies.
+
+Lessons recorded: mesh colliders are currently a trap for architecture-scale
+geometry in JanusWeb — use primitive proxies for buildings until the broadphase
+handles large static AABBs (engine issue to be filed upstream; the profile and
+reproduction live in this repo's history). And measure before theorizing: the
+"too many objects" hypothesis was reasonable, popular, and wrong.
