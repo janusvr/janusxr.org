@@ -37,28 +37,26 @@ south **entry corridor**. The document-mode camera viewpoints orbit low around t
 central fountain.
 
 ```
-                        EXPLORE
-                      (departure
-                        gates)
+                          GET
+                       (mirror)
                           N
-        WHAT-IS                       GET
-       (obelisk)    ~~~~~~~~~~~    (mirror)
-            SW      (   PLAZA    )     NE
-              \    (  vp orbit  )    /
-                \  (    ....    )  /
-                   (  monument  )
+      EXPLORE                         BUILD
+    (departure      ~~~~~~~~~~~    (three halls +
+      gates)        (   PLAZA    )   open-source)
+           WNW      (  vp orbit  )     ENE
+              \    (    ....    )    /
+                \  (  monument  )  /
                    ( + fountain )
                 /  (            )  \
               /     ~~~~~~~~~~~      \
-            W                          E/SE
-      (open floor,        BUILD (three halls +
-       social space)         open-source hall)
-              |                TIMELINE (subway
-              |                 station gallery)
+           SSW                         SSE
+        WHAT-IS                    TIMELINE
+       (obelisk)                (subway station)
+              |
         ENTRY CORRIDOR
         ("main street")
               |
-              S  ← hero camera threshold
+              S  ← hero camera threshold == spawn
 ```
 
 Wing bearings (entry at south, 180°): evenly distributed at 72° — What-is (216°) →
@@ -76,7 +74,7 @@ Threshold → orbit → floor. Specified explicitly; this is the reveal.
 
 1. **Threshold (hero).** The document-mode camera starts at the top of the entry
    corridor, elevated at the plaza's edge — Main Street framing the castle. In view:
-   the monument (logo coin + fountain), the plaza floor, Explore's daylight beyond,
+   the monument (logo coin + fountain), the plaza floor, Get's Mirror beyond,
    wings partially disclosed at the periphery. At first paint this is a static hero
    image; when the engine hydrates, the same framing comes alive (water moving,
    banners, avatars present).
@@ -84,8 +82,9 @@ Threshold → orbit → floor. Specified explicitly; this is the reveal.
    a low circle around the fountain, looking out through that wing's portal doorway
    (see §6). The plaza is progressively disclosed as the orbit sweeps; native scroll
    semantics keep working throughout.
-3. **Floor (Enter).** The Enter affordance descends the camera from wherever it is on
-   the ring to the spawn point on the plaza floor near the fountain, facing Explore.
+3. **Floor (Enter).** The Enter affordance hands over control in place — spawn and the
+   hero viewpoint are the same spot at the corridor threshold, so nothing moves but
+   agency.
    Presence, full navigation, the wings now walkable. Exiting free-roam returns the
    camera to the nearest orbit viewpoint and restores scroll position.
 
