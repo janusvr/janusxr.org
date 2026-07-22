@@ -113,8 +113,10 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
 - **Scroll orbit.** The document-mode viewpoints circle low around the fountain
   (~4m radius, ~3.6m up), each looking out through its wing's portal doorway — close
   to the monument, clear of floor traffic, with nothing occluding the wings. (An
-  earlier mezzanine ring played this role; it framed the coin nicely but occluded
-  the scene too much, and was cut.)
+  earlier walkable mezzanine played this role; it occluded too much and was cut,
+  survived by the **halo ring** — a smaller, purely decorative band floating
+  unsupported over the plaza at ~7.5m radius, broken across the south so the
+  Main Street sightline stays clear.)
 - **Ambient life:** fountain audio, palms/planters, hanging banners with slow motion,
   sky openings overhead, warm pooled lighting. Environmental life only — real visitors
   provide the rest.

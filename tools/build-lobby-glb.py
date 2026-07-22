@@ -212,9 +212,32 @@ for name, deg in WINGS.items():
         beam = box(-WING_W / 2 - 0.2, ly - 0.14, WING_W / 2 + 0.2, ly + 0.14)
         parts.append(place(xz(extrude(beam, 0.35)), M_STRUCT, (c[0], WALL_H - 0.35, c[2]), R))
 
-# (The mezzanine was cut entirely — it framed the coin nicely but occluded the
-# scene too much. The scroll viewpoints now orbit low around the fountain
-# instead; see the vp-* markers in room/lobby.html.)
+# ---- the halo ring ---------------------------------------------------------
+# Decorative successor to the old mezzanine: a thin band floating over the
+# plaza with no supports (virtual architecture owes gravity nothing), broken
+# across the south so it never crosses the Main Street sightline. Not walkable.
+RING_R = (7.2, 7.9)
+RING_Y = 5.2
+RING_GAP = (160.0, 200.0)
+
+def sector_poly(deg0, deg1, radius=24.0):
+    pts = [(0.0, 0.0)]
+    for s in range(13):
+        pts.append(polar(radius, deg0 + (deg1 - deg0) * s / 12))
+    return Polygon(pts)
+
+RING_CUT = sector_poly(RING_GAP[0], RING_GAP[1])
+
+halo_band = Point(0, 0).buffer(RING_R[1], resolution=64).difference(
+    Point(0, 0).buffer(RING_R[0], resolution=64)).difference(RING_CUT)
+parts.append(place(xz(extrude(halo_band, 0.2)), M_STRUCT, (0, RING_Y, 0)))
+halo_glow = Point(0, 0).buffer(7.62, resolution=64).difference(
+    Point(0, 0).buffer(7.48, resolution=64)).difference(RING_CUT)
+parts.append(place(xz(extrude(halo_glow, 0.04)), M_TRIM_DIM, (0, RING_Y + 0.2, 0)))
+# glowing pads at the break
+for enddeg in RING_GAP:
+    px, pz = polar((RING_R[0] + RING_R[1]) / 2, enddeg + (1.2 if enddeg == RING_GAP[0] else -1.2))
+    parts.append(place(xz(extrude(ngon(0.28, n=8), 0.24)), M_TRIM, (px, RING_Y - 0.02, pz)))
 
 # ---- monument: octagonal basin + pedestal ----------------------------------
 basin_wall = ngon(BASIN_R).difference(ngon(BASIN_R - 0.35))
