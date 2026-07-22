@@ -62,6 +62,12 @@ COIN_Y = 7.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
 WINGS = {'whatis': 216, 'explore': 288, 'get': 0, 'build': 72, 'timeline': 144}
+# per-wing (width, length) overrides; build carries the most content
+WING_DIMS = {'build': (12.0, 26.0)}
+
+def wing_dims(name):
+    w, ln = WING_DIMS.get(name, (WING_W, WING_LEN))
+    return w, ln, 14.0 + ln / 2   # width, length, floor-centre radius
 
 def bearing_dir(deg):
     r = math.radians(deg)
@@ -178,39 +184,42 @@ parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 
 # ---- wings -----------------------------------------------------------------
 for name, deg in WINGS.items():
+    w, ln, wr = wing_dims(name)
     d = bearing_dir(deg)
-    c = d * WING_R
+    c = d * wr
     R = rot_y(-deg)  # rotate +z-length geometry onto the bearing
 
-    floor = box(-WING_W / 2, -WING_LEN / 2, WING_W / 2, WING_LEN / 2)
+    floor = box(-w / 2, -ln / 2, w / 2, ln / 2)
     f = xz(extrude(floor, FLOOR_T))
     parts.append(place(f, M_FLOOR, (c[0], -FLOOR_T, c[2]), R))
 
     for sx in (-1, 1):
-        wall = box(sx * WING_W / 2 - 0.2, -WING_LEN / 2, sx * WING_W / 2 + 0.2, WING_LEN / 2)
+        wall = box(sx * w / 2 - 0.2, -ln / 2, sx * w / 2 + 0.2, ln / 2)
         parts.append(place(xz(extrude(wall, WALL_H)), M_WALL, (c[0], 0, c[2]), R))
 
     if name != 'explore':  # explore stays open to the sky/horizon
-        end = box(-WING_W / 2 - 0.2, WING_LEN / 2 - 0.4, WING_W / 2 + 0.2, WING_LEN / 2)
+        end = box(-w / 2 - 0.2, ln / 2 - 0.4, w / 2 + 0.2, ln / 2)
         parts.append(place(xz(extrude(end, WALL_H)), M_WALL, (c[0], 0, c[2]), R))
 
     # circular portal doorway where the wing meets the plaza (r = 14) —
     # the coin's echo: every threshold out of the plaza is a portal ring
-    HOLE_R, HOLE_CY = 3.3, 2.7
-    pw = box(-(WING_W + 1.2) / 2, 0, (WING_W + 1.2) / 2, 6.4).difference(
+    HOLE_R, HOLE_CY = (3.8, 2.9) if name == 'build' else (3.3, 2.7)
+    pw = box(-(w + 1.2) / 2, 0, (w + 1.2) / 2, 6.4).difference(
         Point(0, HOLE_CY).buffer(HOLE_R, resolution=36))
     mouth = face_center(extrude(pw, 0.45), 0.45)
     mp = d * 14.0
     parts.append(place(mouth, M_STRUCT, (mp[0], 0, mp[2]), rot_y(180 - deg)))
     liner = Point(0, HOLE_CY).buffer(HOLE_R + 0.14, resolution=36).difference(
         Point(0, HOLE_CY).buffer(HOLE_R, resolution=36)).intersection(
-        box(-(WING_W + 1.2) / 2, 0.02, (WING_W + 1.2) / 2, 6.38))
+        box(-(w + 1.2) / 2, 0.02, (w + 1.2) / 2, 6.38))
     parts.append(place(face_center(extrude(liner, 0.2), 0.2), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
 
     # pergola rib beams over the wing interior
-    for ly in (-6.5, -3.5, -0.5, 2.5, 5.5, 8.0):
-        beam = box(-WING_W / 2 - 0.2, ly - 0.14, WING_W / 2 + 0.2, ly + 0.14)
+    ly = -(ln / 2 - 2.0)
+    while ly < ln / 2 - 0.5:
+        beam = box(-w / 2 - 0.2, ly - 0.14, w / 2 + 0.2, ly + 0.14)
         parts.append(place(xz(extrude(beam, 0.35)), M_STRUCT, (c[0], WALL_H - 0.35, c[2]), R))
+        ly += 3.0
 
 # ---- the halo ring ---------------------------------------------------------
 # Decorative successor to the old mezzanine: a thin band floating over the
@@ -326,15 +335,18 @@ def wing_place(mesh, material, local_x, y, local_r, deg):
     parts.append(place(mesh, material, (p[0], y, p[2]), rot_y(180 - deg)))
 
 for name, deg in WINGS.items():
+    w, ln, wr = wing_dims(name)
     d = bearing_dir(deg)
-    c = d * WING_R
+    c = d * wr
     R = rot_y(-deg)
 
-    # pilasters along both side walls
-    for ly in (-6.0, -1.5, 3.0):   # wing-local radial offsets from centre
+    # pilasters along both side walls, evenly spaced for the wing's length
+    ly = -(ln / 2 - 3.0)
+    while ly < ln / 2 - 1.5:
         for sx in (-1, 1):
-            pil = box(sx * (WING_W / 2 - 0.35) - 0.18, ly - 0.25, sx * (WING_W / 2 - 0.35) + 0.18, ly + 0.25)
+            pil = box(sx * (w / 2 - 0.35) - 0.18, ly - 0.25, sx * (w / 2 - 0.35) + 0.18, ly + 0.25)
             parts.append(place(xz(extrude(pil, 4.6)), M_STRUCT, (c[0], 0, c[2]), R))
+        ly += 4.5
 
     if name == 'explore':
         # departure gate frames around the portals
@@ -358,9 +370,11 @@ for name, deg in WINGS.items():
         wing_place(pframe, M_STRUCT, 0, 0, 31.5, deg)
 
     if name == 'build':
-        # three hallway dividers — the Quake three-door select, made physical
-        for lx in (-1.33, 1.33):
-            div = box(lx - 0.15, 1.0, lx + 0.15, WING_LEN / 2 - 0.6)
+        # three hallway dividers — the Quake three-door select, made physical.
+        # Halls occupy the wing's middle (r 28..34); the open-source chamber
+        # opens up behind them.
+        for lx in (-1.93, 1.93):
+            div = box(lx - 0.15, 1.0, lx + 0.15, 7.0)
             parts.append(place(xz(extrude(div, 4.0)), M_STRUCT, (c[0], 0, c[2]), R))
 
     # ---- wing interiors: first exhibit furniture (SPACE.md §5) -------------
@@ -409,16 +423,16 @@ for name, deg in WINGS.items():
         parts.append(place(vdoor, M_WALL, at(3.55, 0, 25.0), rot_y(face_yaw(-l))))
     elif name == 'build':
         # glowing headers over the three hall entrances
-        for lx in (-2.67, 0.0, 2.67):
-            parts.append(place(trimesh.creation.box(extents=[2.2, 0.16, 0.12]), M_TRIM,
-                               at(lx, 4.15, 23.9), rot_y(-deg)))
-        # the infrastructure gallery: server racks humming at the far end
-        for lr in (28.5, 30.0):
+        for lx in (-3.87, 0.0, 3.87):
+            parts.append(place(trimesh.creation.box(extents=[3.0, 0.16, 0.12]), M_TRIM,
+                               at(lx, 4.15, 27.7), rot_y(-deg)))
+        # the open-source chamber: server racks humming along its walls
+        for lr in (36.5, 38.0):
             for sx in (-1, 1):
                 parts.append(place(trimesh.creation.box(extents=[0.9, 2.1, 0.7]), M_WALL,
-                                   at(sx * 2.6, 1.05, lr), rot_y(-deg)))
+                                   at(sx * 4.6, 1.05, lr), rot_y(-deg)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM,
-                                   at(sx * 2.6, 2.15, lr), rot_y(-deg)))
+                                   at(sx * 4.6, 2.15, lr), rot_y(-deg)))
     elif name == 'timeline':
         # station platform edge, glowing across the wing
         edge = box(-WING_W / 2 + 0.3, 2.6, WING_W / 2 - 0.3, 2.9)
@@ -447,14 +461,15 @@ for sx in (-1, 1):
     cparts.append(place(xz(extrude(box(sx * CORRIDOR_W / 2 - 0.2, -z1, sx * CORRIDOR_W / 2 + 0.2, -z0), WALL_H)), M_COL))
 
 for name, deg in WINGS.items():
+    w, ln, wr = wing_dims(name)
     d = bearing_dir(deg)
-    c = d * WING_R
+    c = d * wr
     R = rot_y(-deg)
-    cparts.append(place(xz(extrude(box(-WING_W / 2, -WING_LEN / 2, WING_W / 2, WING_LEN / 2), FLOOR_T)), M_COL, (c[0], -FLOOR_T, c[2]), R))
+    cparts.append(place(xz(extrude(box(-w / 2, -ln / 2, w / 2, ln / 2), FLOOR_T)), M_COL, (c[0], -FLOOR_T, c[2]), R))
     for sx in (-1, 1):
-        cparts.append(place(xz(extrude(box(sx * WING_W / 2 - 0.2, -WING_LEN / 2, sx * WING_W / 2 + 0.2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
+        cparts.append(place(xz(extrude(box(sx * w / 2 - 0.2, -ln / 2, sx * w / 2 + 0.2, ln / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
     if name != 'explore':
-        cparts.append(place(xz(extrude(box(-WING_W / 2, WING_LEN / 2 - 0.4, WING_W / 2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
+        cparts.append(place(xz(extrude(box(-w / 2, ln / 2 - 0.4, w / 2, ln / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
 
 for bc in (252, 324):   # bench proxies
     bx, bz = polar(7.45, bc)
