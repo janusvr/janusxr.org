@@ -157,8 +157,9 @@ def face_center(mesh_2d_extruded, thickness):
     m.apply_translation([0, 0, -thickness / 2])
     return m
 
-# corridor mouth arch (facing the plaza, at z0)
-arch = face_center(extrude(arch_frame(CORRIDOR_W + 2, 6.5, 5.6, 2.6), 0.45), 0.45)
+# corridor mouth arch (facing the plaza, at z0) — tall enough that the coin and
+# halo rings read through it from anywhere in the corridor
+arch = face_center(extrude(arch_frame(CORRIDOR_W + 2, 10.6, 6.6, 5.2), 0.45), 0.45)
 parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 
 # ---- wings -----------------------------------------------------------------
@@ -259,10 +260,18 @@ parts.append(place(booth, M_STRUCT, (4.5, 1.1, 4.5), rot_y(-45)))
 # DRESSING PASS — everything below is atmosphere, not layout.
 # ============================================================================
 
-# ---- entry corridor: arch ribs + glowing edge strips -----------------------
-rib = face_center(extrude(arch_frame(7.4, 6.8, 6.0, 3.0), 0.25), 0.25)
-for z in range(17, 30, 3):
-    parts.append(place(rib, M_STRUCT, (0, 0, float(z))))
+# ---- entry corridor: crescendo arch ribs + glowing edge strips -------------
+# Ribs grow taller and wider toward the plaza so each frames the next and none
+# occludes the monument — the weenie must own the axial sightline (Main Street
+# rule: nothing closes overhead between you and the castle).
+RIB_ZS = (16.0, 19.5, 23.0, 27.0, 30.5)
+for z in RIB_ZS:
+    f = 1.0 - (z - RIB_ZS[0]) / (RIB_ZS[-1] - RIB_ZS[0])   # 1 nearest the plaza
+    h = 6.6 + 3.6 * f
+    ow = 6.0 + 0.6 * f
+    sh = 2.8 + 2.4 * f
+    rib = face_center(extrude(arch_frame(7.4 + 0.8 * f, h, ow, sh), 0.25), 0.25)
+    parts.append(place(rib, M_STRUCT, (0, 0, z)))
 for sx in (-1, 1):
     strip = box(sx * 3.1 - 0.15, -(z1 - 0.5), sx * 3.1 + 0.15, -z0)
     parts.append(place(xz(extrude(strip, 0.03)), M_TRIM))
