@@ -416,7 +416,7 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   visibility: hidden;
   pointer-events: none;
 }
-.site-header, main, .site-footer { position: relative; z-index: 1; }
+main, .site-footer { position: relative; z-index: 1; }   /* header stays position:fixed */
 
 /* room-live: engine hydrated; the world shows through the document */
 .room-live #room-viewport { visibility: visible; }
