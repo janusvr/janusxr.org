@@ -363,6 +363,70 @@ for name, deg in WINGS.items():
             div = box(lx - 0.15, 1.0, lx + 0.15, WING_LEN / 2 - 0.6)
             parts.append(place(xz(extrude(div, 4.0)), M_STRUCT, (c[0], 0, c[2]), R))
 
+    # ---- wing interiors: first exhibit furniture (SPACE.md §5) -------------
+    l = np.array([d[2], 0.0, -d[0]])
+
+    def at(local_x, y, local_r):
+        p = d * local_r + l * local_x
+        return (p[0], y, p[2])
+
+    def face_yaw(v):
+        return math.degrees(math.atan2(-v[0], -v[2]))
+
+    def plinth(local_x, local_r, h=1.0, w=1.1):
+        parts.append(place(trimesh.creation.box(extents=[w, h, w]), M_STRUCT,
+                           at(local_x, h / 2, local_r), rot_y(-deg)))
+        parts.append(place(trimesh.creation.box(extents=[w + 0.12, 0.06, w + 0.12]), M_TRIM_DIM,
+                           at(local_x, h + 0.03, local_r), rot_y(-deg)))
+
+    if name == 'whatis':
+        # the spectrum dioramas: editor / markup / scripting, along one wall
+        for lr in (18.0, 22.0, 26.0):
+            plinth(-2.2, lr)
+        # the obelisk weenie: a tall column beside the mouth, facing the plaza
+        ob = at(5.8, 0, 15.6)
+        parts.append(place(trimesh.creation.box(extents=[0.9, 7.5, 0.9]), M_STRUCT,
+                           (ob[0], 3.75, ob[2]), rot_y(180 - deg)))
+        parts.append(place(trimesh.creation.box(extents=[0.14, 6.8, 0.08]), M_TRIM,
+                           (ob[0] - d[0] * 0.5, 3.6, ob[2] - d[2] * 0.5), rot_y(180 - deg)))
+    elif name == 'explore':
+        # departure gates along both side walls, awaiting future portals
+        gate_side = face_center(extrude(arch_frame(2.6, 3.2, 1.9, 1.7), 0.25), 0.25)
+        for lr in (21.0, 26.0):
+            for sx in (-1, 1):
+                fdir = -l * sx
+                parts.append(place(gate_side, M_STRUCT, at(sx * 3.4, 0, lr), rot_y(face_yaw(fdir))))
+    elif name == 'get':
+        # the Mirror: a large emissive ring on the end wall, waiting for its surface
+        mring = face_center(extrude(Point(0, 3.2).buffer(3.0, resolution=36).difference(
+            Point(0, 3.2).buffer(2.8, resolution=36)), 0.2), 0.2)
+        parts.append(place(mring, M_TRIM_DIM, at(0, 0, 31.4), rot_y(180 - deg)))
+        # the vault: a small sealed circle door on the side wall
+        vring = face_center(extrude(Point(0, 1.6).buffer(1.2, resolution=24).difference(
+            Point(0, 1.6).buffer(1.0, resolution=24)), 0.25), 0.25)
+        vdoor = face_center(extrude(Point(0, 1.6).buffer(1.0, resolution=24), 0.1), 0.1)
+        parts.append(place(vring, M_TRIM_DIM, at(3.5, 0, 25.0), rot_y(face_yaw(-l))))
+        parts.append(place(vdoor, M_WALL, at(3.55, 0, 25.0), rot_y(face_yaw(-l))))
+    elif name == 'build':
+        # glowing headers over the three hall entrances
+        for lx in (-2.67, 0.0, 2.67):
+            parts.append(place(trimesh.creation.box(extents=[2.2, 0.16, 0.12]), M_TRIM,
+                               at(lx, 4.15, 23.9), rot_y(-deg)))
+        # the infrastructure gallery: server racks humming at the far end
+        for lr in (28.5, 30.0):
+            for sx in (-1, 1):
+                parts.append(place(trimesh.creation.box(extents=[0.9, 2.1, 0.7]), M_WALL,
+                                   at(sx * 2.6, 1.05, lr), rot_y(-deg)))
+                parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM,
+                                   at(sx * 2.6, 2.15, lr), rot_y(-deg)))
+    elif name == 'timeline':
+        # station platform edge, glowing across the wing
+        edge = box(-WING_W / 2 + 0.3, 2.6, WING_W / 2 - 0.3, 2.9)
+        parts.append(place(xz(extrude(edge, 0.03)), M_TRIM_DIM, (c[0], 0, c[2]), R))
+        # era plinths down the platform: the history of Janus as museum dioramas
+        for lr in (19.5, 23.0, 26.5):
+            plinth(0.0, lr, h=0.8, w=1.0)
+
 lobby = trimesh.Scene()
 for i, p in enumerate(parts):
     lobby.add_geometry(p, node_name=f'lobby-{i:03d}')
