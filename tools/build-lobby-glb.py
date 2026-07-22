@@ -157,9 +157,21 @@ def face_center(mesh_2d_extruded, thickness):
     m.apply_translation([0, 0, -thickness / 2])
     return m
 
-# corridor mouth arch (facing the plaza, at z0) — tall enough that the coin and
-# halo rings read through it from anywhere in the corridor
-arch = face_center(extrude(arch_frame(CORRIDOR_W + 2, 10.6, 6.6, 5.2), 0.45), 0.45)
+def broken_arch(width, opening_w, straight_h, band=0.5, gap_frac=0.55):
+    """Columns with arc stubs that spring inward and stop — tops deliberately
+    missing. Virtual architecture doesn't need the keystone; the gap says so."""
+    r = opening_w / 2
+    cols = box(r, 0, width / 2, straight_h).union(box(-width / 2, 0, -r, straight_h))
+    ring = Point(0, straight_h).buffer(r + band, resolution=32).difference(
+        Point(0, straight_h).buffer(r, resolution=32))
+    upper = ring.intersection(box(-width / 2, straight_h, width / 2, straight_h + r + band + 1))
+    gap = opening_w * gap_frac
+    return cols.union(upper).difference(
+        box(-gap / 2, straight_h + 0.05, gap / 2, straight_h + r + band + 2))
+
+# corridor mouth (facing the plaza, at z0) — broken like the ribs; the gateway
+# pylons frame the monument without ever closing over it
+arch = face_center(extrude(broken_arch(CORRIDOR_W + 2, 6.6, 5.2, band=0.6), 0.45), 0.45)
 parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 
 # ---- wings -----------------------------------------------------------------
@@ -198,18 +210,37 @@ for name, deg in WINGS.items():
         beam = box(-WING_W / 2 - 0.2, ly - 0.14, WING_W / 2 + 0.2, ly + 0.14)
         parts.append(place(xz(extrude(beam, 0.35)), M_STRUCT, (c[0], WALL_H - 0.35, c[2]), R))
 
-# ---- mezzanine: annulus walkway + rail + ramps -----------------------------
+# ---- mezzanine: ~320° arc walkway + rail + ramps ---------------------------
+# The ring is cut open across the south so it never crosses the corridor's
+# sightline to the coin. The break is deliberate and celebrated with end posts.
+MEZZ_GAP = (160.0, 200.0)   # degrees of arc removed, centred on the entry axis
+
+def sector_poly(deg0, deg1, radius=24.0):
+    pts = [(0.0, 0.0)]
+    for s in range(13):
+        pts.append(polar(radius, deg0 + (deg1 - deg0) * s / 12))
+    return Polygon(pts)
+
+MEZZ_CUT = sector_poly(MEZZ_GAP[0], MEZZ_GAP[1])
+
 walk = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0], resolution=64))
+    Point(0, 0).buffer(MEZZ_R[0], resolution=64)).difference(MEZZ_CUT)
 parts.append(place(xz(extrude(walk, MEZZ_T)), M_STRUCT, (0, MEZZ_Y - MEZZ_T, 0)))
 
 rail = Point(0, 0).buffer(MEZZ_R[0] + 0.12, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0], resolution=64))
+    Point(0, 0).buffer(MEZZ_R[0], resolution=64)).difference(MEZZ_CUT)
 parts.append(place(xz(extrude(rail, RAIL_H)), M_STRUCT, (0, MEZZ_Y, 0)))
 # glowing handrail cap
 cap = Point(0, 0).buffer(MEZZ_R[0] + 0.16, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0] - 0.04, resolution=64))
+    Point(0, 0).buffer(MEZZ_R[0] - 0.04, resolution=64)).difference(MEZZ_CUT)
 parts.append(place(xz(extrude(cap, 0.06)), M_TRIM, (0, MEZZ_Y + RAIL_H, 0)))
+
+# end posts where the ring breaks
+for enddeg in MEZZ_GAP:
+    for pr in (MEZZ_R[0] + 0.3, MEZZ_R[1] - 0.3):
+        px, pz = polar(pr, enddeg + (1.6 if enddeg == MEZZ_GAP[0] else -1.6))
+        parts.append(place(xz(extrude(ngon(0.14, n=8), RAIL_H + 0.25)), M_STRUCT, (px, MEZZ_Y, pz)))
+        parts.append(place(xz(extrude(ngon(0.2, n=8), 0.08)), M_TRIM, (px, MEZZ_Y + RAIL_H + 0.25, pz)))
 
 # ramps at x = ±11.5 rising north from z=15.5 (y=0) to z=4 (y=MEZZ_Y)
 run = 15.5 - 4.0
@@ -260,17 +291,13 @@ parts.append(place(booth, M_STRUCT, (4.5, 1.1, 4.5), rot_y(-45)))
 # DRESSING PASS — everything below is atmosphere, not layout.
 # ============================================================================
 
-# ---- entry corridor: crescendo arch ribs + glowing edge strips -------------
-# Ribs grow taller and wider toward the plaza so each frames the next and none
-# occludes the monument — the weenie must own the axial sightline (Main Street
-# rule: nothing closes overhead between you and the castle).
+# ---- entry corridor: broken-arch ribs + glowing edge strips ----------------
 RIB_ZS = (16.0, 19.5, 23.0, 27.0, 30.5)
 for z in RIB_ZS:
     f = 1.0 - (z - RIB_ZS[0]) / (RIB_ZS[-1] - RIB_ZS[0])   # 1 nearest the plaza
-    h = 6.6 + 3.6 * f
     ow = 6.0 + 0.6 * f
     sh = 2.8 + 2.4 * f
-    rib = face_center(extrude(arch_frame(7.4 + 0.8 * f, h, ow, sh), 0.25), 0.25)
+    rib = face_center(extrude(broken_arch(7.4 + 0.8 * f, ow, sh), 0.25), 0.25)
     parts.append(place(rib, M_STRUCT, (0, 0, z)))
 for sx in (-1, 1):
     strip = box(sx * 3.1 - 0.15, -(z1 - 0.5), sx * 3.1 + 0.15, -z0)
@@ -303,12 +330,12 @@ for b in MID_BEARINGS:
     ep = d * 14.42
     parts.append(place(edge, M_TRIM_DIM, (ep[0], 4.1, ep[2]), rot_y(-yaw)))
 
-# ---- mezzanine outer rail --------------------------------------------------
+# ---- mezzanine outer rail (respects the southern gap) ----------------------
 orail = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[1] - 0.12, resolution=64))
+    Point(0, 0).buffer(MEZZ_R[1] - 0.12, resolution=64)).difference(MEZZ_CUT)
 parts.append(place(xz(extrude(orail, RAIL_H)), M_STRUCT, (0, MEZZ_Y, 0)))
 ocap = Point(0, 0).buffer(MEZZ_R[1] + 0.04, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[1] - 0.16, resolution=64))
+    Point(0, 0).buffer(MEZZ_R[1] - 0.16, resolution=64)).difference(MEZZ_CUT)
 parts.append(place(xz(extrude(ocap, 0.06)), M_TRIM, (0, MEZZ_Y + RAIL_H, 0)))
 
 # ---- wing dressing ---------------------------------------------------------
