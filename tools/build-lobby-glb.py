@@ -58,7 +58,7 @@ RAIL_H = 1.0
 RAMP_W = 3.0
 BASIN_R = 3.6
 PED_R = 0.9
-COIN_Y = 6.2
+COIN_Y = 8.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
 WINGS = {'whatis': 225, 'explore': 0, 'get': 45, 'build': 90, 'timeline': 135}
@@ -267,7 +267,7 @@ parts.append(place(xz(extrude(ngon(PED_R * 0.85, rot=0), 3.4)), M_STRUCT, (0, 0.
 # beacon: a thin light shaft rising from the pedestal through the coin into the
 # sky, with halo rings ascending above — the plaza's weenie, visible everywhere
 parts.append(place(xz(extrude(ngon(0.06, n=8), 36.0)), M_TRIM, (0, 4.2, 0)))
-for hy, hr in ((9.6, 1.5), (11.4, 1.1), (13.4, 0.75)):
+for hy, hr in ((11.6, 1.5), (13.4, 1.1), (15.4, 0.75)):
     halo = ngon(hr + 0.09, n=16, rot=0).difference(ngon(hr, n=16, rot=0))
     parts.append(place(xz(extrude(halo, 0.08)), M_TRIM, (0, hy, 0)))
 

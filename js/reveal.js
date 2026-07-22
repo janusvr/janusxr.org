@@ -17,7 +17,7 @@
   /* Fallback viewpoint table — overridden by vp-* markers in the room when present.
      Coordinates match room/lobby.html. */
   var VIEWPOINTS = {
-    hero:     { pos: [0, 3.2, 26],     look: [0, 5, 0] },
+    hero:     { pos: [0, 0, 26], look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
     whatis:   { pos: [-8.13, 5, 8.13], look: [-19, 3, 19] },
     explore:  { pos: [0, 5, -11.5],    look: [0, 3, -26] },
     get:      { pos: [8.13, 5, -8.13], look: [19, 3, -19] },

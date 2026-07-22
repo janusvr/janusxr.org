@@ -21,7 +21,7 @@
   <AssetImage id="sky-down"  src="skybox/down.png" />
   <AssetScript src="lobby.js" />
 </Assets>
-<Room js_id="plaza" pos="2 0 6" fwd="-0.2 0 -0.98"
+<Room js_id="plaza" pos="0 0 26" fwd="0 0 -1"
       skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
       skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
       fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
@@ -57,7 +57,7 @@
   <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
 
   <!-- ===== monument ===== -->
-  <Object id="coin" js_id="monument-coin" pos="0 6.2 0" angular="0 .2 0" lighting="false" />
+  <Object id="coin" js_id="monument-coin" pos="0 8.2 0" angular="0 .2 0" lighting="false" />
   <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
 
   <!-- ===== info booth label ===== -->
@@ -87,7 +87,9 @@
   <Paragraph js_id="mount-timeline" url="../index.html" selector="#timeline-janus" pos="21.92 3.2 21.92" fwd="-0.7071 0 -0.7071" scale="8 6 1" />
 
   <!-- ===== viewpoint markers (invisible; read by js/reveal.js) ===== -->
-  <Object id="cube" js_id="vp-hero"     pos="0 3.2 26"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <!-- vp-hero matches the Room spawn exactly: document mode opens on the same
+       view you inhabit when you press Enter — the handoff moves nothing -->
+  <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
   <Object id="cube" js_id="vp-whatis"   pos="-8.13 5.6 8.13"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
   <Object id="cube" js_id="vp-explore"  pos="0 5.6 -11.5"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
   <Object id="cube" js_id="vp-get"      pos="8.13 5.6 -8.13"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
