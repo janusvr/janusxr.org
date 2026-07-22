@@ -8,7 +8,6 @@
   'use strict';
 
   var ENGINE_URL = 'https://web.janusxr.org/1.7.4/janusweb.js';
-  var ROOM_URL = new URL('room/lobby.html', document.baseURI).href;
   var TWEEN_MS = 900;
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -71,12 +70,28 @@
 
   function boot() {
     if (!window.elation || !elation.janusweb) return;
-    var viewport = document.getElementById('room-viewport');
-    if (!viewport) return;
+    /* the room markup lives inside this element, in an HTML comment — the
+       page is its own room ("rendering this page's virtual twin") */
+    var viewer = document.querySelector('janus-viewer');
+    if (!viewer) return;
+    /* TEMP shim until engine > 1.7.4: the janus-viewer parse path doesn't
+       strip the HTML comment wrapping the room markup, so the room parses
+       empty. Fixed upstream in janusweb scripts/room.js parseSource; remove
+       this when the site pins a release containing that fix. */
+    if (window.JanusFireboxParser) {
+      var origParse = JanusFireboxParser.prototype.parse;
+      JanusFireboxParser.prototype.parse = function (source) {
+        arguments[0] = String(source).replace(/<!--|-->/g, '');
+        return origParse.apply(this, arguments);
+      };
+    }
     try {
-      elation.janusweb.init({
-        url: ROOM_URL,
-        container: viewport,
+      var init = elation.janusweb.init.bind(elation.janusweb);
+      /* defuse the viewer's click-anywhere-to-start fallback; we drive init */
+      elation.janusweb.init = function () {};
+      init({
+        url: document.location.href,
+        container: viewer,
         fullsize: true,
         homepage: document.location.href,
         showui: false,

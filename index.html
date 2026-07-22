@@ -17,7 +17,71 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<div id="room-viewport" aria-hidden="true"></div>
+<janus-viewer autostart="false" aria-hidden="true">
+<!--
+<Assets>
+  <AssetObject id="lobby" src="room/models/lobby.glb" />
+  <AssetObject id="coin" src="room/models/coin.glb" />
+  <AssetImage id="sky-front" src="room/skybox/front.png" />
+  <AssetImage id="sky-back"  src="room/skybox/back.png" />
+  <AssetImage id="sky-left"  src="room/skybox/left.png" />
+  <AssetImage id="sky-right" src="room/skybox/right.png" />
+  <AssetImage id="sky-up"    src="room/skybox/up.png" />
+  <AssetImage id="sky-down"  src="room/skybox/down.png" />
+  <AssetScript src="room/lobby.js" />
+</Assets>
+<Room js_id="plaza" pos="0 0 26" fwd="0 0 -1"
+      skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
+      skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
+      fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
+
+    <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+
+    <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-wing-whatis"   pos="-13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 0.5878" ydir="0 1 0" zdir="-0.5878 0 0.8090" />
+  <Object id="cube" js_id="col-wing-explore"  pos="-21.88 -0.24 -7.11" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.3090 0 0.9511" ydir="0 1 0" zdir="-0.9511 0 -0.3090" />
+  <Object id="cube" js_id="col-wing-get"      pos="0 -0.24 -23" scale="8 0.48 18" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-wing-build"    pos="21.88 -0.24 -7.11" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.3090 0 -0.9511" ydir="0 1 0" zdir="0.9511 0 -0.3090" />
+  <Object id="cube" js_id="col-wing-timeline" pos="13.52 -0.24 18.61" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0.8090 0 -0.5878" ydir="0 1 0" zdir="0.5878 0 0.8090" />
+  <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
+
+    <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
+  <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
+
+    <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
+
+    <Text js_id="label-whatis" pos="-7.94 4.9 10.92" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">WHAT IS</Text>
+  <Paragraph js_id="mount-whatis" selector="#whatis" pos="-18.22 3.2 25.08" fwd="0.5878 0 -0.8090" scale="8 6 1" />
+
+    <Text js_id="label-explore" pos="-12.84 4.9 -4.17" fwd="0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
+  <Link js_id="portal-vesta" pos="-29.09 1.6 -12.08" fwd="0.9511 0 0.3090" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+  <Link js_id="portal-janusweb" pos="-30.63 1.6 -7.32" fwd="0.9511 0 0.3090" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+
+    <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
+  <Paragraph js_id="mount-get" selector="#get" pos="0 3.2 -31" fwd="0 0 1" scale="8 6 1" />
+
+    <Text js_id="label-build" pos="12.84 4.9 -4.17" fwd="-0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">BUILD</Text>
+  <Paragraph js_id="mount-build" selector="#build-opensource" pos="29.48 3.2 -9.58" fwd="-0.9511 0 0.3090" scale="8 6 1" />
+
+    <Text js_id="label-timeline" pos="7.94 4.9 10.92" fwd="-0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">TIMELINE</Text>
+  <Text js_id="label-timeline-past" pos="15.09 4.5 23.15" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
+  <Text js_id="label-timeline-future" pos="17.35 4.5 21.51" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+  <Paragraph js_id="mount-timeline" selector="#timeline-janus" pos="18.22 3.2 25.08" fwd="-0.5878 0 -0.8090" scale="8 6 1" />
+
+      <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-whatis"   pos="-2.35 2 3.24"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-explore"  pos="-3.80 2 -1.24"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-get"      pos="0 2 -4"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-build"    pos="3.80 2 -1.24"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-timeline" pos="2.35 2 3.24"   scale="0.1 0.1 0.1" visible="false" collision_id="" />
+  <Object id="cube" js_id="vp-overview" pos="0 13 21"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
+
+</Room>
+-->
+</janus-viewer>
 
 <header class="site-header">
   <a class="site-header-brand" href="#hero">

@@ -409,7 +409,8 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 }
 
 /* --- phase 2: the room behind the page ----------------------- */
-#room-viewport {
+janus-viewer {
+  display: block;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -419,7 +420,7 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 main, .site-footer { position: relative; z-index: 1; }   /* header stays position:fixed */
 
 /* room-live: engine hydrated; the world shows through the document */
-.room-live #room-viewport { visibility: visible; }
+.room-live janus-viewer { visibility: visible; }
 .room-live .hero-scene { display: none; }        /* CSS backdrop replaced by the real room */
 .room-live .hero-content {
   background: color-mix(in srgb, var(--bg) 55%, transparent);
@@ -436,7 +437,7 @@ main, .site-footer { position: relative; z-index: 1; }   /* header stays positio
 html.room-live, .room-live body { overflow: auto !important; }
 
 /* room-roam: free navigation; the document steps aside */
-.room-roam #room-viewport { pointer-events: auto; z-index: 200; }
+.room-roam janus-viewer { pointer-events: auto; z-index: 200; }
 .room-roam .site-header, .room-roam main, .room-roam .site-footer { display: none; }
 .roam-exit {
   display: none;
