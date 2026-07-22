@@ -7,7 +7,6 @@
 (function () {
   'use strict';
 
-  var ENGINE_URL = 'https://web.janusxr.org/1.7.4/janusweb.js';
   var TWEEN_MS = 900;
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -52,24 +51,30 @@
 
   if (!webglAvailable() || saveData) return;  // Tier 1: stay a 2D page
 
-  /* ---- engine loading (never on the critical path) ---------------------- */
+  /* ---- engine loading ---------------------------------------------------
+     janusweb.js is a plain async script tag in the page head — it downloads
+     and initializes in parallel with the page and is ready much sooner than
+     waiting for load. We just wait for it to appear, then init. */
 
-  function whenIdle(fn) {
-    if (document.readyState === 'complete') idle();
-    else window.addEventListener('load', idle);
-    function idle() {
-      if (window.requestIdleCallback) requestIdleCallback(fn, { timeout: 4000 });
-      else setTimeout(fn, 1500);
+  var booted = false;
+
+  function whenEngineReady(fn) {
+    function fire() {
+      if (booted) return;
+      if (window.elation && elation.janusweb) { booted = true; fn(); }
     }
+    fire();
+    if (booted) return;
+    var tag = document.querySelector('script[src*="janusweb"]');
+    if (tag) tag.addEventListener('load', fire);
+    var tries = 0;
+    var iv = setInterval(function () {
+      fire();
+      if (booted || ++tries > 600) clearInterval(iv);
+    }, 100);
   }
 
-  whenIdle(function () {
-    var script = document.createElement('script');
-    script.src = ENGINE_URL;
-    script.onload = boot;
-    script.onerror = function () { /* engine unreachable: stay 2D */ };
-    document.head.appendChild(script);
-  });
+  whenEngineReady(boot);
 
   function boot() {
     if (!window.elation || !elation.janusweb) return;
