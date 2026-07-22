@@ -157,9 +157,10 @@ its content sourced from the corresponding DOM section (§7).
   legacy native client: archived historical builds, alternative clients, era
   screenshots. Honest signage: unmaintained, preserved.
 
-### 5.4 Build (E)
+### 5.4 Build (ENE)
 
-The largest wing, and the one carrying the project's primary message: **this is an open
+The largest wing — 12m wide and 26m deep against the standard 8×18 — and the one
+carrying the project's primary message: **this is an open
 community project, and you are invited to build it** — worlds, docs, themes, tools, and
 the engine itself.
 
@@ -176,8 +177,9 @@ the engine itself.
     event-driven source displayed beside it.
 - **Infrastructure gallery** at the halls' far end: server racks humming, placards on
   presence/networking/hosting your own corner of the metaverse.
-- **The open-source hall** — the wing's culminating space, styled as a **living
-  workshop**, not an archive: the project under active construction.
+- **The open-source chamber** — the wing's culminating space behind the three
+  halls, styled as a **living workshop**, not an archive: the project under active
+  construction.
   - **Live project board:** in-world displays of recent GitHub activity — latest
     commits, open issues, project planning status — pulled from the GitHub API at
     runtime, with a build-time snapshot baked into the HTML as the Tier 0 / offline

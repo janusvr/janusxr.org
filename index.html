@@ -55,6 +55,7 @@
 
     <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
 
+    <Text js_id="obelisk-text" pos="-13.86 4.6 9.21" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="1.3 1.3 1">JanusXR is...</Text>
     <Text js_id="label-whatis" pos="-7.94 4.9 10.92" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">LEARN</Text>
   <Paragraph js_id="mount-whatis-is" selector="#whatis-is" css="css/phosphor.css" back_col="#0c0f0c" pos="-18.19 2.4 25.03" fwd="0.5878 0 -0.8090" scale="4.5 3.4 1" width="900" height="675" />
   <Paragraph js_id="mount-whatis-inworld"   selector="#whatis-inworld"   css="css/phosphor.css" back_col="#0c0f0c" pos="-14.07 1.85 13.57" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
@@ -63,10 +64,11 @@
   <Paragraph js_id="mount-whatis-decentralized" selector="#whatis-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-11.21 1.85 21.21" fwd="-0.8090 0 -0.5878" scale="2.6 1.8 1" width="640" height="430" />
 
     <Text js_id="label-explore" pos="-12.84 4.9 -4.17" fwd="0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
-  <Link js_id="portal-vesta" pos="-29.09 1.6 -12.08" fwd="0.9511 0 0.3090" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
-  <Link js_id="portal-janusweb" pos="-30.63 1.6 -7.32" fwd="0.9511 0 0.3090" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+  <Link js_id="portal-vesta" pos="-29.09 1.8 -12.08" fwd="0.9511 0 0.3090" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+  <Link js_id="portal-janusweb" pos="-30.63 1.7 -7.32" fwd="0.9511 0 0.3090" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
 
     <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
+  <Text js_id="mirror-caption" pos="0 1.15 -31.1" fwd="0 0 1" col="#7dffa0" scale="0.8 0.8 1">you're already running it</Text>
   <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -19.25" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
   <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -23.75" fwd="-1 0 0" scale="2.4 1.7 1" width="640" height="450" />
   <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-3.4 1.85 -28" fwd="1 0 0" scale="2.2 1.8 1" width="600" height="480" />
@@ -76,12 +78,16 @@
   <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="27.45 3.1 -4.85" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
   <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="26.25 3.1 -8.53" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
   <Paragraph js_id="mount-build-scripting" selector="#build-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="25.05 3.1 -12.21" fwd="-0.9511 0 0.3090" scale="1.5 2 1" width="320" height="420" />
+  <Object id="cube" js_id="machine-core" pos="29.24 1.6 -13.57" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
   <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="33.07 1.85 -16.37" fwd="0.3090 0 0.9511" scale="2.4 1.7 1" width="560" height="410" />
   <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="20.67 1.85 -1.09" fwd="-0.3090 0 -0.9511" scale="2.6 1.6 1" width="660" height="400" />
 
     <Text js_id="label-timeline" pos="7.94 4.9 10.92" fwd="-0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">TRAVEL</Text>
   <Text js_id="label-timeline-past" pos="15.09 4.5 23.15" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
   <Text js_id="label-timeline-future" pos="17.35 4.5 21.51" fwd="-0.5878 0 -0.8090" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+  <Text js_id="era-2010" pos="11.46 1.5 15.78" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2010 - Elation Engine</Text>
+  <Text js_id="era-2014" pos="13.52 1.5 18.61" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2014 - FireBox</Text>
+  <Text js_id="era-2019" pos="15.58 1.5 21.44" fwd="-0.5878 0 -0.8090" col="#7dffa0" scale="0.7 0.7 1">2019 - JanusXR.org</Text>
   <Paragraph js_id="mount-timeline-janus" selector="#timeline-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="12.93 2.8 17.80" fwd="-0.5878 0 -0.8090" cull_face="none" scale="3.6 2.8 1" width="780" height="600" />
   <Paragraph js_id="mount-timeline-past"   selector="#timeline-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="14.00 1.85 25.06" fwd="0.8090 0 -0.5878" scale="2.4 2.1 1" width="560" height="500" />
   <Paragraph js_id="mount-timeline-future" selector="#timeline-future" css="css/phosphor.css" back_col="#0c0f0c" pos="19.50 1.85 21.06" fwd="-0.8090 0 0.5878" scale="2.4 2.1 1" width="560" height="500" />

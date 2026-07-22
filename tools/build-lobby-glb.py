@@ -214,6 +214,11 @@ for name, deg in WINGS.items():
         box(-(w + 1.2) / 2, 0.02, (w + 1.2) / 2, 6.38))
     parts.append(place(face_center(extrude(liner, 0.2), 0.2), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
 
+    # skirting glow lines along both walls, continuing the corridor's language
+    for sx in (-1, 1):
+        skirt = box(sx * (w / 2 - 0.45) - 0.06, -ln / 2 + 0.5, sx * (w / 2 - 0.45) + 0.06, ln / 2 - 0.5)
+        parts.append(place(xz(extrude(skirt, 0.04)), M_TRIM_DIM, (c[0], 0, c[2]), R))
+
     # pergola rib beams over the wing interior
     ly = -(ln / 2 - 2.0)
     while ly < ln / 2 - 0.5:
@@ -349,10 +354,11 @@ for name, deg in WINGS.items():
         ly += 4.5
 
     if name == 'explore':
-        # departure gate frames around the portals
+        # departure gate frames around the portals — Vesta gets the grand gate
+        grand = face_center(extrude(arch_frame(4.2, 4.6, 3.1, 2.5), 0.35), 0.35)
         gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
-        for lx in (-2.5, 2.5):
-            wing_place(gate, M_TRIM, lx, 0, 31.55, deg)
+        wing_place(grand, M_TRIM, -2.5, 0, 31.55, deg)
+        wing_place(gate, M_TRIM, 2.5, 0, 31.55, deg)
     elif name == 'timeline':
         # twin tunnel mouths on the end wall: future glows, the past is dim
         ring = extrude(Point(0, 0).buffer(1.6, resolution=24).difference(
@@ -398,7 +404,8 @@ for name, deg in WINGS.items():
         for lr in (18.0, 22.0, 26.0):
             plinth(-2.2, lr)
         # the obelisk weenie: a tall column beside the mouth, facing the plaza
-        ob = at(5.8, 0, 15.6)
+        # (on the mouth's south flank, clear of the colonnade pillars)
+        ob = at(-5.8, 0, 15.6)
         parts.append(place(trimesh.creation.box(extents=[0.9, 7.5, 0.9]), M_STRUCT,
                            (ob[0], 3.75, ob[2]), rot_y(180 - deg)))
         parts.append(place(trimesh.creation.box(extents=[0.14, 6.8, 0.08]), M_TRIM,
@@ -426,6 +433,20 @@ for name, deg in WINGS.items():
         for lx in (-3.87, 0.0, 3.87):
             parts.append(place(trimesh.creation.box(extents=[3.0, 0.16, 0.12]), M_TRIM,
                                at(lx, 4.15, 27.7), rot_y(-deg)))
+        # each hall foreshadows its tier: blocks / glowing source / machinery
+        for bx, bz, bs in ((-4.4, 30.0, 0.55), (-3.3, 31.2, 0.4), (-4.0, 32.5, 0.7)):
+            parts.append(place(trimesh.creation.box(extents=[bs, bs, bs]), M_STRUCT,
+                               at(bx, bs / 2, bz), rot_y(-deg + bx * 40)))
+        parts.append(place(trimesh.creation.box(extents=[0.45, 0.45, 0.45]), M_TRIM_DIM,
+                           at(-3.6, 0.225, 33.4), rot_y(-deg + 25)))
+        for sz in (30.0, 32.5):   # markup hall: source-glow strips on the dividers
+            for sxx in (-1, 1):
+                parts.append(place(trimesh.creation.box(extents=[0.04, 1.6, 1.2]), M_TRIM_DIM,
+                                   at(sxx * 1.72, 2.0, sz), rot_y(-deg)))
+        # scripting hall: a machine plinth (its animated core lives in the JML)
+        parts.append(place(xz(extrude(ngon(0.5, n=8), 1.1)), M_STRUCT,
+                           at(3.87, 0, 32.0), rot_y(-deg)))
+
         # the open-source chamber: server racks humming along its walls
         for lr in (36.5, 38.0):
             for sx in (-1, 1):
