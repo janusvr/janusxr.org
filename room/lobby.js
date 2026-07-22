@@ -6,7 +6,7 @@ room.onLoad = function() {
     room.update = function(dt) {
       t += dt / 1000;   // dt is milliseconds
       // gentle bob so the monument reads as alive even before theming
-      coin.pos.y = 8.2 + Math.sin(t * 0.8) * 0.15;
+      coin.pos.y = 7.2 + Math.sin(t * 0.8) * 0.15;
     };
   }
 };
