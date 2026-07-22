@@ -116,8 +116,10 @@ for rr in (8.2, 11.6, 15.2):
 
 # PCB traces: radial runs with tangential jogs, ending in pads
 def polar(r, deg):
+    # world bearing → shapely XY (shapely +y becomes world -z through xz(),
+    # so bearing 0 = north needs +y here)
     a = math.radians(deg)
-    return (r * math.sin(a), -r * math.cos(a))   # shapely XY == world X,-Z
+    return (r * math.sin(a), r * math.cos(a))
 
 traces = []
 for k in range(26):
@@ -171,7 +173,7 @@ def broken_arch(width, opening_w, straight_h, band=0.5, gap_frac=0.55):
 
 # corridor mouth (facing the plaza, at z0) — broken like the ribs; the gateway
 # pylons frame the monument without ever closing over it
-arch = face_center(extrude(broken_arch(CORRIDOR_W + 2, 6.6, 5.2, band=0.6), 0.45), 0.45)
+arch = face_center(extrude(broken_arch(CORRIDOR_W + 2, 6.6, 3.8, band=0.6, gap_frac=0.6), 0.45), 0.45)
 parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 
 # ---- wings -----------------------------------------------------------------
@@ -296,8 +298,8 @@ RIB_ZS = (16.0, 19.5, 23.0, 27.0, 30.5)
 for z in RIB_ZS:
     f = 1.0 - (z - RIB_ZS[0]) / (RIB_ZS[-1] - RIB_ZS[0])   # 1 nearest the plaza
     ow = 6.0 + 0.6 * f
-    sh = 2.8 + 2.4 * f
-    rib = face_center(extrude(broken_arch(7.4 + 0.8 * f, ow, sh), 0.25), 0.25)
+    sh = 2.4 + 1.4 * f
+    rib = face_center(extrude(broken_arch(7.4 + 0.8 * f, ow, sh, gap_frac=0.6), 0.25), 0.25)
     parts.append(place(rib, M_STRUCT, (0, 0, z)))
 for sx in (-1, 1):
     strip = box(sx * 3.1 - 0.15, -(z1 - 0.5), sx * 3.1 + 0.15, -z0)
