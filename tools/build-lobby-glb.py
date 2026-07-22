@@ -212,46 +212,9 @@ for name, deg in WINGS.items():
         beam = box(-WING_W / 2 - 0.2, ly - 0.14, WING_W / 2 + 0.2, ly + 0.14)
         parts.append(place(xz(extrude(beam, 0.35)), M_STRUCT, (c[0], WALL_H - 0.35, c[2]), R))
 
-# ---- mezzanine: ~320° arc walkway + rail + ramps ---------------------------
-# The ring is cut open across the south so it never crosses the corridor's
-# sightline to the coin. The break is deliberate and celebrated with end posts.
-MEZZ_GAP = (160.0, 200.0)   # degrees of arc removed, centred on the entry axis
-
-def sector_poly(deg0, deg1, radius=24.0):
-    pts = [(0.0, 0.0)]
-    for s in range(13):
-        pts.append(polar(radius, deg0 + (deg1 - deg0) * s / 12))
-    return Polygon(pts)
-
-MEZZ_CUT = sector_poly(MEZZ_GAP[0], MEZZ_GAP[1])
-
-walk = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0], resolution=64)).difference(MEZZ_CUT)
-parts.append(place(xz(extrude(walk, MEZZ_T)), M_STRUCT, (0, MEZZ_Y - MEZZ_T, 0)))
-
-rail = Point(0, 0).buffer(MEZZ_R[0] + 0.12, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0], resolution=64)).difference(MEZZ_CUT)
-parts.append(place(xz(extrude(rail, RAIL_H)), M_STRUCT, (0, MEZZ_Y, 0)))
-# glowing handrail cap
-cap = Point(0, 0).buffer(MEZZ_R[0] + 0.16, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[0] - 0.04, resolution=64)).difference(MEZZ_CUT)
-parts.append(place(xz(extrude(cap, 0.06)), M_TRIM, (0, MEZZ_Y + RAIL_H, 0)))
-
-# end posts where the ring breaks
-for enddeg in MEZZ_GAP:
-    for pr in (MEZZ_R[0] + 0.3, MEZZ_R[1] - 0.3):
-        px, pz = polar(pr, enddeg + (1.6 if enddeg == MEZZ_GAP[0] else -1.6))
-        parts.append(place(xz(extrude(ngon(0.14, n=8), RAIL_H + 0.25)), M_STRUCT, (px, MEZZ_Y, pz)))
-        parts.append(place(xz(extrude(ngon(0.2, n=8), 0.08)), M_TRIM, (px, MEZZ_Y + RAIL_H + 0.25, pz)))
-
-# ramps at x = ±11.5 rising north from z=15.5 (y=0) to z=4 (y=MEZZ_Y)
-run = 15.5 - 4.0
-length = math.hypot(run, MEZZ_Y)
-pitch = math.atan2(MEZZ_Y, run)
-for sx in (-1, 1):
-    ramp = trimesh.creation.box(extents=[RAMP_W, MEZZ_T, length])
-    t = trimesh.transformations.rotation_matrix(-pitch, [1, 0, 0])
-    parts.append(place(ramp, M_STRUCT, (sx * 11.5, MEZZ_Y / 2 - MEZZ_T / 2, (15.5 + 4.0) / 2), t))
+# (The mezzanine was cut entirely — it framed the coin nicely but occluded the
+# scene too much. The scroll viewpoints now orbit low around the fountain
+# instead; see the vp-* markers in room/lobby.html.)
 
 # ---- monument: octagonal basin + pedestal ----------------------------------
 basin_wall = ngon(BASIN_R).difference(ngon(BASIN_R - 0.35))
@@ -316,10 +279,6 @@ for deg in list(WINGS.values()) + [180]:
 MID_BEARINGS = [22.5 + k * 45 for k in range(8)]
 for b in MID_BEARINGS:
     d = bearing_dir(b)
-    # support column under the mezzanine walkway's outer edge
-    col = xz(extrude(ngon(0.32, n=8), MEZZ_Y - MEZZ_T))
-    p = d * 12.4
-    parts.append(place(col, M_STRUCT, (p[0], 0, p[2])))
     # freestanding pillar with cap marking the plaza boundary
     p2 = d * 15.6
     parts.append(place(xz(extrude(ngon(0.38, n=8), 5.6)), M_STRUCT, (p2[0], 0, p2[2])))
@@ -334,13 +293,6 @@ for b in MID_BEARINGS:
     ep = d * 14.42
     parts.append(place(edge, M_TRIM_DIM, (ep[0], 4.1, ep[2]), rot_y(-yaw)))
 
-# ---- mezzanine outer rail (respects the southern gap) ----------------------
-orail = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[1] - 0.12, resolution=64)).difference(MEZZ_CUT)
-parts.append(place(xz(extrude(orail, RAIL_H)), M_STRUCT, (0, MEZZ_Y, 0)))
-ocap = Point(0, 0).buffer(MEZZ_R[1] + 0.04, resolution=64).difference(
-    Point(0, 0).buffer(MEZZ_R[1] - 0.16, resolution=64)).difference(MEZZ_CUT)
-parts.append(place(xz(extrude(ocap, 0.06)), M_TRIM, (0, MEZZ_Y + RAIL_H, 0)))
 
 # ---- wing dressing ---------------------------------------------------------
 def wing_place(mesh, material, local_x, y, local_r, deg):
@@ -416,15 +368,6 @@ for name, deg in WINGS.items():
         cparts.append(place(xz(extrude(box(sx * WING_W / 2 - 0.2, -WING_LEN / 2, sx * WING_W / 2 + 0.2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
     if name != 'explore':
         cparts.append(place(xz(extrude(box(-WING_W / 2, WING_LEN / 2 - 0.4, WING_W / 2, WING_LEN / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
-
-mezz_walk_c = ngon(MEZZ_R[1], n=12).difference(ngon(MEZZ_R[0], n=12))
-cparts.append(place(xz(extrude(mezz_walk_c, MEZZ_T)), M_COL, (0, MEZZ_Y - MEZZ_T, 0)))
-rail_c = ngon(MEZZ_R[0] + 0.12, n=12).difference(ngon(MEZZ_R[0], n=12))
-cparts.append(place(xz(extrude(rail_c, RAIL_H)), M_COL, (0, MEZZ_Y, 0)))
-for sx in (-1, 1):
-    ramp = trimesh.creation.box(extents=[RAMP_W, MEZZ_T, length])
-    t = trimesh.transformations.rotation_matrix(-pitch, [1, 0, 0])
-    cparts.append(place(ramp, M_COL, (sx * 11.5, MEZZ_Y / 2 - MEZZ_T / 2, (15.5 + 4.0) / 2), t))
 
 for bc in (270, 315):   # bench proxies
     bx, bz = polar(7.45, bc)

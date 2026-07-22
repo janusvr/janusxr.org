@@ -17,13 +17,15 @@
   /* Fallback viewpoint table — overridden by vp-* markers in the room when present.
      Coordinates match room/lobby.html. */
   var VIEWPOINTS = {
-    hero:     { pos: [0, 0, 26], look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
-    whatis:   { pos: [-8.13, 5, 8.13], look: [-19, 3, 19] },
-    explore:  { pos: [0, 5, -11.5],    look: [0, 3, -26] },
-    get:      { pos: [8.13, 5, -8.13], look: [19, 3, -19] },
-    build:    { pos: [11.5, 5, 0],     look: [26, 3, 0] },
-    timeline: { pos: [8.13, 5, 8.13],  look: [19, 3, 19] },
-    overview: { pos: [0, 26, 10],      look: [0, 0, 0] }
+    /* section viewpoints orbit low around the fountain, each looking out
+       through its wing's portal doorway */
+    hero:     { pos: [0, 0, 26],        look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
+    whatis:   { pos: [-2.83, 3.6, 2.83], look: [-19, 3, 19] },
+    explore:  { pos: [0, 3.6, -4],       look: [0, 3, -26] },
+    get:      { pos: [2.83, 3.6, -2.83], look: [19, 3, -19] },
+    build:    { pos: [4, 3.6, 0],        look: [26, 3, 0] },
+    timeline: { pos: [2.83, 3.6, 2.83],  look: [19, 3, 19] },
+    overview: { pos: [0, 26, 10],        look: [0, 0, 0] }
   };
   var SECTION_VP = [
     ['hero', 'hero'], ['whatis', 'whatis'], ['explore', 'explore'],
