@@ -115,9 +115,9 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 .site-nav {
   display: flex;
   gap: 1.1rem;
-  margin-left: auto;
   flex-wrap: wrap;
 }
+.site-header .btn-enter { margin-left: auto; }
 .site-nav a {
   text-decoration: none;
   color: var(--grey);
