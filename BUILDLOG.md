@@ -379,6 +379,29 @@ Two things learned on the way:
 - **HTML comments don't nest.** The room markup's own section comments had to be
   stripped when it moved inside the outer comment wrapper — an inner `-->` would
   have terminated the whole thing and dumped raw JML into the visible page.
+
+## 2026-07-22 — The wings become exhibits
+
+With the page-as-room structure settled, the wings filled in against the SPACE.md
+plan. The section placards decomposed into 17 per-element mounts — each card,
+callout, and widget from the document now hangs as its own styled picture at eye
+level between the pilasters (after a round of "too big, too high, and embedded in
+the wall"). Build outgrew the standard wing and became 12×26m: entry gallery,
+three genuine hallways with their ramp cards as door signage — the editor hall
+strewn with blocks, the markup hall lined with source-glow, the scripting hall
+running a spinning machine core — and an open-source chamber at the back with the
+server racks and the community placard on the end wall. The What-is obelisk got
+its voice: a room script cycles "JanusXR is ______" completions pulled live from
+the document's own list — the same source the 2d typer and no-JS readers see.
+The Mirror got its caption ("you're already running it"), the era plinths their
+years, Vesta its grand gate, and every wing the corridor's skirting glow.
+
+Along the way the paragraph pipeline grew up: the `css` attribute accepts a
+stylesheet URL (fetched, cached, inlined), CSS text is XML-escaped before hitting
+the SVG rasterizer (a single `&` in a comment had been silently killing every
+styled render — the missing `onerror` that hid this is also fixed), and the
+snapshot honors per-mount texture dimensions instead of a hardcoded 1024². All
+engine-side, pending release; the site carries marked shims until then.
 - **The engine's `<janus-viewer>` parse path didn't survive the comment.** The
   fireboxroom regex tradition tolerated comment-wrapped markup by accident of
   extraction order (the regex plucks the block *out of* the comment); the newer
