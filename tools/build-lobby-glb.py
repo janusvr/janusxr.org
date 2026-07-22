@@ -35,9 +35,9 @@ def mat(name, rgb, emissive=None, rough=0.9, metal=0.0):
         m.emissiveFactor = emissive
     return m
 
-M_FLOOR = mat('floor', [0.13, 0.15, 0.13])
+M_FLOOR = mat('floor', [0.10, 0.12, 0.10])
 M_WALL = mat('wall', [0.085, 0.10, 0.085])
-M_STRUCT = mat('structure', [0.16, 0.19, 0.16])
+M_STRUCT = mat('structure', [0.22, 0.26, 0.22])
 M_TRIM = mat('trim-phosphor', [0.05, 0.2, 0.09], emissive=[0.26, 1.0, 0.43], rough=0.5)
 M_COIN = mat('coin-phosphor', [0.07, 0.3, 0.12], emissive=[0.26, 1.0, 0.43], rough=0.4)
 
@@ -182,12 +182,97 @@ parts.append(place(xz(extrude(ngon(BASIN_R - 0.3), 0.25)), M_FLOOR))  # basin fl
 lip = ngon(BASIN_R + 0.08).difference(ngon(BASIN_R - 0.08))
 parts.append(place(xz(extrude(lip, 0.05)), M_TRIM, (0, 0.9, 0)))
 
-ped = ngon(PED_R, rot=0)
-parts.append(place(xz(extrude(ped, 4.2)), M_STRUCT))
+# two-tier tapered pedestal
+parts.append(place(xz(extrude(ngon(1.35, rot=0), 0.8)), M_STRUCT))
+parts.append(place(xz(extrude(ngon(PED_R * 0.85, rot=0), 3.4)), M_STRUCT, (0, 0.8, 0)))
 
 # ---- info booth ------------------------------------------------------------
 booth = trimesh.creation.box(extents=[1.4, 2.2, 0.35])
 parts.append(place(booth, M_STRUCT, (4.5, 1.1, 4.5), rot_y(-45)))
+
+# ============================================================================
+# DRESSING PASS — everything below is atmosphere, not layout.
+# ============================================================================
+
+# ---- entry corridor: arch ribs + glowing edge strips -----------------------
+rib = face_center(extrude(arch_frame(7.4, 6.8, 6.0, 3.0), 0.25), 0.25)
+for z in range(17, 30, 3):
+    parts.append(place(rib, M_STRUCT, (0, 0, float(z))))
+for sx in (-1, 1):
+    strip = box(sx * 3.1 - 0.15, -(z1 - 0.5), sx * 3.1 + 0.15, -z0)
+    parts.append(place(xz(extrude(strip, 0.03)), M_TRIM))
+
+# ---- plaza: radial glowing paths to every destination ----------------------
+for deg in list(WINGS.values()) + [180]:
+    strip = box(-0.15, 5.0, 0.15, 13.8)
+    parts.append(place(xz(extrude(strip, 0.03)), M_TRIM, (0, 0, 0), rot_y(-deg)))
+
+# ---- plaza colonnade + mezzanine support columns ---------------------------
+MID_BEARINGS = [22.5 + k * 45 for k in range(8)]
+for b in MID_BEARINGS:
+    d = bearing_dir(b)
+    # support column under the mezzanine walkway's outer edge
+    col = xz(extrude(ngon(0.32, n=8), MEZZ_Y - MEZZ_T))
+    p = d * 12.4
+    parts.append(place(col, M_STRUCT, (p[0], 0, p[2])))
+    # freestanding pillar with cap marking the plaza boundary
+    p2 = d * 15.6
+    parts.append(place(xz(extrude(ngon(0.38, n=8), 5.6)), M_STRUCT, (p2[0], 0, p2[2])))
+    parts.append(place(xz(extrude(ngon(0.55, n=8), 0.18)), M_TRIM, (p2[0], 5.6, p2[2])))
+
+# ---- mezzanine outer rail --------------------------------------------------
+orail = Point(0, 0).buffer(MEZZ_R[1], resolution=64).difference(
+    Point(0, 0).buffer(MEZZ_R[1] - 0.12, resolution=64))
+parts.append(place(xz(extrude(orail, RAIL_H)), M_STRUCT, (0, MEZZ_Y, 0)))
+ocap = Point(0, 0).buffer(MEZZ_R[1] + 0.04, resolution=64).difference(
+    Point(0, 0).buffer(MEZZ_R[1] - 0.16, resolution=64))
+parts.append(place(xz(extrude(ocap, 0.06)), M_TRIM, (0, MEZZ_Y + RAIL_H, 0)))
+
+# ---- wing dressing ---------------------------------------------------------
+def wing_place(mesh, material, local_x, y, local_r, deg):
+    """Place a mesh at wing-local coordinates (lateral, height, radial-from-center)."""
+    d = bearing_dir(deg)
+    l = np.array([d[2], 0.0, -d[0]])
+    p = d * local_r + l * local_x
+    parts.append(place(mesh, material, (p[0], y, p[2]), rot_y(180 - deg)))
+
+for name, deg in WINGS.items():
+    d = bearing_dir(deg)
+    c = d * WING_R
+    R = rot_y(-deg)
+
+    # pilasters along both side walls
+    for ly in (-6.0, -1.5, 3.0):   # wing-local radial offsets from centre
+        for sx in (-1, 1):
+            pil = box(sx * (WING_W / 2 - 0.35) - 0.18, ly - 0.25, sx * (WING_W / 2 - 0.35) + 0.18, ly + 0.25)
+            parts.append(place(xz(extrude(pil, 4.6)), M_STRUCT, (c[0], 0, c[2]), R))
+
+    if name == 'explore':
+        # departure gate frames around the portals
+        gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
+        for lx in (-2.5, 2.5):
+            wing_place(gate, M_TRIM, lx, 0, 31.55, deg)
+    elif name == 'timeline':
+        # twin tunnel mouths on the end wall: future glows, the past is dim
+        ring = extrude(Point(0, 0).buffer(1.6, resolution=24).difference(
+            Point(0, 0).buffer(1.35, resolution=24)), 0.4)
+        ring = face_center(ring, 0.4)
+        inset = face_center(extrude(Point(0, 0).buffer(1.35, resolution=24), 0.1), 0.1)
+        wing_place(ring, M_STRUCT, -2.2, 2.2, 31.3, deg)   # past (local left)
+        wing_place(inset, M_WALL, -2.2, 2.2, 31.35, deg)
+        wing_place(ring, M_TRIM, 2.2, 2.2, 31.3, deg)      # future (local right)
+        wing_place(inset, M_WALL, 2.2, 2.2, 31.35, deg)
+    else:
+        # framed placard wall where the Paragraph mount sits
+        pframe = face_center(extrude(
+            box(-4.5, 0.4, 4.5, 7.0).difference(box(-4.15, 0.75, 4.15, 6.65)), 0.3), 0.3)
+        wing_place(pframe, M_STRUCT, 0, 0, 31.5, deg)
+
+    if name == 'build':
+        # three hallway dividers — the Quake three-door select, made physical
+        for lx in (-1.33, 1.33):
+            div = box(lx - 0.15, 1.0, lx + 0.15, WING_LEN / 2 - 0.6)
+            parts.append(place(xz(extrude(div, 4.0)), M_STRUCT, (c[0], 0, c[2]), R))
 
 lobby = trimesh.Scene()
 for i, p in enumerate(parts):
@@ -274,3 +359,38 @@ for path in (lobby_path, coin_path, collision_path):
     tris = sum(len(g.faces) for g in scene.geometry.values())
     print(f'{os.path.relpath(path, ROOT)}: {len(scene.geometry)} meshes, {tris} tris, '
           f'{os.path.getsize(path) / 1024:.0f} KB')
+
+# ---- PHOSPHOR skybox -------------------------------------------------------
+from PIL import Image, ImageDraw
+import random
+random.seed(4444)
+
+SKY_DIR = os.path.join(ROOT, 'room', 'skybox')
+os.makedirs(SKY_DIR, exist_ok=True)
+S = 512
+
+def stars(draw, count, ymax):
+    for _ in range(count):
+        x, y = random.randint(0, S - 1), random.randint(0, int(ymax))
+        b = random.randint(30, 110)
+        draw.point((x, y), fill=(int(b * 0.55), b, int(b * 0.65)))
+
+side = Image.new('RGB', (S, S))
+d = ImageDraw.Draw(side)
+for y in range(S):
+    t = y / S
+    # near-black zenith fading to a dark phosphor glow at the horizon
+    r = int(5 + t * t * 8)
+    g = int(7 + t * t * 30)
+    b2 = int(5 + t * t * 14)
+    d.line([(0, y), (S, y)], fill=(r, g, b2))
+stars(d, 90, S * 0.55)
+for face in ('front', 'back', 'left', 'right'):
+    side.save(os.path.join(SKY_DIR, f'{face}.png'))
+
+up = Image.new('RGB', (S, S), (5, 7, 5))
+stars(ImageDraw.Draw(up), 160, S - 1)
+up.save(os.path.join(SKY_DIR, 'up.png'))
+
+Image.new('RGB', (S, S), (10, 13, 10)).save(os.path.join(SKY_DIR, 'down.png'))
+print('room/skybox: 6 faces generated')

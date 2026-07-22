@@ -13,9 +13,18 @@
 <Assets>
   <AssetObject id="lobby" src="models/lobby.glb" />
   <AssetObject id="coin" src="models/coin.glb" />
+  <AssetImage id="sky-front" src="skybox/front.png" />
+  <AssetImage id="sky-back"  src="skybox/back.png" />
+  <AssetImage id="sky-left"  src="skybox/left.png" />
+  <AssetImage id="sky-right" src="skybox/right.png" />
+  <AssetImage id="sky-up"    src="skybox/up.png" />
+  <AssetImage id="sky-down"  src="skybox/down.png" />
   <AssetScript src="lobby.js" />
 </Assets>
-<Room js_id="plaza" pos="2 0.5 6" fwd="-0.2 0 -0.98" fog="true" fog_mode="exp" fog_density="0.006" fog_col="#0c0f0c">
+<Room js_id="plaza" pos="2 0.5 6" fwd="-0.2 0 -0.98"
+      skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
+      skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
+      fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
 
   <!-- ===== architecture (visual only — collision is the proxy boxes below) ===== -->
   <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
