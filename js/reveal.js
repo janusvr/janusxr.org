@@ -37,7 +37,10 @@
     roaming: false,     // free-roam (Enter) mode
     vp: null,           // current viewpoint name
     tween: null,
-    savedScroll: 0
+    savedScroll: 0,
+    navlock: false,     // anchor navigation in flight: scroll events ignored
+    navTimer: 0,
+    navMax: 0
   };
 
   function webglAvailable() {
@@ -108,6 +111,7 @@
       document.documentElement.classList.add('room-live');
       snapTo(currentSectionVP(), true);
       watchScroll();
+      watchNavClicks();
       wireEnter(client);
       state.ready = true;
     });
@@ -163,15 +167,64 @@
   function watchScroll() {
     var pending = false;
     window.addEventListener('scroll', function () {
+      if (state.navlock) {
+        /* anchor navigation in flight: the camera is already lerping to its
+           final destination — treat scroll only as a settle signal */
+        clearTimeout(state.navTimer);
+        state.navTimer = setTimeout(endNav, 200);
+        return;
+      }
       if (pending || state.roaming) return;
       pending = true;
       requestAnimationFrame(function () {
         pending = false;
-        if (state.roaming) return;
+        if (state.roaming || state.navlock) return;
         var vp = currentSectionVP();
         if (vp !== state.vp) snapTo(vp, reducedMotion);
       });
     }, { passive: true });
+  }
+
+  /* ---- anchor navigation: one lerp, straight to the destination ---------- */
+
+  function sectionForHash(id) {
+    var el = document.getElementById(id);
+    if (!el) return null;
+    var node = el;
+    while (node && node !== document.body) {
+      for (var i = 0; i < SECTION_VP.length; i++) {
+        if (SECTION_VP[i][0] === node.id) return SECTION_VP[i][1];
+      }
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  function watchNavClicks() {
+    document.addEventListener('click', function (ev) {
+      if (state.roaming || !state.ready) return;
+      var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      var vp = sectionForHash(a.getAttribute('href').slice(1));
+      if (!vp) return;
+      /* native smooth scroll proceeds; the camera goes direct, now */
+      state.navlock = true;
+      clearTimeout(state.navTimer);
+      clearTimeout(state.navMax);
+      state.navTimer = setTimeout(endNav, 400);       // in case no scroll occurs
+      state.navMax = setTimeout(endNav, 2500);        // hard stop
+      snapTo(vp, reducedMotion);
+    }, true);
+  }
+
+  function endNav() {
+    clearTimeout(state.navTimer);
+    clearTimeout(state.navMax);
+    if (!state.navlock) return;
+    state.navlock = false;
+    /* re-sync in case the user grabbed the scrollbar mid-navigation */
+    var vp = currentSectionVP();
+    if (vp !== state.vp) snapTo(vp, reducedMotion);
   }
 
   function setCamera(pos, look) {
