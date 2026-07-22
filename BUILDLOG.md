@@ -334,3 +334,33 @@ geometry in JanusWeb — use primitive proxies for buildings until the broadphas
 handles large static AABBs (engine issue to be filed upstream; the profile and
 reproduction live in this repo's history). And measure before theorizing: the
 "too many objects" hypothesis was reasonable, popular, and wrong.
+
+## 2026-07-21 — Iterating the space in playtest loop
+
+A rapid sequence of design iterations driven by walking the actual room, each one
+committed separately. The arc of it:
+
+- **Dressing** (corridor ribs, glowing edge strips, radial paths, colonnade,
+  pergolas, benches, PHOSPHOR skybox) — then a **character pass** when "dressed"
+  still read as uninspired: the plaza floor became a circuit board (PCB traces,
+  radar rings), the monument gained a 36m light beacon with ascending halo rings,
+  and the wing mouths became circular portal doorways — the coin's echo at every
+  threshold.
+- **The occlusion wars.** The corridor arches swallowed the monument; taller
+  crescendo arches didn't satisfy; the answer was **broken arches** — columns with
+  arc stubs that spring inward and stop, tops deliberately missing, because virtual
+  architecture owes gravity nothing. This became the space's signature motif.
+- **The mezzanine died.** First cut open to 320° to clear the coin sightline, then
+  removed entirely — it occluded more than it offered. The scroll viewpoints moved
+  to a low orbit (~4m radius) around the fountain, each looking out through its
+  wing's portal ring. Its ghost returned as the **halo ring**: a thin, purely
+  decorative band floating unsupported over the plaza, broken across the south so
+  Main Street stays sacred — the mezzanine's silhouette without its bulk.
+- **The seamless threshold.** Spawn and the document-mode hero camera unified at
+  the corridor threshold, at floor level: the page's opening framing and the view
+  you inhabit on Enter are the same view. Pressing Enter moves nothing but agency.
+- Sundry tuning: coin lowered to 7.2m with the beacon split to skip its band
+  (fountain → laser → coin → laser → rings), a `polar()` bearing flip caught and
+  fixed (which had put the mezzanine cut and the benches on the wrong sides), and
+  a dt-in-milliseconds bug in the coin bob — the same units mistake the original
+  home2 lobby script guarded against with a divide-by-1000. Traditions run deep.
