@@ -23,9 +23,9 @@ document specifies the 3D space itself. Process and inspiration are chronicled i
    primary selling point — participation is a headline exhibit, never fine print. The
    space should actively invite involvement at every level, from hanging out to
    worldbuilding to core engine work.
-6. **2D and 3D share one architecture.** Scroll viewpoints are physical places (the
-   mezzanine); exhibit placards are DOM content; the document and the world are two
-   readings of the same structure.
+6. **2D and 3D share one architecture.** Scroll viewpoints are positions inside the
+   real space (a low orbit around the fountain); exhibit placards are DOM content;
+   the document and the world are two readings of the same structure.
 7. **Structure and presentation are separate.** The layout is a semantically-named
    greybox; themes bind to the names. The greybox is shippable (*"JanusXR is…
    whiteboxable"*).
@@ -33,8 +33,8 @@ document specifies the 3D space itself. Process and inspiration are chronicled i
 ## 2. Spatial overview
 
 A central **plaza** (the hero) with five **wings** radiating from it, entered via a
-south **entry corridor**. A **mezzanine ring** overlooks the plaza floor and hosts the
-document-mode camera viewpoints.
+south **entry corridor**. The document-mode camera viewpoints orbit low around the
+central fountain.
 
 ```
                         EXPLORE
@@ -43,9 +43,9 @@ document-mode camera viewpoints.
                           N
         WHAT-IS                       GET
        (obelisk)    ~~~~~~~~~~~    (mirror)
-            SW      ( mezzanine )      NE
-              \    (    ring    )    /
-                \  (   PLAZA    )  /
+            SW      (   PLAZA    )     NE
+              \    (  vp orbit  )    /
+                \  (    ....    )  /
                    (  monument  )
                    ( + fountain )
                 /  (            )  \
@@ -79,12 +79,13 @@ Threshold → orbit → floor. Specified explicitly; this is the reveal.
    image; when the engine hydrates, the same framing comes alive (water moving,
    banners, avatars present).
 2. **Orbit (document mode).** Each scroll section snaps the camera to a viewpoint on
-   the mezzanine ring, facing into its wing (see §6). The plaza is progressively
-   disclosed as the orbit sweeps; native scroll semantics keep working throughout.
+   a low circle around the fountain, looking out through that wing's portal doorway
+   (see §6). The plaza is progressively disclosed as the orbit sweeps; native scroll
+   semantics keep working throughout.
 3. **Floor (Enter).** The Enter affordance descends the camera from wherever it is on
    the ring to the spawn point on the plaza floor near the fountain, facing Explore.
    Presence, full navigation, the wings now walkable. Exiting free-roam returns the
-   camera to the nearest mezzanine viewpoint and restores scroll position.
+   camera to the nearest orbit viewpoint and restores scroll position.
 
 In WebXR, snaps are comfort-safe blinks, not animated swoops. With
 `prefers-reduced-motion`, all transitions are cuts.
@@ -109,10 +110,11 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
 - **Information booth** near spawn (house pattern: *"stand near and click this screen
   for help"*): controls, chat, how to follow a portal. The gamepad-diagram gag from the
   earliest greybox lobby is welcome here.
-- **Mezzanine ring** above the plaza perimeter, reached by two ramps (near What-is and
-  near Build). Hosts the document-mode viewpoints as physical overlook bays —
-  free-roamers can stand exactly where scrolling readers hover. Also keeps the scroll
-  cameras out of floor traffic (satisfies SPEC §4.2 crowding requirement).
+- **Scroll orbit.** The document-mode viewpoints circle low around the fountain
+  (~4m radius, ~3.6m up), each looking out through its wing's portal doorway — close
+  to the monument, clear of floor traffic, with nothing occluding the wings. (An
+  earlier mezzanine ring played this role; it framed the coin nicely but occluded
+  the scene too much, and was cut.)
 - **Ambient life:** fountain audio, palms/planters, hanging banners with slow motion,
   sky openings overhead, warm pooled lighting. Environmental life only — real visitors
   provide the rest.
@@ -236,11 +238,11 @@ view-source invitation.
 | # | Section | Viewpoint | Framing |
 |---|---------|-----------|---------|
 | 1 | Hero | `vp-hero` — entry threshold, elevated | Monument centered, Explore daylight beyond |
-| 2 | What is | `vp-whatis` — mezzanine SW bay | Obelisk + spectrum dioramas |
-| 3 | Explore | `vp-explore` — mezzanine N bay | Departure gates, sky |
-| 4 | Get | `vp-get` — mezzanine NE bay | The Mirror, vault alcove edge |
-| 5 | Build | `vp-build` — mezzanine E bay | Three halls, open-source hall glowing beyond |
-| 6 | Timeline | `vp-timeline` — mezzanine SE bay | Station entrance, sign glowing |
+| 2 | What is | `vp-whatis` — fountain orbit, SW | Obelisk + spectrum dioramas |
+| 3 | Explore | `vp-explore` — fountain orbit, N | Departure gates, sky |
+| 4 | Get | `vp-get` — fountain orbit, NE | The Mirror, vault alcove edge |
+| 5 | Build | `vp-build` — fountain orbit, E | Three halls, open-source hall glowing beyond |
+| 6 | Timeline | `vp-timeline` — fountain orbit, SE | Station entrance, sign glowing |
 | 7 | Footer | `vp-overview` — rises above the plaza | Whole space at once — the map moment |
 
 The final pull-up is the bookend: after walking the content, the reader sees the whole
@@ -252,7 +254,7 @@ The layout ships as a semantically-named greybox; themes and DOM content bind to
 
 **Naming scheme** (kebab-case, stable, documented):
 
-- Volumes: `plaza`, `entry-corridor`, `mezz-ring`, `wing-whatis`, `wing-explore`,
+- Volumes: `plaza`, `entry-corridor`, `wing-whatis`, `wing-explore`,
   `wing-get`, `wing-build`, `wing-timeline`, `hall-build-editor`, `hall-build-markup`,
   `hall-build-scripting`, `gallery-build-infra`, `hall-build-opensource`,
   `alcove-get-legacy`, `station-timeline`, `tube-timeline-past`, `tube-timeline-future`
@@ -299,7 +301,7 @@ deliberately — whitebox-to-wireframe is a look the space wears with intent.
 ## 9. Multiplayer notes
 
 - Presence connects on load (SPEC §4.2); silent single-user degradation required.
-- Scroll cameras live on the mezzanine — floor traffic never blocks reading.
+- Scroll cameras orbit above the fountain — floor traffic never blocks reading.
 - Spawn offset from the entry axis; arrivals face Explore, not each other.
 - Moderation posture: still deferred (SPEC open question) — revisit before Phase 2.
 
