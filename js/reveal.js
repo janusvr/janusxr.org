@@ -107,6 +107,7 @@
   function onEngineStart(client) {
     whenRoomLoaded(client, function () {
       readRoomViewpoints();
+      styleMounts();
       try { window.player.disable(); } catch (e) {}
       document.documentElement.classList.add('room-live');
       snapTo(currentSectionVP(), true);
@@ -142,6 +143,25 @@
           VIEWPOINTS[name].pos = [marker.pos.x, marker.pos.y, marker.pos.z];
         }
       }
+    } catch (e) {}
+  }
+
+  /* TEMP shim until engine > 1.7.4: the paragraph css attribute only accepts
+     inline CSS text there, not a stylesheet URL (URL support added upstream in
+     janusparagraph.js getStylesheet). Fetch the site stylesheet and assign its
+     text to the mounts so snapshots render in PHOSPHOR today. */
+  function styleMounts() {
+    try {
+      fetch('css/phosphor.css')
+        .then(function (r) { return r.text(); })
+        .then(function (text) {
+          var objects = window.room && window.room.objects;
+          if (!objects) return;
+          for (var id in objects) {
+            if (id.indexOf('mount-') === 0) objects[id].css = text;
+          }
+        })
+        .catch(function () {});
     } catch (e) {}
   }
 
