@@ -187,11 +187,11 @@ parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 # enter at the same doorways, turn, and walk a curve back toward Main Street,
 # where each hall terminates against the corridor walls. Nothing looms over
 # the valley.
-HALL_R = (19.5, 29.5)
+HALL_R = (17.2, 27.2)
 HALLS = {
     # entrance bearing, far cap (at the corridor), near cap, inner-wall gap
-    'learn': dict(deg=280, cap_far=188, cap_near=290, gap=(273.5, 286.5)),
-    'build': dict(deg=80,  cap_far=172, cap_near=70,  gap=(73.5, 86.5)),
+    'learn': dict(deg=280, cap_far=188, cap_near=296, gap=(268.5, 291.5)),
+    'build': dict(deg=80,  cap_far=172, cap_near=64,  gap=(68.5, 91.5)),
 }
 
 def sectorp(a0, a1, radius=45.0):
@@ -214,59 +214,56 @@ for name, spec in HALLS.items():
 
     # floor + foundation under the outer edge
     parts.append(place(xz(extrude(annsec(HALL_R[0], HALL_R[1], a0, a1), 0.5)), M_FLOOR, (0, -0.5, 0)))
-    parts.append(place(xz(extrude(annsec(29.0, HALL_R[1], a0, a1), 4.7)), M_WALL, (0, -5.2, 0)))
+    parts.append(place(xz(extrude(annsec(26.7, HALL_R[1], a0, a1), 4.7)), M_WALL, (0, -5.2, 0)))
 
     # inner wall (split around the entrance gap), outer wall, end caps
-    parts.append(place(xz(extrude(annsec(19.5, 19.9, a0, g0), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(19.5, 19.9, g1, a1), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(29.1, 29.5, a0, a1), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(19.5, 29.5, a0, a0 + 0.9), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(19.5, 29.5, a1 - 0.9, a1), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(17.2, 17.6, a0, g0), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(17.2, 17.6, g1, a1), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(26.8, 27.2, a0, a1), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(17.2, 27.2, a0, a0 + 0.9), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(17.2, 27.2, a1 - 0.9, a1), WALL_H)), M_WALL))
 
     # skirting glow along both walls; radial pergola beams overhead
-    parts.append(place(xz(extrude(annsec(19.95, 20.07, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
-    parts.append(place(xz(extrude(annsec(28.93, 29.05, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
+    parts.append(place(xz(extrude(annsec(17.65, 17.77, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
+    parts.append(place(xz(extrude(annsec(26.63, 26.75, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
     a = a0 + 4.0
     while a < a1 - 2.0:
-        parts.append(place(xz(extrude(annsec(19.3, 29.7, a - 0.45, a + 0.45), 0.35)), M_STRUCT, (0, WALL_H - 0.35, 0)))
+        parts.append(place(xz(extrude(annsec(17.0, 27.4, a - 0.45, a + 0.45), 0.35)), M_STRUCT, (0, WALL_H - 0.35, 0)))
         a += 10.0
     # radial pilasters on the outer wall
     a = a0 + 8.0
     while a < a1 - 4.0:
-        parts.append(place(xz(extrude(annsec(28.55, 29.1, a - 0.75, a + 0.75), 4.6)), M_STRUCT))
+        parts.append(place(xz(extrude(annsec(26.25, 26.8, a - 0.75, a + 0.75), 4.6)), M_STRUCT))
         a += 16.0
 
     # entrance vestibule: portal mouth at the plaza edge, short passage inward
-    mp = d * 14.0
+    mp = d * 16.7
     HOLE_R, HOLE_CY = 3.3, 2.7
     pw = box(-4.6, 0, 4.6, 6.4).difference(Point(0, HOLE_CY).buffer(HOLE_R, resolution=36))
     parts.append(place(face_center(extrude(pw, 0.45), 0.45), M_STRUCT, (mp[0], 0, mp[2]), rot_y(180 - deg)))
     liner = Point(0, HOLE_CY).buffer(HOLE_R + 0.08, resolution=36).difference(
         Point(0, HOLE_CY).buffer(HOLE_R - 0.04, resolution=36)).intersection(box(-4.6, 0.02, 4.6, 6.38))
     parts.append(place(face_center(extrude(liner, 0.5), 0.5), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
-    vfloor = box(-3.5, 13.5, 3.5, 19.7)
+    vfloor = box(-3.6, 15.8, 3.6, 17.5)
     parts.append(place(xz(extrude(vfloor, 0.5)), M_FLOOR, (0, -0.5, 0), rot_y(-deg)))
-    for sx in (-1, 1):
-        vwall = box(sx * 3.5 - 0.2, 14.1, sx * 3.5 + 0.2, 19.6)
-        parts.append(place(xz(extrude(vwall, WALL_H)), M_WALL, (0, 0, 0), rot_y(-deg)))
 
     if name == 'learn':
         # concept plinths along the inner curve
         for b in (258, 242, 226):
-            px, pz = polar(22.0, b)
+            px, pz = polar(19.7, b)
             parts.append(place(trimesh.creation.box(extents=[1.1, 1.0, 1.1]), M_STRUCT, (px, 0.5, pz), rot_y(-b)))
             parts.append(place(trimesh.creation.box(extents=[1.22, 0.06, 1.22]), M_TRIM_DIM, (px, 1.03, pz), rot_y(-b)))
         # the Mirror on the outer wall near the far end; the vault opposite
         mring = face_center(extrude(Point(0, 3.2).buffer(3.0, resolution=36).difference(
             Point(0, 3.2).buffer(2.8, resolution=36)), 0.2), 0.2)
         md = bearing_dir(193)
-        mx, mz = polar(28.9, 193)
+        mx, mz = polar(26.6, 193)
         parts.append(place(mring, M_TRIM_DIM, (mx, 0, mz), rot_y(face_yaw(-md))))
         vring = face_center(extrude(Point(0, 1.6).buffer(1.2, resolution=24).difference(
             Point(0, 1.6).buffer(1.0, resolution=24)), 0.25), 0.25)
         vdoor = face_center(extrude(Point(0, 1.6).buffer(1.0, resolution=24), 0.1), 0.1)
         vd = bearing_dir(202)
-        vx, vz = polar(20.1, 202)
+        vx, vz = polar(17.8, 202)
         parts.append(place(vring, M_TRIM_DIM, (vx, 0, vz), rot_y(face_yaw(vd))))
         parts.append(place(vdoor, M_WALL, (vx + vd[0] * -0.05, 0, vz + vd[2] * -0.05), rot_y(face_yaw(vd))))
         # obelisk beside the mouth, facing the plaza
@@ -278,28 +275,28 @@ for name, spec in HALLS.items():
     else:
         # build: three bays along the outer wall — the three-door select, curved
         for b in (104, 120):
-            parts.append(place(xz(extrude(annsec(24.0, 29.1, b - 0.6, b + 0.6), 4.0)), M_STRUCT))
+            parts.append(place(xz(extrude(annsec(21.7, 26.8, b - 0.6, b + 0.6), 4.0)), M_STRUCT))
         # editor bay: scattered blocks
-        for b, rr, bs in ((95, 27.0, 0.55), (99, 25.5, 0.4), (93, 26.0, 0.7)):
+        for b, rr, bs in ((95, 24.7, 0.55), (99, 23.2, 0.4), (93, 23.7, 0.7)):
             px, pz = polar(rr, b)
             parts.append(place(trimesh.creation.box(extents=[bs, bs, bs]), M_STRUCT, (px, bs / 2, pz), rot_y(-b * 2)))
         # markup bay: source-glow strips on the bay dividers
         for b in (105.5, 118.5):
-            px, pz = polar(26.5, b)
+            px, pz = polar(24.2, b)
             parts.append(place(trimesh.creation.box(extents=[0.04, 1.6, 1.2]), M_TRIM_DIM, (px, 2.0, pz), rot_y(-b)))
         # scripting bay: the machine plinth (its spinning core lives in the JML)
-        px, pz = polar(26.0, 114)
+        px, pz = polar(23.7, 114)
         parts.append(place(xz(extrude(ngon(0.5, n=8), 1.1)), M_STRUCT, (px, 0, pz)))
         # server racks near the far end
         for b in (152, 160):
-            for rr in (21.5, 27.5):
+            for rr in (19.2, 25.2):
                 px, pz = polar(rr, b)
                 parts.append(place(trimesh.creation.box(extents=[0.9, 2.1, 0.7]), M_WALL, (px, 1.05, pz), rot_y(-b)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM, (px, 2.15, pz), rot_y(-b)))
         # open-source placard frame on the far cap
         pframe = face_center(extrude(
             box(-3.2, 0.4, 3.2, 5.0).difference(box(-2.9, 0.7, 2.9, 4.7)), 0.3), 0.3)
-        fx, fz = polar(24.5, 170.6)
+        fx, fz = polar(22.2, 170.6)
         parts.append(place(pframe, M_STRUCT, (fx, 0, fz), rot_y(face_yaw(np.array([0.986, 0, -0.165])))))
 
 # ---- the halo ring ---------------------------------------------------------

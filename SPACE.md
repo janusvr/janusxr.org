@@ -63,7 +63,7 @@ the horizon. An Elation-era aesthetic, home at last.
 ```
 
 Wings: Learn (entrance 280°) and Build (entrance 80°) are **curved cloister
-halls** — annular corridors (r≈19.5–29.5) that hug the plaza. You enter at the
+halls** — annular corridors (r≈17.2–27.2, flush against the plaza rim) that hug the plaza. You enter at the
 doorway, turn (left for Learn, right for Build), and walk the curve back toward
 the south, where each hall terminates against Main Street's walls. Nothing juts
 into the valley's sightlines — from the esplanade, the shrine reads as one
