@@ -209,10 +209,13 @@ for name, deg in WINGS.items():
     mouth = face_center(extrude(pw, 0.45), 0.45)
     mp = d * 14.0
     parts.append(place(mouth, M_STRUCT, (mp[0], 0, mp[2]), rot_y(180 - deg)))
+    # liner sits proud of the wall on every surface: inner radius pokes into
+    # the opening and it's thicker than the wall slab, so no face is coplanar
+    # with the doorway bore (z-fighting)
     liner = Point(0, HOLE_CY).buffer(HOLE_R + 0.14, resolution=36).difference(
-        Point(0, HOLE_CY).buffer(HOLE_R, resolution=36)).intersection(
+        Point(0, HOLE_CY).buffer(HOLE_R - 0.06, resolution=36)).intersection(
         box(-(w + 1.2) / 2, 0.02, (w + 1.2) / 2, 6.38))
-    parts.append(place(face_center(extrude(liner, 0.2), 0.2), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
+    parts.append(place(face_center(extrude(liner, 0.55), 0.55), M_TRIM, (mp[0], 0, mp[2]), rot_y(180 - deg)))
 
     # skirting glow lines along both walls, continuing the corridor's language
     for sx in (-1, 1):
