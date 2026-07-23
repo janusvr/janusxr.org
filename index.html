@@ -24,6 +24,8 @@
 <FireBoxRoom>
   <Assets>
     <AssetObject id="lobby" src="room/models/lobby.glb" />
+  <AssetObject id="esplanade" src="room/models/esplanade.glb" />
+  <AssetObject id="world" src="room/models/world.glb" />
     <AssetObject id="coin" src="room/models/coin.glb" />
     <AssetImage id="sky-front" src="room/skybox/front.png" />
     <AssetImage id="sky-back"  src="room/skybox/back.png" />
@@ -31,69 +33,62 @@
     <AssetImage id="sky-right" src="room/skybox/right.png" />
     <AssetImage id="sky-up"    src="room/skybox/up.png" />
     <AssetImage id="sky-down"  src="room/skybox/down.png" />
-    <AssetScript src="room/lobby.js?v=6" />
+    <AssetScript src="room/lobby.js?v=7" />
   </Assets>
-  <Room js_id="plaza" thirdperson="true" pos="0 0 26" fwd="0 0 -1"
+  <Room js_id="plaza" thirdperson="true" pos="0 0 46" fwd="0 0 -1"
         skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
         skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
         fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
 
-      <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+    <Object id="world" js_id="world-frame" pos="0 0 0" />
+  <Object id="cube" js_id="col-ground" pos="0 -5.25 0" scale="110 0.5 110" visible="false" collision_id="cube" />
 
-      <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
+  <Object js_id="lobby-group" pos="0 0 20">
+    <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+    <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-wing-get"      pos="0 -0.24 -23" scale="8 0.48 18" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-learn-f1" pos="-7.59 -0.25 20.86" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 -0.342" />
-  <Object id="cube" js_id="col-learn-w1" pos="-9.23 2.5 25.37" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 -0.342" />
-  <Object id="cube" js_id="col-learn-f2" pos="-15.42 -0.25 15.97" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 -0.695" />
-  <Object id="cube" js_id="col-learn-w2" pos="-18.76 2.5 19.42" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 -0.695" />
-  <Object id="cube" js_id="col-learn-f3" pos="-20.58 -0.25 8.32" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 -0.927" />
-  <Object id="cube" js_id="col-learn-w3" pos="-25.03 2.5 10.11" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 -0.927" />
-  <Object id="cube" js_id="col-learn-f4" pos="-22.19 -0.25 -0.77" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 -0.999" />
-  <Object id="cube" js_id="col-learn-w4" pos="-26.98 2.5 -0.94" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 -0.999" />
-  <Object id="cube" js_id="col-build-f1" pos="7.59 -0.25 20.86" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 0.342" />
-  <Object id="cube" js_id="col-build-w1" pos="9.23 2.5 25.37" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 0.342" />
-  <Object id="cube" js_id="col-build-f2" pos="15.42 -0.25 15.97" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 0.695" />
-  <Object id="cube" js_id="col-build-w2" pos="18.76 2.5 19.42" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 0.695" />
-  <Object id="cube" js_id="col-build-f3" pos="20.58 -0.25 8.32" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 0.927" />
-  <Object id="cube" js_id="col-build-w3" pos="25.03 2.5 10.11" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 0.927" />
-  <Object id="cube" js_id="col-build-f4" pos="22.19 -0.25 -0.77" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 0.999" />
-  <Object id="cube" js_id="col-build-w4" pos="26.98 2.5 -0.94" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 0.999" />
-  <Object id="cube" js_id="col-learn-vest" pos="-16.40 -0.25 -2.89" scale="7.2 0.5 2.2" visible="false" collision_id="cube" xdir="-0.174 0 0.985" ydir="0 1 0" zdir="-0.985 0 -0.174" />
-  <Object id="cube" js_id="col-build-vest" pos="16.40 -0.25 -2.89" scale="7.2 0.5 2.2" visible="false" collision_id="cube" xdir="-0.174 0 -0.985" ydir="0 1 0" zdir="0.985 0 -0.174" />
-  <Object id="cube" js_id="col-ground" pos="0 -5.25 0" scale="110 0.5 110" visible="false" collision_id="cube" />
-  <Object id="cube" js_id="col-stair" pos="0 -2.5 -23" scale="18 0.3 13.2" visible="false" collision_id="cube" xdir="-1 0 0" ydir="0 0.9231 -0.3846" zdir="0 -0.3846 -0.9231" />
-  <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-learn-w1" pos="-9.23 2.5 25.37" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 -0.342" />
+    <Object id="cube" js_id="col-learn-f2" pos="-15.42 -0.25 15.97" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 -0.695" />
+    <Object id="cube" js_id="col-learn-w2" pos="-18.76 2.5 19.42" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 -0.695" />
+    <Object id="cube" js_id="col-learn-f3" pos="-20.58 -0.25 8.32" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 -0.927" />
+    <Object id="cube" js_id="col-learn-w3" pos="-25.03 2.5 10.11" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 -0.927" />
+    <Object id="cube" js_id="col-learn-f4" pos="-22.19 -0.25 -0.77" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 -0.999" />
+    <Object id="cube" js_id="col-learn-w4" pos="-26.98 2.5 -0.94" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="-0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 -0.999" />
+    <Object id="cube" js_id="col-build-f1" pos="7.59 -0.25 20.86" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 0.342" />
+    <Object id="cube" js_id="col-build-w1" pos="9.23 2.5 25.37" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 0.342" />
+    <Object id="cube" js_id="col-build-f2" pos="15.42 -0.25 15.97" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 0.695" />
+    <Object id="cube" js_id="col-build-w2" pos="18.76 2.5 19.42" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.695 0 0.719" ydir="0 1 0" zdir="-0.719 0 0.695" />
+    <Object id="cube" js_id="col-build-f3" pos="20.58 -0.25 8.32" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 0.927" />
+    <Object id="cube" js_id="col-build-w3" pos="25.03 2.5 10.11" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.927 0 0.375" ydir="0 1 0" zdir="-0.375 0 0.927" />
+    <Object id="cube" js_id="col-build-f4" pos="22.19 -0.25 -0.77" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 0.999" />
+    <Object id="cube" js_id="col-build-w4" pos="26.98 2.5 -0.94" scale="0.4 5 9.5" visible="false" collision_id="cube" xdir="0.999 0 -0.035" ydir="0 1 0" zdir="0.035 0 0.999" />
+    <Object id="cube" js_id="col-learn-vest" pos="-16.40 -0.25 -2.89" scale="7.2 0.5 2.2" visible="false" collision_id="cube" xdir="-0.174 0 0.985" ydir="0 1 0" zdir="-0.985 0 -0.174" />
+    <Object id="cube" js_id="col-build-vest" pos="16.40 -0.25 -2.89" scale="7.2 0.5 2.2" visible="false" collision_id="cube" xdir="-0.174 0 -0.985" ydir="0 1 0" zdir="0.985 0 -0.174" />
+    <Object id="cube" js_id="col-stair" pos="0 -2.5 -23" scale="18 0.3 13.2" visible="false" collision_id="cube" xdir="-1 0 0" ydir="0 0.9231 -0.3846" zdir="0 -0.3846 -0.9231" />
+    <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
-
-      <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
+    <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
     <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
-
-      <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
-
-      <Text js_id="obelisk-text" pos="-16.35 4.6 2.88" fwd="0.985 0 -0.174" col="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
-      <Text js_id="label-learn" pos="-15.95 4.9 -2.81" fwd="0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">LEARN</Text>
+    <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
+    <Text js_id="obelisk-text" pos="-16.35 4.6 2.88" fwd="0.985 0 -0.174" col="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
+    <Text js_id="label-learn" pos="-15.95 4.9 -2.81" fwd="0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">LEARN</Text>
     <Text js_id="learn-is-title" pos="-3.66 3.9 21.90" fwd="-0.986 0 -0.165" col="#e8f5ea" font_scale="false" scale="0.45 0.45 1">JanusXR is</Text>
-  <Text js_id="learn-is-display" pos="-3.66 2.6 21.90" fwd="-0.986 0 -0.165" col="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
+    <Text js_id="learn-is-display" pos="-3.66 2.6 21.90" fwd="-0.986 0 -0.165" col="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
     <Paragraph js_id="mount-learn-rooms"    selector="#learn-rooms"   css="css/phosphor.css" back_col="#0c0f0c" pos="-26.34 1.85 3.70" fwd="0.990 0 -0.139" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-objects"  selector="#learn-objects"    css="css/phosphor.css" back_col="#0c0f0c" pos="-24.31 1.85 10.82" fwd="0.914 0 -0.407" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-presence" selector="#learn-presence" css="css/phosphor.css" back_col="#0c0f0c" pos="-20.38 1.85 17.10" fwd="0.766 0 -0.643" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-stack" selector="#learn-stack" css="css/phosphor.css" back_col="#0c0f0c" pos="-12.25 1.85 13.60" fwd="-0.669 0 0.743" scale="1.8 1.4 1" width="560" height="440" />
-  <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-17.59 1.85 5.04" fwd="-0.961 0 0.276" scale="1.8 1.1 1" width="600" height="380" />
-  <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-15.52 1.85 9.70" fwd="-0.848 0 0.530" scale="1.8 1.25 1" width="640" height="430" />
-
-      <Text js_id="label-explore" pos="0 5.6 -18.2" fwd="0 0 1" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
-    <Link js_id="portal-vesta" pos="-6.6 -3.2 -62" fwd="1 0 0" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
-    <Link js_id="portal-janusweb" pos="6.6 -3.3 -62" fwd="-1 0 0" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
-
-      <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
+    <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-17.59 1.85 5.04" fwd="-0.961 0 0.276" scale="1.8 1.1 1" width="600" height="380" />
+    <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-15.52 1.85 9.70" fwd="-0.848 0 0.530" scale="1.8 1.25 1" width="640" height="430" />
+    <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
     <Text js_id="mirror-caption" pos="-5.89 1.5 25.53" fwd="0.225 0 -0.974" col="#7dffa0" scale="0.45 0.45 1">you're already running it</Text>
     <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="-14.87 1.85 22.05" fwd="0.559 0 -0.829" scale="1.7 1.2 1" width="640" height="450" />
     <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="-8.02 1.85 16.45" fwd="-0.438 0 0.899" scale="1.7 1.2 1" width="640" height="450" />
     <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-8.22 1.85 25.30" fwd="0.309 0 -0.951" scale="1.6 1.3 1" width="600" height="480" />
-
-      <Text js_id="label-build" pos="15.95 4.9 -2.81" fwd="-0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">BUILD</Text>
+    <Text js_id="label-build" pos="15.95 4.9 -2.81" fwd="-0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">BUILD</Text>
     <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="3.66 2.4 21.90" fwd="0.986 0 -0.165" scale="4 3 1" />
     <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="26.34 3.1 3.70" fwd="-0.990 0 -0.139" scale="1.2 1.6 1" width="320" height="420" />
     <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="24.31 3.1 10.82" fwd="-0.914 0 -0.407" scale="1.2 1.6 1" width="320" height="420" />
@@ -101,8 +96,14 @@
     <Object id="cube" js_id="machine-core" pos="21.65 1.6 9.64" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
     <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="10.23 1.85 15.17" fwd="0.559 0 0.829" scale="1.7 1.2 1" width="560" height="410" />
     <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="18.29 1.85 0.64" fwd="0.999 0 0.035" scale="1.8 1.1 1" width="660" height="400" />
+  </Object>
 
-      <Text js_id="label-history" pos="-9.2 -1.2 -46" fwd="1 0 0" col="#43ff6e" scale="1.6 1.6 1">HISTORY</Text>
+  <Object js_id="esplanade-group" pos="0 0 20">
+    <Object id="esplanade" js_id="esplanade-architecture" pos="0 0 0" />
+    <Text js_id="label-explore" pos="0 5.6 -18.2" fwd="0 0 1" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
+    <Link js_id="portal-vesta" pos="-6.6 -3.2 -62" fwd="1 0 0" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+    <Link js_id="portal-janusweb" pos="6.6 -3.3 -62" fwd="-1 0 0" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+    <Text js_id="label-history" pos="-9.2 -1.2 -46" fwd="1 0 0" col="#43ff6e" scale="1.6 1.6 1">HISTORY</Text>
     <Text js_id="label-history-past" pos="-16 -1.6 -50.9" fwd="0 0 1" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
     <Text js_id="label-history-future" pos="-16 -1.6 -41.1" fwd="0 0 -1" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
     <Text js_id="era-2010" pos="-16 -3.5 -49" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2010 - Elation Engine</Text>
@@ -111,12 +112,13 @@
     <Paragraph js_id="mount-history-janus" selector="#history-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -1.9 -46" fwd="1 0 0" cull_face="none" scale="2.6 2 1" width="780" height="600" />
     <Paragraph js_id="mount-history-past"   selector="#history-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -50.7" fwd="0 0 1" scale="1.7 1.5 1" width="560" height="500" />
     <Paragraph js_id="mount-history-future" selector="#history-future" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -41.3" fwd="0 0 -1" scale="1.7 1.5 1" width="560" height="500" />
+  </Object>
 
-        <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-learn"   pos="-3.94 2 -0.69"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-explore"  pos="0 1.2 -15.5"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-build"    pos="3.94 2 -0.69"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-overview" pos="0 13 21"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
+      <Object id="cube" js_id="vp-hero"     pos="0 0 46.00"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-learn"   pos="-3.94 2 19.31"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-explore"  pos="0 1.2 4.50"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-build"    pos="3.94 2 19.31"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-overview" pos="0 13 41.00"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
 
   </Room>
 </FireBoxRoom>

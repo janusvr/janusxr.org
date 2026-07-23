@@ -17,11 +17,12 @@
   var VIEWPOINTS = {
     /* section viewpoints orbit low around the fountain, each looking out
        through its wing's portal doorway */
-    hero:     { pos: [0, 0, 26],        look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
-    learn:    { pos: [-3.94, 2, -0.69], look: [-18.71, 3, -3.3] },
-    explore:  { pos: [0, 1.2, -15.5],   look: [0, -4, -52] },   /* the overlook */
-    build:    { pos: [3.94, 2, -0.69],  look: [18.71, 3, -3.3] },
-    overview: { pos: [0, 13, 21],       look: [0, 0.9, 0] }   /* footer: high south, gazing at the fountain base */
+    /* world coordinates; content lives in movable groups at +20z */
+    hero:     { pos: [0, 0, 46],        look: [0, 1.7, 20] },   /* == Room spawn pos/fwd */
+    learn:    { pos: [-3.94, 2, 19.31], look: [-18.71, 3, 16.7] },
+    explore:  { pos: [0, 1.2, 4.5],     look: [0, -4, -32] },   /* the overlook */
+    build:    { pos: [3.94, 2, 19.31],  look: [18.71, 3, 16.7] },
+    overview: { pos: [0, 13, 41],       look: [0, 0.9, 20] }   /* footer: high south, gazing at the fountain base */
   };
   var SECTION_VP = [
     ['hero', 'hero'], ['learn', 'learn'], ['explore', 'explore'],

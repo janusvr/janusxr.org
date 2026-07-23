@@ -444,6 +444,15 @@ against the corridor's walls. The exhibits rehung along the arcs (outer wall
 facing in, inner wall facing out, the typewriter on Learn's far cap, Build's
 three-door bays curved into the sweep), and from the esplanade the shrine now
 reads as a single compact crown on its hill.
+
+The scene also got its skeleton: content now lives in **movable groups** —
+`lobby-group` (shrine, halls, corridor, stair) and `esplanade-group` (valley
+content), each a parent object the whole assembly can be repositioned by, with
+the ground and Thirteenth Floor border staying put as the world frame (three
+GLB exports now instead of one). First use of the new freedom: everything
+shifted +20z, recentering the build inside the border circle — the valley had
+been running out past the solid ground into the dissolution band. Collision
+verified intact under the group transforms.
 - **The engine's `<janus-viewer>` parse path didn't survive the comment.** The
   fireboxroom regex tradition tolerated comment-wrapped markup by accident of
   extraction order (the regex plucks the block *out of* the comment); the newer

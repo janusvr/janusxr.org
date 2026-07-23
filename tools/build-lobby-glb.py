@@ -421,10 +421,19 @@ def wing_place(mesh, material, local_x, y, local_r, deg):
 
 GROUND_Y = -5.0
 
+# Content routes into three exports: the world frame (ground + border, stays at
+# origin), the lobby (shrine/halls/corridor/stair, movable as a group), and the
+# esplanade (valley content, movable as a group).
+lobby_parts = parts
+espl_parts = []
+world_parts = []
+
+parts = world_parts
 # ---- ground plane (valley floor and surrounding land) ----------------------
 ground = Point(0, 0).buffer(55, resolution=64)
 parts.append(place(xz(extrude(ground, 0.5)), M_FLOOR, (0, GROUND_Y - 0.5, 0)))
 
+parts = lobby_parts
 # ---- the hill: conical skirt under the plaza, foundations under the rest ---
 skirt = trimesh.creation.revolve(np.array([[19.0, 0.0], [26.0, GROUND_Y]]), sections=64)
 skirt.apply_transform(trimesh.transformations.rotation_matrix(-math.pi / 2, [1, 0, 0]))
@@ -446,6 +455,7 @@ for sx in (-1, 1):
     parts.append(place(xz(extrude(ngon(0.25, n=8), 1.1)), M_STRUCT, (sx * 9.4, 0, -16.6)))
     parts.append(place(xz(extrude(ngon(0.35, n=8), 0.1)), M_TRIM, (sx * 9.4, 1.1, -16.6)))
 
+parts = espl_parts
 # ---- the esplanade: promenade axis through the valley ----------------------
 parts.append(place(trimesh.creation.box(extents=[1.6, 0.05, 44]), M_TRIM,
                    (0, GROUND_Y + 0.03, -51)))
@@ -492,6 +502,7 @@ parts.append(place(gate, M_TRIM, (6.8, GROUND_Y, -62.0), rot_y(90)))
 parts.append(place(gate, M_STRUCT, (-6.8, GROUND_Y, -68.0), rot_y(-90)))
 parts.append(place(gate, M_STRUCT, (6.8, GROUND_Y, -68.0), rot_y(90)))
 
+parts = world_parts
 # ---- the Thirteenth Floor border -------------------------------------------
 # Solid world dissolves to green wireframe over blackness; a bright seam marks
 # where reality ends. (Reference: the movie poster; an Elation-era aesthetic.)
@@ -526,13 +537,17 @@ for k in range(72):
     seg = trimesh.creation.box(extents=[0.12, 0.1, 8.0])
     parts.append(place(seg, M_TRIM, (hx, hy, hz), rot_y(-(b + 90))))
 
-lobby = trimesh.Scene()
-for i, p in enumerate(parts):
-    lobby.add_geometry(p, node_name=f'lobby-{i:03d}')
-
+parts = lobby_parts
 os.makedirs(OUT_DIR, exist_ok=True)
-lobby_path = os.path.join(OUT_DIR, 'lobby.glb')
-lobby.export(lobby_path)
+export_paths = []
+for scene_name, plist in (('lobby', lobby_parts), ('esplanade', espl_parts), ('world', world_parts)):
+    sc = trimesh.Scene()
+    for i, p in enumerate(plist):
+        sc.add_geometry(p, node_name=f'{scene_name}-{i:03d}')
+    pth = os.path.join(OUT_DIR, f'{scene_name}.glb')
+    sc.export(pth)
+    export_paths.append(pth)
+lobby_path = export_paths[0]
 
 # ---- collision mesh: same layout, coarse shapes, few tris ------------------
 # Mesh colliders are tested per-frame by physics; the visual mesh's 12k tris
@@ -593,7 +608,7 @@ for i, p in enumerate(coin_parts):
 coin_path = os.path.join(OUT_DIR, 'coin.glb')
 coin.export(coin_path)
 
-for path in (lobby_path, coin_path, collision_path):
+for path in export_paths + [coin_path, collision_path]:
     scene = trimesh.load(path)
     tris = sum(len(g.faces) for g in scene.geometry.values())
     print(f'{os.path.relpath(path, ROOT)}: {len(scene.geometry)} meshes, {tris} tris, '
