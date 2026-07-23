@@ -47,7 +47,7 @@ PLAZA_R = 17.0
 FLOOR_T = 0.5          # slab thickness; walking surface at y=0
 WALL_H = 5.0
 CORRIDOR_W = 7.0
-CORRIDOR_Z = (14.0, 31.0)
+CORRIDOR_Z = (14.0, 27.4)
 WING_W = 8.0
 WING_LEN = 18.0
 WING_R = 23.0          # wing floor centre radius (spans r=14..32)
@@ -375,7 +375,7 @@ parts.append(place(booth, M_STRUCT, (4.5, 1.1, 4.5), rot_y(-45)))
 # ============================================================================
 
 # ---- entry corridor: broken-arch ribs + glowing edge strips ----------------
-RIB_ZS = (16.0, 19.5, 23.0, 27.0, 30.5)
+RIB_ZS = (16.0, 19.5, 23.0, 26.5)
 for z in RIB_ZS:
     f = 1.0 - (z - RIB_ZS[0]) / (RIB_ZS[-1] - RIB_ZS[0])   # 1 nearest the plaza
     # rib columns stay just inside the corridor walls (inner face ±3.3) so no
@@ -444,7 +444,7 @@ parts = lobby_parts
 skirt = trimesh.creation.revolve(np.array([[19.0, 0.0], [26.0, GROUND_Y]]), sections=64)
 skirt.apply_transform(trimesh.transformations.rotation_matrix(-math.pi / 2, [1, 0, 0]))
 parts.append(place(skirt, M_WALL))
-parts.append(place(trimesh.creation.box(extents=[8.0, 4.5, 19.0]), M_WALL, (0, -2.75, 22.5)))
+parts.append(place(trimesh.creation.box(extents=[8.0, 4.5, 15.0]), M_WALL, (0, -2.75, 20.5)))
 
 # ---- the grand stair: plaza rim down to the valley, north -------------------
 STAIR_W = 18.0
@@ -466,7 +466,7 @@ for sx in (-1, 1):
 # Continues the curve of the halls' back walls; each hall exits onto it near
 # its far cap, and it feeds the corridor's south mouth — walk a whole wing and
 # you come out a short stroll from spawn.
-CORR_FOOT = box(-3.9, -31.05, 3.9, -13.0)   # corridor footprint (shapely y = -z)
+CORR_FOOT = box(-3.9, -27.2, 3.9, -13.0)   # corridor footprint (shapely y = -z)
 bal_floor = annsec(27.4, 31.9, 160, 200).difference(CORR_FOOT)
 parts.append(place(xz(extrude(bal_floor, 0.5)), M_FLOOR, (0, -0.5, 0)))
 # outer balustrade + glowing cap
