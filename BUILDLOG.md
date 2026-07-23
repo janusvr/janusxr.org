@@ -434,6 +434,16 @@ a project whose launch theme is styled greybox, is not a confession but a thesis
 The promenade runs straight at that horizon; the gates beside it are the actual
 ways past the edge. `vp-explore` moved to the overlook, so the Explore section's
 document-mode framing is now the valley vista entire.
+
+A follow-up correction closed the loop: the first version's rectangular wings
+jutted out east and west, and from down in the valley they loomed like the walls
+of the Forbidden Palace — precisely the wrong feeling for an open park. The
+wings became **curved cloister halls**: annular corridors hugging the plaza,
+entered at the same doorways, walked as a curve back toward Main Street, ending
+against the corridor's walls. The exhibits rehung along the arcs (outer wall
+facing in, inner wall facing out, the typewriter on Learn's far cap, Build's
+three-door bays curved into the sweep), and from the esplanade the shrine now
+reads as a single compact crown on its hill.
 - **The engine's `<janus-viewer>` parse path didn't survive the comment.** The
   fireboxroom regex tradition tolerated comment-wrapped markup by accident of
   extraction order (the regex plucks the block *out of* the comment); the newer

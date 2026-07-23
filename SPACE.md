@@ -62,10 +62,15 @@ the horizon. An Elation-era aesthetic, home at last.
                      S  ← hero camera == spawn
 ```
 
-Wings: Learn at 280° and Build at 80°, both 12×26m at plaza level (Learn absorbed
-the former Get wing's exhibits; the former Travel wing became the valley's history
-station; the former Explore wing became the valley itself). Document order: Learn →
-Explore (the overlook vista) → Build, with the footer's aerial overview closing.
+Wings: Learn (entrance 280°) and Build (entrance 80°) are **curved cloister
+halls** — annular corridors (r≈19.5–29.5) that hug the plaza. You enter at the
+doorway, turn (left for Learn, right for Build), and walk the curve back toward
+the south, where each hall terminates against Main Street's walls. Nothing juts
+into the valley's sightlines — from the esplanade, the shrine reads as one
+compact hilltop crown, not palace walls. (Learn absorbed the former Get wing's
+exhibits; the former Travel wing became the valley's history station; the former
+Explore wing became the valley itself.) Document order: Learn → Explore (the
+overlook vista) → Build, with the footer's aerial overview closing.
 
 ## 3. The entry sequence
 
@@ -123,7 +128,7 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
 
 ## 5. The lands
 
-### 5.1 Learn (W wing, 280°)
+### 5.1 Learn (curved hall, entrance at 280°)
 
 - **Weenie:** the "JanusXR is ______" obelisk beside the mouth, typing live from
   the document's list.
@@ -149,7 +154,7 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
 - **The border:** the promenade's terminal vista is the Thirteenth Floor edge —
   dissolution, light seam, wireframe, black.
 
-### 5.3 Build (E wing, 80°)
+### 5.3 Build (curved hall, entrance at 80°)
 
 Unchanged in structure: three dressed hallways under card signage (blocks /
 source-glow / machine), the deploy panel at the mouth, racks and the open-source
