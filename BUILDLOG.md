@@ -402,6 +402,38 @@ the SVG rasterizer (a single `&` in a comment had been silently killing every
 styled render — the missing `onerror` that hid this is also fixed), and the
 snapshot honors per-mount texture dimensions instead of a hardcoded 1024². All
 engine-side, pending release; the site carries marked shims until then.
+
+## 2026-07-23 — The outdoor pivot: three lands, a valley, and the edge of reality
+
+The biggest restructure since the space was first drawn, in two moves that landed
+together.
+
+**Consolidation.** Five wings became three: Get's content folded into Learn (what
+it is → how to have it, one land), and Travel folded into Explore as **History**.
+The nav is four verbs now — Learn · Explore · Build · Ascend — and the document
+merged to match, ids and mounts renamed `history-*`.
+
+**The pivot.** A correction mid-planning reshaped everything: this space is
+**outdoors by default**. The park metaphor — Disneyland's esplanades and lands —
+governs; interior metaphors like Grand Central were explicitly set aside (its
+*function*, optimized through-flow with clear paths to destinations, survives;
+its architecture doesn't). The plaza became a semi-enclosed **shrine on a
+hilltop**, its north rim opening to an **overlook** at the head of an 18m grand
+stair descending five meters into a **valley esplanade**: a glowing promenade
+with the **history station** on its west side (an open-fronted pavilion — era
+plinths, tunnel mouths, the train analogy leaning in), showcase plinths and
+gates to the east, and project gates near the far end — Vesta's grand gate among
+them.
+
+And the borders: the world now ends the way reality ends in *The Thirteenth
+Floor* — a reference reaching back to Elation Engine's beginnings. Solid ground
+dissolves into scattered patches, a bright seam of light rings the edge, and
+beyond it there is only green wireframe over blackness, rising into wireframe
+hills at the horizon. The simulation admits what it is at its edges — which, for
+a project whose launch theme is styled greybox, is not a confession but a thesis.
+The promenade runs straight at that horizon; the gates beside it are the actual
+ways past the edge. `vp-explore` moved to the overlook, so the Explore section's
+document-mode framing is now the valley vista entire.
 - **The engine's `<janus-viewer>` parse path didn't survive the comment.** The
   fireboxroom regex tradition tolerated comment-wrapped markup by accident of
   extraction order (the regex plucks the block *out of* the comment); the newer
