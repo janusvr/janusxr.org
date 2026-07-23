@@ -132,11 +132,12 @@ its content sourced from the corresponding DOM section (§7).
 - **Weenie:** the **"JanusXR is ______" obelisk** — a terminal-green text column at
   architectural scale, typing rotating completions from the messaging list, cursor
   blinking. Readable from the plaza.
-- **Exhibits:** the positioning spectrum as three physical dioramas in a row — a
-  Roblox-style UGC scene mid-edit, a markup-only world beside its floating source text,
-  a scripted application (live data viz) — the React↔Unity spectrum walked left to
-  right. Decentralization placard: a constellation map of independently-hosted worlds
-  linked by portals.
+- **Exhibits:** the core concepts as gallery pieces — rooms & portals, objects &
+  assets, presence — with a components panel (JanusWeb, janus-server, Elation Engine,
+  JML, custom components) and a build teaser pointing at the Build wing (the how-to
+  specifics live there; Learn covers what JanusXR *is*). Decentralization placard: a
+  constellation map of independently-hosted worlds linked by portals. The diorama
+  plinths illustrate the concepts.
 
 ### 5.2 Explore (WNW)
 

@@ -59,10 +59,12 @@
       <Text js_id="obelisk-text" pos="-13.86 4.6 9.21" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="1.3 1.3 1">JanusXR is...</Text>
       <Text js_id="label-learn" pos="-7.94 4.9 10.92" fwd="0.5878 0 -0.8090" col="#43ff6e" scale="3 3 1">LEARN</Text>
     <Paragraph js_id="mount-learn-is" selector="#learn-is" css="css/phosphor.css" back_col="#0c0f0c" pos="-18.19 2.4 25.03" fwd="0.5878 0 -0.8090" scale="4.5 3.4 1" width="900" height="675" />
-    <Paragraph js_id="mount-learn-inworld"   selector="#learn-inworld"   css="css/phosphor.css" back_col="#0c0f0c" pos="-14.07 1.85 13.57" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-markup"    selector="#learn-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="-16.71 1.85 17.22" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-scripting" selector="#learn-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.21 1.85 20.65" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-11.21 1.85 21.21" fwd="-0.8090 0 -0.5878" scale="2.6 1.8 1" width="640" height="430" />
+    <Paragraph js_id="mount-learn-rooms"    selector="#learn-rooms"   css="css/phosphor.css" back_col="#0c0f0c" pos="-14.07 1.85 13.57" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-objects"  selector="#learn-objects"    css="css/phosphor.css" back_col="#0c0f0c" pos="-16.71 1.85 17.22" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-presence" selector="#learn-presence" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.21 1.85 20.65" fwd="0.8090 0 0.5878" scale="1.5 2 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-stack" selector="#learn-stack" css="css/phosphor.css" back_col="#0c0f0c" pos="-13.71 1.85 24.65" fwd="-0.8090 0 -0.5878" scale="2.6 2 1" width="560" height="440" />
+  <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-8.56 1.85 17.57" fwd="-0.8090 0 -0.5878" scale="2.6 1.6 1" width="600" height="380" />
+  <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-11.21 1.85 21.21" fwd="-0.8090 0 -0.5878" scale="2.6 1.8 1" width="640" height="430" />
 
       <Text js_id="label-explore" pos="-12.84 4.9 -4.17" fwd="0.9511 0 0.3090" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
     <Link js_id="portal-vesta" pos="-29.09 1.8 -12.08" fwd="0.9511 0 0.3090" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
@@ -195,31 +197,49 @@
   very fancy websites. Standing around in a website with your friends is just the
   floor — your imagination is what defines the ceiling.</p>
 
-  <div id="learn-spectrum" class="spectrum">
-    <h3 class="visually-structural">One engine, three ways in</h3>
+  <div id="learn-concepts" class="concepts">
+    <h3 class="visually-structural">The concepts</h3>
     <div class="cards">
-      <article class="card" id="learn-inworld">
-        <h4>Build in-world</h4>
-        <p>Walk in and start placing blocks. The collaborative in-world editor lets you
-        and your friends build together in real time — no code, no tools to install,
-        no leaving the browser.</p>
-        <p class="card-link"><a href="/docs/editor/">Editor guide →</a></p>
+      <article class="card" id="learn-rooms">
+        <h4>Rooms &amp; portals</h4>
+        <p>Every world is a room, and every room is a URL. Portals connect them the
+        way links connect pages — step through one and you're somewhere else on the
+        web. There is no lobby server to pass through, no walled garden. Just
+        addresses.</p>
       </article>
-      <article class="card" id="learn-markup">
-        <h4>Write markup</h4>
-        <p>A whole world in a text file. Janus Markup Language (JML) describes rooms
-        the way HTML describes pages — declarative, view-source-able, hostable
-        anywhere you can host a file.</p>
-        <p class="card-link"><a href="/docs/jml/">JML reference →</a></p>
+      <article class="card" id="learn-objects">
+        <h4>Objects &amp; assets</h4>
+        <p>Rooms are built from objects — models, images, sounds, video, text —
+        declared like HTML elements and composed like a scene graph. If you've
+        written a webpage, you already know the shape of it.</p>
       </article>
-      <article class="card" id="learn-scripting">
-        <h4>Script everything</h4>
-        <p>Custom entities with event-driven logic, driven by JavaScript. Build full
-        applications: live dashboards, simulations, games — anything the web can
-        reach, your world can render.</p>
-        <p class="card-link"><a href="/docs/scripting/">Scripting API →</a></p>
+      <article class="card" id="learn-presence">
+        <h4>Presence</h4>
+        <p>Every room is multiplayer by default. Visitors share the space, see each
+        other's avatars, talk, and build together. Presence isn't a feature bolted
+        on top — it's infrastructure, like the web server itself.</p>
       </article>
     </div>
+  </div>
+
+  <div id="learn-stack" class="callout">
+    <h3>The components</h3>
+    <p>JanusXR is a small constellation of open pieces, each usable on its own:</p>
+    <ul class="stack-list">
+      <li><strong>JanusWeb</strong> — the client: a 3D browser that runs in your browser.</li>
+      <li><strong>janus-server</strong> — the presence layer that makes rooms shared places.</li>
+      <li><strong>Elation Engine</strong> — the JavaScript engine underneath it all, in development since 2010.</li>
+      <li><strong>JML</strong> — the markup language: rooms described the way documents are.</li>
+      <li><strong>Custom components</strong> — a public registry of scripted elements that extend what rooms can do.</li>
+    </ul>
+  </div>
+
+  <div id="learn-extensible" class="callout">
+    <h3>Declarative or scripted — your choice</h3>
+    <p>A world can be ten lines of markup in a text file, or a full event-driven
+    application — and the component system means the engine itself is endlessly
+    extensible. This section is about what JanusXR <em>is</em>; when you're ready
+    to make something with it, <a href="#build">pick your hallway in Build</a>.</p>
   </div>
 
   <div id="learn-decentralized" class="callout">
