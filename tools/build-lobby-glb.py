@@ -232,7 +232,9 @@ for name, spec in HALLS.items():
     e0, e1 = spec['exit']
     parts.append(place(xz(extrude(hclip(annsec(26.8, 27.2, a0, e0)), WALL_H)), M_WALL))
     parts.append(place(xz(extrude(hclip(annsec(26.8, 27.2, e1, a1)), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(hclip(annsec(17.2, 27.2, a1 - 0.9, a1)), WALL_H)), M_WALL))
+    cn = spec['cap_near']
+    cap_span = (a1 - 0.9, a1) if cn == a1 else (a0, a0 + 0.9)
+    parts.append(place(xz(extrude(hclip(annsec(17.2, 27.2, cap_span[0], cap_span[1])), WALL_H)), M_WALL))
 
     # skirting glow along both walls; radial pergola beams overhead
     parts.append(place(xz(extrude(hclip(annsec(17.65, 17.77, a0 + 1, a1 - 1)), 0.04)), M_TRIM_DIM))
