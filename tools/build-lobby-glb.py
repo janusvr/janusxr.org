@@ -210,31 +210,36 @@ def annsec(r0, r1, a0, a1):
 def face_yaw(v):
     return math.degrees(math.atan2(-v[0], -v[2]))
 
+CORR_SLAB = box(-3.7, -28.0, 3.7, -12.0)   # corridor interior; halls end flush at its walls
+
 for name, spec in HALLS.items():
     deg = spec['deg']
     a0, a1 = sorted((spec['cap_far'], spec['cap_near']))
     g0, g1 = spec['gap']
     d = bearing_dir(deg)
 
-    # floor + foundation under the outer edge
-    parts.append(place(xz(extrude(annsec(HALL_R[0], HALL_R[1], a0, a1), 0.5)), M_FLOOR, (0, -0.5, 0)))
-    parts.append(place(xz(extrude(annsec(26.7, HALL_R[1], a0, a1), 4.7)), M_WALL, (0, -5.2, 0)))
+    def hclip(poly):
+        return poly.difference(CORR_SLAB)
 
-    # inner wall (split around the entrance gap), outer wall, end caps
-    parts.append(place(xz(extrude(annsec(17.2, 17.6, a0, g0), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(17.2, 17.6, g1, a1), WALL_H)), M_WALL))
+    # floor + foundation under the outer edge
+    parts.append(place(xz(extrude(hclip(annsec(HALL_R[0], HALL_R[1], a0, a1)), 0.5)), M_FLOOR, (0, -0.5, 0)))
+    parts.append(place(xz(extrude(hclip(annsec(26.7, HALL_R[1], a0, a1)), 4.7)), M_WALL, (0, -5.2, 0)))
+
+    # inner wall (split around the entrance gap), outer wall; the far end is
+    # capped by the corridor wall itself — halls are clipped flush against it
+    parts.append(place(xz(extrude(hclip(annsec(17.2, 17.6, a0, g0)), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(hclip(annsec(17.2, 17.6, g1, a1)), WALL_H)), M_WALL))
     e0, e1 = spec['exit']
-    parts.append(place(xz(extrude(annsec(26.8, 27.2, a0, e0), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(26.8, 27.2, e1, a1), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(17.2, 27.2, a0, a0 + 0.9), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(17.2, 27.2, a1 - 0.9, a1), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(hclip(annsec(26.8, 27.2, a0, e0)), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(hclip(annsec(26.8, 27.2, e1, a1)), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(hclip(annsec(17.2, 27.2, a1 - 0.9, a1)), WALL_H)), M_WALL))
 
     # skirting glow along both walls; radial pergola beams overhead
-    parts.append(place(xz(extrude(annsec(17.65, 17.77, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
-    parts.append(place(xz(extrude(annsec(26.63, 26.75, a0 + 1, a1 - 1), 0.04)), M_TRIM_DIM))
+    parts.append(place(xz(extrude(hclip(annsec(17.65, 17.77, a0 + 1, a1 - 1)), 0.04)), M_TRIM_DIM))
+    parts.append(place(xz(extrude(hclip(annsec(26.63, 26.75, a0 + 1, a1 - 1)), 0.04)), M_TRIM_DIM))
     a = a0 + 4.0
     while a < a1 - 2.0:
-        parts.append(place(xz(extrude(annsec(17.0, 27.4, a - 0.45, a + 0.45), 0.35)), M_STRUCT, (0, WALL_H - 0.35, 0)))
+        parts.append(place(xz(extrude(hclip(annsec(17.0, 27.4, a - 0.45, a + 0.45)), 0.35)), M_STRUCT, (0, WALL_H - 0.35, 0)))
         a += 10.0
     # radial pilasters on the outer wall
     a = a0 + 8.0
@@ -382,7 +387,7 @@ for z in RIB_ZS:
     # surface is coplanar with them
     ow = 5.3 + 0.4 * f
     sh = 2.4 + 1.4 * f
-    rib = face_center(extrude(broken_arch(6.5, ow, sh, gap_frac=0.6), 0.25), 0.25)
+    rib = face_center(extrude(broken_arch(6.5, ow, sh, band=0.42, gap_frac=0.6), 0.25), 0.25)
     parts.append(place(rib, M_STRUCT, (0, 0, z)))
 for sx in (-1, 1):
     strip = box(sx * 3.1 - 0.15, -(z1 - 0.5), sx * 3.1 + 0.15, -z0)
