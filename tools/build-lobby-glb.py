@@ -194,6 +194,10 @@ HALLS = {
     'build': dict(deg=80,  cap_far=172, cap_near=64,  gap=(68.5, 91.5)),
 }
 
+def wpolar(r, deg):
+    a = math.radians(deg)
+    return (r * math.sin(a), -r * math.cos(a))
+
 def sectorp(a0, a1, radius=45.0):
     n = max(12, int(abs(a1 - a0) / 3))
     pts = [(0.0, 0.0)] + [polar(radius, a0 + (a1 - a0) * i / n) for i in range(n + 1)]
@@ -250,24 +254,24 @@ for name, spec in HALLS.items():
     if name == 'learn':
         # concept plinths along the inner curve
         for b in (258, 242, 226):
-            px, pz = polar(19.7, b)
+            px, pz = wpolar(19.7, b)
             parts.append(place(trimesh.creation.box(extents=[1.1, 1.0, 1.1]), M_STRUCT, (px, 0.5, pz), rot_y(-b)))
             parts.append(place(trimesh.creation.box(extents=[1.22, 0.06, 1.22]), M_TRIM_DIM, (px, 1.03, pz), rot_y(-b)))
         # the Mirror on the outer wall near the far end; the vault opposite
         mring = face_center(extrude(Point(0, 3.2).buffer(3.0, resolution=36).difference(
             Point(0, 3.2).buffer(2.8, resolution=36)), 0.2), 0.2)
         md = bearing_dir(193)
-        mx, mz = polar(26.6, 193)
+        mx, mz = wpolar(26.6, 193)
         parts.append(place(mring, M_TRIM_DIM, (mx, 0, mz), rot_y(face_yaw(-md))))
         vring = face_center(extrude(Point(0, 1.6).buffer(1.2, resolution=24).difference(
             Point(0, 1.6).buffer(1.0, resolution=24)), 0.25), 0.25)
         vdoor = face_center(extrude(Point(0, 1.6).buffer(1.0, resolution=24), 0.1), 0.1)
         vd = bearing_dir(202)
-        vx, vz = polar(17.8, 202)
+        vx, vz = wpolar(17.8, 202)
         parts.append(place(vring, M_TRIM_DIM, (vx, 0, vz), rot_y(face_yaw(vd))))
         parts.append(place(vdoor, M_WALL, (vx + vd[0] * -0.05, 0, vz + vd[2] * -0.05), rot_y(face_yaw(vd))))
         # obelisk beside the mouth, facing the plaza
-        obx, obz = polar(16.6, 260)
+        obx, obz = wpolar(16.6, 260)
         parts.append(place(trimesh.creation.box(extents=[0.9, 7.5, 0.9]), M_STRUCT, (obx, 3.75, obz), rot_y(180 - 260)))
         obd = bearing_dir(260)
         parts.append(place(trimesh.creation.box(extents=[0.14, 6.8, 0.08]), M_TRIM,
@@ -278,25 +282,25 @@ for name, spec in HALLS.items():
             parts.append(place(xz(extrude(annsec(21.7, 26.8, b - 0.6, b + 0.6), 4.0)), M_STRUCT))
         # editor bay: scattered blocks
         for b, rr, bs in ((95, 24.7, 0.55), (99, 23.2, 0.4), (93, 23.7, 0.7)):
-            px, pz = polar(rr, b)
+            px, pz = wpolar(rr, b)
             parts.append(place(trimesh.creation.box(extents=[bs, bs, bs]), M_STRUCT, (px, bs / 2, pz), rot_y(-b * 2)))
         # markup bay: source-glow strips on the bay dividers
         for b in (105.5, 118.5):
-            px, pz = polar(24.2, b)
+            px, pz = wpolar(24.2, b)
             parts.append(place(trimesh.creation.box(extents=[0.04, 1.6, 1.2]), M_TRIM_DIM, (px, 2.0, pz), rot_y(-b)))
         # scripting bay: the machine plinth (its spinning core lives in the JML)
-        px, pz = polar(23.7, 114)
+        px, pz = wpolar(23.7, 114)
         parts.append(place(xz(extrude(ngon(0.5, n=8), 1.1)), M_STRUCT, (px, 0, pz)))
         # server racks near the far end
         for b in (152, 160):
             for rr in (19.2, 25.2):
-                px, pz = polar(rr, b)
+                px, pz = wpolar(rr, b)
                 parts.append(place(trimesh.creation.box(extents=[0.9, 2.1, 0.7]), M_WALL, (px, 1.05, pz), rot_y(-b)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM, (px, 2.15, pz), rot_y(-b)))
         # open-source placard frame on the far cap
         pframe = face_center(extrude(
             box(-3.2, 0.4, 3.2, 5.0).difference(box(-2.9, 0.7, 2.9, 4.7)), 0.3), 0.3)
-        fx, fz = polar(22.2, 170.6)
+        fx, fz = wpolar(22.2, 170.6)
         parts.append(place(pframe, M_STRUCT, (fx, 0, fz), rot_y(face_yaw(np.array([0.986, 0, -0.165])))))
 
 # ---- the halo ring ---------------------------------------------------------
@@ -323,7 +327,7 @@ halo_glow = Point(0, 0).buffer(7.62, resolution=64).difference(
 parts.append(place(xz(extrude(halo_glow, 0.04)), M_TRIM_DIM, (0, RING_Y + 0.2, 0)))
 # glowing pads at the break
 for enddeg in RING_GAP:
-    px, pz = polar((RING_R[0] + RING_R[1]) / 2, enddeg + (1.2 if enddeg == RING_GAP[0] else -1.2))
+    px, pz = wpolar((RING_R[0] + RING_R[1]) / 2, enddeg + (1.2 if enddeg == RING_GAP[0] else -1.2))
     parts.append(place(xz(extrude(ngon(0.28, n=8), 0.24)), M_TRIM, (px, RING_Y - 0.02, pz)))
 
 # ---- monument: octagonal basin + pedestal ----------------------------------
@@ -511,7 +515,7 @@ _rnd.seed(1313)
 for i in range(70):
     th = _rnd.uniform(0, 360)
     rr = _rnd.uniform(56, 69)
-    px, pz = polar(rr, th)
+    px, pz = wpolar(rr, th)
     size = _rnd.uniform(1.5, 4.5)
     parts.append(place(trimesh.creation.box(extents=[size, 0.3, size * _rnd.uniform(0.5, 1.0)]), M_FLOOR,
                        (px, GROUND_Y - 0.15, pz), rot_y(_rnd.uniform(0, 360))))
@@ -532,7 +536,7 @@ for rr in (75.0, 81.0, 87.0):
 # wireframe hills at the horizon: an undulating rim
 for k in range(72):
     b = k * 5.0
-    hx, hz = polar(90.5, b)
+    hx, hz = wpolar(90.5, b)
     hy = GROUND_Y + max(0.0, math.sin(math.radians(b * 3.0))) * 2.6
     seg = trimesh.creation.box(extents=[0.12, 0.1, 8.0])
     parts.append(place(seg, M_TRIM, (hx, hy, hz), rot_y(-(b + 90))))
@@ -562,7 +566,7 @@ for sx in (-1, 1):
 
 
 for bc in (135, 225):   # bench proxies
-    bx, bz = polar(7.45, bc)
+    bx, bz = wpolar(7.45, bc)
     cparts.append(place(trimesh.creation.box(extents=[3.6, 0.45, 0.7]), M_COL,
                         (bx, 0.225, bz), rot_y(-(bc + 90))))
 
