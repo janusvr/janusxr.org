@@ -18,11 +18,11 @@
     /* section viewpoints orbit low around the fountain, each looking out
        through its wing's portal doorway */
     hero:     { pos: [0, 0, 26],        look: [0, 1.7, 0] },   /* == Room spawn pos/fwd */
-    learn:   { pos: [-2.35, 2, 3.24],  look: [-11.17, 3, 15.37] },
-    explore:  { pos: [-3.80, 2, -1.24], look: [-18.07, 3, -5.87] },
+    learn:    { pos: [-4, 2, 0],        look: [-19, 3, 0] },
+    explore:  { pos: [-2.83, 2, -2.83], look: [-13.44, 3, -13.44] },
     get:      { pos: [0, 2, -4],        look: [0, 3, -19] },
-    build:    { pos: [3.80, 2, -1.24],  look: [18.07, 3, -5.87] },
-    travel: { pos: [2.35, 2, 3.24],   look: [11.17, 3, 15.37] },
+    build:    { pos: [2.83, 2, -2.83],  look: [13.44, 3, -13.44] },
+    travel:   { pos: [4, 2, 0],         look: [19, 3, 0] },
     overview: { pos: [0, 13, 21],       look: [0, 0.9, 0] }   /* footer: high south, gazing at the fountain base */
   };
   var SECTION_VP = [

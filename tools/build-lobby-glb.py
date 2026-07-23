@@ -61,7 +61,7 @@ PED_R = 0.9
 COIN_Y = 7.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
-WINGS = {'learn': 216, 'explore': 288, 'get': 0, 'build': 72, 'travel': 144}
+WINGS = {'learn': 270, 'explore': 315, 'get': 0, 'build': 45, 'travel': 90}
 # per-wing (width, length) overrides; build carries the most content
 WING_DIMS = {'build': (12.0, 26.0)}
 
@@ -283,7 +283,7 @@ def wedge(deg_center, deg_span, r0, r1):
     ann = Point(0, 0).buffer(r1, resolution=48).difference(Point(0, 0).buffer(r0, resolution=48))
     return ann.intersection(w)
 
-for bc in (252, 324):
+for bc in (135, 225):
     parts.append(place(xz(extrude(wedge(bc, 26, 7.1, 7.75), 0.45)), M_STRUCT))
     parts.append(place(xz(extrude(wedge(bc, 26, 7.7, 7.78), 0.47)), M_TRIM_DIM))
 
@@ -313,7 +313,7 @@ for deg in list(WINGS.values()) + [180]:
     parts.append(place(xz(extrude(strip, 0.03)), M_TRIM, (0, 0, 0), rot_y(-deg)))
 
 # ---- plaza colonnade + mezzanine support columns ---------------------------
-MID_BEARINGS = [22.5 + k * 45 for k in range(8)]
+MID_BEARINGS = [112.5, 135.0, 157.5, 202.5, 225.0, 247.5]
 for b in MID_BEARINGS:
     d = bearing_dir(b)
     # freestanding pillar with cap marking the plaza boundary
@@ -405,7 +405,7 @@ for name, deg in WINGS.items():
             plinth(-2.2, lr)
         # the obelisk weenie: a tall column beside the mouth, facing the plaza
         # (on the mouth's south flank, clear of the colonnade pillars)
-        ob = at(-5.8, 0, 15.6)
+        ob = at(5.8, 0, 15.6)
         parts.append(place(trimesh.creation.box(extents=[0.9, 7.5, 0.9]), M_STRUCT,
                            (ob[0], 3.75, ob[2]), rot_y(180 - deg)))
         parts.append(place(trimesh.creation.box(extents=[0.14, 6.8, 0.08]), M_TRIM,
@@ -492,7 +492,7 @@ for name, deg in WINGS.items():
     if name != 'explore':
         cparts.append(place(xz(extrude(box(-w / 2, ln / 2 - 0.4, w / 2, ln / 2), WALL_H)), M_COL, (c[0], 0, c[2]), R))
 
-for bc in (252, 324):   # bench proxies
+for bc in (135, 225):   # bench proxies
     bx, bz = polar(7.45, bc)
     cparts.append(place(trimesh.creation.box(extents=[3.6, 0.45, 0.7]), M_COL,
                         (bx, 0.225, bz), rot_y(-(bc + 90))))

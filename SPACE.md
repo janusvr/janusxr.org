@@ -59,14 +59,13 @@ central fountain.
               S  ← hero camera threshold == spawn
 ```
 
-Wing bearings (entry at south, 180°): evenly distributed at 72° — What-is (216°) →
-Explore (288°) → Get (0°, axial) → Build (72°) → Timeline (144°). Document order sweeps
-the orbit **monotonically clockwise** — a full turn less the entry gap — and the layout
-reads symmetric from above (the footer's aerial vantage made the earlier clustered
-bearings look lopsided, so they were redistributed). Get sits axially opposite the
-entry: the Mirror's "you're already running it" is what faces you down Main Street.
-The first and last wings (What-is, Timeline) still flank the entry corridor as
-bookends.
+Wing bearings (entry at south, 180°): the five wings span a 180° arc across the
+north at 45° spacing — Learn (270°, W) → Explore (315°) → Get (0°, axial) →
+Build (45°) → Travel (90°, E). Document order still sweeps monotonically clockwise,
+Get still holds the axial spot (the Mirror's "you're already running it" faces you
+down Main Street), and the entire southern half of the plaza is open social floor —
+benches and colonnade flanking the entry corridor, content concentrated ahead of
+you as you arrive.
 
 ## 3. The entry sequence
 
