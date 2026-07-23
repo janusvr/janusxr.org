@@ -32,40 +32,40 @@ document specifies the 3D space itself. Process and inspiration are chronicled i
 
 ## 2. Spatial overview
 
-A central **plaza** (the hero) with five **wings** radiating from it, entered via a
-south **entry corridor**. The document-mode camera viewpoints orbit low around the
-central fountain.
+**Outdoors by default.** The park metaphor governs: open air, esplanades, lands,
+weenies — never interior architecture (themes may enclose things later; that's
+theirs to do). The world is a landscape: a **shrine on a hilltop** (the plaza),
+two wings flanking it, and to the north an **overlook** at the head of a grand
+stair descending into a **valley esplanade** — the Explore land. At the edges of
+everything, reality runs out the way it does in *The Thirteenth Floor*: solid
+ground dissolves into scattered patches, a bright seam of light marks the border,
+and beyond it only green wireframe over blackness, rising into wireframe hills at
+the horizon. An Elation-era aesthetic, home at last.
 
 ```
-                          GET
-                       (mirror)
-                          N
-      EXPLORE                         BUILD
-    (departure      ~~~~~~~~~~~    (three halls +
-      gates)        (   PLAZA    )   open-source)
-           WNW      (  vp orbit  )     ENE
-              \    (    ....    )    /
-                \  (  monument  )  /
-                   ( + fountain )
-                /  (            )  \
-              /     ~~~~~~~~~~~      \
-           SSW                         SSE
-        WHAT-IS                    TIMELINE
-       (obelisk)                (subway station)
-              |
-        ENTRY CORRIDOR
-        ("main street")
-              |
-              S  ← hero camera threshold == spawn
+        ~ ~ ~ wireframe horizon ~ ~ ~
+      · · light seam · · dissolution · ·
+                 VALLEY (y -5)
+   [HISTORY]     esplanade      [showcase]
+   (station)    | promenade |    (gates)
+    past/future |           | project gates
+                GRAND STAIR
+                 (overlook)
+        LEARN ---- SHRINE ---- BUILD
+       (W wing)  (hilltop     (E wing)
+                  plaza,
+                monument+ring)
+                     |
+               ENTRY CORRIDOR
+               ("main street")
+                     |
+                     S  ← hero camera == spawn
 ```
 
-Wing bearings (entry at south, 180°): the five wings span a 180° arc across the
-north at 45° spacing — Learn (270°, W) → Explore (315°) → Get (0°, axial) →
-Build (45°) → Travel (90°, E). Document order still sweeps monotonically clockwise,
-Get still holds the axial spot (the Mirror's "you're already running it" faces you
-down Main Street), and the entire southern half of the plaza is open social floor —
-benches and colonnade flanking the entry corridor, content concentrated ahead of
-you as you arrive.
+Wings: Learn at 280° and Build at 80°, both 12×26m at plaza level (Learn absorbed
+the former Get wing's exhibits; the former Travel wing became the valley's history
+station; the former Explore wing became the valley itself). Document order: Learn →
+Explore (the overlook vista) → Build, with the footer's aerial overview closing.
 
 ## 3. The entry sequence
 
@@ -121,122 +121,43 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
   sky openings overhead, warm pooled lighting. Environmental life only — real visitors
   provide the rest.
 
-## 5. The wings
+## 5. The lands
 
-Each wing: a mouth on the plaza, a weenie visible from the plaza, exhibits inside, and
-its content sourced from the corresponding DOM section (§7).
+### 5.1 Learn (W wing, 280°)
 
-### 5.1 What-is (SW)
+- **Weenie:** the "JanusXR is ______" obelisk beside the mouth, typing live from
+  the document's list.
+- **Exhibits:** concept cards (rooms & portals, objects & assets, presence) over
+  their diorama plinths; components, extensibility, and decentralization panels
+  opposite; the typewriter feature wall at the far end; and the absorbed Get
+  exhibits — web-client and self-host panels, the **Mirror** ring ("you're
+  already running it"), and the **vault** door with the legacy placard.
 
-- **Weenie:** the **"JanusXR is ______" obelisk** — a terminal-green text column at
-  architectural scale, typing rotating completions from the messaging list, cursor
-  blinking. Readable from the plaza.
-- **Exhibits:** the core concepts as gallery pieces — rooms & portals, objects &
-  assets, presence — with a components panel (JanusWeb, janus-server, Elation Engine,
-  JML, custom components) and a build teaser pointing at the Build wing (the how-to
-  specifics live there; Learn covers what JanusXR *is*). Decentralization placard: a
-  constellation map of independently-hosted worlds linked by portals. The diorama
-  plinths illustrate the concepts.
+### 5.2 Explore (the valley, N)
 
-### 5.2 Explore (WNW)
+- **Weenie:** the vista itself — the overlook at the top of the grand stair, the
+  promenade running to the edge of the simulation.
+- **The esplanade** serves Grand Central's *function* (through-flow, clear paths
+  to destinations) with park architecture: open sky, a glowing promenade axis,
+  destinations along it.
+- **History station** (west): an open-fronted pavilion — platform edge, era
+  plinths with year labels, the floating station sign, past/future tunnel mouths
+  in its side walls with their panels. The train analogy lives here.
+- **Showcase** (east): plinths and gate frames for featured/new content.
+- **Project gates** near the far end: Vesta (grand gate), JanusWeb, spares for
+  other projects Janus and otherwise — the actual ways past the edge.
+- **The border:** the promenade's terminal vista is the Thirteenth Floor edge —
+  dissolution, light seam, wireframe, black.
 
-- **Weenie:** daylight itself — the only wing open to sky/horizon. Portal glow at
-  the mouth.
-- **Exhibits:** **departure gates** — the numbered-doors tradition reborn: a colonnade
-  of active portals to featured worlds, each with destination placard (name, author,
-  URL — portals are just URLs; the placard says so). Vesta gets the grand gate.
-  Curation TBD (SPEC open question); gates degrade gracefully to fewer entries.
+### 5.3 Build (E wing, 80°)
 
-### 5.3 Get (N, axial)
+Unchanged in structure: three dressed hallways under card signage (blocks /
+source-glow / machine), the deploy panel at the mouth, racks and the open-source
+placard in the rear chamber.
 
-- **Weenie:** **the Mirror** — a large live surface showing the visitor's own view back
-  to them, captioned *"you're already running it."* The punchline of the whole section —
-  and, sitting axially opposite the entry, the first thing framed down Main Street.
-- **Exhibits:** web client (you're in it — link out is a portal home), self-hosting the
-  client and server. A side alcove — dressed as a small **museum vault** — holds the
-  legacy native client: archived historical builds, alternative clients, era
-  screenshots. Honest signage: unmaintained, preserved.
+### 5.4 Footer
 
-### 5.4 Build (ENE)
-
-The largest wing — 12m wide and 26m deep against the standard 8×18 — and the one
-carrying the project's primary message: **this is an open
-community project, and you are invited to build it** — worlds, docs, themes, tools, and
-the engine itself.
-
-- **Weenie:** above the wing mouth, a large object suspended **mid-construction,
-  cycling between greybox and fully-themed** — foreshadowing the editor, the theme
-  system, and the invitation to build.
-- **The three ramps** — the Quake homage: three short halls side by side, each dressed
-  to foreshadow its authorship tier, each ending in a portal to its docs area:
-  - **Editor hall:** manipulable blocks scattered about; a sandbox pedestal you can
-    actually edit (stretch: live, multiplayer).
-  - **Markup hall:** walls of glowing JML source; a placard pairing 10 lines of JML
-    with the room they produce, side by side. *"As simple as hosting a text file."*
-  - **Scripting hall:** machinery running — a live scripted contraption with its
-    event-driven source displayed beside it.
-- **Infrastructure gallery** at the halls' far end: server racks humming, placards on
-  presence/networking/hosting your own corner of the metaverse.
-- **The open-source chamber** — the wing's culminating space behind the three
-  halls, styled as a **living workshop**, not an archive: the project under active
-  construction.
-  - **Live project board:** in-world displays of recent GitHub activity — latest
-    commits, open issues, project planning status — pulled from the GitHub API at
-    runtime, with a build-time snapshot baked into the HTML as the Tier 0 / offline
-    fallback. The room shows not just that the project is alive, but *what it's doing
-    right now*.
-  - **Ways-in placards for every level:** hang out and report what's broken · build
-    worlds · write docs · make themes (§8 — the theme format is a contribution
-    on-ramp) · client and server code. Each placard links directly to the relevant
-    repo, issue tracker, or guide.
-  - Repository portals for the core repos, prominently framed — these are front-door
-    exhibits, not footer links.
-- Deployment-modes placard near the mouth: embedded in an existing site, full-page
-  app, translators transforming 2D websites and APIs into 3D worlds, and many more.
-
-### 5.5 Timeline (SE)
-
-Not a corridor of Janus history — a statement that Janus sits **in the middle of a much
-longer story**, with the future still unbuilt.
-
-- **Weenie:** a glowing **subway station entrance** at the wing mouth — illuminated
-  station sign, stairs descending. From the plaza it reads as transit: this wing goes
-  *somewhere else in time*.
-- **The station:** descending the stairs lands you in an art gallery built inside a
-  **decommissioned subway station**. The platform hall is the **History of Janus
-  (2010–present)**, positioned at the center (or reasonably so) of the station:
-  a spatially-organized set of dioramas, screenshots, 3D artifacts, and plaques —
-  museum-display language. Initial build-out covers the highlights: 2010 Elation
-  Engine · 2014 FireBox · 2015 JanusVR, Inc. · 2016 JanusWeb · 2019 JanusXR.org. Where
-  possible, era exhibits include **portals into era-representative content** (an
-  original FireBox room; the preserved home2 lobby). Candidate artifact: the restored
-  FireBox gyroscopic ring sculpture from the 2014 lobby, displayed as the museum piece
-  it is.
-- **The tube to the left — the past.** A tunnel receding toward everything that came
-  before Janus: the evolution of virtual spaces — MUDs, Habitat, VRML, ActiveWorlds,
-  SGI, Netscape, and onward. The curatorial through-line is **the recurring battle
-  between corporate dominance and open standards** — the cycle swings back and forth
-  through the decades, and the tunnel spatializes that oscillation (one possibility:
-  exhibits alternate between the tunnel's two walls, corporate era facing open era,
-  the track running between them). Filled in as an ongoing task; the initial build-out
-  is a few illuminated exhibits, with the format explicitly extensible. Educational in
-  intent: Janus stands on the shoulders of giants, and the exhibit says whose — and
-  which side of the cycle they were on.
-- **The tube to the right — the future.** A **well-lit, clean, whitebox-to-wireframe
-  construction site** — not dark or abandoned, but actively being built: crisp work
-  lighting, tidy scaffolds, surfaces resolving from whitebox to wireframe as the
-  tunnel recedes. Exhibits near the mouth: shorter-term expected advancements in tech,
-  ambitions for Janus and other open metaverse initiatives, and speculative ideas from
-  science fiction. The message is spatial as much as written: *the future is under
-  construction, and you're invited to solidify some part of it yourself* — an
-  invitation placard points back to the Build wing.
-
-### 5.6 Footer
-
-Document-only navigation (community channels, license, contact — repositories live
-prominently in the Build wing, not here). Its minimal in-world counterpart: a small
-plaque near the entry corridor noting the site is built with JanusXR itself, with a
-view-source invitation.
+Document-only navigation; the in-world colophon plaque near the entry corridor.
 
 ## 6. Document-mode choreography
 

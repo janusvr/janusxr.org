@@ -61,9 +61,9 @@ PED_R = 0.9
 COIN_Y = 7.2
 
 # bearings: deg from north, clockwise; north = -z, east = +x
-WINGS = {'learn': 270, 'explore': 315, 'get': 0, 'build': 45, 'travel': 90}
+WINGS = {'learn': 280, 'build': 80}
 # per-wing (width, length) overrides; build carries the most content
-WING_DIMS = {'build': (12.0, 26.0)}
+WING_DIMS = {'build': (12.0, 26.0), 'learn': (12.0, 26.0)}
 
 def wing_dims(name):
     w, ln = WING_DIMS.get(name, (WING_W, WING_LEN))
@@ -378,7 +378,7 @@ for name, deg in WINGS.items():
         # framed placard wall where the Paragraph mount sits
         pframe = face_center(extrude(
             box(-4.5, 0.4, 4.5, 7.0).difference(box(-4.15, 0.75, 4.15, 6.65)), 0.3), 0.3)
-        wing_place(pframe, M_STRUCT, 0, 0, 31.5, deg)
+        wing_place(pframe, M_STRUCT, 0, 0, 14 + ln - 0.5, deg)
 
     if name == 'build':
         # three hallway dividers — the Quake three-door select, made physical.
@@ -405,9 +405,19 @@ for name, deg in WINGS.items():
                            at(local_x, h + 0.03, local_r), rot_y(-deg)))
 
     if name == 'learn':
-        # the spectrum dioramas: editor / markup / scripting, along one wall
+        # concept dioramas along one wall
         for lr in (18.0, 22.0, 26.0):
             plinth(-2.2, lr)
+        # the Mirror (from the absorbed Get wing): emissive ring on the east wall
+        mring = face_center(extrude(Point(0, 3.2).buffer(3.0, resolution=36).difference(
+            Point(0, 3.2).buffer(2.8, resolution=36)), 0.2), 0.2)
+        parts.append(place(mring, M_TRIM_DIM, at(5.55, 0, 36.0), rot_y(face_yaw(-l))))
+        # the vault door on the west wall
+        vring = face_center(extrude(Point(0, 1.6).buffer(1.2, resolution=24).difference(
+            Point(0, 1.6).buffer(1.0, resolution=24)), 0.25), 0.25)
+        vdoor = face_center(extrude(Point(0, 1.6).buffer(1.0, resolution=24), 0.1), 0.1)
+        parts.append(place(vring, M_TRIM_DIM, at(-5.55, 0, 36.0), rot_y(face_yaw(l))))
+        parts.append(place(vdoor, M_WALL, at(-5.6, 0, 36.0), rot_y(face_yaw(l))))
         # the obelisk weenie: a tall column beside the mouth, facing the plaza
         # (on the mouth's south flank, clear of the colonnade pillars)
         ob = at(5.8, 0, 15.6)
@@ -459,13 +469,126 @@ for name, deg in WINGS.items():
                                    at(sx * 4.6, 1.05, lr), rot_y(-deg)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM,
                                    at(sx * 4.6, 2.15, lr), rot_y(-deg)))
-    elif name == 'travel':
-        # station platform edge, glowing across the wing
-        edge = box(-WING_W / 2 + 0.3, 2.6, WING_W / 2 - 0.3, 2.9)
-        parts.append(place(xz(extrude(edge, 0.03)), M_TRIM_DIM, (c[0], 0, c[2]), R))
-        # era plinths down the platform: the history of Janus as museum dioramas
-        for lr in (19.5, 23.0, 26.5):
-            plinth(0.0, lr, h=0.8, w=1.0)
+
+
+
+# ============================================================================
+# THE OUTDOORS — ground, the hill, the grand stair, the valley esplanade,
+# and the Thirteenth Floor border where reality runs out.
+# ============================================================================
+
+GROUND_Y = -5.0
+
+# ---- ground plane (valley floor and surrounding land) ----------------------
+ground = Point(0, 0).buffer(55, resolution=64)
+parts.append(place(xz(extrude(ground, 0.5)), M_FLOOR, (0, GROUND_Y - 0.5, 0)))
+
+# ---- the hill: conical skirt under the plaza, foundations under the rest ---
+skirt = trimesh.creation.revolve(np.array([[19.0, 0.0], [26.0, GROUND_Y]]), sections=64)
+skirt.apply_transform(trimesh.transformations.rotation_matrix(-math.pi / 2, [1, 0, 0]))
+parts.append(place(skirt, M_WALL))
+for name, deg in WINGS.items():
+    w, ln, wr = wing_dims(name)
+    d = bearing_dir(deg)
+    c = d * wr
+    parts.append(place(trimesh.creation.box(extents=[w + 0.6, 4.5, ln + 0.6]), M_WALL,
+                       (c[0], -2.75, c[2]), rot_y(-deg)))
+parts.append(place(trimesh.creation.box(extents=[8.0, 4.5, 19.0]), M_WALL, (0, -2.75, 22.5)))
+
+# ---- the grand stair: plaza rim down to the valley, north -------------------
+STAIR_W = 18.0
+for i in range(10):
+    ytop = -0.5 * (i + 1)
+    zc = -(17.0 + 0.6 + 1.2 * i)
+    parts.append(place(trimesh.creation.box(extents=[STAIR_W, 0.5, 1.2]), M_STRUCT,
+                       (0, ytop - 0.25, zc)))
+    # glowing nose strip on each tread
+    parts.append(place(trimesh.creation.box(extents=[STAIR_W, 0.05, 0.1]), M_TRIM_DIM,
+                       (0, ytop + 0.02, zc - 0.55)))
+# balustrade posts at the overlook
+for sx in (-1, 1):
+    parts.append(place(xz(extrude(ngon(0.25, n=8), 1.1)), M_STRUCT, (sx * 9.4, 0, -16.6)))
+    parts.append(place(xz(extrude(ngon(0.35, n=8), 0.1)), M_TRIM, (sx * 9.4, 1.1, -16.6)))
+
+# ---- the esplanade: promenade axis through the valley ----------------------
+parts.append(place(trimesh.creation.box(extents=[1.6, 0.05, 44]), M_TRIM,
+                   (0, GROUND_Y + 0.03, -51)))
+
+# ---- history station (west of the promenade) --------------------------------
+SX, SZ = -16.0, -46.0   # station centre
+# platform pad + glowing edge facing the promenade
+parts.append(place(trimesh.creation.box(extents=[15, 0.15, 11]), M_STRUCT, (SX - 0.5, GROUND_Y + 0.08, SZ)))
+parts.append(place(trimesh.creation.box(extents=[0.12, 0.06, 11]), M_TRIM_DIM, (SX + 6.9, GROUND_Y + 0.18, SZ)))
+# walls: rear (west), north, south; open east toward the promenade
+parts.append(place(trimesh.creation.box(extents=[0.4, 4.5, 11]), M_WALL, (SX - 7.3, GROUND_Y + 2.25, SZ)))
+parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ - 5.3)))
+parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ + 5.3)))
+# canopy + posts at the open edge
+parts.append(place(trimesh.creation.box(extents=[16, 0.25, 12]), M_STRUCT, (SX - 0.5, GROUND_Y + 4.6, SZ)))
+for pz in (SZ - 4.6, SZ + 4.6):
+    parts.append(place(xz(extrude(ngon(0.22, n=8), 4.5)), M_STRUCT, (SX + 6.6, GROUND_Y, pz)))
+# era plinths along the platform
+for pz in (SZ - 3.0, SZ, SZ + 3.0):
+    parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (SX, GROUND_Y + 0.4, pz)))
+    parts.append(place(trimesh.creation.box(extents=[1.12, 0.06, 1.12]), M_TRIM_DIM, (SX, GROUND_Y + 0.83, pz)))
+# tunnel mouths: past on the south wall (dim), future on the north wall (bright)
+tring = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.3, resolution=24).difference(
+    Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.1, resolution=24)), 0.3), 0.3)
+tinset = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.1, resolution=24), 0.1), 0.1)
+for wz, mat_ring in ((SZ - 5.3, M_TRIM_DIM), (SZ + 5.3, M_TRIM)):
+    yaw = 0 if wz > SZ else 180
+    parts.append(place(tring, mat_ring, (SX, GROUND_Y, wz), rot_y(yaw)))
+    parts.append(place(tinset, M_WALL, (SX, GROUND_Y, wz), rot_y(yaw)))
+
+# ---- showcase area (east of the promenade) ---------------------------------
+for pz in (-49.0, -46.0, -43.0):
+    parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (16.0, GROUND_Y + 0.4, pz)))
+    parts.append(place(trimesh.creation.box(extents=[1.12, 0.06, 1.12]), M_TRIM_DIM, (16.0, GROUND_Y + 0.83, pz)))
+showgate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
+for gz in (-44.0, -48.0):
+    parts.append(place(showgate, M_STRUCT, (10.5, GROUND_Y, gz), rot_y(90)))
+
+# ---- project gates flanking the promenade near the far end -----------------
+grand = face_center(extrude(arch_frame(4.2, 4.6, 3.1, 2.5), 0.35), 0.35)
+gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
+parts.append(place(grand, M_TRIM, (-6.8, GROUND_Y, -62.0), rot_y(-90)))
+parts.append(place(gate, M_TRIM, (6.8, GROUND_Y, -62.0), rot_y(90)))
+parts.append(place(gate, M_STRUCT, (-6.8, GROUND_Y, -68.0), rot_y(-90)))
+parts.append(place(gate, M_STRUCT, (6.8, GROUND_Y, -68.0), rot_y(90)))
+
+# ---- the Thirteenth Floor border -------------------------------------------
+# Solid world dissolves to green wireframe over blackness; a bright seam marks
+# where reality ends. (Reference: the movie poster; an Elation-era aesthetic.)
+_rnd.seed(1313)
+# dissolution band: scattered floor patches over the void
+for i in range(70):
+    th = _rnd.uniform(0, 360)
+    rr = _rnd.uniform(56, 69)
+    px, pz = polar(rr, th)
+    size = _rnd.uniform(1.5, 4.5)
+    parts.append(place(trimesh.creation.box(extents=[size, 0.3, size * _rnd.uniform(0.5, 1.0)]), M_FLOOR,
+                       (px, GROUND_Y - 0.15, pz), rot_y(_rnd.uniform(0, 360))))
+# dim grid emerging beneath the dissolution
+for th in range(0, 360, 15):
+    strip = box(-0.07, 55, 0.07, 70)
+    parts.append(place(xz(extrude(strip, 0.05)), M_TRIM_DIM, (0, GROUND_Y - 0.05, 0), rot_y(-th)))
+# the light seam at the edge of reality
+seam = Point(0, 0).buffer(70.3, resolution=96).difference(Point(0, 0).buffer(69.7, resolution=96))
+parts.append(place(xz(extrude(seam, 0.08)), M_TRIM, (0, GROUND_Y, 0)))
+# pure wireframe beyond: radials and concentric rings over nothing
+for th in range(0, 360, 8):
+    strip = box(-0.06, 70.5, 0.06, 90)
+    parts.append(place(xz(extrude(strip, 0.06)), M_TRIM, (0, GROUND_Y, 0), rot_y(-th)))
+for rr in (75.0, 81.0, 87.0):
+    ring = Point(0, 0).buffer(rr + 0.06, resolution=80).difference(Point(0, 0).buffer(rr - 0.06, resolution=80))
+    parts.append(place(xz(extrude(ring, 0.06)), M_TRIM, (0, GROUND_Y, 0)))
+# wireframe hills at the horizon: an undulating rim
+for k in range(72):
+    b = k * 5.0
+    hx, hz = polar(90.5, b)
+    hy = GROUND_Y + max(0.0, math.sin(math.radians(b * 3.0))) * 2.6
+    seg = trimesh.creation.box(extents=[0.12, 0.1, 8.0])
+    parts.append(place(seg, M_TRIM, (hx, hy, hz), rot_y(-(b + 90))))
 
 lobby = trimesh.Scene()
 for i, p in enumerate(parts):

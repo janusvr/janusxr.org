@@ -31,7 +31,7 @@
     <AssetImage id="sky-right" src="room/skybox/right.png" />
     <AssetImage id="sky-up"    src="room/skybox/up.png" />
     <AssetImage id="sky-down"  src="room/skybox/down.png" />
-    <AssetScript src="room/lobby.js?v=3" />
+    <AssetScript src="room/lobby.js?v=4" />
   </Assets>
   <Room js_id="plaza" thirdperson="true" pos="0 0 26" fwd="0 0 -1"
         skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
@@ -42,12 +42,12 @@
 
       <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-corridor"   pos="0 -0.25 22"       scale="7 0.5 18"   visible="false" collision_id="cube" />
-    <Object id="cube" js_id="col-wing-learn"   pos="-23 -0.24 0" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0 0 1" ydir="0 1 0" zdir="-1 0 0" />
-    <Object id="cube" js_id="col-wing-explore"  pos="-16.26 -0.24 -16.26" scale="8 0.48 18" visible="false" collision_id="cube" xdir="-0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 -0.7071" />
+    <Object id="cube" js_id="col-wing-learn"   pos="-26.59 -0.24 -4.69" scale="12 0.48 26" visible="false" collision_id="cube" xdir="-0.1736 0 0.9848" ydir="0 1 0" zdir="-0.9848 0 -0.1736" />
     <Object id="cube" js_id="col-wing-get"      pos="0 -0.24 -23" scale="8 0.48 18" visible="false" collision_id="cube" />
-    <Object id="cube" js_id="col-wing-build"    pos="19.09 -0.24 -19.09" scale="12 0.48 26" visible="false" collision_id="cube" xdir="-0.7071 0 -0.7071" ydir="0 1 0" zdir="0.7071 0 -0.7071" />
-    <Object id="cube" js_id="col-wing-travel" pos="23 -0.24 0" scale="8 0.48 18" visible="false" collision_id="cube" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" />
-    <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
+    <Object id="cube" js_id="col-wing-build"    pos="26.59 -0.24 -4.69" scale="12 0.48 26" visible="false" collision_id="cube" xdir="-0.1736 0 -0.9848" ydir="0 1 0" zdir="0.9848 0 -0.1736" />
+    <Object id="cube" js_id="col-ground" pos="0 -5.25 0" scale="110 0.5 110" visible="false" collision_id="cube" />
+  <Object id="cube" js_id="col-stair" pos="0 -2.5 -23" scale="18 0.3 13.2" visible="false" collision_id="cube" xdir="-1 0 0" ydir="0 0.9231 -0.3846" zdir="0 -0.3846 -0.9231" />
+  <Object id="cube" js_id="col-basin"    pos="0 0.45 0" scale="7.2 0.9 7.2" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
 
@@ -56,52 +56,50 @@
 
       <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
 
-      <Text js_id="obelisk-text" pos="-15.6 4.6 5.8" fwd="1 0 0" col="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
-      <Text js_id="label-learn" pos="-13.5 4.9 0" fwd="1 0 0" col="#43ff6e" scale="3 3 1">LEARN</Text>
-    <Text js_id="learn-is-title" pos="-30.45 3.9 0" fwd="1 0 0" col="#e8f5ea" font_scale="false" scale="0.45 0.45 1">JanusXR is</Text>
-  <Text js_id="learn-is-display" pos="-30.94 2.6 0" fwd="1 0 0" col="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
-    <Paragraph js_id="mount-learn-rooms"    selector="#learn-rooms"   css="css/phosphor.css" back_col="#0c0f0c" pos="-19.25 1.85 -3.4" fwd="0 0 1" scale="1.05 1.4 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-objects"  selector="#learn-objects"    css="css/phosphor.css" back_col="#0c0f0c" pos="-23.75 1.85 -3.4" fwd="0 0 1" scale="1.05 1.4 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-presence" selector="#learn-presence" css="css/phosphor.css" back_col="#0c0f0c" pos="-28 1.85 -3.4" fwd="0 0 1" scale="1.05 1.4 1" width="320" height="440" />
-    <Paragraph js_id="mount-learn-stack" selector="#learn-stack" css="css/phosphor.css" back_col="#0c0f0c" pos="-28 1.85 3.4" fwd="0 0 -1" scale="1.8 1.4 1" width="560" height="440" />
-  <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.25 1.85 3.4" fwd="0 0 -1" scale="1.8 1.1 1" width="600" height="380" />
-  <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-23.75 1.85 3.4" fwd="0 0 -1" scale="1.8 1.25 1" width="640" height="430" />
+      <Text js_id="obelisk-text" pos="-16.37 4.6 3.0" fwd="0.9848 0 0.1736" col="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
+      <Text js_id="label-learn" pos="-13.3 4.9 -2.34" fwd="0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">LEARN</Text>
+    <Text js_id="learn-is-title" pos="-38.7 3.9 -6.82" fwd="0.9848 0 0.1736" col="#e8f5ea" font_scale="false" scale="0.45 0.45 1">JanusXR is</Text>
+  <Text js_id="learn-is-display" pos="-38.7 2.6 -6.82" fwd="0.9848 0 0.1736" col="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
+    <Paragraph js_id="mount-learn-rooms"    selector="#learn-rooms"   css="css/phosphor.css" back_col="#0c0f0c" pos="-18.03 1.85 -8.61" fwd="-0.1736 0 0.9848" scale="1.05 1.4 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-objects"  selector="#learn-objects"    css="css/phosphor.css" back_col="#0c0f0c" pos="-22.46 1.85 -9.39" fwd="-0.1736 0 0.9848" scale="1.05 1.4 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-presence" selector="#learn-presence" css="css/phosphor.css" back_col="#0c0f0c" pos="-26.89 1.85 -10.17" fwd="-0.1736 0 0.9848" scale="1.05 1.4 1" width="320" height="440" />
+    <Paragraph js_id="mount-learn-stack" selector="#learn-stack" css="css/phosphor.css" back_col="#0c0f0c" pos="-28.75 1.85 0.37" fwd="0.1736 0 -0.9848" scale="1.8 1.4 1" width="560" height="440" />
+  <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-19.89 1.85 1.93" fwd="0.1736 0 -0.9848" scale="1.8 1.1 1" width="600" height="380" />
+  <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-24.32 1.85 1.15" fwd="0.1736 0 -0.9848" scale="1.8 1.25 1" width="640" height="430" />
 
-      <Text js_id="label-explore" pos="-9.55 4.9 -9.55" fwd="0.7071 0 0.7071" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
-    <Link js_id="portal-vesta" pos="-20.43 1.8 -23.97" fwd="0.7071 0 0.7071" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
-    <Link js_id="portal-janusweb" pos="-23.97 1.7 -20.43" fwd="0.7071 0 0.7071" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
+      <Text js_id="label-explore" pos="0 5.6 -18.2" fwd="0 0 1" col="#43ff6e" scale="3 3 1">EXPLORE</Text>
+    <Link js_id="portal-vesta" pos="-6.6 -3.2 -62" fwd="1 0 0" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
+    <Link js_id="portal-janusweb" pos="6.6 -3.3 -62" fwd="-1 0 0" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
 
       <Text js_id="label-get" pos="0 4.9 -13.5" fwd="0 0 1" col="#43ff6e" scale="3 3 1">GET</Text>
-    <Text js_id="mirror-caption" pos="0 1.15 -31.1" fwd="0 0 1" col="#7dffa0" scale="0.45 0.45 1">you're already running it</Text>
-    <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -19.25" fwd="-1 0 0" scale="1.7 1.2 1" width="640" height="450" />
-    <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="3.4 1.85 -23.75" fwd="-1 0 0" scale="1.7 1.2 1" width="640" height="450" />
-    <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-3.4 1.85 -28" fwd="1 0 0" scale="1.6 1.3 1" width="600" height="480" />
+    <Text js_id="mirror-caption" pos="-36.37 1.5 -1.03" fwd="0.1736 0 -0.9848" col="#7dffa0" scale="0.45 0.45 1">you're already running it</Text>
+    <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="-31.32 1.85 -10.95" fwd="-0.1736 0 0.9848" scale="1.7 1.2 1" width="640" height="450" />
+    <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="-33.18 1.85 -0.42" fwd="0.1736 0 -0.9848" scale="1.7 1.2 1" width="640" height="450" />
+    <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-36.25 1.85 -11.82" fwd="-0.1736 0 0.9848" scale="1.6 1.3 1" width="600" height="480" />
 
-      <Text js_id="label-build" pos="9.55 4.9 -9.55" fwd="-0.7071 0 0.7071" col="#43ff6e" scale="3 3 1">BUILD</Text>
-    <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="27.79 2.4 -27.79" fwd="-0.7071 0 0.7071" scale="4 3 1" />
-    <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="22.25 3.1 -16.78" fwd="-0.7071 0 0.7071" scale="1.2 1.6 1" width="320" height="420" />
-    <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="19.52 3.1 -19.52" fwd="-0.7071 0 0.7071" scale="1.2 1.6 1" width="320" height="420" />
-    <Paragraph js_id="mount-build-scripting" selector="#build-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="16.78 3.1 -22.25" fwd="-0.7071 0 0.7071" scale="1.2 1.6 1" width="320" height="420" />
-    <Object id="cube" js_id="machine-core" pos="19.89 1.6 -25.36" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
-    <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="22.03 1.85 -29.59" fwd="0.7071 0 0.7071" scale="1.7 1.2 1" width="560" height="410" />
-    <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="17.92 1.85 -10.36" fwd="-0.7071 0 -0.7071" scale="1.8 1.1 1" width="660" height="400" />
+      <Text js_id="label-build" pos="13.3 4.9 -2.34" fwd="-0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">BUILD</Text>
+    <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="38.7 2.4 -6.82" fwd="-0.9848 0 0.1736" scale="4 3 1" />
+    <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="27.85 3.1 -0.98" fwd="-0.9848 0 0.1736" scale="1.2 1.6 1" width="320" height="420" />
+    <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="27.18 3.1 -4.79" fwd="-0.9848 0 0.1736" scale="1.2 1.6 1" width="320" height="420" />
+    <Paragraph js_id="mount-build-scripting" selector="#build-scripting" css="css/phosphor.css" back_col="#0c0f0c" pos="26.51 3.1 -8.6" fwd="-0.9848 0 0.1736" scale="1.2 1.6 1" width="320" height="420" />
+    <Object id="cube" js_id="machine-core" pos="30.84 1.6 -9.37" scale="0.5 0.5 0.5" col="#43ff6e" angular="0 .8 0" lighting="false" />
+    <Paragraph js_id="mount-build-infra"  selector="#build-infra"  css="css/phosphor.css" back_col="#0c0f0c" pos="35.02 1.85 -11.61" fwd="0.1736 0 0.9848" scale="1.7 1.2 1" width="560" height="410" />
+    <Paragraph js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css" back_col="#0c0f0c" pos="20.63 1.85 1.8" fwd="-0.1736 0 -0.9848" scale="1.8 1.1 1" width="660" height="400" />
 
-      <Text js_id="label-travel" pos="13.5 4.9 0" fwd="-1 0 0" col="#43ff6e" scale="3 3 1">TRAVEL</Text>
-    <Text js_id="label-travel-past" pos="27.6 4.5 1.4" fwd="-1 0 0" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
-    <Text js_id="label-travel-future" pos="27.6 4.5 -1.4" fwd="-1 0 0" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
-    <Text js_id="era-2010" pos="19.5 1.5 0" fwd="-1 0 0" col="#7dffa0" scale="0.4 0.4 1">2010 - Elation Engine</Text>
-    <Text js_id="era-2014" pos="23 1.5 0" fwd="-1 0 0" col="#7dffa0" scale="0.4 0.4 1">2014 - FireBox</Text>
-    <Text js_id="era-2019" pos="26.5 1.5 0" fwd="-1 0 0" col="#7dffa0" scale="0.4 0.4 1">2019 - JanusXR.org</Text>
-    <Paragraph js_id="mount-travel-janus" selector="#travel-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="22 2.8 0" fwd="-1 0 0" cull_face="none" scale="2.6 2 1" width="780" height="600" />
-    <Paragraph js_id="mount-travel-past"   selector="#travel-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="28.5 1.85 3.4" fwd="0 0 -1" scale="1.7 1.5 1" width="560" height="500" />
-    <Paragraph js_id="mount-travel-future" selector="#travel-future" css="css/phosphor.css" back_col="#0c0f0c" pos="28.5 1.85 -3.4" fwd="0 0 1" scale="1.7 1.5 1" width="560" height="500" />
+      <Text js_id="label-history" pos="-9.2 -1.2 -46" fwd="1 0 0" col="#43ff6e" scale="1.6 1.6 1">HISTORY</Text>
+    <Text js_id="label-history-past" pos="-16 -1.6 -50.9" fwd="0 0 1" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
+    <Text js_id="label-history-future" pos="-16 -1.6 -41.1" fwd="0 0 -1" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+    <Text js_id="era-2010" pos="-16 -3.5 -49" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2010 - Elation Engine</Text>
+    <Text js_id="era-2014" pos="-16 -3.5 -46" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2014 - FireBox</Text>
+    <Text js_id="era-2019" pos="-16 -3.5 -43" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2019 - JanusXR.org</Text>
+    <Paragraph js_id="mount-history-janus" selector="#history-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -1.9 -46" fwd="1 0 0" cull_face="none" scale="2.6 2 1" width="780" height="600" />
+    <Paragraph js_id="mount-history-past"   selector="#history-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -50.7" fwd="0 0 1" scale="1.7 1.5 1" width="560" height="500" />
+    <Paragraph js_id="mount-history-future" selector="#history-future" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -41.3" fwd="0 0 -1" scale="1.7 1.5 1" width="560" height="500" />
 
         <Object id="cube" js_id="vp-hero"     pos="0 0 26"         scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-learn"   pos="-4 2 0"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-explore"  pos="-2.83 2 -2.83"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-get"      pos="0 2 -4"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-build"    pos="2.83 2 -2.83"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
-    <Object id="cube" js_id="vp-travel" pos="4 2 0"   scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-learn"   pos="-3.94 2 -0.69"  scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-explore"  pos="0 1.2 -15.5"     scale="0.1 0.1 0.1" visible="false" collision_id="" />
+    <Object id="cube" js_id="vp-build"    pos="3.94 2 -0.69"      scale="0.1 0.1 0.1" visible="false" collision_id="" />
     <Object id="cube" js_id="vp-overview" pos="0 13 21"       scale="0.1 0.1 0.1" visible="false" collision_id="" />
 
   </Room>
@@ -117,9 +115,7 @@
   <nav class="site-nav" aria-label="Site">
     <a href="#learn">Learn</a>
     <a href="#explore">Explore</a>
-    <a href="#get">Get</a>
     <a href="#build">Build</a>
-    <a href="#travel">Travel</a>
     <a href="#footer">Ascend</a>
   </nav>
   <a class="btn btn-enter" href="https://web.janusxr.org/">Enter ▸</a>
@@ -253,6 +249,38 @@
     <a href="https://github.com/janusvr/janus-server">multiplayer server</a> if you
     like — or use ours.</p>
   </div>
+
+  <div id="learn-get">
+    <h3>How can I get JanusXR?</h3>
+  
+  <div id="get-webclient">
+    <h4>The web client</h4>
+    <p>You mostly already have it. JanusWeb runs in any modern browser —
+    <a href="https://web.janusxr.org/">launch it</a> and you're in. Desktop, mobile,
+    and WebXR headsets all welcome; versioned engine builds are hosted at
+    <a href="https://web.janusxr.org/">web.janusxr.org</a> if you want to pin one.</p>
+  </div>
+
+  <div id="get-selfhost">
+    <h4>Host it yourself</h4>
+    <p>Everything is self-hostable: embed the
+    <a href="https://github.com/jbaicoianu/janusweb">JanusWeb client</a> in your own
+    site, serve your own worlds from any static host, and run the
+    <a href="https://github.com/janusvr/janus-server">multiplayer server</a> to give
+    them presence. Your worlds live on your infrastructure, under your rules.</p>
+  </div>
+
+  <div id="get-legacy" class="vault">
+    <h4>The vault: legacy &amp; alternative clients</h4>
+    <p>From 2014 to 2019 Janus was a native desktop application. It's no longer
+    maintained, but we keep it on a shelf behind glass — for history, for curiosity,
+    and for the handful of things it still does best.</p>
+    <ul>
+      <li><a href="https://github.com/janusvr">Archived native client builds</a> — the JanusVR desktop client, preserved.</li>
+      <li>Alternative &amp; community clients — implementations by the community, past and present.</li>
+    </ul>
+  </div>
+  </div>
 </section>
 
 <!-- ======================================================= explore -->
@@ -279,38 +307,81 @@
       featured? <a href="#build-opensource">Get involved</a>.</p>
     </article>
   </div>
-</section>
 
-<!-- ======================================================= get -->
-<section class="section" id="get" aria-labelledby="get-title">
-  <h2 id="get-title"><span class="prompt">&gt;</span> How can I get JanusXR?</h2>
+  <div id="history">
+    <h3>When are we?</h3>
+    <p>Janus is the middle of this story, not the end of it. Virtual worlds have been
+  swinging between corporate platforms and open standards for half a century — this
+  is our stop on a much longer line.</p>
 
-  <div id="get-webclient">
-    <h3>The web client</h3>
-    <p>You mostly already have it. JanusWeb runs in any modern browser —
-    <a href="https://web.janusxr.org/">launch it</a> and you're in. Desktop, mobile,
-    and WebXR headsets all welcome; versioned engine builds are hosted at
-    <a href="https://web.janusxr.org/">web.janusxr.org</a> if you want to pin one.</p>
+  <div class="history-station">
+
+    <div id="history-past" class="tube tube-past">
+      <h3>◂ The tube to the past</h3>
+      <p class="tube-note">The line goes back further than you think. A few stops,
+      with more being excavated:</p>
+      <ol class="history-list" reversed>
+        <li><span class="era">1978</span> <span class="tl-tag tag-open">open</span>
+          <strong>MUD</strong> — text-only shared worlds, built at a university and
+          given away. The pattern starts here: a world is just a server anyone can run.</li>
+        <li><span class="era">1986</span> <span class="tl-tag tag-corp">corporate</span>
+          <strong>Habitat</strong> — Lucasfilm puts avatars on a Commodore 64.
+          Brilliant, beloved, and owned.</li>
+        <li><span class="era">1990s</span> <span class="tl-tag tag-corp">corporate</span>
+          <strong>SGI</strong> — the graphics workstations that made real-time 3D real,
+          at workstation prices.</li>
+        <li><span class="era">1995</span> <span class="tl-tag tag-open">open</span>
+          <strong>VRML</strong> — the open 3D web standard, born when SGI's tech met
+          Netscape's browser. Ahead of its time; the time is now catching up.</li>
+        <li><span class="era">1995</span> <span class="tl-tag tag-corp">corporate</span>
+          <strong>ActiveWorlds</strong> — persistent user-built worlds at dial-up
+          speeds, on a company's servers.</li>
+        <li><span class="era">2000s</span> <span class="tl-tag tag-corp">corporate</span>
+          <strong>Second Life</strong> — a virtual economy at scale, and a lesson in
+          what it means when the platform owns the world.</li>
+      </ol>
+    </div>
+
+    <div id="history-janus" class="station-platform">
+      <h3>◉ This station: Janus, 2010 – present</h3>
+      <ol class="history-list">
+        <li><span class="era">2010</span> <strong>Elation Engine</strong> —
+          development begins on the JavaScript engine and web framework that still
+          powers everything below.</li>
+        <li><span class="era">2014</span> <strong>FireBox</strong> — James McCrae's
+        experiment: what if webpages were rooms, and links were portals you walked
+        through?</li>
+        <li><span class="era">2015</span> <strong>JanusVR, Inc.</strong> — the company
+        era: a native client, funded development, and lobbies full of people.</li>
+        <li><span class="era">2016</span> <strong>JanusWeb</strong> — the engine comes
+        to the browser. No install; a world becomes something you can link to.</li>
+        <li><span class="era">2019</span> <strong>JanusXR.org</strong> — the company
+        winds down and the project goes fully open. Born from the ashes; community-run
+        ever since. <em>You are here.</em></li>
+      </ol>
+    </div>
+
+    <div id="history-future" class="tube tube-future">
+      <h3>The tube to the future ▸</h3>
+      <p class="tube-note">Well-lit, under construction, and hiring. Some of what's
+      on the line ahead:</p>
+      <ul class="history-list">
+        <li><span class="era">soon</span> <strong>The open web catches up</strong> —
+        WebXR on every headset, WebGPU rendering, browsers that treat 3D as a first-class
+        citizen.</li>
+        <li><span class="era">next</span> <strong>An open metaverse</strong> —
+        portable avatars and identity, interoperable worlds, and the standards work to
+        make "decentralized" stick this time.</li>
+        <li><span class="era">someday</span> <strong>The stuff from the books</strong> —
+        the Street, the matrix, the holodeck. Somebody has to actually build it. It
+        won't be a corporation.</li>
+        <li class="tube-invite"><span class="era">now</span> <strong>Your part</strong> —
+        this tunnel is unfinished on purpose. <a href="#build-opensource">Grab a
+        hard hat</a>.</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div id="get-selfhost">
-    <h3>Host it yourself</h3>
-    <p>Everything is self-hostable: embed the
-    <a href="https://github.com/jbaicoianu/janusweb">JanusWeb client</a> in your own
-    site, serve your own worlds from any static host, and run the
-    <a href="https://github.com/janusvr/janus-server">multiplayer server</a> to give
-    them presence. Your worlds live on your infrastructure, under your rules.</p>
-  </div>
-
-  <div id="get-legacy" class="vault">
-    <h3>The vault: legacy &amp; alternative clients</h3>
-    <p>From 2014 to 2019 Janus was a native desktop application. It's no longer
-    maintained, but we keep it on a shelf behind glass — for history, for curiosity,
-    and for the handful of things it still does best.</p>
-    <ul>
-      <li><a href="https://github.com/janusvr">Archived native client builds</a> — the JanusVR desktop client, preserved.</li>
-      <li>Alternative &amp; community clients — implementations by the community, past and present.</li>
-    </ul>
   </div>
 </section>
 
@@ -388,82 +459,6 @@
   </div>
 </section>
 
-<!-- ======================================================= travel -->
-<section class="section" id="travel" aria-labelledby="travel-title">
-  <h2 id="travel-title"><span class="prompt">&gt;</span> When are we?</h2>
-  <p>Janus is the middle of this story, not the end of it. Virtual worlds have been
-  swinging between corporate platforms and open standards for half a century — this
-  is our stop on a much longer line.</p>
-
-  <div class="travel-station">
-
-    <div id="travel-past" class="tube tube-past">
-      <h3>◂ The tube to the past</h3>
-      <p class="tube-note">The line goes back further than you think. A few stops,
-      with more being excavated:</p>
-      <ol class="travel-list" reversed>
-        <li><span class="era">1978</span> <span class="tl-tag tag-open">open</span>
-          <strong>MUD</strong> — text-only shared worlds, built at a university and
-          given away. The pattern starts here: a world is just a server anyone can run.</li>
-        <li><span class="era">1986</span> <span class="tl-tag tag-corp">corporate</span>
-          <strong>Habitat</strong> — Lucasfilm puts avatars on a Commodore 64.
-          Brilliant, beloved, and owned.</li>
-        <li><span class="era">1990s</span> <span class="tl-tag tag-corp">corporate</span>
-          <strong>SGI</strong> — the graphics workstations that made real-time 3D real,
-          at workstation prices.</li>
-        <li><span class="era">1995</span> <span class="tl-tag tag-open">open</span>
-          <strong>VRML</strong> — the open 3D web standard, born when SGI's tech met
-          Netscape's browser. Ahead of its time; the time is now catching up.</li>
-        <li><span class="era">1995</span> <span class="tl-tag tag-corp">corporate</span>
-          <strong>ActiveWorlds</strong> — persistent user-built worlds at dial-up
-          speeds, on a company's servers.</li>
-        <li><span class="era">2000s</span> <span class="tl-tag tag-corp">corporate</span>
-          <strong>Second Life</strong> — a virtual economy at scale, and a lesson in
-          what it means when the platform owns the world.</li>
-      </ol>
-    </div>
-
-    <div id="travel-janus" class="station-platform">
-      <h3>◉ This station: Janus, 2010 – present</h3>
-      <ol class="travel-list">
-        <li><span class="era">2010</span> <strong>Elation Engine</strong> —
-          development begins on the JavaScript engine and web framework that still
-          powers everything below.</li>
-        <li><span class="era">2014</span> <strong>FireBox</strong> — James McCrae's
-        experiment: what if webpages were rooms, and links were portals you walked
-        through?</li>
-        <li><span class="era">2015</span> <strong>JanusVR, Inc.</strong> — the company
-        era: a native client, funded development, and lobbies full of people.</li>
-        <li><span class="era">2016</span> <strong>JanusWeb</strong> — the engine comes
-        to the browser. No install; a world becomes something you can link to.</li>
-        <li><span class="era">2019</span> <strong>JanusXR.org</strong> — the company
-        winds down and the project goes fully open. Born from the ashes; community-run
-        ever since. <em>You are here.</em></li>
-      </ol>
-    </div>
-
-    <div id="travel-future" class="tube tube-future">
-      <h3>The tube to the future ▸</h3>
-      <p class="tube-note">Well-lit, under construction, and hiring. Some of what's
-      on the line ahead:</p>
-      <ul class="travel-list">
-        <li><span class="era">soon</span> <strong>The open web catches up</strong> —
-        WebXR on every headset, WebGPU rendering, browsers that treat 3D as a first-class
-        citizen.</li>
-        <li><span class="era">next</span> <strong>An open metaverse</strong> —
-        portable avatars and identity, interoperable worlds, and the standards work to
-        make "decentralized" stick this time.</li>
-        <li><span class="era">someday</span> <strong>The stuff from the books</strong> —
-        the Street, the matrix, the holodeck. Somebody has to actually build it. It
-        won't be a corporation.</li>
-        <li class="tube-invite"><span class="era">now</span> <strong>Your part</strong> —
-        this tunnel is unfinished on purpose. <a href="#build-opensource">Grab a
-        hard hat</a>.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
 
 </main>
 
