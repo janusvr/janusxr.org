@@ -160,6 +160,14 @@ Unchanged in structure: three dressed hallways under card signage (blocks /
 source-glow / machine), the deploy panel at the mouth, racks and the open-source
 placard in the rear chamber.
 
+### 5.3.1 The balcony
+
+A curved walkway wrapping Main Street's south end, continuing the arc of the
+halls' back walls, with a glowing balustrade overlooking the Thirteenth Floor
+void. Each hall exits onto it near its far cap, and it feeds the corridor's
+south mouth — the circulation loop closes: walk all of Learn or Build and you
+come out a short stroll from spawn.
+
 ### 5.4 Footer
 
 Document-only navigation; the in-world colophon plaque near the entry corridor.

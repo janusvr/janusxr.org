@@ -190,8 +190,8 @@ parts.append(place(arch, M_STRUCT, (0, 0, z0)))
 HALL_R = (17.2, 27.2)
 HALLS = {
     # entrance bearing, far cap (at the corridor), near cap, inner-wall gap
-    'learn': dict(deg=280, cap_far=188, cap_near=296, gap=(268.5, 291.5)),
-    'build': dict(deg=80,  cap_far=172, cap_near=64,  gap=(68.5, 91.5)),
+    'learn': dict(deg=280, cap_far=188, cap_near=296, gap=(268.5, 291.5), exit=(189.0, 194.0)),
+    'build': dict(deg=80,  cap_far=172, cap_near=64,  gap=(68.5, 91.5), exit=(166.0, 171.0)),
 }
 
 def wpolar(r, deg):
@@ -223,7 +223,9 @@ for name, spec in HALLS.items():
     # inner wall (split around the entrance gap), outer wall, end caps
     parts.append(place(xz(extrude(annsec(17.2, 17.6, a0, g0), WALL_H)), M_WALL))
     parts.append(place(xz(extrude(annsec(17.2, 17.6, g1, a1), WALL_H)), M_WALL))
-    parts.append(place(xz(extrude(annsec(26.8, 27.2, a0, a1), WALL_H)), M_WALL))
+    e0, e1 = spec['exit']
+    parts.append(place(xz(extrude(annsec(26.8, 27.2, a0, e0), WALL_H)), M_WALL))
+    parts.append(place(xz(extrude(annsec(26.8, 27.2, e1, a1), WALL_H)), M_WALL))
     parts.append(place(xz(extrude(annsec(17.2, 27.2, a0, a0 + 0.9), WALL_H)), M_WALL))
     parts.append(place(xz(extrude(annsec(17.2, 27.2, a1 - 0.9, a1), WALL_H)), M_WALL))
 
@@ -458,6 +460,27 @@ for i in range(10):
 for sx in (-1, 1):
     parts.append(place(xz(extrude(ngon(0.25, n=8), 1.1)), M_STRUCT, (sx * 9.4, 0, -16.6)))
     parts.append(place(xz(extrude(ngon(0.35, n=8), 0.1)), M_TRIM, (sx * 9.4, 1.1, -16.6)))
+
+
+# ---- the balcony: wraps Main Street's south end, overlooking the void -------
+# Continues the curve of the halls' back walls; each hall exits onto it near
+# its far cap, and it feeds the corridor's south mouth — walk a whole wing and
+# you come out a short stroll from spawn.
+CORR_FOOT = box(-3.9, -31.05, 3.9, -13.0)   # corridor footprint (shapely y = -z)
+bal_floor = annsec(27.4, 31.9, 160, 200).difference(CORR_FOOT)
+parts.append(place(xz(extrude(bal_floor, 0.5)), M_FLOOR, (0, -0.5, 0)))
+# outer balustrade + glowing cap
+bal_rail = annsec(31.55, 31.9, 160, 200).difference(CORR_FOOT)
+parts.append(place(xz(extrude(bal_rail, 1.0)), M_STRUCT))
+bal_cap = annsec(31.5, 31.95, 160, 200).difference(CORR_FOOT)
+parts.append(place(xz(extrude(bal_cap, 0.06)), M_TRIM, (0, 1.0, 0)))
+# end returns and inner skirting glow
+for ea in ((160, 161.2), (198.8, 200)):
+    parts.append(place(xz(extrude(annsec(27.4, 31.9, ea[0], ea[1]), 1.0)), M_STRUCT))
+parts.append(place(xz(extrude(annsec(27.5, 27.62, 161, 199).difference(CORR_FOOT), 0.04)), M_TRIM_DIM))
+# foundation down to the hillside/ground
+bal_found = annsec(31.4, 31.9, 160, 200).difference(CORR_FOOT)
+parts.append(place(xz(extrude(bal_found, 4.7)), M_WALL, (0, -5.2, 0)))
 
 parts = espl_parts
 # ---- the esplanade: promenade axis through the valley ----------------------

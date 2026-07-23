@@ -18,7 +18,7 @@
     /* section viewpoints orbit low around the fountain, each looking out
        through its wing's portal doorway */
     /* world coordinates; content lives in movable groups at +20z */
-    hero:     { pos: [0, 0, 46],        look: [0, 1.7, 20] },   /* == Room spawn pos/fwd */
+    hero:     { pos: [0, 0, 35],        look: [0, 1.7, 20] },   /* == Room spawn pos/fwd */
     learn:    { pos: [-3.94, 2, 19.31], look: [-18.71, 3, 16.7] },
     explore:  { pos: [0, 1.2, 4.5],     look: [0, -4, -32] },   /* the overlook */
     build:    { pos: [3.94, 2, 19.31],  look: [18.71, 3, 16.7] },
