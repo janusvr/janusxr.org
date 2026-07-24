@@ -328,6 +328,12 @@
       window.player.enable();
       window.janus.showchat = true;
     } catch (e) {}
+    /* engage pointer lock right off the Enter click (a valid user gesture)
+       instead of waiting for a second click on the canvas */
+    try {
+      var inst = elation.engine.instances;
+      inst[Object.keys(inst)[0]].systems.controls.requestPointerLock();
+    } catch (e) {}
   }
 
   function exitWorld() {
