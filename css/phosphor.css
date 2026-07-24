@@ -473,6 +473,9 @@ html.room-live, .room-live body { overflow: auto !important; }
 @media (max-width: 640px) {
   .site-nav { display: none; }   /* sections remain reachable by scroll */
   .janusxr-is-list { columns: 1; }
+  /* the desktop left-offset makes room for the world beside the content;
+     small screens have no "beside" — fill the width */
+  .section { margin: 0; max-width: 100%; }
 }
 
 @media print {
