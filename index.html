@@ -35,7 +35,7 @@
     <AssetImage id="sky-down"  src="room/skybox/down.png" />
     <AssetScript src="room/lobby.js?v=8" />
   </Assets>
-  <Room js_id="plaza" thirdperson="true" pos="0 0 35" fwd="0 0 -1"
+  <Room js_id="plaza" thirdperson="true" defaultlights="false" ambient="0.02 0.02 0.02" pos="0 0 35" fwd="0 0 -1"
         skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
         skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
         fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
@@ -73,36 +73,42 @@
     <Object id="cube" js_id="col-pedestal" pos="0 2.5 0"  scale="1.8 4.2 1.8" visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-booth"    pos="4.5 1.1 4.5" scale="1.4 2.2 0.35" visible="false" collision_id="cube" xdir="0.7071 0 0.7071" ydir="0 1 0" zdir="-0.7071 0 0.7071" />
 
-    <Light js_id="light-monument"  pos="0 7 0"    col="#43ff6e" light_intensity="4" light_range="24" light_decay="2" />
-    <Light js_id="light-fountain"  pos="0 1.4 0"  col="#2a9e6f" light_intensity="2" light_range="10" light_decay="2" />
-    <Light js_id="light-spot-1" pos="-5.97 5.4 14.41"  fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-spot-2" pos="-11.03 5.4 11.03" fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-spot-3" pos="-14.41 5.4 5.97"  fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-spot-4" pos="14.41 5.4 5.97"   fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-spot-5" pos="11.03 5.4 11.03"  fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-spot-6" pos="5.97 5.4 14.41"   fwd="0 -1 0" col="#7dffa0" light_intensity="3" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
-    <Light js_id="light-mouth-learn" pos="-15.3 3 -2.7" col="#43ff6e" light_intensity="2" light_range="9" light_decay="2" />
-    <Light js_id="light-mouth-build" pos="15.3 3 -2.7"  col="#43ff6e" light_intensity="2" light_range="9" light_decay="2" />
-    <Light js_id="light-corridor-1" pos="0 2.6 18" col="#2a9e4f" light_intensity="1.5" light_range="9" light_decay="2" />
-    <Light js_id="light-corridor-2" pos="0 2.6 24" col="#2a9e4f" light_intensity="1.5" light_range="9" light_decay="2" />
+    <Light js_id="light-monument"  pos="0 7 0"    col="#43ff6e" light_intensity="9" light_range="24" light_decay="2" />
+    <Light js_id="light-fountain"  pos="0 1.4 0"  col="#2a9e6f" light_intensity="4" light_range="10" light_decay="2" />
+    <Light js_id="light-spot-1" pos="-5.97 5.4 14.41"  fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-spot-2" pos="-11.03 5.4 11.03" fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-spot-3" pos="-14.41 5.4 5.97"  fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-spot-4" pos="14.41 5.4 5.97"   fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-spot-5" pos="11.03 5.4 11.03"  fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-spot-6" pos="5.97 5.4 14.41"   fwd="0 -1 0" col="#7dffa0" light_intensity="6" light_range="13" light_cone_angle="0.35" light_penumbra="0.8" light_decay="2" />
+    <Light js_id="light-mouth-learn" pos="-15.3 3 -2.7" col="#43ff6e" light_intensity="4" light_range="9" light_decay="2" />
+    <Light js_id="light-mouth-build" pos="15.3 3 -2.7"  col="#43ff6e" light_intensity="4" light_range="9" light_decay="2" />
+    <Light js_id="light-corridor-1" pos="0 2.6 18" col="#2a9e4f" light_intensity="3" light_range="9" light_decay="2" />
+    <Light js_id="light-hall-learn-1" pos="-14.1 4 14.1" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Light js_id="light-hall-learn-2" pos="-21.3 4 7.5" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Light js_id="light-hall-build-1" pos="14.1 4 14.1" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Light js_id="light-hall-build-2" pos="21.3 4 7.5" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Light js_id="light-stair" pos="0 0.5 -23" col="#2a9e4f" light_intensity="4" light_range="14" light_decay="2" />
+    <Light js_id="light-balcony" pos="0 2 29.5" col="#2a9e4f" light_intensity="3" light_range="11" light_decay="2" />
+    <Light js_id="light-corridor-2" pos="0 2.6 24" col="#2a9e4f" light_intensity="3" light_range="9" light_decay="2" />
     <Object id="coin" js_id="monument-coin" pos="0 7.2 0" angular="0 .2 0" lighting="false" />
     <Water js_id="fountain-water" pos="0 0.7 0" sizex="6" sizey="6" col="#153a2a" />
-    <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" scale="1 1 1">INFO</Text>
-    <Text js_id="obelisk-text" pos="-16.35 4.6 2.88" fwd="0.985 0 -0.174" col="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
-    <Text js_id="label-learn" pos="-15.95 4.9 -2.81" fwd="0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">LEARN</Text>
-    <Text js_id="learn-is-title" pos="-3.66 3.9 21.90" fwd="-0.986 0 -0.165" col="#e8f5ea" font_scale="false" scale="0.45 0.45 1">JanusXR is</Text>
-    <Text js_id="learn-is-display" pos="-3.66 2.6 21.90" fwd="-0.986 0 -0.165" col="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
+    <Text js_id="booth-info-label" pos="4.5 2.5 4.5" fwd="-0.7071 0 -0.7071" col="#43ff6e" emissive="#43ff6e" scale="1 1 1">INFO</Text>
+    <Text js_id="obelisk-text" pos="-16.35 4.6 2.88" fwd="0.985 0 -0.174" col="#43ff6e" emissive="#43ff6e" font_scale="false" scale="0.175 0.175 1">JanusXR is...</Text>
+    <Text js_id="label-learn" pos="-15.95 4.9 -2.81" fwd="0.9848 0 0.1736" col="#43ff6e" emissive="#43ff6e" scale="3 3 1">LEARN</Text>
+    <Text js_id="learn-is-title" pos="-3.66 3.9 21.90" fwd="-0.986 0 -0.165" col="#e8f5ea" emissive="#e8f5ea" font_scale="false" scale="0.45 0.45 1">JanusXR is</Text>
+    <Text js_id="learn-is-display" pos="-3.66 2.6 21.90" fwd="-0.986 0 -0.165" col="#43ff6e" emissive="#43ff6e" font_scale="false" scale="0.2 0.2 1">...</Text>
     <Paragraph js_id="mount-learn-rooms"    selector="#learn-rooms"   css="css/phosphor.css" back_col="#0c0f0c" pos="-26.34 1.85 3.70" fwd="0.990 0 -0.139" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-objects"  selector="#learn-objects"    css="css/phosphor.css" back_col="#0c0f0c" pos="-24.31 1.85 10.82" fwd="0.914 0 -0.407" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-presence" selector="#learn-presence" css="css/phosphor.css" back_col="#0c0f0c" pos="-20.38 1.85 17.10" fwd="0.766 0 -0.643" scale="1.05 1.4 1" width="320" height="440" />
     <Paragraph js_id="mount-learn-stack" selector="#learn-stack" css="css/phosphor.css" back_col="#0c0f0c" pos="-12.25 1.85 13.60" fwd="-0.669 0 0.743" scale="1.8 1.4 1" width="560" height="440" />
     <Paragraph js_id="mount-learn-extensible" selector="#learn-extensible" css="css/phosphor.css" back_col="#0c0f0c" pos="-17.59 1.85 5.04" fwd="-0.961 0 0.276" scale="1.8 1.1 1" width="600" height="380" />
     <Paragraph js_id="mount-learn-decentralized" selector="#learn-decentralized" css="css/phosphor.css" back_col="#0c0f0c" pos="-15.52 1.85 9.70" fwd="-0.848 0 0.530" scale="1.8 1.25 1" width="640" height="430" />
-    <Text js_id="mirror-caption" pos="-5.89 1.5 25.53" fwd="0.225 0 -0.974" col="#7dffa0" scale="0.45 0.45 1">you're already running it</Text>
+    <Text js_id="mirror-caption" pos="-5.89 1.5 25.53" fwd="0.225 0 -0.974" col="#7dffa0" emissive="#7dffa0" scale="0.45 0.45 1">you're already running it</Text>
     <Paragraph js_id="mount-get-webclient" selector="#get-webclient" css="css/phosphor.css" back_col="#0c0f0c" pos="-14.87 1.85 22.05" fwd="0.559 0 -0.829" scale="1.7 1.2 1" width="640" height="450" />
     <Paragraph js_id="mount-get-selfhost"  selector="#get-selfhost"  css="css/phosphor.css" back_col="#0c0f0c" pos="-8.02 1.85 16.45" fwd="-0.438 0 0.899" scale="1.7 1.2 1" width="640" height="450" />
     <Paragraph js_id="mount-get-legacy"    selector="#get-legacy"    css="css/phosphor.css" back_col="#0c0f0c" pos="-8.22 1.85 25.30" fwd="0.309 0 -0.951" scale="1.6 1.3 1" width="600" height="480" />
-    <Text js_id="label-build" pos="15.95 4.9 -2.81" fwd="-0.9848 0 0.1736" col="#43ff6e" scale="3 3 1">BUILD</Text>
+    <Text js_id="label-build" pos="15.95 4.9 -2.81" fwd="-0.9848 0 0.1736" col="#43ff6e" emissive="#43ff6e" scale="3 3 1">BUILD</Text>
     <Paragraph js_id="mount-build-opensource" selector="#build-opensource" css="css/phosphor.css" back_col="#0c0f0c" pos="3.66 2.4 21.90" fwd="0.986 0 -0.165" scale="4 3 1" />
     <Paragraph js_id="mount-build-editor"    selector="#build-editor"    css="css/phosphor.css" back_col="#0c0f0c" pos="26.34 3.1 3.70" fwd="-0.990 0 -0.139" scale="1.2 1.6 1" width="320" height="420" />
     <Paragraph js_id="mount-build-markup"    selector="#build-markup"    css="css/phosphor.css" back_col="#0c0f0c" pos="24.31 3.1 10.82" fwd="-0.914 0 -0.407" scale="1.2 1.6 1" width="320" height="420" />
@@ -114,15 +120,19 @@
 
   <Object js_id="esplanade-group" pos="0 0 20">
     <Object id="esplanade" js_id="esplanade-architecture" pos="0 0 0" />
-    <Text js_id="label-explore" pos="0 5.6 -60" fwd="0 0 1" col="#43ff6e" scale="20 20 1">EXPLORE</Text>
+    <Light js_id="light-station" pos="-15 -1.5 -46" col="#7dffa0" light_intensity="5" light_range="14" light_decay="2" />
+    <Light js_id="light-promenade-1" pos="0 -2.5 -38" col="#2a9e4f" light_intensity="4" light_range="14" light_decay="2" />
+    <Light js_id="light-promenade-2" pos="0 -2.5 -56" col="#2a9e4f" light_intensity="4" light_range="14" light_decay="2" />
+    <Light js_id="light-gates" pos="0 -2.5 -62" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Text js_id="label-explore" pos="0 5.6 -60" fwd="0 0 1" col="#43ff6e" emissive="#43ff6e" scale="20 20 1">EXPLORE</Text>
     <Link js_id="portal-vesta" pos="-6.6 -3.2 -62" fwd="1 0 0" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
     <Link js_id="portal-janusweb" pos="6.6 -3.3 -62" fwd="-1 0 0" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />
-    <Text js_id="label-history" pos="-9.2 -1.2 -46" fwd="1 0 0" col="#43ff6e" scale="1.6 1.6 1">HISTORY</Text>
-    <Text js_id="label-history-past" pos="-16 -1.6 -50.9" fwd="0 0 1" col="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
-    <Text js_id="label-history-future" pos="-16 -1.6 -41.1" fwd="0 0 -1" col="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
-    <Text js_id="era-2010" pos="-16 -3.5 -49" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2010 - Elation Engine</Text>
-    <Text js_id="era-2014" pos="-16 -3.5 -46" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2014 - FireBox</Text>
-    <Text js_id="era-2019" pos="-16 -3.5 -43" fwd="1 0 0" col="#7dffa0" scale="0.4 0.4 1">2019 - JanusXR.org</Text>
+    <Text js_id="label-history" pos="-9.2 -1.2 -46" fwd="1 0 0" col="#43ff6e" emissive="#43ff6e" scale="1.6 1.6 1">HISTORY</Text>
+    <Text js_id="label-history-past" pos="-16 -1.6 -50.9" fwd="0 0 1" col="#2a9e4f" emissive="#2a9e4f" scale="1.2 1.2 1">&#9666; PAST</Text>
+    <Text js_id="label-history-future" pos="-16 -1.6 -41.1" fwd="0 0 -1" col="#2a9e4f" emissive="#2a9e4f" scale="1.2 1.2 1">FUTURE &#9656;</Text>
+    <Text js_id="era-2010" pos="-16 -3.5 -49" fwd="1 0 0" col="#7dffa0" emissive="#7dffa0" scale="0.4 0.4 1">2010 - Elation Engine</Text>
+    <Text js_id="era-2014" pos="-16 -3.5 -46" fwd="1 0 0" col="#7dffa0" emissive="#7dffa0" scale="0.4 0.4 1">2014 - FireBox</Text>
+    <Text js_id="era-2019" pos="-16 -3.5 -43" fwd="1 0 0" col="#7dffa0" emissive="#7dffa0" scale="0.4 0.4 1">2019 - JanusXR.org</Text>
     <Paragraph js_id="mount-history-janus" selector="#history-janus" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -1.9 -46" fwd="1 0 0" cull_face="none" scale="2.6 2 1" width="780" height="600" />
     <Paragraph js_id="mount-history-past"   selector="#history-past"   css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -50.7" fwd="0 0 1" scale="1.7 1.5 1" width="560" height="500" />
     <Paragraph js_id="mount-history-future" selector="#history-future" css="css/phosphor.css" back_col="#0c0f0c" pos="-16 -3.0 -41.3" fwd="0 0 -1" scale="1.7 1.5 1" width="560" height="500" />
