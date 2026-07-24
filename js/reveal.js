@@ -190,6 +190,7 @@
   function watchScroll() {
     var pending = false;
     window.addEventListener('scroll', function () {
+      if (state.suppressScroll) { state.suppressScroll = false; return; }
       if (state.navlock) {
         /* anchor navigation in flight: the camera is already lerping to its
            final destination — treat scroll only as a settle signal */
@@ -265,7 +266,8 @@
     if (!target) return;
     if (state.tween) { cancelAnimationFrame(state.tween.raf); state.tween = null; }
 
-    var from = state.vp ? VIEWPOINTS[state.vp] : null;
+    var from = state.vp ? VIEWPOINTS[state.vp] : state.freePose;
+    state.freePose = null;
     state.vp = name;
 
     if (instant || !from) {
@@ -340,12 +342,27 @@
     if (!state.roaming) return;
     state.roaming = false;
     document.documentElement.classList.remove('room-roam');
+    /* preserve the walked-to position: the camera stays where the avatar
+       stands, registered as a temporary off-rail pose that the next scroll
+       tweens away from — no teleport on exit */
+    try {
+      var p = window.player;
+      var pp = p.pos || p.position;
+      var dir = p.dir || p.view_dir || null;
+      var look = dir ? [pp.x + dir.x * 10, pp.y + 1.6 + dir.y * 10, pp.z + dir.z * 10]
+                     : [0, 2, 20];
+      state.freePose = { pos: [pp.x, pp.y, pp.z], look: look };
+    } catch (e) { state.freePose = null; }
     try {
       window.janus.showchat = false;
       window.player.disable();
     } catch (e) {}
-    window.scrollTo(0, state.savedScroll);
+    /* hiding the document collapsed its height and zeroed the scroll;
+       restore where the reader left off — and swallow the scroll event that
+       restore fires, so the camera holds the walked-to pose until the reader
+       actually scrolls */
+    state.suppressScroll = true;
+    window.scrollTo({ top: state.savedScroll, left: 0, behavior: 'instant' });
     state.vp = null;
-    snapTo(currentSectionVP(), true);
   }
 })();
