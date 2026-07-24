@@ -1,122 +1,167 @@
-/* janusxr.org — progressive enhancements only.
-   Everything on this page works with this file missing. */
+/* janusxr.org — site enhancements as custom elements.
+   Everything here is progressive: each element's light-DOM children are the
+   complete no-JS content (Tier 0 gets the full reading), and the elements
+   only decorate. The page works with this file missing. */
 
 document.documentElement.classList.add('js');
 
 var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* --- "JanusXR is ______" typer ------------------------------- */
-(function () {
-  var list = document.getElementById('janusxr-is-list');
-  var typer = document.getElementById('janusxr-is-typer');
-  if (!list || !typer) return;
+/* <jxr-typer prefix="JanusXR is ">
+     <ul>…completions…</ul>
+   </jxr-typer>
+   Types and erases completions pulled from its own list. Without JS the list
+   itself is the content — readers get more, not less. */
+class JXRTyper extends HTMLElement {
+  connectedCallback() {
+    if (this._wired) return;
+    this._wired = true;
 
-  var items = Array.prototype.map.call(list.querySelectorAll('li'), function (li) {
-    return li.textContent;
-  });
-  if (!items.length) return;
+    var list = this.querySelector('ul, ol');
+    if (!list) return;
+    this.items = Array.prototype.map.call(list.querySelectorAll('li'), function (li) {
+      return li.textContent;
+    });
+    if (!this.items.length) return;
 
-  var idx = Math.floor(Math.random() * items.length);
+    var line = document.createElement('p');
+    line.className = 'janusxr-is-line';
+    line.setAttribute('aria-hidden', 'true');
+    line.append(this.getAttribute('prefix') || '');
+    this.typer = document.createElement('span');
+    this.typer.className = 'typer';
+    line.appendChild(this.typer);
+    var cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    line.appendChild(cursor);
+    this.prepend(line);
 
-  if (reducedMotion) {
-    // No typing animation: swap the completion whole, slowly.
-    typer.textContent = items[idx];
-    setInterval(function () {
-      idx = (idx + 1) % items.length;
-      typer.textContent = items[idx];
-    }, 6000);
-    return;
-  }
+    this.idx = Math.floor(Math.random() * this.items.length);
 
-  var TYPE_MS = 45, ERASE_MS = 22, HOLD_MS = 2600;
-
-  function type(text, pos) {
-    typer.textContent = text.slice(0, pos);
-    if (pos < text.length) {
-      setTimeout(function () { type(text, pos + 1); }, TYPE_MS);
-    } else {
-      setTimeout(function () { erase(text, text.length); }, HOLD_MS);
+    if (reducedMotion) {
+      /* no typing animation: swap the completion whole, slowly */
+      this.typer.textContent = this.items[this.idx];
+      this._timer = setInterval(() => {
+        this.idx = (this.idx + 1) % this.items.length;
+        this.typer.textContent = this.items[this.idx];
+      }, 6000);
+      return;
     }
+
+    this.TYPE_MS = 45; this.ERASE_MS = 22; this.HOLD_MS = 2600;
+    this._type(this.items[this.idx], 0);
   }
 
-  function erase(text, pos) {
-    typer.textContent = text.slice(0, pos);
+  disconnectedCallback() {
+    clearInterval(this._timer);
+    clearTimeout(this._timeout);
+  }
+
+  _type(text, pos) {
+    this.typer.textContent = text.slice(0, pos);
+    this._timeout = pos < text.length
+      ? setTimeout(() => this._type(text, pos + 1), this.TYPE_MS)
+      : setTimeout(() => this._erase(text, text.length), this.HOLD_MS);
+  }
+
+  _erase(text, pos) {
+    this.typer.textContent = text.slice(0, pos);
     if (pos > 0) {
-      setTimeout(function () { erase(text, pos - 1); }, ERASE_MS);
+      this._timeout = setTimeout(() => this._erase(text, pos - 1), this.ERASE_MS);
     } else {
-      idx = (idx + 1) % items.length;
-      type(items[idx], 0);
+      this.idx = (this.idx + 1) % this.items.length;
+      this._type(this.items[this.idx], 0);
     }
   }
+}
 
-  type(items[idx], 0);
-})();
+/* <jxr-scroll-spy> … <a href="#…"> … </jxr-scroll-spy>
+   Highlights whichever child link's target section owns the viewport midline
+   (last section wins at the very bottom of the page). */
+class JXRScrollSpy extends HTMLElement {
+  connectedCallback() {
+    if (this._wired) return;
+    this._wired = true;
 
-/* --- scroll spy: highlight the active section in the nav ------ */
-(function () {
-  var links = Array.prototype.slice.call(
-    document.querySelectorAll('.site-nav a[href^="#"]'));
-  if (!links.length) return;
-  var targets = links.map(function (a) {
-    return { link: a, el: document.getElementById(a.getAttribute('href').slice(1)) };
-  }).filter(function (t) { return t.el; });
+    this.targets = Array.prototype.slice.call(this.querySelectorAll('a[href^="#"]'))
+      .map(function (a) {
+        return { link: a, el: document.getElementById(a.getAttribute('href').slice(1)) };
+      })
+      .filter(function (t) { return t.el; });
+    if (!this.targets.length) return;
 
-  function update() {
+    var pending = false;
+    this._onScroll = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(() => { pending = false; this._update(); });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._update();
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  _update() {
     var mid = window.innerHeight / 2;
     var current = null;
-    for (var i = 0; i < targets.length; i++) {
-      if (targets[i].el.getBoundingClientRect().top <= mid) current = targets[i];
-    }
+    this.targets.forEach(function (t) {
+      if (t.el.getBoundingClientRect().top <= mid) current = t;
+    });
     var doc = document.documentElement;
     if (window.scrollY + window.innerHeight >= doc.scrollHeight - 4) {
-      current = targets[targets.length - 1];
+      current = this.targets[this.targets.length - 1];
     }
-    targets.forEach(function (t) {
+    this.targets.forEach(function (t) {
       t.link.classList.toggle('active', t === current);
     });
   }
+}
 
-  var pending = false;
-  window.addEventListener('scroll', function () {
-    if (pending) return;
-    pending = true;
-    requestAnimationFrame(function () { pending = false; update(); });
-  }, { passive: true });
-  update();
-})();
+/* <jxr-github-activity repo="owner/name">
+     …fallback content… <ul class="activity-feed" hidden></ul>
+   </jxr-github-activity>
+   Fills its feed list with the repo's latest commits; the fallback children
+   already say everything a reader needs if the fetch never lands. */
+class JXRGithubActivity extends HTMLElement {
+  connectedCallback() {
+    if (this._wired) return;
+    this._wired = true;
 
-/* --- live project activity from GitHub ----------------------- */
-(function () {
-  var box = document.getElementById('build-activity');
-  if (!box || !window.fetch) return;
-  var repo = box.getAttribute('data-repo');
-  var feed = box.querySelector('.activity-feed');
-  var fallback = box.querySelector('.activity-fallback');
+    var repo = this.getAttribute('repo');
+    var feed = this.querySelector('.activity-feed');
+    if (!repo || !feed || !window.fetch) return;
 
-  fetch('https://api.github.com/repos/' + repo + '/commits?per_page=5')
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-    .then(function (commits) {
-      if (!commits.length) return;
-      commits.forEach(function (c) {
-        var li = document.createElement('li');
-        var sha = document.createElement('a');
-        sha.className = 'sha';
-        sha.href = c.html_url;
-        sha.textContent = c.sha.slice(0, 7);
-        li.appendChild(sha);
-        li.appendChild(document.createTextNode(
-          ' ' + c.commit.message.split('\n')[0]
-        ));
-        feed.appendChild(li);
-      });
-      feed.hidden = false;
-      if (fallback) {
-        fallback.textContent = 'Latest commits to ' + repo + ' — ';
-        var a = document.createElement('a');
-        a.href = 'https://github.com/' + repo;
-        a.textContent = 'see it all on GitHub';
-        fallback.appendChild(a);
-      }
-    })
-    .catch(function () { /* fallback content already in the DOM */ });
-})();
+    fetch('https://api.github.com/repos/' + repo + '/commits?per_page=5')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then((commits) => {
+        if (!commits.length) return;
+        commits.forEach(function (c) {
+          var li = document.createElement('li');
+          var sha = document.createElement('a');
+          sha.className = 'sha';
+          sha.href = c.html_url;
+          sha.textContent = c.sha.slice(0, 7);
+          li.appendChild(sha);
+          li.appendChild(document.createTextNode(' ' + c.commit.message.split('\n')[0]));
+          feed.appendChild(li);
+        });
+        feed.hidden = false;
+        var fallback = this.querySelector('.activity-fallback');
+        if (fallback) {
+          fallback.textContent = 'Latest commits to ' + repo + ' — ';
+          var a = document.createElement('a');
+          a.href = 'https://github.com/' + repo;
+          a.textContent = 'see it all on GitHub';
+          fallback.appendChild(a);
+        }
+      })
+      .catch(function () { /* fallback content already in the DOM */ });
+  }
+}
+
+customElements.define('jxr-typer', JXRTyper);
+customElements.define('jxr-scroll-spy', JXRScrollSpy);
+customElements.define('jxr-github-activity', JXRGithubActivity);

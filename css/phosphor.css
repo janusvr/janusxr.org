@@ -522,3 +522,6 @@ html.room-live, .room-live body { overflow: auto !important; }
 @media (max-width: 640px) {
   .title-block { display: none; }
 }
+
+/* custom elements default to inline; these are blocks */
+jxr-typer, jxr-github-activity { display: block; }
