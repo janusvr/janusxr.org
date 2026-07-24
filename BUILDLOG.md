@@ -461,3 +461,12 @@ verified intact under the group transforms.
   the ocean again. Fixed upstream in janusweb's `room.js` (strip comment markers
   in the janus-viewer branch, pending release); until the site pins a release
   containing it, `reveal.js` carries a small parser shim, clearly marked TEMP.
+
+## 2026-07-24 — Stamped for review
+
+Wording and style tweaks (content column now left-aligned, giving the world more
+room to show through), and a blueprint **title block** in the bottom-right corner:
+project name, STATUS: work in progress, STAGE: 1 — whiteboxing, SCALE: 1:1, hidden
+on mobile, persistent even in free-roam. The site is about to go somewhere others
+can walk it and give feedback, and a whitebox should say it is one — the stamp is
+the honest label on the drawing.
