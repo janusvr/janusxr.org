@@ -525,3 +525,31 @@ html.room-live, .room-live body { overflow: auto !important; }
 
 /* custom elements default to inline; these are blocks */
 janus-webpage-typer, janus-webpage-githubactivity { display: block; }
+
+/* --- draft watermarks on the history exhibits ----------------- */
+.draft-note {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--green-dim);
+}
+.history-station .tube,
+.history-station .station-platform { position: relative; overflow: hidden; }
+.history-station .tube::after,
+.history-station .station-platform::after {
+  content: "DRAFT";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(4rem, 12vw, 8rem);
+  letter-spacing: 0.25em;
+  color: var(--green);
+  opacity: 0.12;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
