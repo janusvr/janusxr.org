@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ============================================================
    PHOSPHOR — the 2D face of the janusxr.org launch theme.
    Green phosphor on near-black, CRT lineage. Design tokens here
@@ -212,8 +213,8 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   margin: 0.25rem 0 1.5rem;
   letter-spacing: 0.08em;
 }
-.tagline::before { content: "— "; color: var(--green-dim); }
-.tagline::after  { content: " —"; color: var(--green-dim); }
+.tagline::before { content: "\2014\0020"; color: var(--green-dim); }
+.tagline::after  { content: "\0020\2014"; color: var(--green-dim); }
 .hero-blurb { color: var(--grey); max-width: 36rem; margin: 0 auto 2rem; }
 .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 0 0 1rem; }
 .hero-note { font-family: var(--mono); font-size: 0.8rem; color: var(--green-dim); }
@@ -296,7 +297,7 @@ h4 { font-size: 1rem; color: var(--green-soft); }
 }
 .janusxr-is-list li { margin-bottom: 0.2rem; }
 .janusxr-is-list::before {
-  content: "JanusXR is…";
+  content: "JanusXR is\2026";
   display: block;
   column-span: all;
   color: var(--white);
@@ -310,7 +311,7 @@ h4 { font-size: 1rem; color: var(--green-soft); }
   padding: 1.1rem 1.5rem;
   margin-top: 2rem;
 }
-.vault h3::before { content: "▣ "; color: var(--green-dim); }
+.vault h3::before { content: "\25A3\0020"; color: var(--green-dim); }
 .vault p, .vault li { color: var(--grey); }
 
 /* --- build: open source hall --------------------------------- */
