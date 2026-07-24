@@ -534,10 +534,12 @@ janus-webpage-typer, janus-webpage-githubactivity { display: block; }
   letter-spacing: 0.12em;
   color: var(--green-dim);
 }
-.history-station .tube,
-.history-station .station-platform { position: relative; overflow: hidden; }
-.history-station .tube::after,
-.history-station .station-platform::after {
+/* scoped to the cards themselves, not via ancestor — the 3D snapshots peel
+   each card out of its wrapper, so descendant selectors would never match */
+.tube,
+.station-platform { position: relative; overflow: hidden; }
+.tube::after,
+.station-platform::after {
   content: "DRAFT";
   position: absolute;
   inset: 0;
