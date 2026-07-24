@@ -7,12 +7,12 @@ document.documentElement.classList.add('js');
 
 var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* <jxr-typer prefix="JanusXR is ">
+/* <janus-webpage-typer prefix="JanusXR is ">
      <ul>…completions…</ul>
-   </jxr-typer>
+   </janus-webpage-typer>
    Types and erases completions pulled from its own list. Without JS the list
    itself is the content — readers get more, not less. */
-class JXRTyper extends HTMLElement {
+class JanusWebpageTyper extends HTMLElement {
   connectedCallback() {
     if (this._wired) return;
     this._wired = true;
@@ -75,10 +75,10 @@ class JXRTyper extends HTMLElement {
   }
 }
 
-/* <jxr-scroll-spy> … <a href="#…"> … </jxr-scroll-spy>
+/* <janus-webpage-scrollspy> … <a href="#…"> … </janus-webpage-scrollspy>
    Highlights whichever child link's target section owns the viewport midline
    (last section wins at the very bottom of the page). */
-class JXRScrollSpy extends HTMLElement {
+class JanusWebpageScrollSpy extends HTMLElement {
   connectedCallback() {
     if (this._wired) return;
     this._wired = true;
@@ -120,12 +120,12 @@ class JXRScrollSpy extends HTMLElement {
   }
 }
 
-/* <jxr-github-activity repo="owner/name">
+/* <janus-webpage-githubactivity repo="owner/name">
      …fallback content… <ul class="activity-feed" hidden></ul>
-   </jxr-github-activity>
+   </janus-webpage-githubactivity>
    Fills its feed list with the repo's latest commits; the fallback children
    already say everything a reader needs if the fetch never lands. */
-class JXRGithubActivity extends HTMLElement {
+class JanusWebpageGithubActivity extends HTMLElement {
   connectedCallback() {
     if (this._wired) return;
     this._wired = true;
@@ -162,6 +162,6 @@ class JXRGithubActivity extends HTMLElement {
   }
 }
 
-customElements.define('jxr-typer', JXRTyper);
-customElements.define('jxr-scroll-spy', JXRScrollSpy);
-customElements.define('jxr-github-activity', JXRGithubActivity);
+customElements.define('janus-webpage-typer', JanusWebpageTyper);
+customElements.define('janus-webpage-scrollspy', JanusWebpageScrollSpy);
+customElements.define('janus-webpage-githubactivity', JanusWebpageGithubActivity);

@@ -524,4 +524,4 @@ html.room-live, .room-live body { overflow: auto !important; }
 }
 
 /* custom elements default to inline; these are blocks */
-jxr-typer, jxr-github-activity { display: block; }
+janus-webpage-typer, janus-webpage-githubactivity { display: block; }
