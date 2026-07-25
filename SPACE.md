@@ -146,8 +146,11 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
   to destinations) with park architecture: open sky, a glowing promenade axis,
   destinations along it.
 - **History station** (west): an open-fronted pavilion — platform edge, era
-  plinths with year labels, the floating station sign, past/future tunnel mouths
-  in its side walls with their panels. The train analogy lives here.
+  plinths with year labels, the floating station sign, the "this station" panel
+  on the rear wall, and past/future tunnel mouths in its side walls with their
+  panels — past on the south wall (dim ring), future on the north (bright ring),
+  so the era plinths read oldest-to-newest along the direction of travel. The
+  train analogy lives here.
 - **Showcase** (east): plinths and gate frames for featured/new content.
 - **Project gates** near the far end: Vesta (grand gate), JanusWeb, spares for
   other projects Janus and otherwise — the actual ways past the edge.

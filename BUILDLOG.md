@@ -494,3 +494,28 @@ back to the top. Two culprits, stacked:
 Verified with a scrollY-over-time probe: `/#explore` now settles with the
 Explore section under the header, scrollspy agreeing, and the camera on the
 explore viewpoint; a plain load still starts at hero, untouched.
+
+## 2026-07-24 — Learn wall geometry, unlit panels, station orientation
+
+Three fixes from a walkthrough:
+
+- **Learn's posters vs. the pilasters.** Every outer-wall poster in the Learn
+  hall straddled a pilaster — the mounts had been placed by mirroring Build's
+  bearings, but the two halls' pilaster rhythms start from different origins,
+  so what cleared in Build collided in Learn (and the legacy panel clipped the
+  balcony-exit doorway). All five outer-wall mounts re-bearinged to the clear
+  gap centers between pilasters (204°–268°, one per bay).
+- **The typewriter greets you now.** "JanusXR is …" moved from the far cap —
+  where you'd only find it after walking the whole hall — to the outer wall at
+  284°, dead ahead in the widest clear span when you step through the entrance.
+- **Paragraphs go unlit.** All `<Paragraph>` mounts now carry
+  `lighting="false"` (MeshBasicMaterial): the panels are self-illuminated
+  signage, and reading them shouldn't depend on where the lighting pass has
+  gotten to. Verified via material probe.
+- **History station straightened out.** The "this station" panel had been
+  floating at the platform's center line, its top poking through the canopy —
+  now properly hung on the rear wall, sized to fit under the roof. Past and
+  future swapped sides (past now south/dim ring, future north/bright ring —
+  the generator comment had always *said* past-south, but the code did the
+  opposite), and the era plinth labels flipped with them so 2010 sits nearest
+  the past tunnel and the timeline reads oldest-to-newest as you walk through.

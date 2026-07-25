@@ -511,11 +511,12 @@ for pz in (SZ - 4.6, SZ + 4.6):
 for pz in (SZ - 3.0, SZ, SZ + 3.0):
     parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (SX, GROUND_Y + 0.4, pz)))
     parts.append(place(trimesh.creation.box(extents=[1.12, 0.06, 1.12]), M_TRIM_DIM, (SX, GROUND_Y + 0.83, pz)))
-# tunnel mouths: past on the south wall (dim), future on the north wall (bright)
+# tunnel mouths: past on the south wall (dim), future on the north wall (bright);
+# north is -z, so SZ - 5.3 is the north (future) wall
 tring = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.3, resolution=24).difference(
     Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.1, resolution=24)), 0.3), 0.3)
 tinset = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.1, resolution=24), 0.1), 0.1)
-for wz, mat_ring in ((SZ - 5.3, M_TRIM_DIM), (SZ + 5.3, M_TRIM)):
+for wz, mat_ring in ((SZ - 5.3, M_TRIM), (SZ + 5.3, M_TRIM_DIM)):
     yaw = 0 if wz > SZ else 180
     parts.append(place(tring, mat_ring, (SX, GROUND_Y, wz), rot_y(yaw)))
     parts.append(place(tinset, M_WALL, (SX, GROUND_Y, wz), rot_y(yaw)))
