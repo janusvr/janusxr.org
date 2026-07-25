@@ -519,3 +519,15 @@ Three fixes from a walkthrough:
   the generator comment had always *said* past-south, but the code did the
   opposite), and the era plinth labels flipped with them so 2010 sits nearest
   the past tunnel and the timeline reads oldest-to-newest as you walk through.
+
+## 2026-07-24 — Station labels legible
+
+The PAST/FUTURE wall labels used `◂`/`▸` triangles the 3D text font doesn't
+cover (rendered as fallback boxes), and after the side-swap they sat *behind*
+their posters — placed between wall face and poster plane. Swapped to ASCII
+`<`/`>`, moved both labels proud of the poster planes and up into the clear
+band between poster top and canopy. Added the missing third sign: PRESENT,
+over the rear-wall station panel, poster dropped and resized to make room —
+the three walls now read < PAST · PRESENT · FUTURE > around the platform.
+Verified by bounding-box probe (poster spans y −4.75..−1.35: clear of canopy
+and platform) and captures of all three walls.
