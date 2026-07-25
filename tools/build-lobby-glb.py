@@ -499,8 +499,8 @@ parts.append(place(xz(extrude(bal_found, 4.7)), M_WALL, (0, -5.2, 0)))
 
 parts = espl_parts
 # ---- the esplanade: promenade axis through the valley ----------------------
-parts.append(place(trimesh.creation.box(extents=[1.6, 0.1, 44]), M_TRIM,
-                   (0, GROUND_Y, -51)))
+parts.append(place(trimesh.creation.box(extents=[1.6, 0.1, 45.6]), M_TRIM,
+                   (0, GROUND_Y, -50.2)))
 
 # ---- history station (west of the promenade) --------------------------------
 SX, SZ = -16.0, -46.0   # station centre

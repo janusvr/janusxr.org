@@ -654,3 +654,21 @@ edge; the strip shortened to stop shy of the walls and sits buried 2cm into
 the pad. The walls stand on the ground now, sunk 5cm in and grown taller to
 keep meeting the canopy. Rule refined: footprints of nested elements should
 never share a boundary plane. GLBs ?v=8.
+
+## 2026-07-25 — The sun stops following you around
+
+James caught the beacon's shadow sliding across the Build wall as he walked —
+directional-light shadows changing angle with player movement, which no sun
+should do. Engine bug in `januslight.js`: the player-tracking shadow volume
+computed each frame's light direction as `configured pos − target pos`, but
+the target had been moved to the *player's position* the frame before — so
+the effective bearing was `2·pos − player`, swinging as you moved. Rewritten:
+the configured pos is now a pure fixed bearing; only the shadow volume's
+center follows the player (and lights with an explicit `light_target` are
+left alone entirely). Verified by probing the light vector at three player
+positions — identical bearing at all three. Pending release with the other
+engine changes.
+
+Also: the promenade's glowing centerline stopped 1.2m short of the stair
+base after the tenth tread was removed — extended to tuck under the bottom
+tread. GLBs ?v=9.
