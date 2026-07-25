@@ -40,7 +40,7 @@ M_WALL = mat('wall', [0.085, 0.10, 0.085])
 M_STRUCT = mat('structure', [0.22, 0.26, 0.22])
 M_TRIM = mat('trim-phosphor', [0.05, 0.2, 0.09], emissive=[0.26, 1.0, 0.43], rough=0.5)
 M_TRIM_DIM = mat('trim-phosphor-dim', [0.04, 0.12, 0.06], emissive=[0.05, 0.22, 0.09], rough=0.6)
-M_COIN = mat('coin-phosphor', [0.07, 0.3, 0.12], emissive=[0.26, 1.0, 0.43], rough=0.4)
+M_COIN = mat('coin-phosphor', [0.07, 0.3, 0.12], emissive=[0.05, 0.2, 0.09], rough=0.2, metal=0.6)
 
 # ---- layout parameters (must match room/lobby.html anchors) ----------------
 PLAZA_R = 17.0

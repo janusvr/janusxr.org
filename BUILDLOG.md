@@ -699,3 +699,20 @@ fixes pending release with the other engine changes.
 
 Also: the under-stair ramp was exactly as wide as the treads, z-fighting at
 their ends — narrowed 0.3m so the treads overhang it. GLBs ?v=10.
+
+## 2026-07-25 — Enter always means *this* world
+
+Clicking Enter before the room finished loading bounced to the hosted web
+client — the button's no-JS fallback href, falling through because the click
+handler was only wired after room load (and even then deliberately deferred
+to the href when not ready). That fallback made sense when this page was a
+2D brochure; now that the page *is* the world, it's wrong. Enter buttons are
+wired at script start: once we've committed to running the engine, clicks
+always stay here — an early click queues the entry and drops you in the
+moment the room is ready. The href remains for Tier 0 and no-WebGL browsers,
+where the hosted client genuinely is the only way in.
+
+And the coin steps into the light: `lighting` back on, emissive dialed from
+full phosphor down to a soft glow, roughness 0.2 with a bit of metalness —
+it now reads as a spinning minted object rather than a flat neon cutout.
+GLBs ?v=11.

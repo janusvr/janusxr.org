@@ -38,7 +38,8 @@
     navlock: false,     // anchor navigation in flight: scroll events ignored
     navTimer: 0,
     navMax: 0,
-    userScrolled: false // the user has scrolled deliberately since page load
+    userScrolled: false, // the user has scrolled deliberately since page load
+    pendingEnter: false  // Enter clicked before the room finished loading
   };
 
   ['wheel', 'touchstart', 'keydown'].forEach(function (evname) {
@@ -127,6 +128,10 @@
       watchNavClicks();
       wireEnter(client);
       state.ready = true;
+      if (state.pendingEnter) {
+        state.pendingEnter = false;
+        enterWorld();
+      }
     });
   }
 
@@ -324,15 +329,25 @@
 
   /* ---- Enter: hand over the controls ------------------------------------ */
 
-  function wireEnter(client) {
+  /* Wired at script start, before the engine even boots: once we've committed
+     to running the world in this page, Enter must never bounce to the hosted
+     client. A click that lands before the room is ready queues the entry. */
+  function wireEnterEarly() {
     var enters = document.querySelectorAll('.btn-enter');
     for (var i = 0; i < enters.length; i++) {
       enters[i].addEventListener('click', function (ev) {
-        if (!state.ready) return;   // engine not up: link falls through to web client
         ev.preventDefault();
-        enterWorld();
+        if (state.ready) {
+          enterWorld();
+        } else {
+          state.pendingEnter = true;
+        }
       });
     }
+  }
+  wireEnterEarly();
+
+  function wireEnter(client) {
     /* exit chip created here rather than in the HTML so Tier 0 never sees it */
     var exit = document.createElement('button');
     exit.type = 'button';
