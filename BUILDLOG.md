@@ -672,3 +672,30 @@ engine changes.
 Also: the promenade's glowing centerline stopped 1.2m short of the stair
 base after the tenth tread was removed — extended to tuck under the bottom
 tread. GLBs ?v=9.
+
+## 2026-07-25 — Why the coin wouldn't spin
+
+The coin's `angular="0 .2 0"` did nothing, and neither did
+`rotate_deg_per_sec`. Two stacked engine bugs, found by live-probing the
+property system (the JML parse, string→vector coercion, and spawn plumbing
+all checked out one by one):
+
+- **The sleep system ate slow spins.** The physics sleep threshold treats
+  motion below `|v|² + |ω|² = 0.3` as "settling" — and *zeroes the body's
+  velocities* when it dozes off. Any spin slower than ~63°/s froze half a
+  second after load. But damping defaults to off: undamped constant motion
+  never decays, so it's intentional animation, not a body coming to rest.
+  `rigidbody.js` now refuses to sleep a body whose motion is undamped.
+- **`updateRotationSpeed` clobbered `angular`.** It runs unconditionally
+  after dynamics creation, and since `rotate_axis` has a non-empty default,
+  an object with no `rotate_deg_per_sec` wrote axis × 0 into the body —
+  which shares its angular-velocity vector with the `angular` property.
+  Setting `angular` was thus erased microseconds later. It now writes only
+  when a rotation speed is actually in play (with a latch so setting the
+  speed back to 0 still stops a spinner).
+
+Verified: the coin turns 0.6 rad in 3.0s at ω=0.2 — numerically exact. Both
+fixes pending release with the other engine changes.
+
+Also: the under-stair ramp was exactly as wide as the treads, z-fighting at
+their ends — narrowed 0.3m so the treads overhang it. GLBs ?v=10.
