@@ -470,3 +470,27 @@ project name, STATUS: work in progress, STAGE: 1 — whiteboxing, SCALE: 1:1, hi
 on mobile, persistent even in free-roam. The site is about to go somewhere others
 can walk it and give feedback, and a whitebox should say it is one — the stamp is
 the honest label on the drawing.
+
+## 2026-07-24 — Deep links that actually land
+
+Loading `/#explore` looked right for a moment, then the page smooth-scrolled
+back to the top. Two culprits, stacked:
+
+- **The engine's mobile URL-bar hack.** A `window.scrollTo(0, 1)` on load —
+  the ancient iOS trick for hiding the address bar — fired unconditionally,
+  stomping the browser's anchor scroll, and the page's `scroll-behavior:
+  smooth` turned that into a visible glide to the top. Fixed upstream in
+  janusweb's `client.js`: the nudge now only fires when there's no hash and
+  the page is unscrolled — the one situation it was ever meant for.
+- **`room-live` moves the anchors.** When the room comes alive the section
+  margins expand (the 2D column spreads out to pace the 3D walk), roughly
+  doubling the document height *after* the browser already did its hash
+  scroll — so even without the engine's stomp, the link's target section had
+  drifted well below where you were left standing. `reveal.js` now re-asserts
+  the hash the moment `room-live` lands (instant, suppress-scroll — the same
+  machinery exit-restore uses), skipped if you've already scrolled somewhere
+  yourself.
+
+Verified with a scrollY-over-time probe: `/#explore` now settles with the
+Explore section under the header, scrollspy agreeing, and the camera on the
+explore viewpoint; a plain load still starts at hero, untouched.

@@ -37,8 +37,16 @@
     savedScroll: 0,
     navlock: false,     // anchor navigation in flight: scroll events ignored
     navTimer: 0,
-    navMax: 0
+    navMax: 0,
+    userScrolled: false // the user has scrolled deliberately since page load
   };
+
+  ['wheel', 'touchstart', 'keydown'].forEach(function (evname) {
+    window.addEventListener(evname, function mark() {
+      state.userScrolled = true;
+      window.removeEventListener(evname, mark);
+    }, { passive: true });
+  });
 
   function webglAvailable() {
     try {
@@ -113,12 +121,26 @@
       styleMounts();
       try { window.player.disable(); } catch (e) {}
       document.documentElement.classList.add('room-live');
+      reanchorHash();
       snapTo(currentSectionVP(), true);
       watchScroll();
       watchNavClicks();
       wireEnter(client);
       state.ready = true;
     });
+  }
+
+  /* room-live grows the sections (the 2D column spreads out to pace the 3D
+     walk), moving every anchor target after the browser already did its hash
+     scroll. Re-assert the hash so a /#section link still lands on its
+     section — unless the user has taken over scrolling in the meantime. */
+  function reanchorHash() {
+    if (state.userScrolled) return;
+    var id = document.location.hash.slice(1);
+    var el = id && document.getElementById(id);
+    if (!el) return;
+    state.suppressScroll = true;
+    el.scrollIntoView({ behavior: 'instant', block: 'start' });
   }
 
   function whenRoomLoaded(client, cb, tries) {
