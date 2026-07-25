@@ -505,12 +505,15 @@ parts.append(place(trimesh.creation.box(extents=[1.6, 0.1, 44]), M_TRIM,
 # ---- history station (west of the promenade) --------------------------------
 SX, SZ = -16.0, -46.0   # station centre
 # platform pad + glowing edge facing the promenade
-parts.append(place(trimesh.creation.box(extents=[15, 0.3, 11]), M_STRUCT, (SX - 0.5, GROUND_Y + 0.1, SZ)))
-parts.append(place(trimesh.creation.box(extents=[0.12, 0.06, 11]), M_TRIM_DIM, (SX + 6.9, GROUND_Y + 0.28, SZ)))
-# walls: rear (west), north, south; open east toward the promenade
-parts.append(place(trimesh.creation.box(extents=[0.4, 4.5, 11]), M_WALL, (SX - 7.3, GROUND_Y + 2.25, SZ)))
-parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ - 5.3)))
-parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ + 5.3)))
+# platform pad spans the walls' INTERIOR (tucked 0.1 into each wall body so
+# faces interpenetrate, never align) with a small lip past the open east edge
+parts.append(place(trimesh.creation.box(extents=[14.4, 0.3, 10.4]), M_STRUCT, (SX, GROUND_Y + 0.1, SZ)))
+parts.append(place(trimesh.creation.box(extents=[0.12, 0.06, 10.0]), M_TRIM_DIM, (SX + 6.9, GROUND_Y + 0.26, SZ)))
+# walls: rear (west), north, south; open east toward the promenade; walls
+# stand on the ground outside the pad, sunk 5cm in
+parts.append(place(trimesh.creation.box(extents=[0.4, 4.6, 11]), M_WALL, (SX - 7.3, GROUND_Y + 2.25, SZ)))
+parts.append(place(trimesh.creation.box(extents=[15, 4.6, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ - 5.3)))
+parts.append(place(trimesh.creation.box(extents=[15, 4.6, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ + 5.3)))
 # canopy + posts at the open edge
 parts.append(place(trimesh.creation.box(extents=[16, 0.25, 12]), M_STRUCT, (SX - 0.5, GROUND_Y + 4.6, SZ)))
 for pz in (SZ - 4.6, SZ + 4.6):

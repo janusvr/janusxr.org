@@ -641,3 +641,16 @@ Two ground-truth fixes in the valley:
   materials. New rule applied across the valley: pieces interpenetrate,
   never kiss. The pad is thicker with its bottom buried and a proper 25cm
   platform lip on top; everything else sinks 5cm into the ground. GLBs ?v=7.
+
+## 2026-07-25 — Pavilion foundation, properly inside
+
+The station still shimmered after the sink pass, and the diagnosis (James's)
+was exact: the platform pad's footprint matched the walls' OUTER extents, so
+the pad's side faces were coplanar with the wall faces along the entire base
+— and the threshold strip ran its ends into the same planes. The pad now
+spans the walls' interior, tucked 0.1 into each wall body so the surfaces
+interpenetrate rather than align, keeping a small lip past the open east
+edge; the strip shortened to stop shy of the walls and sits buried 2cm into
+the pad. The walls stand on the ground now, sunk 5cm in and grown taller to
+keep meeting the canopy. Rule refined: footprints of nested elements should
+never share a boundary plane. GLBs ?v=8.
