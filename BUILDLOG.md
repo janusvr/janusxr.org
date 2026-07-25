@@ -583,3 +583,21 @@ self-shadowing at shallow angles. Two-part fix:
   (world, lobby, esplanade) set `shadow_side="front"` so backfaces render
   into the shadow map — closed extruded solids self-shadow much more cleanly
   from the inside surface than the lit one.
+
+## 2026-07-25 — Normals, welded and split
+
+With real directional light in the scene, the geometry's dirty secret showed:
+patchy light/dark facets on the halo band, gradient fans across flat faces,
+diagonal shading seams on walls. Not unwelded vertices — the opposite.
+trimesh's `extrude_polygon` welds cap and wall vertices, so the GLB export
+wrote *smooth* vertex normals averaged across 90° edges: every corner vertex
+leaned its normal between floor and wall, and big flat faces interpolated
+gradients between corners. (The coin had the same defect, masked by its
+unlit material.)
+
+Fix in one choke point: `place()` now runs every part through
+`trimesh.graph.smooth_shade(angle=35°)` before export — edges sharper than
+35° get split vertices (flat faces shade flat), gentler runs like the halo
+band's 64 segments keep shared normals (curves stay smooth). Model files
+grew ~60% from the duplicated vertices; shading artifacts gone across the
+board. GLBs bumped to ?v=3.

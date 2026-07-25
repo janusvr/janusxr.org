@@ -81,6 +81,10 @@ def place(mesh, material, translate=(0, 0, 0), transform=None):
     if transform is not None:
         mesh.apply_transform(transform)
     mesh.apply_translation(translate)
+    # extrude_polygon welds cap and wall vertices, which exports smooth
+    # normals averaged across 90-degree edges — hard edges must split so flat
+    # faces shade flat, while curved bands (halo, rings) stay smooth
+    mesh = trimesh.graph.smooth_shade(mesh, angle=math.radians(35))
     mesh.visual = trimesh.visual.TextureVisuals(material=material)
     return mesh
 
