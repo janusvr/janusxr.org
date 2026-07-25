@@ -439,7 +439,8 @@ parts.append(place(xz(extrude(ground, 0.5)), M_FLOOR, (0, GROUND_Y - 0.5, 0)))
 
 parts = lobby_parts
 # ---- the hill: conical skirt under the plaza, foundations under the rest ---
-skirt = trimesh.creation.revolve(np.array([[19.0, 0.0], [26.0, GROUND_Y]]), sections=64)
+# profile runs bottom-up so the revolved surface winds with outward normals
+skirt = trimesh.creation.revolve(np.array([[26.0, GROUND_Y], [19.0, 0.0]]), sections=64)
 skirt.apply_transform(trimesh.transformations.rotation_matrix(-math.pi / 2, [1, 0, 0]))
 parts.append(place(skirt, M_WALL))
 parts.append(place(trimesh.creation.box(extents=[8.0, 4.5, 15.0]), M_WALL, (0, -2.75, 20.5)))

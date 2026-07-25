@@ -601,3 +601,13 @@ Fix in one choke point: `place()` now runs every part through
 band's 64 segments keep shared normals (curves stay smooth). Model files
 grew ~60% from the duplicated vertices; shading artifacts gone across the
 board. GLBs bumped to ?v=3.
+
+## 2026-07-25 — The hill turns right-side out
+
+The plaza's conical skirt — the hill the shrine stands on — had inverted
+normals: `trimesh.creation.revolve` winds its surface from the profile
+direction, and the profile ran top-down (plaza edge to ground), producing
+faces that pointed into the earth. From the valley the hillside rendered
+inside-out. Profile reversed to run bottom-up; the only revolve in the
+generator, so nothing else affected. The hill now shades as a proper lit
+slope from the valley floor. GLBs at ?v=4.
