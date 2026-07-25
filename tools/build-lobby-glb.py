@@ -453,7 +453,8 @@ STAIR_W = 18.0
 _stair_angle = math.atan2(0.5, 1.2)
 parts.append(place(trimesh.creation.box(extents=[STAIR_W, 0.4, 12.6]), M_WALL, (0, -3.45, -23.0),
                    trimesh.transformations.rotation_matrix(-_stair_angle, [1, 0, 0])))
-for i in range(10):
+# 9 steps: the tenth tread's top sat exactly at ground level
+for i in range(9):
     ytop = -0.5 * (i + 1)
     zc = -(17.0 + 0.6 + 1.2 * i)
     parts.append(place(trimesh.creation.box(extents=[STAIR_W, 0.5, 1.2]), M_STRUCT,
