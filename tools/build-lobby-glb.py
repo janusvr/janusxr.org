@@ -439,14 +439,20 @@ parts.append(place(xz(extrude(ground, 0.5)), M_FLOOR, (0, GROUND_Y - 0.5, 0)))
 
 parts = lobby_parts
 # ---- the hill: conical skirt under the plaza, foundations under the rest ---
-# profile runs bottom-up so the revolved surface winds with outward normals
-skirt = trimesh.creation.revolve(np.array([[26.0, GROUND_Y], [19.0, 0.0]]), sections=64)
+# profile runs bottom-up so the revolved surface winds with outward normals;
+# top tucks just under the plaza slab edge (r17) so the seam stays hidden
+skirt = trimesh.creation.revolve(np.array([[24.0, GROUND_Y], [16.9, -0.02]]), sections=64)
 skirt.apply_transform(trimesh.transformations.rotation_matrix(-math.pi / 2, [1, 0, 0]))
 parts.append(place(skirt, M_WALL))
 parts.append(place(trimesh.creation.box(extents=[8.0, 4.5, 15.0]), M_WALL, (0, -2.75, 20.5)))
 
 # ---- the grand stair: plaza rim down to the valley, north -------------------
 STAIR_W = 18.0
+# solid ramp under the treads: the hill falls away faster than the stair
+# descends, so this closes the gap that would show under the lower treads
+_stair_angle = math.atan2(0.5, 1.2)
+parts.append(place(trimesh.creation.box(extents=[STAIR_W, 0.4, 12.6]), M_WALL, (0, -3.45, -23.0),
+                   trimesh.transformations.rotation_matrix(-_stair_angle, [1, 0, 0])))
 for i in range(10):
     ytop = -0.5 * (i + 1)
     zc = -(17.0 + 0.6 + 1.2 * i)

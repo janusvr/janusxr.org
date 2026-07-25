@@ -611,3 +611,14 @@ faces that pointed into the earth. From the valley the hillside rendered
 inside-out. Profile reversed to run bottom-up; the only revolve in the
 generator, so nothing else affected. The hill now shades as a proper lit
 slope from the valley floor. GLBs at ?v=4.
+
+## 2026-07-25 — The hill meets the floor and yields to the stairs
+
+The skirt's radii were never coordinated with its neighbors: its top rim
+started at r19 — two meters outside the r17 plaza slab, a floating shelf gap —
+and its base ran to r26, burying the upper stair treads inside the hillside.
+Reprofiled to r17→24, with the top vertex tucked just under the slab edge so
+the seam can't show. The hill now falls away slightly faster than the stair
+descends, so a solid ramp slab went in under the treads to close the
+underside — the staircase reads as cut into the hill's north face, treads
+emerging cleanly, hill flanks framing it. GLBs at ?v=5.
