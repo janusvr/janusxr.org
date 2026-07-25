@@ -266,19 +266,6 @@ for name, spec in HALLS.items():
             px, pz = wpolar(19.7, b)
             parts.append(place(trimesh.creation.box(extents=[1.1, 1.0, 1.1]), M_STRUCT, (px, 0.5, pz), rot_y(-b)))
             parts.append(place(trimesh.creation.box(extents=[1.22, 0.06, 1.22]), M_TRIM_DIM, (px, 1.03, pz), rot_y(-b)))
-        # the Mirror on the outer wall near the far end; the vault opposite
-        mring = face_center(extrude(Point(0, 3.2).buffer(3.0, resolution=36).difference(
-            Point(0, 3.2).buffer(2.8, resolution=36)), 0.2), 0.2)
-        md = bearing_dir(193)
-        mx, mz = wpolar(26.6, 193)
-        parts.append(place(mring, M_TRIM_DIM, (mx, 0, mz), rot_y(face_yaw(-md))))
-        vring = face_center(extrude(Point(0, 1.6).buffer(1.2, resolution=24).difference(
-            Point(0, 1.6).buffer(1.0, resolution=24)), 0.25), 0.25)
-        vdoor = face_center(extrude(Point(0, 1.6).buffer(1.0, resolution=24), 0.1), 0.1)
-        vd = bearing_dir(202)
-        vx, vz = wpolar(17.8, 202)
-        parts.append(place(vring, M_TRIM_DIM, (vx, 0, vz), rot_y(face_yaw(vd))))
-        parts.append(place(vdoor, M_WALL, (vx + vd[0] * -0.05, 0, vz + vd[2] * -0.05), rot_y(face_yaw(vd))))
         # obelisk beside the mouth, facing the plaza
         obx, obz = wpolar(16.6, 260)
         parts.append(place(trimesh.creation.box(extents=[0.9, 7.5, 0.9]), M_STRUCT, (obx, 3.75, obz), rot_y(180 - 260)))
@@ -306,11 +293,11 @@ for name, spec in HALLS.items():
                 px, pz = wpolar(rr, b)
                 parts.append(place(trimesh.creation.box(extents=[0.9, 2.1, 0.7]), M_WALL, (px, 1.05, pz), rot_y(-b)))
                 parts.append(place(trimesh.creation.box(extents=[0.9, 0.05, 0.7]), M_TRIM_DIM, (px, 2.15, pz), rot_y(-b)))
-        # open-source placard frame on the far cap
+        # open-source placard frame on the outer wall facing the entrance
         pframe = face_center(extrude(
             box(-3.2, 0.4, 3.2, 5.0).difference(box(-2.9, 0.7, 2.9, 4.7)), 0.3), 0.3)
-        fx, fz = wpolar(22.2, 170.6)
-        parts.append(place(pframe, M_STRUCT, (fx, 0, fz), rot_y(face_yaw(np.array([0.986, 0, -0.165])))))
+        fx, fz = wpolar(26.7, 80)
+        parts.append(place(pframe, M_STRUCT, (fx, 0, fz), rot_y(face_yaw(-bearing_dir(80)))))
 
 # ---- the halo ring ---------------------------------------------------------
 # Decorative successor to the old mezzanine: a thin band floating over the

@@ -531,3 +531,25 @@ over the rear-wall station panel, poster dropped and resized to make room —
 the three walls now read < PAST · PRESENT · FUTURE > around the platform.
 Verified by bounding-box probe (poster spans y −4.75..−1.35: clear of canopy
 and platform) and captures of all three walls.
+
+## 2026-07-24 — Hall poster pass: hug the walls, greet the door
+
+Walkthrough feedback, both halls:
+
+- **Learn's inner-wall posters** hung 0.7m off the wall (r18.3 against a wall
+  face at r17.6) — reading as floating panels, not signage. All four pulled in
+  to r17.75, matching the outer wall's 0.2m standoff.
+- **The Mirror and vault rings removed.** The two leftover circles at Learn's
+  far end — the Mirror ring (outer wall, 193°) and the vault ring/door (inner
+  wall, 202°), absorbed from the old Get wing — never earned their keep in the
+  merged hall. Gone, along with the mirror's caption text.
+- **Build's deploy poster overlapped the entryway** — centered at 92° with the
+  entrance gap ending at 91.5°. Re-bearinged to 100°, and both Build inner-wall
+  posters pulled in to r17.75 like Learn's.
+- **Build's outer-wall posters dropped** from y3.1 to y2.0 — they were hung
+  above eye level.
+- **The open-source placard greets you now.** Same treatment as Learn's
+  typewriter: moved from the far cap to the outer wall at 80°, dead ahead
+  through the entrance, resized to 4:3 inside its structural frame — which
+  traveled with it in the generator. Build's first impression is the project's
+  first message: built in the open.
