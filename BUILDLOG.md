@@ -622,3 +622,22 @@ the seam can't show. The hill now falls away slightly faster than the stair
 descends, so a solid ramp slab went in under the treads to close the
 underside — the staircase reads as cut into the hill's north face, treads
 emerging cleanly, hill flanks framing it. GLBs at ?v=5.
+
+## 2026-07-25 — Closing the underworld
+
+Two ground-truth fixes in the valley:
+
+- **The void under the plaza is sealed.** The halls' radial end walls and the
+  corridor's side walls stopped at floor level, leaving the underside of the
+  whole shrine ring open to view from the valley — an unsightly structural
+  void. All of them now carry foundations down to the ground (both radial
+  ends of each wing, corridor sides, and a sill across the corridor's south
+  end). The balcony still floats — it overlooks the void on purpose; now it's
+  the only thing that does.
+- **The pavilion floor shimmer.** The station pad hovered 5mm above the
+  ground plane, the promenade centerline likewise, and a dozen pieces (canopy
+  posts, tunnel rings, gates, showcase plinths) sat *exactly* at ground
+  level — coplanar faces that z-fight at distance with double-sided GLB
+  materials. New rule applied across the valley: pieces interpenetrate,
+  never kiss. The pad is thicker with its bottom buried and a proper 25cm
+  platform lip on top; everything else sinks 5cm into the ground. GLBs ?v=7.

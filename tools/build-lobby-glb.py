@@ -154,6 +154,11 @@ parts.append(place(xz(extrude(cor_floor, FLOOR_T)), M_FLOOR, (0, -FLOOR_T, 0)))
 for sx in (-1, 1):
     wall = box(sx * CORRIDOR_W / 2 - 0.2, -z1, sx * CORRIDOR_W / 2 + 0.2, -z0)
     parts.append(place(xz(extrude(wall, WALL_H)), M_WALL))
+    # foundation below the wall, down to the ground
+    parts.append(place(xz(extrude(wall, 4.7)), M_WALL, (0, -5.2, 0)))
+# sill across the corridor's south end, closing the under-floor void there
+cor_sill = box(-CORRIDOR_W / 2 - 0.2, -z1, CORRIDOR_W / 2 + 0.2, -(z1 - 0.4))
+parts.append(place(xz(extrude(cor_sill, 4.7)), M_WALL, (0, -5.2, 0)))
 
 def arch_frame(width, height, opening_w, straight_h):
     """Wall slab with an arched doorway cut out, built in XY (x across, y up)."""
@@ -239,6 +244,10 @@ for name, spec in HALLS.items():
     cn = spec['cap_near']
     cap_span = (a1 - 0.9, a1) if cn == a1 else (a0, a0 + 0.9)
     parts.append(place(xz(extrude(hclip(annsec(17.2, 27.2, cap_span[0], cap_span[1])), WALL_H)), M_WALL))
+    # end-wall foundations: both radial ends run down to the ground so the
+    # void under the plaza is closed off at the wing ends
+    for f0, f1 in ((a0, a0 + 0.9), (a1 - 0.9, a1)):
+        parts.append(place(xz(extrude(hclip(annsec(17.2, 27.2, f0, f1)), 4.7)), M_WALL, (0, -5.2, 0)))
 
     # skirting glow along both walls; radial pergola beams overhead
     parts.append(place(xz(extrude(hclip(annsec(17.65, 17.77, a0 + 1, a1 - 1)), 0.04)), M_TRIM_DIM))
@@ -490,14 +499,14 @@ parts.append(place(xz(extrude(bal_found, 4.7)), M_WALL, (0, -5.2, 0)))
 
 parts = espl_parts
 # ---- the esplanade: promenade axis through the valley ----------------------
-parts.append(place(trimesh.creation.box(extents=[1.6, 0.05, 44]), M_TRIM,
-                   (0, GROUND_Y + 0.03, -51)))
+parts.append(place(trimesh.creation.box(extents=[1.6, 0.1, 44]), M_TRIM,
+                   (0, GROUND_Y, -51)))
 
 # ---- history station (west of the promenade) --------------------------------
 SX, SZ = -16.0, -46.0   # station centre
 # platform pad + glowing edge facing the promenade
-parts.append(place(trimesh.creation.box(extents=[15, 0.15, 11]), M_STRUCT, (SX - 0.5, GROUND_Y + 0.08, SZ)))
-parts.append(place(trimesh.creation.box(extents=[0.12, 0.06, 11]), M_TRIM_DIM, (SX + 6.9, GROUND_Y + 0.18, SZ)))
+parts.append(place(trimesh.creation.box(extents=[15, 0.3, 11]), M_STRUCT, (SX - 0.5, GROUND_Y + 0.1, SZ)))
+parts.append(place(trimesh.creation.box(extents=[0.12, 0.06, 11]), M_TRIM_DIM, (SX + 6.9, GROUND_Y + 0.28, SZ)))
 # walls: rear (west), north, south; open east toward the promenade
 parts.append(place(trimesh.creation.box(extents=[0.4, 4.5, 11]), M_WALL, (SX - 7.3, GROUND_Y + 2.25, SZ)))
 parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0.5, GROUND_Y + 2.25, SZ - 5.3)))
@@ -505,7 +514,7 @@ parts.append(place(trimesh.creation.box(extents=[15, 4.5, 0.4]), M_WALL, (SX - 0
 # canopy + posts at the open edge
 parts.append(place(trimesh.creation.box(extents=[16, 0.25, 12]), M_STRUCT, (SX - 0.5, GROUND_Y + 4.6, SZ)))
 for pz in (SZ - 4.6, SZ + 4.6):
-    parts.append(place(xz(extrude(ngon(0.22, n=8), 4.5)), M_STRUCT, (SX + 6.6, GROUND_Y, pz)))
+    parts.append(place(xz(extrude(ngon(0.22, n=8), 4.5)), M_STRUCT, (SX + 6.6, GROUND_Y - 0.05, pz)))
 # era plinths along the platform
 for pz in (SZ - 3.0, SZ, SZ + 3.0):
     parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (SX, GROUND_Y + 0.4, pz)))
@@ -517,24 +526,24 @@ tring = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.3, reso
 tinset = face_center(extrude(Point(0, GROUND_Y + 2.2 - GROUND_Y).buffer(1.1, resolution=24), 0.1), 0.1)
 for wz, mat_ring in ((SZ - 5.3, M_TRIM), (SZ + 5.3, M_TRIM_DIM)):
     yaw = 0 if wz > SZ else 180
-    parts.append(place(tring, mat_ring, (SX, GROUND_Y, wz), rot_y(yaw)))
-    parts.append(place(tinset, M_WALL, (SX, GROUND_Y, wz), rot_y(yaw)))
+    parts.append(place(tring, mat_ring, (SX, GROUND_Y - 0.05, wz), rot_y(yaw)))
+    parts.append(place(tinset, M_WALL, (SX, GROUND_Y - 0.05, wz), rot_y(yaw)))
 
 # ---- showcase area (east of the promenade) ---------------------------------
 for pz in (-49.0, -46.0, -43.0):
-    parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (16.0, GROUND_Y + 0.4, pz)))
-    parts.append(place(trimesh.creation.box(extents=[1.12, 0.06, 1.12]), M_TRIM_DIM, (16.0, GROUND_Y + 0.83, pz)))
+    parts.append(place(trimesh.creation.box(extents=[1.0, 0.8, 1.0]), M_STRUCT, (16.0, GROUND_Y + 0.35, pz)))
+    parts.append(place(trimesh.creation.box(extents=[1.12, 0.06, 1.12]), M_TRIM_DIM, (16.0, GROUND_Y + 0.78, pz)))
 showgate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
 for gz in (-44.0, -48.0):
-    parts.append(place(showgate, M_STRUCT, (10.5, GROUND_Y, gz), rot_y(90)))
+    parts.append(place(showgate, M_STRUCT, (10.5, GROUND_Y - 0.05, gz), rot_y(90)))
 
 # ---- project gates flanking the promenade near the far end -----------------
 grand = face_center(extrude(arch_frame(4.2, 4.6, 3.1, 2.5), 0.35), 0.35)
 gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
-parts.append(place(grand, M_TRIM, (-6.8, GROUND_Y, -62.0), rot_y(-90)))
-parts.append(place(gate, M_TRIM, (6.8, GROUND_Y, -62.0), rot_y(90)))
-parts.append(place(gate, M_STRUCT, (-6.8, GROUND_Y, -68.0), rot_y(-90)))
-parts.append(place(gate, M_STRUCT, (6.8, GROUND_Y, -68.0), rot_y(90)))
+parts.append(place(grand, M_TRIM, (-6.8, GROUND_Y - 0.05, -62.0), rot_y(-90)))
+parts.append(place(gate, M_TRIM, (6.8, GROUND_Y - 0.05, -62.0), rot_y(90)))
+parts.append(place(gate, M_STRUCT, (-6.8, GROUND_Y - 0.05, -68.0), rot_y(-90)))
+parts.append(place(gate, M_STRUCT, (6.8, GROUND_Y - 0.05, -68.0), rot_y(90)))
 
 parts = world_parts
 # ---- the Thirteenth Floor border -------------------------------------------
