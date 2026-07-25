@@ -568,3 +568,18 @@ The esplanade's local lights got a general lift — station, promenade pair,
 and gates brightened; new fills over the showcase plinths and the stair base,
 so the valley reads as a lit destination from the overlook instead of a void
 with signs in it.
+
+## 2026-07-25 — Shadow acne treatment
+
+The first shadow pass speckled — classic acne from a big ortho shadow volume
+self-shadowing at shallow angles. Two-part fix:
+
+- **Engine:** `januslight.js` now exposes `light_shadow_normalbias` (three.js
+  `shadow.normalBias` — offsets the depth comparison along the surface normal,
+  the modern cure for acne on lit slopes; pending release with the other
+  engine changes).
+- **Room:** the sun gets `light_shadow_normalbias="0.2"` with a small negative
+  depth bias to hold contacts tight, and the three architecture objects
+  (world, lobby, esplanade) set `shadow_side="front"` so backfaces render
+  into the shadow map — closed extruded solids self-shadow much more cleanly
+  from the inside surface than the lit one.

@@ -40,12 +40,12 @@
         skybox_right_id="sky-right" skybox_up_id="sky-up" skybox_down_id="sky-down"
         fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
 
-    <Object id="world" js_id="world-frame" pos="0 0 0" />
-    <Light js_id="light-sun" light_directional="true" pos="-25 40 25" col="#b8ffd0" light_intensity="3" light_range="45" light_shadow="true" light_shadow_size="2048" light_shadow_bias="0.0003" />
+    <Object id="world" js_id="world-frame" shadow_side="front" pos="0 0 0" />
+    <Light js_id="light-sun" light_directional="true" pos="-25 40 25" col="#b8ffd0" light_intensity="3" light_range="45" light_shadow="true" light_shadow_size="2048" light_shadow_bias="-0.0002" light_shadow_normalbias="0.2" />
   <Object id="cube" js_id="col-ground" pos="0 -5.25 0" scale="110 0.5 110" visible="false" collision_id="cube" />
 
   <Object js_id="lobby-group" pos="0 0 20">
-    <Object id="lobby" js_id="lobby-architecture" pos="0 0 0" />
+    <Object id="lobby" js_id="lobby-architecture" shadow_side="front" pos="0 0 0" />
     <Object id="cube" js_id="col-plaza"      pos="0 -0.25 0"        scale="34 0.5 34"  visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-corridor"   pos="0 -0.25 21"       scale="7 0.5 14"   visible="false" collision_id="cube" />
     <Object id="cube" js_id="col-learn-f1" pos="-7.59 -0.25 20.86" scale="10 0.5 9.3" visible="false" collision_id="cube" xdir="-0.342 0 0.940" ydir="0 1 0" zdir="-0.940 0 -0.342" />
@@ -119,7 +119,7 @@
   </Object>
 
   <Object js_id="esplanade-group" pos="0 0 20">
-    <Object id="esplanade" js_id="esplanade-architecture" pos="0 0 0" />
+    <Object id="esplanade" js_id="esplanade-architecture" shadow_side="front" pos="0 0 0" />
     <Light js_id="light-station" pos="-15 -1.5 -46" col="#7dffa0" light_intensity="8" light_range="18" light_decay="2" />
     <Light js_id="light-promenade-1" pos="0 -1.5 -38" col="#2a9e4f" light_intensity="7" light_range="18" light_decay="2" />
     <Light js_id="light-promenade-2" pos="0 -1.5 -56" col="#2a9e4f" light_intensity="7" light_range="18" light_decay="2" />
