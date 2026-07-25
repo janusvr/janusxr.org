@@ -41,6 +41,7 @@
         fog="true" fog_mode="exp" fog_density="0.0035" fog_col="#0c0f0c">
 
     <Object id="world" js_id="world-frame" pos="0 0 0" />
+    <Light js_id="light-sun" light_directional="true" pos="-25 40 25" col="#b8ffd0" light_intensity="3" light_range="45" light_shadow="true" light_shadow_size="2048" light_shadow_bias="0.0003" />
   <Object id="cube" js_id="col-ground" pos="0 -5.25 0" scale="110 0.5 110" visible="false" collision_id="cube" />
 
   <Object js_id="lobby-group" pos="0 0 20">
@@ -119,10 +120,12 @@
 
   <Object js_id="esplanade-group" pos="0 0 20">
     <Object id="esplanade" js_id="esplanade-architecture" pos="0 0 0" />
-    <Light js_id="light-station" pos="-15 -1.5 -46" col="#7dffa0" light_intensity="5" light_range="14" light_decay="2" />
-    <Light js_id="light-promenade-1" pos="0 -2.5 -38" col="#2a9e4f" light_intensity="4" light_range="14" light_decay="2" />
-    <Light js_id="light-promenade-2" pos="0 -2.5 -56" col="#2a9e4f" light_intensity="4" light_range="14" light_decay="2" />
-    <Light js_id="light-gates" pos="0 -2.5 -62" col="#43ff6e" light_intensity="4" light_range="12" light_decay="2" />
+    <Light js_id="light-station" pos="-15 -1.5 -46" col="#7dffa0" light_intensity="8" light_range="18" light_decay="2" />
+    <Light js_id="light-promenade-1" pos="0 -1.5 -38" col="#2a9e4f" light_intensity="7" light_range="18" light_decay="2" />
+    <Light js_id="light-promenade-2" pos="0 -1.5 -56" col="#2a9e4f" light_intensity="7" light_range="18" light_decay="2" />
+    <Light js_id="light-showcase" pos="13 -1.5 -46" col="#7dffa0" light_intensity="6" light_range="15" light_decay="2" />
+    <Light js_id="light-stairbase" pos="0 -1.5 -31" col="#2a9e4f" light_intensity="6" light_range="15" light_decay="2" />
+    <Light js_id="light-gates" pos="0 -2.5 -62" col="#43ff6e" light_intensity="6" light_range="12" light_decay="2" />
     <Text js_id="label-explore" pos="0 5.6 -60" fwd="0 0 1" col="#43ff6e" emissive="#43ff6e" scale="20 20 1">EXPLORE</Text>
     <Link js_id="portal-vesta" pos="-6.6 -3.2 -62" fwd="1 0 0" scale="2.6 3.2 1" url="https://vesta.janusxr.org/" title="Vesta" col="#43ff6e" />
     <Link js_id="portal-janusweb" pos="6.6 -3.3 -62" fwd="-1 0 0" scale="2 2.8 1" url="https://web.janusxr.org/" title="JanusWeb" col="#43ff6e" />

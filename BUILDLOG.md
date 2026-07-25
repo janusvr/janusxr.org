@@ -553,3 +553,18 @@ Walkthrough feedback, both halls:
   through the entrance, resized to 4:3 inside its structural frame — which
   traveled with it in the generator. Build's first impression is the project's
   first message: built in the open.
+
+## 2026-07-25 — Let there be moonlight
+
+Lighting pass on the esplanade, and a first for the whole scene: a
+**shadow-casting directional light** (`light-sun`, pale phosphor-white from
+high southwest). The engine's directional lights keep their ortho shadow
+camera centered on the player (±light_range box), so one 2048px shadow map
+serves the whole walkable world at decent texel density instead of trying to
+cover 140m in one static box. The halo ring now throws a soft arc across the
+plaza floor, and the station canopy actually shades its platform.
+
+The esplanade's local lights got a general lift — station, promenade pair,
+and gates brightened; new fills over the showcase plinths and the stair base,
+so the valley reads as a lit destination from the overlook instead of a void
+with signs in it.
