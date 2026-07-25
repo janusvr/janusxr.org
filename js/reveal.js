@@ -12,8 +12,8 @@
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var saveData = navigator.connection && navigator.connection.saveData;
 
-  /* Fallback viewpoint table — overridden by vp-* markers in the room when present.
-     Coordinates match room/lobby.html. */
+  /* Fallback viewpoint table — overridden by same-named markers in the room
+     when present (position and orientation both come from the objects). */
   var VIEWPOINTS = {
     /* section viewpoints orbit low around the fountain, each looking out
        through its wing's portal doorway */
@@ -22,11 +22,11 @@
     learn:    { pos: [-3.94, 2, 19.31], look: [-18.71, 3, 16.7] },
     explore:  { pos: [0, 1.2, 4.5],     look: [0, -4, -32] },   /* the overlook */
     build:    { pos: [3.94, 2, 19.31],  look: [18.71, 3, 16.7] },
-    overview: { pos: [0, 13, 41],       look: [0, 0.9, 20] }   /* footer: high south, gazing at the fountain base */
+    footer:   { pos: [0, 13, 41],       look: [0, 0.9, 20] }   /* high south, gazing at the fountain base */
   };
   var SECTION_VP = [
     ['hero', 'hero'], ['learn', 'learn'], ['explore', 'explore'],
-    ['build', 'build'], ['footer', 'overview']
+    ['build', 'build'], ['footer', 'footer']
   ];
 
   var state = {
@@ -134,16 +134,22 @@
     }
   }
 
-  /* Prefer viewpoint positions authored in the room (vp-* markers) over the
-     JS fallback table — the room is the source of truth (SPACE.md contract). */
+  /* The room's markers are the source of truth: named exactly like the
+     document anchors, their pos is the camera position and their fwd is the
+     gaze direction for that section's snap. */
   function readRoomViewpoints() {
     try {
       var objects = window.room && window.room.objects;
       if (!objects) return;
       for (var name in VIEWPOINTS) {
-        var marker = objects['vp-' + name];
+        var marker = objects[name];
         if (marker && marker.pos) {
-          VIEWPOINTS[name].pos = [marker.pos.x, marker.pos.y, marker.pos.z];
+          var p = marker.pos;
+          VIEWPOINTS[name].pos = [p.x, p.y, p.z];
+          var f = marker.fwd;
+          if (f && (f.x || f.y || f.z)) {
+            VIEWPOINTS[name].look = [p.x + f.x * 10, p.y + f.y * 10, p.z + f.z * 10];
+          }
         }
       }
     } catch (e) {}
