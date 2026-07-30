@@ -540,6 +540,25 @@ showgate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
 for gz in (-44.0, -48.0):
     parts.append(place(showgate, M_STRUCT, (10.5, GROUND_Y - 0.05, gz), rot_y(90)))
 
+# ---- station furniture: system-map board + media shelf ---------------------
+# The network map, mounted by the platform edge the way real stations do,
+# angled to face arrivals coming up the promenade from the stairs. The map
+# image itself is applied in the JML (assets/history-map.png).
+MAP_B, MAP_BZ, MAP_ROT = SX + 6.4, SZ + 3.4, 58
+_mapd = rot_y(MAP_ROT)
+parts.append(place(trimesh.creation.box(extents=[2.9, 1.85, 0.1]), M_STRUCT,
+                   (MAP_B, GROUND_Y + 1.7, MAP_BZ), _mapd))
+_bax = (math.cos(math.radians(MAP_ROT)), -math.sin(math.radians(MAP_ROT)))  # board x-axis in xz
+for s in (-1.15, 1.15):
+    parts.append(place(xz(extrude(ngon(0.06, n=8), 1.35)), M_STRUCT,
+                       (MAP_B + _bax[0] * s, GROUND_Y - 0.05, MAP_BZ + _bax[1] * s)))
+
+# media shelf against the rear wall, north of the PRESENT panel: backing +
+# two shelf boards; the clickable cases live in the JML so they can react
+parts.append(place(trimesh.creation.box(extents=[0.12, 1.7, 2.5]), M_STRUCT, (SX - 7.04, GROUND_Y + 1.85, SZ - 3.55)))
+for sy in (GROUND_Y + 1.28, GROUND_Y + 2.18):
+    parts.append(place(trimesh.creation.box(extents=[0.34, 0.05, 2.4]), M_STRUCT, (SX - 6.93, sy, SZ - 3.55)))
+
 # ---- project gates flanking the promenade near the far end -----------------
 grand = face_center(extrude(arch_frame(4.2, 4.6, 3.1, 2.5), 0.35), 0.35)
 gate = face_center(extrude(arch_frame(3.2, 3.6, 2.3, 2.0), 0.3), 0.3)
