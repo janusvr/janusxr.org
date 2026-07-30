@@ -150,7 +150,12 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
   on the rear wall, and past/future tunnel mouths in its side walls with their
   panels — past on the south wall (dim ring), future on the north (bright ring),
   so the era plinths read oldest-to-newest along the direction of travel. The
-  train analogy lives here.
+  train analogy lives here. Station furniture: the **system map board** by the
+  platform edge (the subway map of virtual-world history, generated from
+  `data/history/graph.json` by `tools/history-map/`), and the **media shelf**
+  on the rear wall north of the PRESENT panel — eight clickable cases
+  (`data/history/media.json`), each populating the detail panel above the
+  shelf; clicking the panel opens the pick's read/watch link.
 - **Showcase** (east): plinths and gate frames for featured/new content.
 - **Project gates** near the far end: Vesta (grand gate), JanusWeb, spares for
   other projects Janus and otherwise — the actual ways past the edge.
@@ -162,6 +167,24 @@ mouth, no content obstacles in the center — the plaza's exhibit is the space i
 Unchanged in structure: three dressed hallways under card signage (blocks /
 source-glow / machine), the deploy panel at the mouth, racks and the open-source
 placard in the rear chamber.
+
+**The editor bay** (first hall, bearings ~94–103°, r18.5–22.5): a dark
+pedestal with a glowing green button (`edit-button`; the tutorial banner
+above it is the sign) that toggles the live JanusWeb editor in place — the walk-up
+equivalent of F1 — beside an unlocked playground: `play-cube` (pink),
+`play-sphere` (blue), `play-cylinder` (orange), `play-torus` (purple),
+`play-text` ("EDIT ME"), and `play-sparks` (green ember particles). A tutorial
+panel (`mount-edit-tutorial`) floats above the pedestal: idle it invites
+the tour, and once the button is pressed it walks the visitor through an
+eight-step sequence (select, move, rotate, scale, recolor via the 3D
+wheel, confirm, ctrl+right-click raycast-place, copy/paste), advancing
+by observing the editor's state — clicking the panel skips a step. The
+playground lives in its own `editor-bay` group *outside* `lobby-group`
+because `locked` walks the ancestor chain; the rest of the station
+(`lobby-group`, `esplanade-group`, world frame, sun, viewpoints) is
+`locked="true"` so visitors' editing is scoped to the playground. The
+webui itself loads lazily on first Enter (`js/reveal.js`) and hides
+again on exit — the 2D page never shows engine chrome.
 
 ### 5.3.1 The balcony
 

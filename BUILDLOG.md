@@ -716,3 +716,653 @@ And the coin steps into the light: `lighting` back on, emissive dialed from
 full phosphor down to a soft glow, roughness 0.2 with a bit of metalness —
 it now reads as a spinning minted object rather than a flat neon cutout.
 GLBs ?v=11.
+
+## 2026-07-26 — The system map and the media shelf
+
+Issue #1 called for the history exhibit's centerpiece: metaverse history as
+a transit system map. We now have it, built from existing documentation as
+the issue insists — Shinki Nishikori's "The timeline of virtual worlds"
+chart (CC BY-SA 4.0), transcribed as a **node graph**
+(`data/history/graph.json`): seven ordered lines (Web3D, Worlds, Games,
+Format, Graphics, Hardware, Company), ~90 stations with fame/influence
+carried over from the source, decade zones, and sparse maker/lineage ties.
+The graph is the durable artifact — contributors add stations to JSON, the
+poster regenerates.
+
+The generator (`tools/history-map/`, dependency-free ES modules that run in
+Node today and could run in the page tomorrow) lays it out **hybrid Beck**:
+freeform octilinear routing with rounded bends, but stations confined to
+their decade's zone band. Interchanges (Unreal, Unity) pull lines together
+at double-ring stations; label sides alternate along each line with angled
+labels for the dense clusters; per-node hints are the hand-tuning escape
+hatch, as with any real transit map. The Web3D line runs phosphor green —
+VRML viewers through Elation/FireBox/JanusVR/JanusWeb/JanusXR to a "You are
+here" station — and continues, dashed, past the light seam into a
+wireframed "the future" zone. `build.mjs` writes the SVG and rasterizes a
+4096px PNG through the same headless Chrome the capture rig uses.
+
+In the page: a figure in #history with the attribution. In the world: a
+freestanding **system map board** by the station's platform edge, angled at
+arrivals from the stairs. And fiction got a better home than a map line —
+the **media shelf** on the station's rear wall: eight cases (True Names,
+TRON, Neuromancer, the Habitat postmortem, Snow Crash, Designing Virtual
+Worlds, SAO, Ready Player One) that were nearly unclickable until we
+learned the janus way: `pickable` doesn't give an object a pick collider —
+`collision_id` does; the CPU picker raycasts the colliders scene, and
+without one the ray sailed through to the sky sphere 9.6km out. Click a
+case, its card fills the detail panel; click the panel, the read/watch link
+opens. The same eight live in #history as "The reading list" for Tier 0.
+
+Verified end-to-end with a scripted walkthrough: enter, walk to the shelf,
+real click on a case (panel re-renders), real click on the panel (new tab
+to OpenLibrary). Not yet committed — awaiting review.
+
+## 2026-07-28 — The map learns what it's about: epoch hubs
+
+v1 of the system map was honest but inert — seven parallel lines that never
+met, a swimlane chart in transit-map clothes. James named the missing idea:
+history clusters. Waves of projects crest around moments when an enabling
+technology makes a new generation possible, and the map should braid at
+those moments. v2 restructures around **epoch hubs** — six grand capsule
+interchanges on a central spine (TIMESHARING '62, THE PC & DIAL-UP '80, THE
+CONSUMER INTERNET '95, BROADBAND & WEB 2.0 '04, THE VR SPRING '13, THE AI
+MOMENT '23), metro-style vertical names inside tall capsules. Every line of
+a generation converges into its hub and fans back out; between hubs, lines
+relax to home tracks. The knots-and-calm rhythm is the historical claim.
+
+The flat Company Line became the **Enablers Line** — IBM, Apple, Sun, SGI,
+Netscape, 3dfx, NVIDIA, Google, Oculus, Meta, OpenAI — the leaps that made
+each wave possible, threading every hub. World-specific companies retired
+to dashed maker-ties. Text+games merged into one Games Line (MUD1 to UEFN).
+Fiction left the map for the media shelf. And people now appear as **named
+transfer corridors** — dotted arcs: Carmack carries the idea from Doom to
+the Rift, Rosedale from Second Life to High Fidelity, Pesce & Parisi from
+Labyrinth to VRML, Morningstar & Farmer from Habitat onward.
+
+Decades demoted to a thin ruler at the bottom; clusters may spill their
+decade (it's a ruler, not a wall — stations spill, epochs anchor). Layout
+learned hub capsule slots (lines stack through an interchange without
+crossing inside it) and to never let one line's relaxation drag a shared
+hub. Editorial calls worth recording: Labyrinth precedes the '95 hub as its
+seed; glTF rides out of the VR Spring with the Format line; FireBox is born
+of the VR Spring on the map exactly as it was in life. Still uncommitted.
+
+## 2026-07-28 — Reach: careers as routes
+
+Three refinements from review. Decade labels dropped their "s" — a ruler
+says "1990", not "1990s". The You-are-here arrival straightened: the Web3D
+line now exits THE AI MOMENT dead level and runs off the right edge through
+the future boundary — no climb, just onward.
+
+And the map learned to show **reach** — entities that touched many
+technologies across eras. Companies got reach ties (IBM feeds both the
+timesharing and PC hubs; SGI ties to IRIS GL and Open Inventor; Apple's
+dashed line crosses the entire map from 1977 to Vision Pro). For people,
+the transit grammar scales better than arcs: **a career as a route**. John
+Carmack is now a dotted personal service line calling at Doom, Quake, Rift
+DK1, glTF, Quest 2, Meta, and Horizon Worlds — one thread of a person
+carrying the idea through four epochs. Service lines ride through stations
+without owning them (no interchange rings, no layout influence), so the
+network's structure stays product-shaped while the people move through it.
+
+## 2026-07-28 — Freight topology: sidings, feeders, and through-trunks
+
+The contiguous-line model forced siblings into fake lineages (WorldsAway →
+Worlds Chat → The Palace reads as descent; they were parallel bets). James
+called the fix: **branching freight structure**. Lines are now sets of
+branch paths — a trunk plus feeders and sidings — declared in the data as
+`branches: [{path, dy}]`. Dead projects end in terminus stub bars off a
+hub's ladder; surviving lineages run through; feeders merge in (Doom's
+action lineage and LambdaMOO's text lineage both flow into the '95 hub;
+the MMO branch rejoins at Broadband). Convergence is now drawn, not
+implied: the VRML browser fan collapses back to one thread — Cosmo through
+Vivaty to Elation — that carries into the VR Spring and becomes Janus.
+Editorial corrections along the way: Active Worlds and Cybertown split
+into separate sidings (different companies — Cybertown was blaxxun's);
+VRM branches off glTF rather than following it; the Epic trunk runs
+Quake → Unreal → Fortnite → UEFN as one continuous route.
+
+Layout learned per-branch offsets, per-path spacing, and terminus
+detection (a station touched by exactly one segment gets the freight-yard
+bar, angled across its approach). Siding labels sit to the right of their
+stubs like platform signs. The map finally looks like what the history
+was: many parallel attempts, a few survivors, everything meeting at the
+same handful of stations.
+
+## 2026-07-28 — Branches begin things too
+
+James: branches aren't just dead ends — they're beginnings. The cycle the
+map should show is cambrian explosion → convergence → one or two clear
+winners per category. So origins became free-standing feeder branches that
+merge IN: Spacewar! is now an origin terminus feeding the TIMESHARING hub;
+Maze War and the Adventure→MUD1 text lineage converge into THE PC &
+DIAL-UP as independent births; Doom's and LambdaMOO's lineages already
+arrived at '95 separately. And winners now ride OUT: glTF and USD both
+emerge from the VR Spring's format explosion and merge into THE AI
+MOMENT — two winners where there were once a dozen formats. The terminus
+bar reads both ways: an ending at the right edge of a fan, a beginning at
+the left edge of a feeder.
+
+## 2026-07-28 — Flows, not funerals
+
+James: the terminus bars declared technologies dead, and that was never the
+point — the point is the brackets, and the sometimes-non-obvious tracks
+that got us to today. So: buffer stops removed (sidings now simply end at
+their last station), and **threads** promoted to the map's main device for
+flow. Threads are dotted service routes — a person or company riding
+through stations across lines and epochs:
+
+- **Microsoft** — PC hub → Consumer Internet → DirectX → Broadband →
+  Minecraft → AltspaceVR → OpenAI. Ownership and partnership drawn as
+  continuity; the DirectX and AltspaceVR "stubs" now visibly flow onward.
+- **John Carmack** (existing) — Doom → Quake → Rift → glTF → Quest → Meta
+  → Horizon Worlds.
+- **Philip Rosedale** — Second Life → High Fidelity (arc promoted to
+  thread).
+- **Tim Sweeney** — Unreal → Fortnite → UEFN.
+
+Plus a missing enabler: **NeXT** joins the Enablers line (1988 — NeXTSTEP
+hosted both the first web browser and Doom's development, tie drawn to
+Doom), with a Steve Jobs person-arc linking Apple ↔ NeXT. Legend
+reorganized into two rows: lines above, threads and glyph key below.
+Everything remains uncommitted for review.
+
+## 2026-07-28 — v3: the knowledge graph
+
+The history project became its own project (data/history/SPEC.md). The
+poster's flat graph.json split into three layers: a **knowledge graph**
+(entities/<track>.json + relations.json — typed, dated, every relation
+cited), a **curation layer** (map/poster.json — lines, branches, hints,
+and now per-station year and label overrides, because IBM was founded in
+1911 but stations at its System/360 moment, and "Universal Scene
+Description" is a fine name but a terrible label), and the renderers.
+Migration was verified bit-identical before anything new landed.
+
+Then six research agents fanned out in parallel — worlds, games, graphics,
+formats+web3d, hardware, companies+people — each returning structured,
+source-cited JSON. After reconciliation (rename maps, dedupe, track
+routing): **303 entities, 483 relations**, from Sensorama and Sketchpad to
+Resonite and Vision Pro, including the stories the poster could never
+hold: the Fahrenheit treaty, the VRML 2.0 spec war (Moving Worlds vs
+ActiveVRML), the id-alumni and SGI diasporas, Rosedale's full loop back to
+Linden as CTO, Worlds Inc's patent-troll afterlife, and our own lineage
+cited to the primary sources.
+
+The drill-down arrived as **line diagrams** — one dense strip map per
+track (tools/history-map/diagram.js): every entity drawn as a lifespan
+bar, lineage chains sharing rails (Habitat → Club Caribe → Fujitsu
+Habitat → WorldsAway rides one line; Wolfenstein → Doom → Quake → GoldSrc
+→ Half-Life → Counter-Strike another), competitors interval-packed onto
+parallel rails, built-on dependencies as dashed drops, ongoing bars
+running off the right edge. The 2D page gained "Ride a line" — six
+collapsible diagrams under the system map. Still to come: mounting the
+strip maps in the 3D station (pending diagram review), poster enrichment
+from the new graph (WoW, Valve, three.js all earned candidacies), and the
+click-card drill-down. Nothing committed.
+
+## 2026-07-28 — The research reaches the poster
+
+James caught the gap: the knowledge graph was feeding the diagrams but the
+poster's curation hadn't moved. Enrichment pass, chosen for what it does
+to the branching story: Wolfenstein 3D feeds Doom; the Valve lineage forks
+off Quake (Half-Life → Counter-Strike → Steam) and merges back at
+Broadband; the MMO branch runs straight through the hub to World of
+Warcraft; three.js rides WebGL into the VR Spring (the rail Janus actually
+arrived on); CUDA branches out of Broadband and merges into the AI Moment;
+the hardware line now calls at the Consumer Internet (Virtual Boy, the
+90s bust's cautionary siding) and fans the 2016 headset war (Vive,
+PlayStation VR, HoloLens) out of the VR Spring; OpenSimulator forks off
+Second Life; Rec Room joins the social-VR fan; WorldView joins the
+browser ladder; and Tony Parisi became the fifth thread — Labyrinth →
+WorldView → Vivaty → glTF → Unity, three decades of one person carrying
+the 3D web across lines. Poster assets at ?v=8.
+
+## 2026-07-28 — The critic's gauntlet
+
+James set the bar: iterate until a critical agent obsessed with accuracy,
+attributability, and aesthetic beauty passes the map. Four adversarial
+review rounds, each a fresh set of eyes with a ruler and a grudge.
+
+Round 1 (FAIL) caught real sins: the Carmack thread claimed glTF and
+Horizon Worlds with no backing relations — drawn as fact, sourced as
+nothing. Cut to what the graph proves (Doom → Quake → Rift DK1 → Quest 2
+→ Meta, with the E3 2012 demo relation added and sourced). The
+Morningstar & Farmer arc overclaimed; it's Randy Farmer's alone now. And
+the curation layer got a conscience: every thread stop and person arc now
+build-fails unless a relation backs it (directly, or via a role at an org
+that touches the stop). The loophole where poster.json could draw
+unsourced history is closed.
+
+Round 2 (FAIL) broke the hand-hinting habit. A dozen label collisions
+fixed by hand had spawned a dozen new ones, so the renderer grew an
+automatic label placer: candidate positions scored against other labels,
+sampled line geometry, hub capsules, thread and arc labels, canvas
+bounds — with association costs so a label may not drift from its dot or
+let a foreign line run between them. Epoch hubs also became true anchors:
+the min-spacing pass now compresses predecessors instead of shoving hubs
+off their year (the VR Spring had slid to 2015; it sits at 2013 and Rift
+DK1 precedes Vive, as history demands).
+
+Round 3 (FAIL, narrowly) measured the axis with a ruler: WoW three years
+late, SGI predating its own products, Adventure west of Maze War. Fixes:
+stations exiting a hub hug it; SGI precedes Sun (Nov '81 vs Feb '82);
+the games bay was structurally decompressed (tracks respaced, branch rows
+spread, fame fonts shaved) because no placer can fix a bay that has more
+label than space. Vivaty's Microsoft exit got a primary source — Parisi's
+own resume.
+
+Round 4: PASS. "Would I hang it? Yes." The last three blemishes —
+Maze War masquerading as Adventure's label, EVE's vertical through
+Steam's ring, Neos VR adrift — died in the same pass that gave every
+label a background-colored halo knockout, so the rare label that must
+touch a line (Rift CV1, in a provably full fan bay) stays legible.
+Data warts closed: FireBox (2013) now predates JanusVR (2014), VRML97
+sits at 1997, High Fidelity the platform and High Fidelity, Inc. are
+distinct entities with roles pointing at the company. Poster at ?v=9,
+line diagrams at ?v=2. Known future work, per the critic's log: the
+1980s enablers run still drifts late (NeXT reads ~1990); editorial year
+pins (IBM at System/360, Google at IPO) have no on-poster convention
+mark; decade labels center on bands while ticks mark boundaries.
+Nothing committed.
+
+## 2026-07-28 — Every line gets its arrow
+
+Two James calls: "The AI Moment" is now "THE RISE OF AI", and the
+subtitle's promise — every line is still running — is finally drawn
+rather than implied. The You-are-here continuation was generalized:
+every line now exits its rightmost stop and runs dashed into the future
+band, parallel to the axis, arrowhead at the edge. Worlds, formats, and
+the enablers leave straight out of the AI hub's slots as a tight bundle;
+games continues from UEFN, hardware from Vision Pro, graphics from its
+CUDA call at the hub; the green line still carries the You-are-here
+station on its way out. The label placer samples the new runs so nothing
+drifts onto them. Map at ?v=10.
+
+## 2026-07-28 — Beginnings come in from the left
+
+James named the dissonance: origin stubs exiting rightward read as
+endings to an English-reading eye. The fix honors chronology while
+flipping the grammar — stub branches whose stations belong to their
+moment (station year ≤ hub year + 1) are now feeders that come in from
+the left and merge into the hub; only genuinely later offshoots still
+spring out to the right. Hubs finally read as true interchanges:
+the '95 browser ladder and the '95 worlds ladder both converge into the
+Consumer Internet; DirectX, Virtual Boy, Roblox, COLLADA, and High
+Fidelity feed their moments. Three were exempted to protect famous
+orderings — SM64 stays right of the hub (it must not draw beside Doom),
+Gear VR and Cardboard stay right (mobile VR followed DK1). Layout
+learned two tricks: a feeder terminating at a hub can never push the
+hub off its year, and hub approaches route diagonal-first so a fan's
+shared vertical rides the hub column instead of braiding at each
+station's x. Map at ?v=11.
+
+## 2026-07-28 — Stations serve neighborhoods
+
+James found the deeper break in the metaphor: there's no 7-11 stop and
+a supermarket stop — businesses cluster, and each neighborhood gets one
+station. Drawing every project as its own stop both starved the map of
+context (110 of 303 entities drawn) and lied structurally: a line
+through five contemporaneous chat worlds asserts a succession that never
+happened. v4 answer: **districts** — one squared stop serving a whole
+scene, with the members as a small-type roster under the name,
+unordered, which is the honest shape of a rivalry. Ten districts so
+far: the VRML browsers, the chat worlds, the web worlds (There, IMVU,
+Habbo, Club Penguin, Gaia, Blue Mars, PS Home — seven names that never
+fit before), social VR, MUDs & MOOs, the early MMOs (Meridian 59
+through EVE), the VR lab era, the headset war, mobile VR, and the
+immersive web. Landmarks (fame 3) and anything a thread, tie, or arc
+touches keep individual stations — Grand Central is still Grand
+Central. Validation gained district rules: ids can't shadow entities,
+members must exist and relate to a co-member, and nobody can be both a
+station and a roster line. A dozen sourced sibling relations (the
+browser war, the post-EQ MMO field, VPL's glove in NASA's lab) entered
+the graph to satisfy the co-member rule — the district idiom is already
+making the knowledge graph denser. Legend grew a third row. Map at
+?v=12; SPEC.md formalizes the district concept.
+
+## 2026-07-28 — Neighborhoods become clouds
+
+Two James notes: the "The" prefixes went ("VRML browsers", "Chat
+worlds", "Headset war" — tighter everywhere), and districts stopped
+pretending to be stations. No more squared glyph with a list beside it:
+a neighborhood is now an amorphous cloud — a wobbled organic region
+tinted with its line's color, the member names living inside it, the
+line dipping into the blob and emerging toward its hub. The wobble is
+deterministic (seeded from the district id) so builds stay
+reproducible. Clouds paint beneath the lines like park shading on a
+metro map; names paint above everything with their halos. The label
+placer reserves the cloud's footprint so neighbors keep out. Mobile VR
+moved to the calm side of the hardware trunk after a three-way brawl
+with Rift DK1's label in the 60px between the graphics trunk and the
+ruler. Legend's district glyph is now a tiny cloud. Map at ?v=13.
+
+## 2026-07-28 — Regions, not blobs
+
+James course-corrected the clouds: neighborhoods should speak the map's
+own design language, keep a stop glyph, and be true regions — able to
+hold several stations, the way the Janus lineage all lives in the
+immersive web. Districts now render as rounded convex hulls (metro
+fare-zone shading: hull of everything enclosed, offset outward, corners
+rounded) instead of wobbled amoebas, the district stop glyph is back on
+the line (ring with a line-colored core, serving the roster), and
+districts gained `contains` — individually-drawn stations the region
+encloses. Immersive web wraps Elation Engine, FireBox, JanusVR,
+JanusWeb, and JanusXR; Social VR wraps AltspaceVR, High Fidelity,
+VRChat, and Neos VR; the VRML browsers region claims Labyrinth,
+WorldView, and Cosmo Player; MUD1, Ultima Online, WorldsAway, CAVE,
+Rift CV1, and Second Life each anchor their scenes. "The" dropped from
+every district label. Map at ?v=14.
+
+## 2026-07-29 — The editor bay gets a big green button
+
+First contents for the build wing: the editor hall now teaches by
+letting you touch. A dark plinth carries a glowing green button —
+"PRESS TO EDIT" — that toggles the real JanusWeb editor right where you
+stand (the same toggle F1 drives, one state machine, no desync), and
+beside it sits a playground: pink cube, blue sphere, orange cylinder,
+purple torus, a floating EDIT ME, and a fountain of green ember
+particles. Everything in the playground is markup-declared, so it shows
+up in the editor's scene tree and View Source — the station practices
+the view-source ethic it preaches.
+
+Three discoveries shaped the build. The site boots the engine with
+showui:false so the 2D page stays chrome-free — which silently meant no
+webui, no editor, no F1; the fix is lazy UI (client.createUI() on first
+Enter, hidden again on exit — createUI is public and idempotent, and
+uiconfig resolves at engine start regardless). The editor's locked flag
+walks the ancestor chain, so the playground had to live in its own
+editor-bay group outside lobby-group; the rest of the station is now
+locked="true" and refuses selection. And particles need no texture at
+all: without image_id the shader draws plain colored square points —
+additive green pixels, which on a phosphor terminal is not a fallback
+but the correct aesthetic.
+
+lobby.js at ?v=10. The editor card on the 2D page now points at the
+button. Nothing committed.
+
+Post-script, with egg on face: the first cut of the bay markup included
+an HTML comment header — inside the page-level comment that wraps the
+whole FireBoxRoom block. The inner `-->` terminated the wrapper early
+and spilled half the room source into the live DOM as unstyled
+elements, which ate every click and scroll on the page. James spotted
+it in the source in about a minute. Rule now on file: no HTML comments
+inside the room markup, ever.
+
+## 2026-07-29 — Tab stays in the editor
+
+Engine fix pair: Tab and Shift+Tab cycle manipulation modes while
+editing an object, but the browser's default Tab was simultaneously
+walking focus out of the world — mode would change AND the page would
+scroll to some focused button. The controls system already had the
+right mechanism (capturekeys preventDefaults the raw event; someone had
+even left 'keyboard_tab' commented out in the defaults, wisely — global
+capture would break page tab-navigation for keyboard users). The fix
+scopes it: the editor now enables keyboard_tab capture exactly while
+the roomedit context is active and releases it after, at all four
+activate/deactivate sites. Along the way, disableKeyboardCapture had an
+inverted guard (idx == -1 then splice) that made it pop the *last*
+capture key whenever asked to remove one that wasn't there — fixed.
+Engine rebuilt; changes uncommitted with the rest of the engine work.
+
+## 2026-07-29 — Properties get 3D hands
+
+The editor grew the extension point James remembered planning: floating
+in-world UIs per property type. Tab already cycled through every typed
+property of a selected object — the type metadata was sitting right
+there in the thing definitions — but only pos/rotation/scale had any
+3D presence, and the transform gizmo would linger, stale, while you
+tabbed through col or lighting. Now setMode is type-aware: transform
+properties drive TransformControls as always; any other property looks
+up its TYPE in a registry of 3D property UIs, parks the gizmo, and
+floats the matching editor next to the object.
+
+First registrant: a color picker — hue ring around a
+saturation/value square with a live swatch, canvas-textured planes on
+the editor's overlay layer, billboarded to the player, TransformControls
+idioms throughout (own raycaster, the transforming flag so a drag isn't
+mistaken for an edit-confirm click, drags tracked against the rig's
+plane so sliding off the ring doesn't drop the handle). Changes flow
+through the same path as the 2D inspector — set, sync, refresh — so the
+r/g/b fields follow the wheel and the wheel follows typed hex, and it
+binds to whatever color property the mode landed on, col or emissive or
+rand_col alike. Engine media assets only; no rebuild, hardlinks
+preserved, nothing committed.
+
+## 2026-07-29 — The bay becomes a teacher
+
+"PRESS TO EDIT" now means it: the green button opens the editor and
+starts an eight-step walk-through on a panel floating over the
+pedestal — pick something up, move it, Tab to rotate, Tab to scale,
+Tab to the color wheel, set it down, ctrl+right-click to ride an
+object on your crosshair, copy and paste. The whole tutorial is
+site-side observation, zero engine hooks: the editor already tells
+anyone who watches — roomedit.object while a session runs, a bubbling
+'edit' event on every confirm, objectinfo.mode as Tab cycles,
+roomedit.raycast during crosshair placement, roomedit.pastebuffer on
+ctrl+c. lobby.js polls five times a second, snapshots a baseline when
+each step begins, and advances on the delta. Leniency by design: any
+playground object counts, and clicking the panel skips a step. Closing
+the editor mid-tour pauses it; the button restarts it; finishing
+leaves a card that says the truth — everything you just learned works
+in every Janus world. lobby.js at ?v=11.
+
+## 2026-07-29 — The tour dialog learns to float
+
+Two James notes on the tutorial. First, readability: the Paragraph
+textures were rendering black-on-dark — the engine wraps panel content
+in .paragraphcontainer and nothing styled it, so phosphor.css now owns
+that scope (ink text, green headings and bolds, dim italics for the
+click-hint line). The media shelf's detail card inherits the fix for
+free. Second, ergonomics: a wall-mounted instruction card is easy to
+walk away from mid-lesson, so while the tour runs the panel unhooks
+from its pedestal mount and floats at the bottom of your view,
+following the camera with a 0.18 lerp lag so it trails comfortably
+instead of being bolted to your eyeballs, always tilted to face you.
+Idle, it parks back on its home pose above the pedestal — the bay
+still advertises the tour to passers-by. Skip-by-clicking still works
+in flight; the collider rides along. lobby.js at ?v=12; paragraph css
+refs at ?v=2.
+
+## 2026-07-29 — The dialog floats properly this time
+
+First floating attempt was bad two ways: misaligned (hand-derived
+group offset instead of real parent-space math) and it fought the
+lesson — a bottom-center panel with a collider sits exactly between
+you and the floor objects the tour asks you to click, and eats the
+picks. A DOM overlay was floated as the fix and rightly rejected:
+this has to work in VR, so it stays in-world. The rework: lazy-follow
+(the panel holds still in the world while you aim; it only glides to
+a fresh lower-left anchor once you've turned or moved ~a meter — the
+wrist-menu pattern, kinder in VR than continuous tracking), the
+anchor moved out of the floor-object corridor, position converted
+through the panel parent's actual worldToLocal, and the panel's
+collider removed in flight so every scene pick passes through.
+Skipping moved to a small SKIP chip that rides the dialog's lower
+edge with its own tiny collider. Parked, everything restores — 
+collider back, home pose, chip hidden. lobby.js at ?v=13.
+
+## 2026-07-29 — Signs stay upright
+
+James called out the tracking math: deriving the panel's facing from
+the full 3D camera-to-panel vector fed pitch into fwd, and the engine's
+basis derivation turned that into off-axis roll — a tilted, drifting
+sign. The correct idiom, per James: anchor in PLAYER BODY space.
+player.localToWorld() places the dialog at a fixed offset beside your
+view each frame — the body yaws but never pitches, so height stays
+steady — and the facing vector is flattened to the horizontal before
+normalizing, so the sign is upright by construction, in VR and on
+desktop alike. The lazy-glide state machine went away entirely; a
+static body-relative placement is simpler and predictable. lobby.js
+at ?v=14.
+
+## 2026-07-29 — Glass, scale, and a real checkmark
+
+Polish round on the floating tour dialog, all James's eye: the card's
+backdrop is now tinted glass (back_alpha 0.55 over a deep green — the
+Paragraph element had rgba support all along), it shrank to 60% and
+dropped a touch lower, and the completion tick stopped being a
+character in the title. It's geometry now — two green emissive bars
+forming a full-height checkmark that appears to the left of the whole
+card during the step-complete beat, drawn always-on-top like the rest
+of the overlay. helvetiker may or may not own U+2713; boxes always
+render. One splice bug caught in review: the skip chip's transform
+update had landed inside the checkmark's guard, which would have
+frozen the chip in space for anyone whose room lacked the check
+object. lobby.js at ?v=19.
+
+## 2026-07-29 — Wheel lessons, and the sign becomes the banner
+
+The PRESS TO EDIT text is gone: the tutorial banner itself now hangs
+low over the button as the bay's sign — one surface instead of two,
+and its idle copy already says press the green button. And the tour
+grew from eight steps to eleven: after each of the move/rotate/scale
+drags comes a wheel lesson, because the scroll wheel is the editor's
+precision tool. The bindings were read from the engine before being
+taught, and they're quirky enough to matter: for vectors (position,
+scale) plain scroll works the Y axis with ALT for X and SHIFT for Z;
+for rotation plain scroll is yaw with CTRL for pitch and SHIFT for
+roll — the modifier-to-axis map genuinely differs between the two, and
+the tour now says so truthfully. lobby.js at ?v=22.
+
+## 2026-07-29 — Gray clones and a proper graduation
+
+Two fixes. The mystery of the gray paste: janusbase's clone() lists
+'color' in its skipprops, so the property loop continue'd past it —
+which made the loop's own "special handling for color" below
+unreachable, dead code guarding an assignment that never ran. Every
+cloned object silently dropped its color and came out default gray.
+The carry-over now happens after the loop, where skipprops can't eat
+it. Engine rebuilt.
+
+And the tour now ends like it means it: completing the final step
+keeps the big green checkmark up beside the "you know the editor now"
+card for eight seconds — a proper graduation moment instead of the
+card instantly teleporting back to the pedestal behind you — before
+everything parks and the bay returns to its idle invitation. Starting
+a new tour during the linger cancels the pending reset cleanly.
+lobby.js at ?v=27.
+
+## 2026-07-29 — The panel double-exposure
+
+James's screenshot showed the editor's right panel printing "Scene"
+over "Inventory" and tree rows over the search box. Not a z-order
+mystery: editor.css gave the inventory `flex: 0` — flex-basis zero, a
+zero-height box — while inventory.css demanded height:100%. Basis
+wins in a flex column, the box collapsed, and its contents overflowed
+straight over the scene tree stacked correctly beneath it. Inventory
+now gets a real share (flex 1 1 30%, min-height 0, overflow hidden)
+and drops the height:100% claim. Also from the same screenshot: the
+clone-color engine fix is confirmed live — the pasted sphere came out
+pink, not gray. Checkmark nudged twice by eye to (-0.38, 1.145);
+lobby.js at ?v=31.
+
+## 2026-07-29 — The paste lag flurry
+
+James profiled it: pasting triggered seconds of repeated timer-fired
+tasks, each reading offsetParent and forcing layout dozens of times.
+The chain: ui-panel installs a subtree MutationObserver that calls
+refresh() — and for non-deferred elements, base refresh() renders
+SYNCHRONOUSLY. Paste enters raycast-follow, the property inspector
+rewrites its inputs every frame, several mutation batches per frame
+hit every panel on screen, and each one ran updateLayout(), whose
+very first line reads offsetParent — a forced layout — even for
+corner-anchored panels that then just write style constants. Answer
+to the question asked: yes the observer needed coalescing (one rAF
+per frame per panel now, same pattern the element render loop already
+uses), but the debounce alone wasn't the whole cure — updateLayout now
+checks isConnected (free) instead of offsetParent, and only panels
+that truly measure themselves (middle/center) ever touch layout state.
+Engine rebuilt.
+
+## 2026-07-29 — Clones join the scene tree
+
+Pasted objects weren't appearing in the scene editor. Not a regression
+— a sibling of the gray-clone bug that was never fixed: persist is an
+engine-level flag stored under properties.persist rather than as a
+flat accessor, so clone()'s property loop read this['persist'] as
+undefined and every clone was born persist:false — exactly what the
+scene tree's addNode filters out (and what world saves would skip).
+The drop and inventory-spawn paths had dodged this years ago by
+passing persist:true explicitly; clone() now carries it at the source,
+so cut/paste and any future cloner inherit the fix. Engine rebuilt.
+
+## 2026-07-29 — The tree's locked door, and a courtesy scroll
+
+Third time was the charm on pasted objects missing from the scene
+tree, and the real villain was upstream of both prior fixes: the
+room-script proxy never exposed `persist` at all. addNode reads
+data.persist off the proxy from getObjectById — undefined for every
+object ever — so the gate silently rejected every live thing_add.
+Markup objects only appeared because the initial tree build treats
+undefined visibility as visible. The clone had likely been persisting
+correctly the whole time; the tree just refused everyone at the door.
+persist is now a proxied property (which also lets room scripts read
+it), the addNode gate falls back to the thing itself for robustness,
+and — per James — selecting any object in the world now smooth-scrolls
+the scene tree to its row (block: nearest, so no jump when it's
+already visible). Engine rebuilt.
+
+## 2026-07-29 — The group that swallowed thing_add, and six severed links
+
+James called the shape of it exactly: the playground primitives live
+inside the editor-bay group, and thing_add only fires on the DIRECT
+parent — so objects created under a child group announced themselves
+to the group, and the room (where the scene tree listens) never heard.
+Inventory spawns worked because their parent is the room itself.
+room.createObject now re-announces on the room for any object created
+under a non-room parent, so group children, pastes, and remote spawns
+all reach the tree.
+
+And the reason "the fixes aren't showing up": six engine script files
+had silently severed their hardlinks to the copies the build actually
+consumes — room.js among them, meaning today's room.js work was
+building from a stale twin. All six pairs showed scripts/ newer;
+relinked with ln -f and rebuilt. The webui chain also gained cache
+busting (uiconfig ?v=2 through default.json through editor.json
+scripts) so editor.js updates actually reach the browser, and
+revealNode reads item-or-value off tree rows to match the treeview's
+actual property naming. Engine rebuilt for real this time.
+
+## 2026-07-29 — Phantom twins at the tree root
+
+James nailed the last scene-tree mystery himself: room.objects is a
+flat js_id registry — nested objects are registered there too — and
+the tree root was ingesting it wholesale. Every object inside a group
+grew a phantom twin at root level, the js_id-keyed row map pointed at
+whichever twin was built last, and selection sync faithfully scrolled
+to the wrong one. refreshList now filters the root to objects whose
+parent is the room itself (or unregistered), leaving nested objects to
+appear only where they belong: under their parents. Selection sync
+highlights and scrolls the true row. webui chain at v4.
+
+## 2026-07-29 — Delete deletes now
+
+Deleting an edited object left it selected in the tree and the
+property pane — because locally, nothing was deleted at all.
+editObjectDelete pushed the object onto room.deletions, which turns
+out to be the outbound multiplayer sync ledger (drained by
+getDeletions into <type id js_id/> strings), not a removal queue; the
+actual removeObject call sat commented out beside it. Delete now
+removes through the parent (removeChild, with janusbase's own
+remove-fallbacks), which cascades properly: janusbase announces
+thing_remove at the room level for group children (the mirror of the
+thing_add fix), onThingRemove feeds the sync ledger, the scene tree
+drops the row — including its descendants, after fixing treeview
+removeItem's key cleanup, which read the usually-undefined t.value
+and left stale _itemsByKey entries pointing at dead rows — and a new
+objectinfo.clear() empties the property pane instead of showing a
+ghost. webui chain at v6, engine rebuilt.
+
+## 2026-07-30 — The 2D page stops competing with the pavilion
+
+James redrew the boundary: the document's explore section kept only
+the system map — the six line diagrams and the reading list are gone
+from the 2D page, replaced by a pointer that sends readers down the
+grand stair to the history pavilion, which is the point of having
+built it. The diagram SVGs stay in assets for the pavilion (or a
+dedicated page) later; the station's mounted exhibits (past tube,
+platform, future tube) kept their DOM sources. The stale graph.json
+link in the map caption now points at data/history/. And the build
+section's editor card shed its step-by-step tutorial synopsis — it
+says what matters (simple in-world building tools, taught hands-on at
+the green button) in three lines instead of eight.
