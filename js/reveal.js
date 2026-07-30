@@ -111,12 +111,14 @@
         homepage: document.location.href,
         showui: false,
         showchat: false,
-        crosshair: false
+        crosshair: false,
+        uiconfig: 'janusweb-dev/media/assets/webui/default.json?v=7'
       }).then(onEngineStart, function () { /* init failed: stay 2D */ });
     } catch (e) { /* stay 2D */ }
   }
 
   function onEngineStart(client) {
+    state.client = client;
     whenRoomLoaded(client, function () {
       readRoomViewpoints();
       styleMounts();
@@ -373,6 +375,15 @@
       window.player.enable();
       window.janus.showchat = true;
     } catch (e) {}
+    /* the engine boots with showui:false so the 2D page stays chrome-free;
+       the webui (toolbar, editor, inventory) loads lazily on first entry
+       and just un-hides on re-entry */
+    try {
+      if (state.client && state.client.createUI) {
+        state.client.createUI();
+        if (state.client.ui && state.client.ui.style) state.client.ui.style.display = '';
+      }
+    } catch (e) {}
     /* engage pointer lock right off the Enter click (a valid user gesture)
        instead of waiting for a second click on the canvas */
     try {
@@ -399,6 +410,12 @@
     try {
       window.janus.showchat = false;
       window.player.disable();
+    } catch (e) {}
+    /* engine chrome never shows over the 2D page */
+    try {
+      if (state.client && state.client.ui && state.client.ui.style) {
+        state.client.ui.style.display = 'none';
+      }
     } catch (e) {}
     /* hiding the document collapsed its height and zeroed the scroll;
        restore where the reader left off — and swallow the scroll event that

@@ -430,7 +430,7 @@ main, .site-footer { position: relative; z-index: 1; }   /* header stays positio
 .room-live janus-viewer { visibility: visible; }
 .room-live .hero-scene { display: none; }        /* CSS backdrop replaced by the real room */
 .room-live .hero-content {
-  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
   padding: 2rem;
 }
 .room-live .section {
@@ -558,6 +558,7 @@ janus-webpage-typer, janus-webpage-githubactivity { display: block; }
   transform: rotate(-12deg);
   pointer-events: none;
 }
+
 /* --- history: system map + reading list ------------------------------- */
 .history-map { margin: 2rem 0; }
 .history-map img { width: 100%; height: auto; display: block; border: 1px solid #1f3527; }
@@ -575,6 +576,45 @@ janus-webpage-typer, janus-webpage-githubactivity { display: block; }
 .history-lines figure { margin: 0; }
 .history-lines img { width: 100%; height: auto; display: block; }
 
+/* in-world Paragraph textures (janusparagraph renders into .paragraphcontainer;
+   without these the SVG texture falls back to black-on-default) */
+.paragraphcontainer {
+  color: #e8f5ea;
+  background: transparent;
+  font-family: "DejaVu Sans Mono", Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.45;
+  padding: 10px 14px;
+}
+.paragraphcontainer h4 {
+  color: #43ff6e;
+  margin: 0 0 8px;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+}
+.paragraphcontainer p { margin: 0 0 8px; }
+.paragraphcontainer b { color: #43ff6e; font-weight: 700; }
+.paragraphcontainer em { color: #8fbf9e; }
+.paragraphcontainer a { color: #43ff6e; text-decoration: underline; }
+.paragraphcontainer .media-open {
+  color: #2a9e4f;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.paragraphcontainer .tut-glyph {
+  font-size: 130px;
+  line-height: 150px;
+  color: #43ff6e;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(67, 255, 110, 0.65);
+}
+.paragraphcontainer .tut-card {
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 18px;
+  padding: 12px 20px;
+}
 
 /* the station tubes are 3D-mount source content only (selector-mounted
    Paragraphs in the history pavilion read their markup); the 2D page
