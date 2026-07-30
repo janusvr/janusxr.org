@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1300" viewBox="0 0 2200 1300" font-family="DejaVu Sans Mono, Menlo, monospace">
+<rect width="2200" height="1300" fill="#0c0f0c"/>
+<line x1="2049.71098265896" y1="110" x2="2049.71098265896" y2="1170" stroke="#2a9e4f" stroke-width="1.5" stroke-dasharray="8 7"/>
+<line x1="2055.71098265896" y1="140" x2="2160.0000000000005" y2="140" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="186" x2="2160.0000000000005" y2="186" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="232" x2="2160.0000000000005" y2="232" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="278" x2="2160.0000000000005" y2="278" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="324" x2="2160.0000000000005" y2="324" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="370" x2="2160.0000000000005" y2="370" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="416" x2="2160.0000000000005" y2="416" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="462" x2="2160.0000000000005" y2="462" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="508" x2="2160.0000000000005" y2="508" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="554" x2="2160.0000000000005" y2="554" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="600" x2="2160.0000000000005" y2="600" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="646" x2="2160.0000000000005" y2="646" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="692" x2="2160.0000000000005" y2="692" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="738" x2="2160.0000000000005" y2="738" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="784" x2="2160.0000000000005" y2="784" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="830" x2="2160.0000000000005" y2="830" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="876" x2="2160.0000000000005" y2="876" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="922" x2="2160.0000000000005" y2="922" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="968" x2="2160.0000000000005" y2="968" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="1014" x2="2160.0000000000005" y2="1014" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="1060" x2="2160.0000000000005" y2="1060" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="1106" x2="2160.0000000000005" y2="1106" stroke="#153822" stroke-width="1"/>
+<line x1="2055.71098265896" y1="1152" x2="2160.0000000000005" y2="1152" stroke="#153822" stroke-width="1"/>
+<text x="2104.85549132948" y="138" text-anchor="middle" font-size="18" fill="#2a9e4f" letter-spacing="4">THE FUTURE</text>
+<line x1="40" y1="1172" x2="2160.0000000000005" y2="1172" stroke="#1f3527" stroke-width="2"/>
+<line x1="40" y1="1165" x2="40" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="119.65317919075146" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">1960</text>
+<line x1="199.30635838150292" y1="1165" x2="199.30635838150292" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="280.1849710982659" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">1970</text>
+<line x1="361.06358381502895" y1="1165" x2="361.06358381502895" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="477.47976878612724" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">1980</text>
+<line x1="593.8959537572255" y1="1165" x2="593.8959537572255" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="831.6300578034683" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">1990</text>
+<line x1="1069.364161849711" y1="1165" x2="1069.364161849711" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="1204.1618497109828" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">2000</text>
+<line x1="1338.9595375722545" y1="1165" x2="1338.9595375722545" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="1547.2832369942198" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">2010</text>
+<line x1="1755.6069364161851" y1="1165" x2="1755.6069364161851" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="1902.6589595375726" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">2020</text>
+<line x1="2049.71098265896" y1="1165" x2="2049.71098265896" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<text x="2104.85549132948" y="1196" text-anchor="middle" font-size="13" fill="#3f6b4e" letter-spacing="2">THE FUTURE</text>
+<line x1="2160.0000000000005" y1="1165" x2="2160.0000000000005" y2="1179" stroke="#2a4633" stroke-width="2"/>
+<line x1="456" y1="736" x2="1000" y2="288" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="768" y1="736" x2="752" y2="264" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="1440" y1="736" x2="1552" y2="1096" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="1776" y1="736" x2="1824" y2="376" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="1360" y1="1016" x2="1680" y2="288" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="704" y1="592" x2="768" y2="592" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="1552" y1="592" x2="1656" y2="624" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="168" y1="736" x2="120" y2="680" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="168" y1="736" x2="408" y2="680" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="456" y1="736" x2="440" y2="1016" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="456" y1="736" x2="704" y2="592" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="304" y1="736" x2="1952" y2="1096" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<line x1="584" y1="736" x2="768" y2="872" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.85"/>
+<path d="M 632.3 219.3 Q 632.3 200.4 656.2 198.6 L 780.5 189.2 Q 804.4 187.4 828.4 187.4 L 944.2 187.4 Q 968.2 187.4 990.8 195.6 L 1080.3 228.6 Q 1102.8 236.8 1102.8 258.5 L 1102.8 258.5 Q 1102.8 280.2 1080.9 289.9 L 1040.6 307.7 Q 1018.7 317.4 995.1 321.6 L 990.4 322.4 Q 966.8 326.6 942.8 326.6 L 828.2 326.6 Q 804.2 326.6 780.3 324.3 L 693.8 315.8 Q 669.9 313.4 659.2 292.0 L 643.0 259.6 Q 632.3 238.2 632.3 219.3 Z" fill="#43ff6e" fill-opacity="0.07" stroke="#43ff6e" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 1366.8 309.4 Q 1366.8 290.9 1387.3 278.6 L 1399.8 271.1 Q 1420.4 258.7 1444.0 254.7 L 1555.4 236.0 Q 1579.1 232.0 1603.1 232.0 L 1771.5 232.0 Q 1795.5 232.0 1795.5 253.3 L 1795.5 253.3 Q 1795.5 274.6 1783.2 293.1 L 1783.2 293.1 Q 1770.9 311.5 1755.7 330.1 L 1691.2 409.0 Q 1676.0 427.6 1652.0 427.6 L 1542.8 427.6 Q 1518.8 427.6 1498.7 414.4 L 1386.8 340.9 Q 1366.8 327.8 1366.8 309.4 Z" fill="#43ff6e" fill-opacity="0.07" stroke="#43ff6e" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 481.7 488.4 Q 481.7 464.4 502.9 453.3 L 614.1 395.0 Q 635.4 383.9 659.1 380.0 L 697.0 373.9 Q 720.7 370.0 743.2 370.0 L 743.2 370.0 Q 765.7 370.0 766.1 394.0 L 767.6 471.9 Q 768.0 495.9 768.0 515.9 L 768.0 515.9 Q 768.0 536.0 748.8 550.4 L 723.5 569.4 Q 704.3 583.9 680.3 583.9 L 505.7 583.9 Q 481.7 583.9 481.7 559.9 Z" fill="#ff6ea8" fill-opacity="0.07" stroke="#ff6ea8" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 1044.2 410.8 Q 1044.2 386.8 1068.2 386.8 L 1173.5 386.8 Q 1197.5 386.8 1221.0 391.9 L 1237.5 395.6 Q 1260.9 400.7 1283.0 410.2 L 1344.5 436.8 Q 1366.6 446.3 1366.6 470.3 L 1366.6 583.0 Q 1366.6 607.0 1342.6 607.0 L 1234.7 607.0 Q 1210.7 607.0 1194.0 589.8 L 1060.9 452.5 Q 1044.2 435.2 1044.2 411.2 Z" fill="#ff6ea8" fill-opacity="0.07" stroke="#ff6ea8" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 1358.5 455.7 Q 1358.5 434.7 1382.2 430.3 L 1512.9 406.3 Q 1536.5 402.0 1551.4 402.0 L 1551.4 402.0 Q 1566.3 402.0 1590.3 403.0 L 1646.8 405.4 Q 1670.8 406.4 1688.0 423.1 L 1712.3 446.9 Q 1729.5 463.7 1733.9 487.3 L 1739.8 518.2 Q 1744.3 541.8 1744.3 560.1 L 1744.3 560.1 Q 1744.3 578.4 1720.3 578.4 L 1690.7 578.4 Q 1666.7 578.4 1652.7 576.0 L 1652.7 576.0 Q 1638.8 573.7 1615.5 568.1 L 1425.6 522.2 Q 1402.3 516.6 1384.5 500.4 L 1376.3 493.0 Q 1358.5 476.8 1358.5 455.7 Z" fill="#ff6ea8" fill-opacity="0.07" stroke="#ff6ea8" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 715.9 932.3 Q 715.9 908.3 739.9 908.3 L 867.2 908.3 Q 891.2 908.3 915.2 909.0 L 996.5 911.4 Q 1020.4 912.1 1041.3 924.0 L 1068.9 939.6 Q 1089.7 951.5 1089.7 975.5 L 1089.7 1060.0 Q 1089.7 1084.0 1065.7 1084.0 L 974.3 1084.0 Q 950.3 1084.0 929.1 1072.8 L 737.1 971.1 Q 715.9 959.8 715.9 935.8 Z" fill="#ffb347" fill-opacity="0.07" stroke="#ffb347" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 301.4 904.1 Q 301.4 883.1 310.1 863.5 L 310.1 863.5 Q 318.7 843.9 342.3 839.3 L 438.9 820.6 Q 462.5 816.0 480.6 816.0 L 480.6 816.0 Q 498.7 816.0 521.4 823.9 L 583.9 845.5 Q 606.6 853.4 606.6 877.4 L 606.6 937.0 Q 606.6 961.0 582.6 961.0 L 479.6 961.0 Q 455.6 961.0 432.2 955.6 L 324.8 930.6 Q 301.4 925.1 301.4 904.1 Z" fill="#ffb347" fill-opacity="0.07" stroke="#ffb347" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 437.5 996.0 Q 437.5 972.0 461.5 972.0 L 551.2 972.0 Q 575.2 972.0 595.4 984.9 L 711.5 1058.9 Q 731.7 1071.8 736.7 1089.2 L 736.7 1089.2 Q 741.6 1106.6 741.6 1126.6 L 741.6 1126.6 Q 741.6 1146.5 717.6 1146.5 L 705.6 1146.5 Q 681.6 1146.5 657.7 1144.2 L 514.1 1129.9 Q 490.2 1127.5 470.6 1113.6 L 457.1 1103.9 Q 437.5 1090.0 437.5 1066.0 Z" fill="#ff5c5c" fill-opacity="0.07" stroke="#ff5c5c" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 1552.0 1036.1 Q 1552.0 1012.5 1574.8 1004.9 L 1611.6 992.5 Q 1634.4 984.8 1658.4 984.8 L 1775.8 984.8 Q 1799.8 984.8 1799.8 1008.8 L 1799.8 1067.0 Q 1799.8 1091.0 1778.3 1101.7 L 1709.4 1135.9 Q 1688.0 1146.5 1664.0 1146.5 L 1617.7 1146.5 Q 1593.7 1146.5 1583.3 1124.9 L 1562.4 1081.3 Q 1552.0 1059.6 1552.0 1036.1 Z" fill="#ff5c5c" fill-opacity="0.07" stroke="#ff5c5c" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 1513.4 935.0 Q 1513.4 911.0 1537.4 911.0 L 1654.6 911.0 Q 1678.6 911.0 1678.6 935.0 L 1678.6 980.5 Q 1678.6 1004.5 1656.3 1013.5 L 1593.4 1039.0 Q 1571.1 1048.0 1547.1 1048.0 L 1546.5 1048.0 Q 1522.5 1048.0 1518.5 1024.3 L 1517.5 1018.8 Q 1513.4 995.1 1513.4 971.1 Z" fill="#ff5c5c" fill-opacity="0.07" stroke="#ff5c5c" stroke-opacity="0.4" stroke-width="1.5"/>
+<path d="M 768 288 L 821.3933982822018 341.3933982822018 Q 832 352 832 367 L 832 632" fill="none" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 832 632 L 832 471 Q 832 456 842.6066017177982 445.3933982822018 L 989.3933982822018 298.6066017177982 Q 1000 288 1015 288 L 1145 288 Q 1160 288 1175 288 L 1425 288 Q 1440 288 1450.6066017177982 298.6066017177982 L 1493.3933982822018 341.3933982822018 Q 1504 352 1504 367 L 1504 625 Q 1504 640 1504 625 L 1504 351 Q 1504 336 1514.6066017177982 325.3933982822018 L 1541.3933982822018 298.6066017177982 Q 1552 288 1567 288 L 1601 288 Q 1616 288 1631 288 L 1665 288 Q 1680 288 1695 288 L 1729 288 Q 1744 288 1754.6066017177982 298.6066017177982 L 1893.3933982822018 437.3933982822018 Q 1904 448 1904 463 L 1904 617 Q 1904 632 1919 632 L 2072 632" fill="none" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 736 232 L 821.3933982822018 317.3933982822018 Q 832 328 832 343 L 832 632" fill="none" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 752 264 L 821.3933982822018 333.3933982822018 Q 832 344 832 359 L 832 632" fill="none" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 640 L 1504 383 Q 1504 368 1514.6066017177982 357.3933982822018 L 1552 320" fill="none" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 408 664 L 408 559 Q 408 544 418.6066017177982 533.3933982822018 L 485.3933982822018 466.6066017177982 Q 496 456 511 456 L 625 456 Q 640 456 650.6066017177982 466.6066017177982 L 821.3933982822018 637.3933982822018 Q 832 648 847 648 L 921 648 Q 936 648 946.6066017177982 637.3933982822018 L 1117.3933982822018 466.6066017177982 Q 1128 456 1138.6066017177982 466.6066017177982 L 1181.3933982822018 509.3933982822018 Q 1192 520 1192 535 L 1192 633 Q 1192 648 1207 648 L 1233 648 Q 1248 648 1258.6066017177982 637.3933982822018 L 1429.3933982822018 466.6066017177982 Q 1440 456 1450.6066017177982 466.6066017177982 L 1493.3933982822018 509.3933982822018 Q 1504 520 1504 535 L 1504 641 Q 1504 656 1504 641 L 1504 519 Q 1504 504 1514.6066017177982 493.3933982822018 L 1541.3933982822018 466.6066017177982 Q 1552 456 1567 456 L 1697 456 Q 1712 456 1722.6066017177982 466.6066017177982 L 1904 648" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 736 400 L 821.3933982822018 485.3933982822018 Q 832 496 832 511 L 832 648" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 656 L 1529 656 Q 1544 656 1554.6066017177982 645.3933982822018 L 1824 376" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 656 L 1504 495 Q 1504 480 1514.6066017177982 469.3933982822018 L 1552 432" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1424 488 L 1493.3933982822018 557.3933982822018 Q 1504 568 1504 583 L 1504 656" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 656 L 1529 656 Q 1544 656 1554.6066017177982 645.3933982822018 L 1645.3933982822018 554.6066017177982 Q 1656 544 1671 544 L 1904 544" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1128 456 L 1177 456 Q 1192 456 1202.6066017177982 445.3933982822018 L 1248 400" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 736 512 L 821.3933982822018 597.3933982822018 Q 832 608 832 623 L 832 648" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1192 648 L 1192 495 Q 1192 480 1202.6066017177982 469.3933982822018 L 1240 432" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 656 L 1504 607 Q 1504 592 1514.6066017177982 581.3933982822018 L 1584 512" fill="none" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 704 592 L 753 592 Q 768 592 778.6066017177982 602.6066017177982 L 821.3933982822018 645.3933982822018 Q 832 656 832 660 L 832 660 Q 832 664 840 664 L 840 664 Q 848 664 858.6066017177982 653.3933982822018 L 909.3933982822018 602.6066017177982 Q 920 592 935 592 L 1105 592 Q 1120 592 1130.6066017177982 602.6066017177982 L 1181.3933982822018 653.3933982822018 Q 1192 664 1207 664 L 1481 664 Q 1496 664 1500 668 L 1500 668 Q 1504 672 1504 657 L 1504 655 Q 1504 640 1514.6066017177982 629.3933982822018 L 1541.3933982822018 602.6066017177982 Q 1552 592 1567 592 L 1817 592 Q 1832 592 1842.6066017177982 602.6066017177982 L 1904 664" fill="none" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1112 624 L 1137 624 Q 1152 624 1162.6066017177982 634.6066017177982 L 1192 664" fill="none" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 672 L 1545 672 Q 1560 672 1570.6066017177982 661.3933982822018 L 1573.3933982822018 658.6066017177982 Q 1584 648 1599 648 L 1873 648 Q 1888 648 1896 656 L 1904 664" fill="none" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1552 592 L 1609 592 Q 1624 592 1634.6066017177982 602.6066017177982 L 1656 624" fill="none" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 120 664 L 120 676 Q 120 688 130.6066017177982 698.6066017177982 L 157.3933982822018 725.3933982822018 Q 168 736 183 736 L 289 736 Q 304 736 319 736 L 337 736 Q 352 736 362.6066017177982 725.3933982822018 L 397.3933982822018 690.6066017177982 Q 408 680 408 684 L 408 684 Q 408 688 418.6066017177982 698.6066017177982 L 445.3933982822018 725.3933982822018 Q 456 736 471 736 L 505 736 Q 520 736 535 736 L 569 736 Q 584 736 599 736 L 753 736 Q 768 736 772 736 L 772 736 Q 776 736 786.6066017177982 725.3933982822018 L 821.3933982822018 690.6066017177982 Q 832 680 832 684 L 832 684 Q 832 688 842.6066017177982 698.6066017177982 L 869.3933982822018 725.3933982822018 Q 880 736 895 736 L 985 736 Q 1000 736 1015 736 L 1121 736 Q 1136 736 1146.6066017177982 725.3933982822018 L 1181.3933982822018 690.6066017177982 Q 1192 680 1192 684 L 1192 684 Q 1192 688 1202.6066017177982 698.6066017177982 L 1229.3933982822018 725.3933982822018 Q 1240 736 1255 736 L 1425 736 Q 1440 736 1448 736 L 1448 736 Q 1456 736 1466.6066017177982 725.3933982822018 L 1493.3933982822018 698.6066017177982 Q 1504 688 1519 688 L 1713 688 Q 1728 688 1738.6066017177982 698.6066017177982 L 1765.3933982822018 725.3933982822018 Q 1776 736 1791 736 L 1825 736 Q 1840 736 1844 736 L 1844 736 Q 1848 736 1858.6066017177982 725.3933982822018 L 1904 680" fill="none" stroke="#cdd8d0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 56 872 L 109.39339828220179 818.6066017177982 Q 120 808 120 793 L 120 695 Q 120 680 120 695 L 120 697 Q 120 712 130.6066017177982 722.6066017177982 L 269.3933982822018 861.3933982822018 Q 280 872 295 872 L 329 872 Q 344 872 354.6066017177982 861.3933982822018 L 397.3933982822018 818.6066017177982 Q 408 808 408 793 L 408 711 Q 408 696 423 696 L 577 696 Q 592 696 602.6066017177982 706.6066017177982 L 757.3933982822018 861.3933982822018 Q 768 872 778.6066017177982 861.3933982822018 L 821.3933982822018 818.6066017177982 Q 832 808 832 793 L 832 711 Q 832 696 832 711 L 832 809 Q 832 824 842.6066017177982 834.6066017177982 L 869.3933982822018 861.3933982822018 Q 880 872 884 872 L 884 872 Q 888 872 898.6066017177982 882.6066017177982 L 949.3933982822018 933.3933982822018 Q 960 944 970.6066017177982 933.3933982822018 L 1181.3933982822018 722.6066017177982 Q 1192 712 1192 704 L 1192 704 Q 1192 696 1207 696 L 1433 696 Q 1448 696 1458.6066017177982 706.6066017177982 L 1613.3933982822018 861.3933982822018 Q 1624 872 1639 872 L 1713 872 Q 1728 872 1738.6066017177982 861.3933982822018 L 1893.3933982822018 706.6066017177982 Q 1904 696 1904 711 L 1904 809 Q 1904 824 1914.6066017177982 834.6066017177982 L 1952 872" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 256 824 L 268 824 Q 280 824 290.6066017177982 813.3933982822018 L 408 696" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 704 848 L 729 848 Q 744 848 754.6066017177982 858.6066017177982 L 768 872" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 832 696 L 832 785 Q 832 800 842.6066017177982 810.6066017177982 L 880 848" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 832 696 L 832 841 Q 832 856 842.6066017177982 866.6066017177982 L 909.3933982822018 933.3933982822018 Q 920 944 935 944 L 985 944 Q 1000 944 1010.6066017177982 933.3933982822018 L 1181.3933982822018 762.6066017177982 Q 1192 752 1192 737 L 1192 711 Q 1192 696 1192 711 L 1192 881 Q 1192 896 1202.6066017177982 906.6066017177982 L 1229.3933982822018 933.3933982822018 Q 1240 944 1255 944 L 1368 944" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 880 872 L 888 872 Q 896 872 906.6066017177982 861.3933982822018 L 949.3933982822018 818.6066017177982 Q 960 808 975 808 L 1009 808 Q 1024 808 1039 808 L 1081 808 Q 1096 808 1106.6066017177982 797.3933982822018 L 1181.3933982822018 722.6066017177982 Q 1192 712 1192 704 L 1192 696" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1112 848 L 1181.3933982822018 778.6066017177982 Q 1192 768 1192 753 L 1192 696" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1192 696 L 1192 793 Q 1192 808 1202.6066017177982 818.6066017177982 L 1288 904" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 408 696 L 408 761 Q 408 776 418.6066017177982 786.6066017177982 L 469.3933982822018 837.3933982822018 Q 480 848 495 848 L 665 848 Q 680 848 690.6066017177982 837.3933982822018 L 832 696" fill="none" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 440 1016 L 689 1016 Q 704 1016 714.6066017177982 1005.3933982822018 L 821.3933982822018 898.6066017177982 Q 832 888 832 873 L 832 727 Q 832 712 832 727 L 832 801 Q 832 816 842.6066017177982 826.6066017177982 L 949.3933982822018 933.3933982822018 Q 960 944 975 944 L 1073 944 Q 1088 944 1098.6066017177982 954.6066017177982 L 1149.3933982822018 1005.3933982822018 Q 1160 1016 1175 1016 L 1209 1016 Q 1224 1016 1239 1016 L 1345 1016 Q 1360 1016 1370.6066017177982 1005.3933982822018 L 1493.3933982822018 882.6066017177982 Q 1504 872 1504 857 L 1504 719 Q 1504 704 1504 719 L 1504 881 Q 1504 896 1514.6066017177982 906.6066017177982 L 1624 1016" fill="none" stroke="#b98aff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 752 1048 L 821.3933982822018 978.6066017177982 Q 832 968 832 953 L 832 712" fill="none" stroke="#b98aff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1360 1016 L 1377 1016 Q 1392 1016 1402.6066017177982 1005.3933982822018 L 1413.3933982822018 994.6066017177982 Q 1424 984 1434.6066017177982 973.3933982822018 L 1493.3933982822018 914.6066017177982 Q 1504 904 1504 889 L 1504 704" fill="none" stroke="#b98aff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1192 712 L 1192 1017 Q 1192 1032 1202.6066017177982 1042.6066017177982 L 1229.3933982822018 1069.3933982822018 Q 1240 1080 1255 1080 L 1521 1080 Q 1536 1080 1546.6066017177982 1069.3933982822018 L 1904 712" fill="none" stroke="#b98aff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 120 696 L 120 1033 Q 120 1048 130.6066017177982 1058.6066017177982 L 157.3933982822018 1085.3933982822018 Q 168 1096 183 1096 L 497 1096 Q 512 1096 527 1096 L 689 1096 Q 704 1096 714.6066017177982 1085.3933982822018 L 821.3933982822018 978.6066017177982 Q 832 968 832 953 L 832 743 Q 832 728 847 728 L 1481 728 Q 1496 728 1500 724 L 1500 724 Q 1504 720 1504 735 L 1504 1033 Q 1504 1048 1514.6066017177982 1058.6066017177982 L 1541.3933982822018 1085.3933982822018 Q 1552 1096 1567 1096 L 1601 1096 Q 1616 1096 1631 1096 L 1769 1096 Q 1784 1096 1794.6066017177982 1085.3933982822018 L 1893.3933982822018 986.6066017177982 Q 1904 976 1904 961 L 1904 743 Q 1904 728 1904 743 L 1904 1033 Q 1904 1048 1914.6066017177982 1058.6066017177982 L 1952 1096" fill="none" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 752 1128 L 821.3933982822018 1058.6066017177982 Q 832 1048 832 1033 L 832 728" fill="none" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 720 L 1504 945 Q 1504 960 1514.6066017177982 970.6066017177982 L 1584 1040" fill="none" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1504 720 L 1504 953 Q 1504 968 1514.6066017177982 978.6066017177982 L 1552 1016" fill="none" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 768 872 L 865 872 Q 880 872 895 872 L 1313 872 Q 1328 872 1338.6066017177982 882.6066017177982 L 1541.3933982822018 1085.3933982822018 Q 1552 1096 1567 1096 L 1769 1096 Q 1784 1096 1784 1081 L 1784 759 Q 1784 744 1780 740 L 1776 736" fill="none" stroke="#9fb8a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 7" opacity="0.9"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="756" y="862" text-anchor="end" font-size="13" font-style="italic" fill="#9fb8a8">John Carmack</text>
+<path d="M 408 680 L 817 680 Q 832 680 832 695 L 832 953 Q 832 968 821.3933982822018 978.6066017177982 L 762.6066017177982 1037.3933982822018 Q 752 1048 767 1048 L 809 1048 Q 824 1048 834.6066017177982 1037.3933982822018 L 1181.3933982822018 690.6066017177982 Q 1192 680 1192 695 L 1192 793 Q 1192 808 1202.6066017177982 818.6066017177982 L 1277.3933982822018 893.3933982822018 Q 1288 904 1288 889 L 1288 711 Q 1288 696 1298.6066017177982 685.3933982822018 L 1541.3933982822018 442.6066017177982 Q 1552 432 1552 440 L 1552 440 Q 1552 448 1562.6066017177982 458.6066017177982 L 1840 736" fill="none" stroke="#7aa3c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 7" opacity="0.9"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="740" y="1038" text-anchor="end" font-size="13" font-style="italic" fill="#7aa3c9">Microsoft</text>
+<path d="M 1128 456 L 1377 456 Q 1392 456 1402.6066017177982 466.6066017177982 L 1424 488" fill="none" stroke="#c9a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 7" opacity="0.9"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1116" y="446" text-anchor="end" font-size="13" font-style="italic" fill="#c9a3b8">Philip Rosedale</text>
+<path d="M 960 944 L 1181.3933982822018 722.6066017177982 Q 1192 712 1192 697 L 1192 695 Q 1192 680 1207 680 L 1417 680 Q 1432 680 1442.6066017177982 690.6066017177982 L 1613.3933982822018 861.3933982822018 Q 1624 872 1639 872 L 1952 872" fill="none" stroke="#c9b87a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 7" opacity="0.9"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="938" y="982" text-anchor="end" font-size="13" font-style="italic" fill="#c9b87a">Tim Sweeney</text>
+<path d="M 768 288 L 768 276 Q 768 264 757.3933982822018 253.3933982822018 L 746.6066017177982 242.6066017177982 Q 736 232 751 232 L 1089 232 Q 1104 232 1114.6066017177982 242.6066017177982 L 1149.3933982822018 277.3933982822018 Q 1160 288 1175 288 L 1233 288 Q 1248 288 1258.6066017177982 298.6066017177982 L 1541.3933982822018 581.3933982822018 Q 1552 592 1552 607 L 1552 673 Q 1552 688 1541.3933982822018 698.6066017177982 L 1224 1016" fill="none" stroke="#8fc9a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 7" opacity="0.9"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="716" y="252" text-anchor="end" font-size="13" font-style="italic" fill="#8fc9a8">Tony Parisi</text>
+<path d="M 768 288 Q 701.12 440 768 592" fill="none" stroke="#e8f5ea" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.75"/><text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="726.5344" y="435" text-anchor="middle" font-size="12" font-style="italic" fill="#8fbf9e">Pesce &amp; Parisi</text>
+<path d="M 496 456 Q 603.68 375.2 736 400" fill="none" stroke="#e8f5ea" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.75"/><text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="608.3616" y="390.264" text-anchor="middle" font-size="12" font-style="italic" fill="#8fbf9e">Randy Farmer</text>
+<path d="M 304 736 Q 444 797.6 584 736" fill="none" stroke="#e8f5ea" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.75"/><text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="549" y="779.192" text-anchor="middle" font-size="12" font-style="italic" fill="#8fbf9e">Steve Jobs</text>
+<line x1="2072" y1="632" x2="2154" y2="632" stroke="#43ff6e" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 624 L 2167 632 L 2154 640 Z" fill="#43ff6e"/>
+<line x1="1904" y1="648" x2="2154" y2="648" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 640 L 2167 648 L 2154 656 Z" fill="#ff6ea8"/>
+<line x1="1904" y1="664" x2="2154" y2="664" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 656 L 2167 664 L 2154 672 Z" fill="#5ac8fa"/>
+<line x1="1904" y1="680" x2="2154" y2="680" stroke="#cdd8d0" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 672 L 2167 680 L 2154 688 Z" fill="#cdd8d0"/>
+<line x1="1952" y1="872" x2="2154" y2="872" stroke="#ffb347" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 864 L 2167 872 L 2154 880 Z" fill="#ffb347"/>
+<line x1="1904" y1="712" x2="2154" y2="712" stroke="#b98aff" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 704 L 2167 712 L 2154 720 Z" fill="#b98aff"/>
+<line x1="1952" y1="1096" x2="2154" y2="1096" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M 2154 1088 L 2167 1096 L 2154 1104 Z" fill="#ff5c5c"/>
+<circle cx="768" cy="288" r="6" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="753" y="292.25" text-anchor="end" font-size="12.5" font-weight="700" fill="#e8f5ea">Labyrinth</text>
+<rect x="812" y="539.25" width="40" height="281.5" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="832" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 832 680)" dominant-baseline="central">THE CONSUMER INTERNET</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="832" y="529.25" text-anchor="middle" font-size="13" fill="#2a9e4f">1995</text>
+<circle cx="1000" cy="288" r="7" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1028" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Cosmo Player</text>
+<circle cx="1160" cy="288" r="6" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1204" y="272" text-anchor="middle" font-size="12.5" font-weight="400" fill="#e8f5ea">Vivaty</text>
+<circle cx="1440" cy="288" r="6" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1440" y="313" text-anchor="middle" font-size="12.5" font-weight="400" fill="#e8f5ea">Elation Engine</text>
+<rect x="1484" y="585.25" width="40" height="189.5" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="1504" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 1504 680)" dominant-baseline="central">THE VR SPRING</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1504" y="575.25" text-anchor="middle" font-size="13" fill="#2a9e4f">2013</text>
+<circle cx="1552" cy="288" r="6" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="313" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e8f5ea">FireBox</text>
+<circle cx="1616" cy="288" r="7" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1616" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">JanusVR</text>
+<circle cx="1680" cy="288" r="7" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1680" y="315.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">JanusWeb</text>
+<circle cx="1744" cy="288" r="7" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1744" y="263" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">JanusXR</text>
+<rect x="1884" y="579.5" width="40" height="201" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="1904" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 1904 680)" dominant-baseline="central">THE RISE OF AI</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1904" y="569.5" text-anchor="middle" font-size="13" fill="#2a9e4f">2023</text>
+<circle cx="2072" cy="632" r="17" fill="none" stroke="#43ff6e" stroke-width="2" opacity="0.55"/><circle cx="2072" cy="632" r="12" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="2072" cy="632" r="6" fill="#43ff6e"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="2072" y="605" text-anchor="middle" font-size="19" font-weight="400" fill="#e8f5ea">You are here</text>
+<circle cx="736" cy="232" r="6" fill="#0c0f0c" stroke="#43ff6e" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="721" y="228.25" text-anchor="end" font-size="12.5" font-weight="700" fill="#e8f5ea">WorldView</text>
+<circle cx="752" cy="264" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="752" cy="264" r="4" fill="#43ff6e"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="227.35000000000002" text-anchor="start" font-size="15" font-weight="400" fill="#e8f5ea">VRML browsers</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="240.35000000000002" text-anchor="start" font-size="11" font-weight="700" fill="#9fbfa8">WebSpace Navigator</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="253.85000000000002" text-anchor="start" font-size="11" fill="#9fbfa8">Live3D</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="267.35" text-anchor="start" font-size="11" font-weight="700" fill="#9fbfa8">Sony Community Place</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="280.85" text-anchor="start" font-size="11" font-weight="700" fill="#9fbfa8">blaxxun Contact</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="817" y="294.35" text-anchor="start" font-size="11" fill="#9fbfa8">Cortona3D</text>
+<circle cx="1552" cy="320" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1552" cy="320" r="4" fill="#43ff6e"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="368.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">Immersive web</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="381.8" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">A-Frame</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="395.3" text-anchor="middle" font-size="11" fill="#9fbfa8">Mozilla Hubs</text>
+<rect x="388" y="568" width="40" height="224" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="408" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 408 680)" dominant-baseline="central">THE PC &amp; DIAL-UP</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="408" y="558" text-anchor="middle" font-size="13" fill="#2a9e4f">1980</text>
+<circle cx="496" cy="456" r="9" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="524" y="488.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Habitat</text>
+<circle cx="1128" cy="456" r="9" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1128" y="421" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Second Life</text>
+<rect x="1172" y="550.75" width="40" height="258.5" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="1192" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 1192 680)" dominant-baseline="central">BROADBAND &amp; WEB 2.0</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1192" y="540.75" text-anchor="middle" font-size="13" fill="#2a9e4f">2004</text>
+<circle cx="1440" cy="456" r="6" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1440" y="432" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e8f5ea">Cloud Party</text>
+<circle cx="1552" cy="456" r="9" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1552" y="488.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">VRChat</text>
+<circle cx="736" cy="400" r="6" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="721" y="412.25" text-anchor="end" font-size="12.5" font-weight="400" fill="#e8f5ea">WorldsAway</text>
+<circle cx="1824" cy="376" r="7" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1840" y="381.1" text-anchor="start" font-size="15" font-weight="400" fill="#e8f5ea">Horizon Worlds</text>
+<circle cx="1552" cy="432" r="7" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1568" y="437.1" text-anchor="start" font-size="15" font-weight="400" fill="#e8f5ea">AltspaceVR</text>
+<circle cx="1424" cy="488" r="7" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1438" y="463" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">High Fidelity</text>
+<circle cx="1656" cy="544" r="6" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1671" y="556.25" text-anchor="start" font-size="12.5" font-weight="700" fill="#e8f5ea">Neos VR</text>
+<circle cx="1904" cy="544" r="6" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1860" y="528" text-anchor="middle" font-size="12.5" font-weight="400" fill="#e8f5ea">Resonite</text>
+<circle cx="1248" cy="400" r="6" fill="#0c0f0c" stroke="#ff6ea8" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1263" y="404.25" text-anchor="start" font-size="12.5" font-weight="700" fill="#e8f5ea">OpenSimulator</text>
+<circle cx="736" cy="512" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="736" cy="512" r="4" fill="#ff6ea8"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="687" y="498.1" text-anchor="end" font-size="15" font-weight="400" fill="#e8f5ea">Chat worlds</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="687" y="511.1" text-anchor="end" font-size="11" font-weight="700" fill="#9fbfa8">Worlds Chat</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="687" y="524.6" text-anchor="end" font-size="11" font-weight="700" fill="#9fbfa8">The Palace</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="687" y="538.1" text-anchor="end" font-size="11" font-weight="700" fill="#9fbfa8">AlphaWorld / Active Worlds</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="687" y="551.6" text-anchor="end" font-size="11" fill="#9fbfa8">Cybertown</text>
+<circle cx="1240" cy="432" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1240" cy="432" r="4" fill="#ff6ea8"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="480.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">Web worlds</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="493.8" text-anchor="middle" font-size="11" fill="#9fbfa8">There</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="507.3" text-anchor="middle" font-size="11" fill="#9fbfa8">IMVU</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="520.8" text-anchor="middle" font-size="11" fill="#9fbfa8">Habbo Hotel</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="534.3" text-anchor="middle" font-size="11" fill="#9fbfa8">Club Penguin</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="547.8" text-anchor="middle" font-size="11" fill="#9fbfa8">Gaia Online</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="561.3" text-anchor="middle" font-size="11" fill="#9fbfa8">Blue Mars</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1284" y="574.8" text-anchor="middle" font-size="11" fill="#9fbfa8">PlayStation Home</text>
+<circle cx="1584" cy="512" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1584" cy="512" r="4" fill="#ff6ea8"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1619" y="495.6" text-anchor="start" font-size="15" font-weight="400" fill="#e8f5ea">Social VR</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1619" y="508.6" text-anchor="start" font-size="11" fill="#9fbfa8">Sansar</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1619" y="522.1" text-anchor="start" font-size="11" fill="#9fbfa8">Rec Room</text>
+<circle cx="704" cy="592" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="689" y="596.25" text-anchor="end" font-size="12.5" font-weight="700" fill="#e8f5ea">Open Inventor</text>
+<circle cx="768" cy="592" r="7" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="740" y="619.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">VRML 1.0</text>
+<circle cx="920" cy="592" r="9" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="920" y="565" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">VRML97</text>
+<circle cx="1120" cy="592" r="7" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1092" y="575" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">X3D</text>
+<circle cx="1552" cy="592" r="9" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="565" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">glTF</text>
+<circle cx="1112" cy="624" r="7" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1112" y="651.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">COLLADA</text>
+<circle cx="1584" cy="648" r="7" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1584" y="675.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">USD</text>
+<circle cx="1656" cy="624" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1656" y="649" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e8f5ea">VRM</text>
+<rect x="100" y="596.75" width="40" height="166.5" rx="20" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text x="120" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#e8f5ea" letter-spacing="2" transform="rotate(-90 120 680)" dominant-baseline="central">TIMESHARING</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="120" y="586.75" text-anchor="middle" font-size="13" fill="#2a9e4f">1962</text>
+<circle cx="168" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="168" y="768.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">IBM</text>
+<circle cx="304" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="290" y="768.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Apple</text>
+<circle cx="456" cy="736" r="7" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="456" y="711" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">SGI</text>
+<circle cx="520" cy="736" r="7" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="548" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Sun</text>
+<circle cx="584" cy="736" r="7" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="628" y="711" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">NeXT</text>
+<circle cx="768" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="754" y="768.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Netscape</text>
+<circle cx="880" cy="736" r="7" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="880" y="763.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">3dfx</text>
+<circle cx="1000" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1000" y="709" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">NVIDIA</text>
+<circle cx="1240" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1268" y="768.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Google</text>
+<circle cx="1440" cy="736" r="7" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1396" y="763.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Oculus VR</text>
+<circle cx="1776" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1776" y="768.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Meta</text>
+<circle cx="1840" cy="736" r="9" fill="#0c0f0c" stroke="#cdd8d0" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1840" y="701" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">OpenAI</text>
+<circle cx="56" cy="872" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="84" y="899.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Spacewar!</text>
+<circle cx="280" cy="872" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="266" y="899.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Adventure</text>
+<circle cx="344" cy="872" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="344" y="904.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">MUD1</text>
+<circle cx="768" cy="872" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="768" y="904.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Doom</text>
+<circle cx="880" cy="872" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="866" y="904.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Quake</text>
+<circle cx="960" cy="944" r="12" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1004" y="917" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Unreal Engine</text>
+<circle cx="1624" cy="872" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1652" y="845" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Fortnite</text>
+<circle cx="1952" cy="872" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1952" y="847" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">UEFN</text>
+<circle cx="256" cy="824" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="240" y="829.1" text-anchor="end" font-size="15" font-weight="700" fill="#e8f5ea">Maze War</text>
+<circle cx="704" cy="848" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="660" y="883.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Wolfenstein 3D</text>
+<circle cx="880" cy="848" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="898" y="854.46" text-anchor="start" font-size="19" font-weight="700" fill="#e8f5ea">Super Mario 64</text>
+<circle cx="920" cy="944" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="888" y="942.46" text-anchor="end" font-size="19" font-weight="700" fill="#e8f5ea">Ultima Online</text>
+<circle cx="1000" cy="944" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1000" cy="944" r="4" fill="#ffb347"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="984.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">Early MMOs</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="997.8" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">Meridian 59</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="1011.3" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">EverQuest</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="1024.8" text-anchor="middle" font-size="11" fill="#9fbfa8">Asheron's Call</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="1038.3" text-anchor="middle" font-size="11" fill="#9fbfa8">RuneScape</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1014" y="1051.8" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">EVE Online</text>
+<circle cx="1240" cy="944" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1240" y="984.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">World of Warcraft</text>
+<circle cx="1368" cy="944" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1396" y="919" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">Final Fantasy XIV</text>
+<circle cx="960" cy="808" r="7" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="944" y="813.1" text-anchor="end" font-size="15" font-weight="700" fill="#e8f5ea">Half-Life</text>
+<circle cx="1024" cy="808" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="996" y="781" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Counter-Strike</text>
+<circle cx="1096" cy="808" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1124" y="781" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Steam</text>
+<circle cx="1112" cy="848" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1130" y="854.46" text-anchor="start" font-size="19" font-weight="700" fill="#e8f5ea">Roblox</text>
+<circle cx="1288" cy="904" r="9" fill="#0c0f0c" stroke="#ffb347" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1270" y="910.46" text-anchor="end" font-size="19" font-weight="700" fill="#e8f5ea">Minecraft</text>
+<circle cx="480" cy="848" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="480" cy="848" r="4" fill="#ffb347"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="524" y="888.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">MUDs &amp; MOOs</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="524" y="901.8" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">Island of Kesmai</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="524" y="915.3" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">LambdaMOO</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="524" y="928.8" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">DikuMUD</text>
+<circle cx="440" cy="1016" r="6" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="396" y="1000" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e8f5ea">IRIS GL</text>
+<circle cx="704" cy="1016" r="9" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="690" y="989" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">OpenGL</text>
+<circle cx="1160" cy="1016" r="7" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1146" y="1043.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">OpenGL ES</text>
+<circle cx="1224" cy="1016" r="9" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1252" y="1048.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Unity</text>
+<circle cx="1360" cy="1016" r="9" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1360" y="1048.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">WebGL</text>
+<circle cx="1624" cy="1016" r="7" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="1059.8" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">WebGPU</text>
+<circle cx="752" cy="1048" r="7" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="722" y="1061.1" text-anchor="end" font-size="15" font-weight="700" fill="#e8f5ea">DirectX</text>
+<circle cx="1424" cy="984" r="7" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1424" y="1011.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">three.js</text>
+<circle cx="1240" cy="1080" r="7" fill="#0c0f0c" stroke="#b98aff" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1240" y="1107.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">CUDA</text>
+<circle cx="168" cy="1096" r="7" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="168" y="1123.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Sword of Damocles</text>
+<circle cx="512" cy="1096" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="512" cy="1096" r="4" fill="#ff5c5c"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="512" y="1012" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">VR lab era</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="512" y="1025" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">NASA VIEW</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="512" y="1038.5" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">VPL DataGlove</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="512" y="1052" text-anchor="middle" font-size="11" fill="#9fbfa8">VPL EyePhone</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="512" y="1065.5" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">Virtuality</text>
+<circle cx="704" cy="1096" r="7" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="704" y="1123.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">CAVE</text>
+<circle cx="1552" cy="1096" r="9" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1552" y="1128.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Rift DK1</text>
+<circle cx="1616" cy="1096" r="7" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1644" y="1123.8" text-anchor="middle" font-size="15" font-weight="700" fill="#e8f5ea">Rift CV1</text>
+<circle cx="1784" cy="1096" r="9" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1784" y="1128.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Quest 2</text>
+<circle cx="1952" cy="1096" r="9" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1952" y="1128.68" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f5ea">Vision Pro</text>
+<circle cx="752" cy="1128" r="7" fill="#0c0f0c" stroke="#ff5c5c" stroke-width="3.5"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="768" y="1133.1" text-anchor="start" font-size="15" font-weight="700" fill="#e8f5ea">Virtual Boy</text>
+<circle cx="1584" cy="1040" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1584" cy="1040" r="4" fill="#ff5c5c"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1649" y="1024.85" text-anchor="start" font-size="15" font-weight="400" fill="#e8f5ea">Headset war</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1649" y="1037.85" text-anchor="start" font-size="11" font-weight="700" fill="#9fbfa8">HTC Vive</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1649" y="1051.35" text-anchor="start" font-size="11" fill="#9fbfa8">PlayStation VR</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1649" y="1064.85" text-anchor="start" font-size="11" font-weight="700" fill="#9fbfa8">Microsoft HoloLens</text>
+<circle cx="1552" cy="1016" r="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3.5"/><circle cx="1552" cy="1016" r="4" fill="#ff5c5c"/>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="951" text-anchor="middle" font-size="15" font-weight="400" fill="#e8f5ea">Mobile VR</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="964" text-anchor="middle" font-size="11" fill="#9fbfa8">Samsung Gear VR</text>
+<text paint-order="stroke" stroke="#0c0f0c" stroke-width="5" stroke-linejoin="round" x="1596" y="977.5" text-anchor="middle" font-size="11" font-weight="700" fill="#9fbfa8">Google Cardboard</text>
+<text x="52" y="64" font-size="40" font-weight="700" fill="#e8f5ea">The timeline of virtual worlds — transit map</text>
+<text x="52" y="94" font-size="17" fill="#2a9e4f">many lines, one network · every line is still running · janusxr.org</text>
+<line x1="52" y1="1197" x2="86" y2="1197" stroke="#43ff6e" stroke-width="7" stroke-linecap="round"/>
+<text x="94" y="1202" font-size="14" fill="#e8f5ea">Web3D Line</text>
+<line x1="214" y1="1197" x2="248" y2="1197" stroke="#ff6ea8" stroke-width="5" stroke-linecap="round"/>
+<text x="256" y="1202" font-size="14" fill="#e8f5ea">Worlds Line</text>
+<line x1="384.6" y1="1197" x2="418.6" y2="1197" stroke="#5ac8fa" stroke-width="5" stroke-linecap="round"/>
+<text x="426.6" y="1202" font-size="14" fill="#e8f5ea">Format Line</text>
+<line x1="555.2" y1="1197" x2="589.2" y2="1197" stroke="#cdd8d0" stroke-width="6" stroke-linecap="round"/>
+<text x="597.2" y="1202" font-size="14" fill="#e8f5ea">Enablers Line</text>
+<line x1="743" y1="1197" x2="777" y2="1197" stroke="#ffb347" stroke-width="5" stroke-linecap="round"/>
+<text x="785" y="1202" font-size="14" fill="#e8f5ea">Games Line</text>
+<line x1="905" y1="1197" x2="939" y2="1197" stroke="#b98aff" stroke-width="5" stroke-linecap="round"/>
+<text x="947" y="1202" font-size="14" fill="#e8f5ea">Graphics Line</text>
+<line x1="1092.8" y1="1197" x2="1126.8" y2="1197" stroke="#ff5c5c" stroke-width="5" stroke-linecap="round"/>
+<text x="1134.8" y="1202" font-size="14" fill="#e8f5ea">Hardware Line</text>
+<text x="1292.6" y="1202" font-size="14" fill="#e8f5ea">label size = fame · <tspan font-weight="700">bold = influence</tspan></text>
+<rect x="52" y="1212" width="20" height="30" rx="10" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="2.5"/>
+<text x="82" y="1232" font-size="14" fill="#e8f5ea">epoch — everyone changes trains here</text>
+<circle cx="418" cy="1227" r="6" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="3"/>
+<text x="434" y="1232" font-size="14" fill="#e8f5ea">interchange</text>
+<path d="M 550.0 1226.0 Q 550.0 1216.0 567.0 1216.0 L 567.0 1216.0 Q 584.0 1216.0 584.0 1226.0 L 584.0 1226.0 Q 584.0 1236.0 567.0 1236.0 L 567.0 1236.0 Q 550.0 1236.0 550.0 1226.0 Z" fill="#e8f5ea" fill-opacity="0.12" stroke="#e8f5ea" stroke-opacity="0.6" stroke-width="1.3"/>
+<circle cx="560" cy="1226" r="3.5" fill="#0c0f0c" stroke="#e8f5ea" stroke-width="2"/>
+<text x="596" y="1232" font-size="14" fill="#e8f5ea">district — one stop, a whole scene</text>
+<path d="M 52 1262 Q 74 1242 96 1262" fill="none" stroke="#e8f5ea" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.75"/>
+<text x="104" y="1262" font-size="14" fill="#e8f5ea">person link</text>
+<line x1="220" y1="1257" x2="250" y2="1257" stroke="#9fb8a8" stroke-width="2" stroke-dasharray="2 7"/>
+<text x="258" y="1262" font-size="14" font-style="italic" fill="#e8f5ea">John Carmack</text>
+<line x1="376.4" y1="1257" x2="406.4" y2="1257" stroke="#7aa3c9" stroke-width="2" stroke-dasharray="2 7"/>
+<text x="414.4" y="1262" font-size="14" font-style="italic" fill="#e8f5ea">Microsoft</text>
+<line x1="508.2" y1="1257" x2="538.2" y2="1257" stroke="#c9a3b8" stroke-width="2" stroke-dasharray="2 7"/>
+<text x="546.2" y="1262" font-size="14" font-style="italic" fill="#e8f5ea">Philip Rosedale</text>
+<line x1="689.2" y1="1257" x2="719.2" y2="1257" stroke="#c9b87a" stroke-width="2" stroke-dasharray="2 7"/>
+<text x="727.2" y="1262" font-size="14" font-style="italic" fill="#e8f5ea">Tim Sweeney</text>
+<line x1="837.4000000000001" y1="1257" x2="867.4000000000001" y2="1257" stroke="#8fc9a8" stroke-width="2" stroke-dasharray="2 7"/>
+<text x="875.4000000000001" y="1262" font-size="14" font-style="italic" fill="#e8f5ea">Tony Parisi</text>
+<text x="2148" y="1234" text-anchor="end" font-size="13" fill="#2a9e4f">Adapted from “The timeline of virtual worlds” © Shinki Nishikori, CC BY-SA 4.0. This map is likewise CC BY-SA 4.0.</text>
+<text x="2148" y="1254" text-anchor="end" font-size="13" fill="#2a9e4f">janusxr.org — data lives in data/history/; corrections and new stations welcome.</text>
+</svg>

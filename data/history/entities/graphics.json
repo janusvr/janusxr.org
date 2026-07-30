@@ -1,0 +1,746 @@
+{
+ "track": "graphics",
+ "entities": [
+  {
+   "id": "sketchpad",
+   "label": "Sketchpad",
+   "kind": "product",
+   "track": "graphics",
+   "dates": {
+    "start": 1963,
+    "end": 1963
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Ivan Sutherland's 1963 light-pen drawing program that invented interactive computer graphics in a single PhD thesis.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sketchpad"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sketchpad"
+   ]
+  },
+  {
+   "id": "david-evans",
+   "label": "David C. Evans",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 1968,
+    "end": 1998
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Built the University of Utah graphics program that trained a generation, then co-founded Evans & Sutherland.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/David_C._Evans"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_C._Evans"
+   ]
+  },
+  {
+   "id": "amd",
+   "label": "AMD",
+   "kind": "company",
+   "track": "graphics",
+   "dates": {
+    "start": 1969,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "acquires ATI for $5.4B"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The CPU maker that bought ATI and later donated Mantle, reshaping the entire modern graphics API landscape.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/AMD"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/AMD"
+   ]
+  },
+  {
+   "id": "stb-systems",
+   "label": "STB Systems",
+   "kind": "company",
+   "track": "graphics",
+   "dates": {
+    "start": 1981,
+    "end": 1999
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The Texas board maker whose acquisition turned 3dfx's card-making partners into enemies overnight.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/STB_Systems"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/STB_Systems",
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "id": "kurt-akeley",
+   "label": "Kurt Akeley",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 1982,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI co-founder who architected RealityEngine and co-wrote the OpenGL specification.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kurt_Akeley"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kurt_Akeley"
+   ]
+  },
+  {
+   "id": "irisgl",
+   "label": "IRIS GL",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1983,
+    "end": 1992
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI's proprietary workstation graphics API whose cleaned-up open descendant became OpenGL.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/IRIS_GL"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/IRIS_GL"
+   ]
+  },
+  {
+   "id": "ati",
+   "label": "ATI Technologies",
+   "kind": "company",
+   "track": "graphics",
+   "dates": {
+    "start": 1985,
+    "end": 2006,
+    "milestones": [
+     {
+      "year": 2000,
+      "what": "first Radeon launches"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Toronto chipmaker that outlived 3dfx to become NVIDIA's last standing rival before AMD absorbed it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/ATI_Technologies"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/ATI_Technologies"
+   ]
+  },
+  {
+   "id": "vga",
+   "label": "VGA",
+   "kind": "hardware",
+   "track": "graphics",
+   "dates": {
+    "start": 1987,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "IBM's 1987 display standard whose 640x480 fallback mode PCs still boot into decades later.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Video_Graphics_Array"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Video_Graphics_Array"
+   ]
+  },
+  {
+   "id": "phigs",
+   "label": "PHIGS",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1988,
+    "end": 1997
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The ISO-blessed retained-mode 3D standard that OpenGL's immediate-mode pragmatism steamrolled.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/PHIGS"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/PHIGS"
+   ]
+  },
+  {
+   "id": "s3",
+   "label": "S3 Graphics",
+   "kind": "company",
+   "track": "graphics",
+   "dates": {
+    "start": 1989,
+    "end": 2000,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "S3TC texture compression licensed into DirectX 6"
+     },
+     {
+      "year": 2000,
+      "what": "graphics unit sold into a VIA joint venture"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "A 2D-era giant that lost the 3D race but whose S3TC compression outlived it inside every GPU.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/S3_Graphics"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/S3_Graphics"
+   ]
+  },
+  {
+   "id": "opengl",
+   "label": "OpenGL",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1992,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "stewardship passes from the ARB to Khronos"
+     },
+     {
+      "year": 2017,
+      "what": "OpenGL 4.6, the final major release"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The cross-platform 3D API that carried real-time graphics from SGI workstations to every desktop and, via ES, every phone.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenGL"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL"
+   ]
+  },
+  {
+   "id": "opengl-arb",
+   "label": "OpenGL ARB",
+   "kind": "company",
+   "track": "graphics",
+   "dates": {
+    "start": 1992,
+    "end": 2006
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The industry review board that governed OpenGL by committee for fourteen contentious years.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenGL_Architecture_Review_Board"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_Architecture_Review_Board"
+   ]
+  },
+  {
+   "id": "realityengine",
+   "label": "RealityEngine",
+   "kind": "hardware",
+   "track": "graphics",
+   "dates": {
+    "start": 1992,
+    "end": 1996
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI's million-dollar textured-graphics monster, the machine every 90s VR lab dreamed of owning.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/RealityEngine"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/RealityEngine"
+   ]
+  },
+  {
+   "id": "chris-malachowsky",
+   "label": "Chris Malachowsky",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 1993,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Sun GX graphics co-inventor who brought silicon engineering muscle to NVIDIA's founding trio.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Chris_Malachowsky"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chris_Malachowsky"
+   ]
+  },
+  {
+   "id": "curtis-priem",
+   "label": "Curtis Priem",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 1993,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Architect of Sun's GX graphics who designed NVIDIA's early chip architectures as founding CTO.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Curtis_Priem"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Curtis_Priem"
+   ]
+  },
+  {
+   "id": "gary-tarolli",
+   "label": "Gary Tarolli",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 1994,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI graphics veteran who co-founded 3dfx as CTO and architected the Voodoo line.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx",
+    "https://www.computerhistory.org/collections/catalog/102746832"
+   ]
+  },
+  {
+   "id": "directx",
+   "label": "DirectX / Direct3D",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Direct3D debuts from the RenderMorphics acquisition"
+     },
+     {
+      "year": 2015,
+      "what": "Direct3D 12 goes low-overhead"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Microsoft's game-platform weapon that fought OpenGL for a decade and won the Windows desktop.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/DirectX"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/DirectX",
+    "https://en.wikipedia.org/wiki/Direct3D"
+   ]
+  },
+  {
+   "id": "glide",
+   "label": "Glide",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1996,
+    "end": 2000
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "3dfx's slim proprietary API, briefly the fast path every PC game targeted before open standards caught up.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Glide_(API)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glide_(API)"
+   ]
+  },
+  {
+   "id": "voodoo-graphics",
+   "label": "Voodoo Graphics",
+   "kind": "hardware",
+   "track": "graphics",
+   "dates": {
+    "start": 1996,
+    "end": 2000
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The add-in card that made PC gamers see texture-filtered 3D for the first time and never look back.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Voodoo_Graphics"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Voodoo_Graphics"
+   ]
+  },
+  {
+   "id": "fahrenheit",
+   "label": "Fahrenheit",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 1997,
+    "end": 2000
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The doomed Microsoft-SGI treaty to unify Direct3D and OpenGL, which mostly bought Microsoft time while SGI's API leadership drained away.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fahrenheit_(graphics_API)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fahrenheit_(graphics_API)"
+   ]
+  },
+  {
+   "id": "riva-128",
+   "label": "RIVA 128",
+   "kind": "hardware",
+   "track": "graphics",
+   "dates": {
+    "start": 1997,
+    "end": 1998
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Direct3D-first chip that saved a nearly broke NVIDIA and put it on the map against 3dfx.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/RIVA_128"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/RIVA_128"
+   ]
+  },
+  {
+   "id": "geforce-256",
+   "label": "GeForce 256",
+   "kind": "hardware",
+   "track": "graphics",
+   "dates": {
+    "start": 1999,
+    "end": 2000
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Marketed as the world's first GPU, it pulled transform and lighting onto the chip and named an entire category.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/GeForce_256"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/GeForce_256"
+   ]
+  },
+  {
+   "id": "radeon",
+   "label": "Radeon",
+   "kind": "product",
+   "track": "graphics",
+   "dates": {
+    "start": 2000,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "ATI's GPU brand, still AMD's answer to GeForce a quarter century on.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Radeon"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Radeon"
+   ]
+  },
+  {
+   "id": "opengles",
+   "label": "OpenGL ES",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2003,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The trimmed-down OpenGL for embedded devices that ended up rendering every smartphone screen on Earth.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenGL_ES"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_ES"
+   ]
+  },
+  {
+   "id": "cuda",
+   "label": "CUDA",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2006,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "AlexNet trains on two GeForce GTX 580s, igniting deep learning"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "NVIDIA's bet that gamers' chips could do general compute, which accidentally became the substrate of modern AI.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/CUDA"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/CUDA",
+    "https://en.wikipedia.org/wiki/AlexNet"
+   ]
+  },
+  {
+   "id": "vladimir-vukicevic",
+   "label": "Vladimir Vukicevic",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 2006,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Mozilla engineer who prototyped Canvas 3D into WebGL, then conceived WebVR — twice opening browsers to new hardware.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Vuki%C4%87evi%C4%87"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vladimir_Vuki%C4%87evi%C4%87"
+   ]
+  },
+  {
+   "id": "ricardo-cabello",
+   "label": "Ricardo Cabello (mr.doob)",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 2010,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The demoscene coder known as mr.doob who single-handedly bootstrapped three.js and web 3D culture.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three.js",
+    "https://github.com/mrdoob/three.js"
+   ]
+  },
+  {
+   "id": "brandon-jones",
+   "label": "Brandon Jones",
+   "kind": "person",
+   "track": "graphics",
+   "dates": {
+    "start": 2011,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Google engineer who brought WebVR to Chrome and became a principal editor of the WebXR spec.",
+   "links": {},
+   "sources": [
+    "https://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html",
+    "https://en.wikipedia.org/wiki/WebXR"
+   ]
+  },
+  {
+   "id": "webgl",
+   "label": "WebGL",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2011,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2009,
+      "what": "Khronos WebGL working group formed"
+     },
+     {
+      "year": 2011,
+      "what": "WebGL 1.0 ships in Firefox 4 and Chrome"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The API that put a real GPU behind every browser tab, making 3D on the web a default rather than a plugin.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebGL"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGL"
+   ]
+  },
+  {
+   "id": "mantle",
+   "label": "Mantle",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2013,
+    "end": 2015
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "AMD's short-lived low-overhead API whose real legacy was being donated as the foundation of Vulkan.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mantle_(API)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mantle_(API)"
+   ]
+  },
+  {
+   "id": "metal",
+   "label": "Metal",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2018,
+      "what": "Apple deprecates OpenGL in Metal's favor"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Apple's low-overhead GPU API, the walled-garden answer to Vulkan and the flavor of its WebGPU proposal.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Metal_(API)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Metal_(API)"
+   ]
+  },
+  {
+   "id": "webvr",
+   "label": "WebVR",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2014,
+    "end": 2018,
+    "milestones": [
+     {
+      "year": 2016,
+      "what": "WebVR 1.0 proposal from Mozilla and Google teams"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The experimental API that plugged VR headsets into browsers and proved the immersive web was possible.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebVR"
+   ]
+  },
+  {
+   "id": "vulkan",
+   "label": "Vulkan",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2016,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Khronos's explicit, cross-platform successor to OpenGL, built from the bones of AMD's Mantle.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Vulkan"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "id": "webgpu",
+   "label": "WebGPU",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2017,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "ships in Chrome 113"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The browser's next GPU interface, abstracting Vulkan, Metal, and D3D12 and bringing compute shaders to the web.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebGPU"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "id": "webxr",
+   "label": "WebXR",
+   "kind": "api",
+   "track": "graphics",
+   "dates": {
+    "start": 2018,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "WebVR's successor, folding AR and VR into a single W3C standard for immersive browsers.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebXR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebXR"
+   ]
+  }
+ ]
+}

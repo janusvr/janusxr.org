@@ -38,4 +38,29 @@ room.onLoad = function() {
 
   typewriter('learn-is-display', '');
   typewriter('obelisk-text', 'JanusXR is ');
+  // media shelf: clicking a case shows its card on the detail panel;
+  // clicking the panel opens the current pick's read/watch link
+  var currentMedia = null;
+  var detail = room.objects['mount-media-detail'];
+  fetch('data/history/media.json').then(function(r) { return r.json(); }).then(function(data) {
+    data.items.forEach(function(item) {
+      var obj = room.objects['media-' + item.id];
+      if (!obj) return;
+      obj.addEventListener('click', function() {
+        currentMedia = item;
+        if (detail) {
+          detail.text = '<h4>' + item.title + ' (' + item.year + ')</h4>' +
+                        '<p><em>' + item.creator + ' - ' + item.kind + '</em></p>' +
+                        '<p>' + item.blurb + '</p>' +
+                        '<p class="media-open">click this panel to read/watch</p>';
+        }
+      });
+    });
+  }).catch(function() {});
+  if (detail) {
+    detail.addEventListener('click', function() {
+      if (currentMedia) window.open(currentMedia.media_url, '_blank');
+    });
+  }
+
 };

@@ -1,0 +1,2254 @@
+{
+ "track": "formats",
+ "entities": [
+  {
+   "id": "inventor",
+   "label": "Open Inventor",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1992,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2000,
+      "what": "open-sourced by SGI"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI's C++ scene-graph toolkit whose ASCII file format became the literal DNA of VRML 1.0.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Open_Inventor"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Open_Inventor"
+   ]
+  },
+  {
+   "id": "vrml1",
+   "label": "VRML 1.0",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": 1997,
+    "milestones": [
+     {
+      "year": 1994,
+      "what": "conceived around the WWW94 conference and www-vrml list"
+     },
+     {
+      "year": 1995,
+      "what": "1.0 spec finalized"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The first attempt at a 3D web: static hyperlinked worlds described in a dialect of Open Inventor.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRML"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "id": "vrml97",
+   "label": "VRML 2.0 / VRML97",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1996,
+    "end": 2001,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "SGI's Moving Worlds wins the VRML 2.0 RFP"
+     },
+     {
+      "year": 1997,
+      "what": "becomes ISO/IEC 14772 as VRML97"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Animated, scriptable virtual worlds standardized after a six-proposal shootout that SGI's Moving Worlds won over Microsoft's ActiveVRML.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRML"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML",
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "id": "activevrml",
+   "label": "ActiveVRML",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 1997,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "lost VRML 2.0 vote; evolved into DirectAnimation/Chromeffects"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Microsoft's reactive, functional-programming rival bid for the VRML 2.0 crown, elegant but rejected by the community vote.",
+   "links": {},
+   "sources": [
+    "https://www.rigacci.org/docs/biblio/online/vrml/ch11.htm",
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "id": "x3d",
+   "label": "X3D",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 2001,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2004,
+      "what": "ISO/IEC 19775 ratified"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "VRML's XML-clad successor that kept the ISO torch of the open 3D web burning long after the plugins died.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/X3D"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3D"
+   ]
+  },
+  {
+   "id": "obj",
+   "label": "Wavefront OBJ",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1990,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Wavefront Technologies' plain-text mesh format that outlived its creator to become 3D's lowest common denominator.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Wavefront_.obj_file"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wavefront_.obj_file"
+   ]
+  },
+  {
+   "id": "stl",
+   "label": "STL",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1987,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "3D Systems' bare-triangles stereolithography format from 1987 that still feeds nearly every 3D printer on Earth.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/STL_(file_format)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/STL_(file_format)"
+   ]
+  },
+  {
+   "id": "ply",
+   "label": "PLY",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Stanford's polygon format, designed by Greg Turk to store scanned geometry like the famous Stanford Bunny.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/PLY_(file_format)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/PLY_(file_format)"
+   ]
+  },
+  {
+   "id": "fbx",
+   "label": "FBX",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 1996,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "lands at Autodesk via the Alias acquisition"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Kaydara FiLMBOX's native format that rode two acquisitions to become Autodesk's proprietary lingua franca of game and film pipelines.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/FBX"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "id": "collada",
+   "label": "COLLADA",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "adopted by the Khronos Group"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Sony's open XML interchange schema for digital assets, handed to Khronos to fight FBX with openness.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/COLLADA"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "id": "gltf",
+   "label": "glTF",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "glTF 1.0 released"
+     },
+     {
+      "year": 2017,
+      "what": "glTF 2.0 with PBR materials"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Khronos's 'JPEG of 3D', a compact runtime delivery format that finally made 3D assets load like images on the web.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/GlTF"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "id": "usd",
+   "label": "USD (Universal Scene Description)",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 2016,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2018,
+      "what": "USDZ unveiled with Apple at WWDC"
+     },
+     {
+      "year": 2023,
+      "what": "AOUSD alliance formed to standardize it"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Pixar's open-sourced film pipeline scene format, now courted by Apple, NVIDIA, and Adobe as the metaverse's authoring backbone.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "id": "vrm",
+   "label": "VRM",
+   "kind": "format",
+   "track": "formats",
+   "dates": {
+    "start": 2018,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Japan's glTF-based humanoid avatar format that lets VTubers carry one body across any app that speaks it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRM_(file_format)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRM_(file_format)"
+   ]
+  },
+  {
+   "id": "openxr",
+   "label": "OpenXR",
+   "kind": "api",
+   "track": "formats",
+   "dates": {
+    "start": 2017,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "1.0 specification released"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Khronos's royalty-free API that ended the VR runtime format wars by letting one binary target every headset.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenXR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "id": "web3d-consortium",
+   "label": "Web3D Consortium",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1996,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "renamed from VRML Consortium"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The nonprofit that shepherded VRML into ISO and has kept an open, royalty-free 3D web standard alive ever since.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Web3D_Consortium"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Web3D_Consortium"
+   ]
+  },
+  {
+   "id": "khronos",
+   "label": "Khronos Group",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 2000,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The industry consortium behind OpenGL, Vulkan, COLLADA, glTF, and OpenXR — the standards engine room of real-time 3D.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Khronos_Group"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khronos_Group"
+   ]
+  },
+  {
+   "id": "metaverse-standards-forum",
+   "label": "Metaverse Standards Forum",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 2022,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A Khronos-convened coordination body where thousands of companies try to make metaverse standards interoperate instead of collide.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Metaverse_Standards_Forum"
+   },
+   "sources": [
+    "https://metaverse-standards.org/"
+   ]
+  },
+  {
+   "id": "aousd",
+   "label": "Alliance for OpenUSD",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 2023,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Pixar, Adobe, Apple, Autodesk, and NVIDIA's Linux Foundation alliance to turn USD into a formal open standard.",
+   "links": {},
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "id": "labyrinth",
+   "label": "Labyrinth",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": 1995
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Mark Pesce and Tony Parisi's scrappy 1994 prototype 3D web browser whose WWW94 demo willed VRML into existence.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML",
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "id": "webspace",
+   "label": "WebSpace Navigator",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 1997
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI and Template Graphics' Inventor-powered viewer, the first commercial VRML browser the world could actually run.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebSpace"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "id": "worldview",
+   "label": "WorldView",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "licensed to Microsoft for Internet Explorer"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Intervista's WorldView put VRML on ordinary Windows PCs and rode Internet Explorer to tens of millions of desktops.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "live3d",
+   "label": "Live3D",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 1998
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Paper Software's WebFX reborn as Netscape Live3D, the VRML plugin bundled straight into Navigator at the browser war's peak.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Live3D"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "id": "cosmo",
+   "label": "Cosmo Player",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1996,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "sold with Cosmo Software to Platinum Technology, then CA"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "SGI's polished VRML97 player, the de facto reference browser of the VRML era until corporate hand-offs orphaned it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cosmo_Software"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "id": "communityplace",
+   "label": "Community Place",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1996,
+    "end": 2001
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Sony CSL's multi-user VRML 2.0 browser and server, filling shared worlds with avatars years before 'metaverse' was a pitch deck.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Community_Place"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place"
+   ]
+  },
+  {
+   "id": "blaxxun-contact",
+   "label": "blaxxun Contact",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 2002
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Black Sun/blaxxun's avatar-filled VRML community client, named straight out of Snow Crash's Black Sun bar.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blaxxun"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "cortona",
+   "label": "Cortona3D",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1999,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "ParallelGraphics' Cortona plugin quietly inherited the VRML userbase after Cosmo's demise and pivoted into industrial 3D documentation.",
+   "links": {},
+   "sources": [
+    "https://www.cortona3d.com/"
+   ]
+  },
+  {
+   "id": "freewrl",
+   "label": "FreeWRL",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The long-running open-source VRML/X3D browser that kept the standard runnable when the commercial players vanished.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/FreeWRL"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/FreeWRL"
+   ]
+  },
+  {
+   "id": "x3dom",
+   "label": "X3DOM",
+   "kind": "api",
+   "track": "formats",
+   "dates": {
+    "start": 2009,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Fraunhofer IGD's framework that dropped X3D scenes straight into the HTML DOM via WebGL — declarative 3D with no plugin at all.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/X3DOM"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3DOM"
+   ]
+  },
+  {
+   "id": "vivaty",
+   "label": "Vivaty (Media Machines / Flux)",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2003,
+    "end": 2010,
+    "milestones": [
+     {
+      "year": 2008,
+      "what": "Media Machines rebrands as Vivaty"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Tony Parisi's X3D-powered Flux player grown into Vivaty's in-browser virtual worlds, whose assets Microsoft picked up at shutdown.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "unity-web-player",
+   "label": "Unity Web Player",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2005,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "deprecated as browsers dropped NPAPI plugins"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The plugin that made real game engines routine inside browsers — until the plugin era itself was abolished.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "id": "threejs",
+   "label": "three.js",
+   "kind": "api",
+   "track": "formats",
+   "dates": {
+    "start": 2010,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Ricardo Cabello's WebGL library that became the default substrate for practically all post-plugin 3D on the web.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Three.js"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three.js"
+   ]
+  },
+  {
+   "id": "aframe",
+   "label": "A-Frame",
+   "kind": "api",
+   "track": "formats",
+   "dates": {
+    "start": 2015,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Mozilla's HTML-tag framework for WebVR that let anyone author a virtual world in a page of markup — VRML's spirit, reborn on three.js.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "id": "sketchfab",
+   "label": "Sketchfab",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "acquired by Epic Games"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The YouTube of 3D models, which normalized embedding interactive 3D in any web page.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sketchfab"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sketchfab"
+   ]
+  },
+  {
+   "id": "firebox",
+   "label": "FireBox",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2014,
+    "end": 2014
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "James McCrae's 2014 experiment that treated web pages as rooms and hyperlinks as portals — the seed that became JanusVR.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://www.janusvr.com/updates_2014_11.html"
+   ]
+  },
+  {
+   "id": "janusvr",
+   "label": "JanusVR",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2014,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "company founded by McCrae and Singh in December"
+     },
+     {
+      "year": 2019,
+      "what": "company folds; code released as open source"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The VR internet browser where webpages are rooms and links are portals, built by a Toronto team who open-sourced it all on the way out.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusvr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "id": "janusweb",
+   "label": "JanusWeb",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2016,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "James Baicoianu's three.js-based engine that brought JanusVR's portal-linked rooms to any plain web browser, no install required.",
+   "links": {},
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "id": "janusxr",
+   "label": "JanusXR",
+   "kind": "product",
+   "track": "formats",
+   "dates": {
+    "start": 2019,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The community continuation of the Janus vision — an immersive, decentralized web of collaborative 3D spaces, kept alive by its ex-JanusVR builders.",
+   "links": {},
+   "sources": [
+    "https://janusxr.org/about.html",
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "id": "elation",
+   "label": "Elation Engine",
+   "kind": "api",
+   "track": "formats",
+   "dates": {
+    "start": 2013,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Baicoianu's modular JavaScript game engine, the quiet foundation under JanusWeb's virtual worlds.",
+   "links": {},
+   "sources": [
+    "https://github.com/jbaicoianu/elation-engine"
+   ]
+  },
+  {
+   "id": "sgi",
+   "label": "Silicon Graphics (SGI)",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1982,
+    "end": 2009
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The graphics-workstation titan whose Inventor toolkit, Moving Worlds spec, and Cosmo browser defined the first 3D web.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "id": "netscape",
+   "label": "Netscape",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": 2008,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "acquired by AOL"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The browser company that bought its way into VRML by swallowing Paper Software and shipping Live3D to the masses.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Netscape"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Netscape"
+   ]
+  },
+  {
+   "id": "sony",
+   "label": "Sony",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1946,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Twice-pivotal in open 3D: co-author of Moving Worlds and Community Place in the 90s, birthplace of COLLADA in the 2000s.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sony"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sony"
+   ]
+  },
+  {
+   "id": "microsoft",
+   "label": "Microsoft",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1975,
+    "end": null
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "Lost the VRML 2.0 spec war with ActiveVRML, then simply licensed Intervista's WorldView to put VRML in Internet Explorer anyway.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft"
+   ]
+  },
+  {
+   "id": "apple",
+   "label": "Apple",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1976,
+    "end": null
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "Pitched 'Out of This World' in the VRML 2.0 contest, then returned decades later to champion USDZ and co-found AOUSD.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Apple_Inc."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "id": "pixar",
+   "label": "Pixar",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1986,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The animation studio that gave its production scene format, USD, to the world and reshaped 3D interchange.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Pixar"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pixar"
+   ]
+  },
+  {
+   "id": "autodesk",
+   "label": "Autodesk",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1982,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The design-software giant whose acquisition chain made FBX the proprietary toll bridge of 3D pipelines.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Autodesk"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Autodesk"
+   ]
+  },
+  {
+   "id": "kaydara",
+   "label": "Kaydara",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1993,
+    "end": 2004
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The Montreal motion-capture house whose FiLMBOX product left behind a file format far more famous than itself: FBX.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/FBX"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "id": "alias",
+   "label": "Alias Systems",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1983,
+    "end": 2006
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Maya's maker, the middle link that carried FBX from Kaydara into Autodesk's empire.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Alias_Systems_Corporation"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alias_Systems_Corporation"
+   ]
+  },
+  {
+   "id": "intervista",
+   "label": "Intervista Software",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "sold to Platinum Technology"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Tony Parisi's VRML startup, whose WorldView browser was the format's beachhead on the Windows desktop.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "paper-software",
+   "label": "Paper Software",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1993,
+    "end": 1996
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The tiny upstate-New York shop whose WebFX plugin was good enough that Netscape bought the whole company.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Live3D"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "id": "blaxxun",
+   "label": "blaxxun interactive",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1995,
+    "end": 2002,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "renamed from Black Sun Interactive"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Snow Crash-named Munich/SF company that ran some of the largest avatar communities of the VRML age.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blaxxun"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "mozilla",
+   "label": "Mozilla",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Firefox's steward, whose MozVR team seeded the WebVR API era and gave the world A-Frame.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mozilla"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mozilla"
+   ]
+  },
+  {
+   "id": "unity",
+   "label": "Unity Technologies",
+   "kind": "company",
+   "track": "formats",
+   "dates": {
+    "start": 2004,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The engine democratizer whose Web Player era and later hiring of Tony Parisi tied it into web 3D's long arc.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unity_Technologies"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_Technologies"
+   ]
+  },
+  {
+   "id": "mark-pesce",
+   "label": "Mark Pesce",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The evangelist-engineer who co-created Labyrinth and willed a 'VRML' community into existence with a mailing list and a vision.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mark_Pesce"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "id": "tony-parisi",
+   "label": "Tony Parisi",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Web 3D's ultimate recurring character: Labyrinth, WorldView, Flux/Vivaty, and glTF all bear his fingerprints across three decades.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "gavin-bell",
+   "label": "Gavin Bell",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 1992,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The SGI engineer who translated Open Inventor into the VRML 1.0 spec and co-edited VRML 2.0.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML",
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ]
+  },
+  {
+   "id": "rikk-carey",
+   "label": "Rikk Carey",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 1994,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Co-editor of the VRML 2.0/97 specification at SGI and co-author of the Annotated VRML reference.",
+   "links": {},
+   "sources": [
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ]
+  },
+  {
+   "id": "neil-trevett",
+   "label": "Neil Trevett",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 2000,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Khronos's long-serving president, the standards diplomat behind glTF, OpenXR, and the Metaverse Standards Forum.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Neil_Trevett"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neil_Trevett"
+   ]
+  },
+  {
+   "id": "james-mccrae",
+   "label": "James McCrae",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 2014,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Toronto graphics researcher who built FireBox, co-founded JanusVR, and still keeps the native client alive as JanusXR.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusvr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "id": "james-baicoianu",
+   "label": "James Baicoianu",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 2013,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Builder of the Elation Engine and JanusWeb, who carried the Janus vision onto the open web and into its community era.",
+   "links": {},
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb",
+    "https://janusxr.org/about.html"
+   ]
+  },
+  {
+   "id": "karan-singh",
+   "label": "Karan Singh",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 2014,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "University of Toronto graphics professor who co-founded JanusVR with his former student James McCrae.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "id": "fabrice-robinet",
+   "label": "Fabrice Robinet",
+   "kind": "person",
+   "track": "formats",
+   "dates": {
+    "start": 2012,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The engineer at the origin of glTF, who led its creation inside the Khronos COLLADA working group.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/GlTF"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "sgi",
+   "to": "inventor",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "IRIS/Open Inventor toolkit",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Open_Inventor"
+   ]
+  },
+  {
+   "from": "vrml1",
+   "to": "inventor",
+   "type": "built-on",
+   "start": 1994,
+   "end": null,
+   "note": "syntax derived from Inventor ASCII format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "mark-pesce",
+   "to": "labyrinth",
+   "type": "created",
+   "start": 1994,
+   "end": null,
+   "note": "co-built prototype 3D web browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "labyrinth",
+   "type": "created",
+   "start": 1994,
+   "end": null,
+   "note": "co-built with Pesce",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "labyrinth",
+   "to": "vrml1",
+   "type": "influenced",
+   "start": 1994,
+   "end": null,
+   "note": "WWW94 demo sparked the www-vrml effort",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "mark-pesce",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "co-instigator, moderated www-vrml list",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "co-creator",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "gavin-bell",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "principal spec author, adapted Inventor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "gavin-bell",
+   "to": "sgi",
+   "type": "role",
+   "start": 1992,
+   "end": null,
+   "note": "engineer on Inventor and VRML work",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "vrml97",
+   "to": "vrml1",
+   "type": "succeeded",
+   "start": 1996,
+   "end": null,
+   "note": "added animation, scripting, sound",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "vrml97",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "Moving Worlds proposal with Sony and Mitra",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "co-authored Moving Worlds proposal",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "activevrml",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "reactive-language VRML 2.0 bid",
+   "sources": [
+    "https://www.rigacci.org/docs/biblio/online/vrml/ch11.htm"
+   ]
+  },
+  {
+   "from": "activevrml",
+   "to": "vrml97",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1996,
+   "note": "lost the VRML 2.0 RFP vote to Moving Worlds",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "sgi",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1996,
+   "note": "rival 'Out of This World' VRML 2.0 RFP entry",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "rikk-carey",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "spec co-editor",
+   "sources": [
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ]
+  },
+  {
+   "from": "gavin-bell",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "spec co-editor",
+   "sources": [
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ]
+  },
+  {
+   "from": "web3d-consortium",
+   "to": "vrml97",
+   "type": "standardized",
+   "start": 1997,
+   "end": null,
+   "note": "ISO/IEC 14772",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "x3d",
+   "to": "vrml97",
+   "type": "succeeded",
+   "start": 2001,
+   "end": null,
+   "note": "XML-encoded successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3D"
+   ]
+  },
+  {
+   "from": "web3d-consortium",
+   "to": "x3d",
+   "type": "standardized",
+   "start": 2004,
+   "end": null,
+   "note": "ISO/IEC 19775",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3D"
+   ]
+  },
+  {
+   "from": "kaydara",
+   "to": "fbx",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "native format of FiLMBOX",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "alias",
+   "to": "kaydara",
+   "type": "acquired",
+   "start": 2004,
+   "end": null,
+   "note": "brought FBX to Alias",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "autodesk",
+   "to": "alias",
+   "type": "acquired",
+   "start": 2006,
+   "end": null,
+   "note": "FBX becomes an Autodesk format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alias_Systems_Corporation"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "collada",
+   "type": "created",
+   "start": 2004,
+   "end": null,
+   "note": "born at Sony Computer Entertainment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "collada",
+   "type": "standardized",
+   "start": 2006,
+   "end": null,
+   "note": "adopted and maintained by Khronos",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "collada",
+   "to": "fbx",
+   "type": "competed-with",
+   "start": 2006,
+   "end": null,
+   "note": "open vs proprietary interchange rivalry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA",
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "gltf",
+   "type": "standardized",
+   "start": 2015,
+   "end": null,
+   "note": "royalty-free runtime asset format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "from": "collada",
+   "to": "gltf",
+   "type": "influenced",
+   "start": 2012,
+   "end": null,
+   "note": "glTF emerged from the COLLADA working group as its transmission-format successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "gltf",
+   "type": "role",
+   "start": 2012,
+   "end": null,
+   "note": "spec co-editor; named the format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "fabrice-robinet",
+   "to": "gltf",
+   "type": "role",
+   "start": 2012,
+   "end": null,
+   "note": "original creator and lead",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "from": "pixar",
+   "to": "usd",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "open-sourced its production scene format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "aousd",
+   "to": "usd",
+   "type": "standardized",
+   "start": 2023,
+   "end": null,
+   "note": "alliance formed to write formal USD specs",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "pixar",
+   "to": "aousd",
+   "type": "created",
+   "start": 2023,
+   "end": null,
+   "note": "founded with Adobe, Apple, Autodesk, NVIDIA under the Linux Foundation",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "aousd",
+   "type": "role",
+   "start": 2023,
+   "end": null,
+   "note": "founding member",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "autodesk",
+   "to": "aousd",
+   "type": "role",
+   "start": 2023,
+   "end": null,
+   "note": "founding member",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "pixar",
+   "type": "partnered",
+   "start": 2018,
+   "end": null,
+   "note": "USDZ AR format unveiled at WWDC 2018",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "gltf",
+   "to": "usd",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "overlapping ecosystems; increasingly framed as complementary delivery vs interchange",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF",
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "vrm",
+   "to": "gltf",
+   "type": "built-on",
+   "start": 2018,
+   "end": null,
+   "note": "glTF 2.0 extension for humanoid avatars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRM_(file_format)"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "openxr",
+   "type": "standardized",
+   "start": 2019,
+   "end": null,
+   "note": "1.0 released 2019",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "from": "neil-trevett",
+   "to": "khronos",
+   "type": "role",
+   "start": 2000,
+   "end": null,
+   "note": "long-time president",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neil_Trevett"
+   ]
+  },
+  {
+   "from": "neil-trevett",
+   "to": "metaverse-standards-forum",
+   "type": "role",
+   "start": 2022,
+   "end": null,
+   "note": "president",
+   "sources": [
+    "https://metaverse-standards.org/"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "metaverse-standards-forum",
+   "type": "created",
+   "start": 2022,
+   "end": null,
+   "note": "convened and hosts the forum",
+   "sources": [
+    "https://metaverse-standards.org/"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "webspace",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "with Template Graphics Software",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "webspace",
+   "to": "inventor",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "built with the Open Inventor toolkit",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "webspace",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "first commercial VRML browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "intervista",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "founded VRML startup",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "intervista",
+   "to": "worldview",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "first PC VRML browser plugin",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "worldview",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "implemented VRML on Windows",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "worldview",
+   "type": "licensed",
+   "start": 1997,
+   "end": null,
+   "note": "VRML support shipped with Internet Explorer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "paper-software",
+   "to": "live3d",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "originally released as WebFX",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "netscape",
+   "to": "paper-software",
+   "type": "acquired",
+   "start": 1996,
+   "end": null,
+   "note": "WebFX rebranded Live3D",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "live3d",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "VRML plugin bundled with Navigator",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "live3d",
+   "to": "worldview",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1998,
+   "note": "VRML plugin wars of the browser era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D",
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "cosmo",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "flagship VRML97 player",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "sgi",
+   "type": "spun-off-from",
+   "start": 1997,
+   "end": null,
+   "note": "Cosmo Software subsidiary; sold to Platinum then CA in 1998-99",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "webspace",
+   "type": "succeeded",
+   "start": 1996,
+   "end": null,
+   "note": "SGI's next-generation VRML client",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software",
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1996,
+   "end": null,
+   "note": "de facto reference VRML97 implementation",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "communityplace",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "from Sony CSL research",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place"
+   ]
+  },
+  {
+   "from": "communityplace",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1996,
+   "end": null,
+   "note": "multi-user VRML 2.0 browser and server",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place"
+   ]
+  },
+  {
+   "from": "communityplace",
+   "to": "blaxxun-contact",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2001,
+   "note": "rival multi-user VRML community platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "blaxxun",
+   "to": "blaxxun-contact",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "CyberGate lineage community client",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "blaxxun-contact",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1997,
+   "end": null,
+   "note": "VRML-based avatar communities",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "cortona",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1999,
+   "end": null,
+   "note": "ParallelGraphics' VRML plugin",
+   "sources": [
+    "https://www.cortona3d.com/"
+   ]
+  },
+  {
+   "from": "cortona",
+   "to": "cosmo",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "inherited the VRML plugin userbase as Cosmo faded",
+   "sources": [
+    "https://www.cortona3d.com/",
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "freewrl",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 1998,
+   "end": null,
+   "note": "open-source VRML/X3D browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FreeWRL"
+   ]
+  },
+  {
+   "from": "x3dom",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 2009,
+   "end": null,
+   "note": "X3D scenes as live HTML5 DOM via WebGL",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3DOM"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "vivaty",
+   "type": "created",
+   "start": 2003,
+   "end": null,
+   "note": "founded Media Machines, rebranded Vivaty 2008",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "vivaty",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 2004,
+   "end": null,
+   "note": "Flux player and editor were X3D-based",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "vivaty",
+   "type": "acquired",
+   "start": 2010,
+   "end": null,
+   "note": "picked up assets at shutdown",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "unity",
+   "to": "unity-web-player",
+   "type": "created",
+   "start": 2005,
+   "end": null,
+   "note": "browser plugin for Unity content",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "unity",
+   "type": "role",
+   "start": 2016,
+   "end": 2022,
+   "note": "Global Head of VR/AR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "mozilla",
+   "to": "aframe",
+   "type": "created",
+   "start": 2015,
+   "end": null,
+   "note": "built by the MozVR team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "from": "aframe",
+   "to": "threejs",
+   "type": "built-on",
+   "start": 2015,
+   "end": null,
+   "note": "entity-component layer over three.js",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "firebox",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "webpages as rooms, links as portals",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "firebox",
+   "type": "succeeded",
+   "start": 2014,
+   "end": null,
+   "note": "Firebox renamed JanusVR; worlds stayed 'FireBoxRooms'",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder, December 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "karan-singh",
+   "to": "janusvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "elation",
+   "type": "created",
+   "start": 2013,
+   "end": null,
+   "note": "JavaScript game engine",
+   "sources": [
+    "https://github.com/jbaicoianu/elation-engine"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusweb",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "web-native Janus client",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusvr",
+   "type": "role",
+   "start": 2016,
+   "end": 2019,
+   "note": "team member; JanusWeb became JanusVR's official open-source web client",
+   "sources": [
+    "https://janusxr.org/about.html",
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusweb",
+   "to": "elation",
+   "type": "built-on",
+   "start": 2016,
+   "end": null,
+   "note": "built atop the Elation Engine",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusweb",
+   "to": "threejs",
+   "type": "built-on",
+   "start": 2016,
+   "end": null,
+   "note": "renders via three.js and WebGL",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "janusweb",
+   "type": "influenced",
+   "start": 2016,
+   "end": null,
+   "note": "browser-native implementation of JanusVR's portal-linked room format",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusxr",
+   "to": "janusvr",
+   "type": "succeeded",
+   "start": 2019,
+   "end": null,
+   "note": "community continuation after the company folded and open-sourced its code",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://janusxr.org/about.html"
+   ]
+  },
+  {
+   "from": "janusxr",
+   "to": "janusweb",
+   "type": "built-on",
+   "start": 2019,
+   "end": null,
+   "note": "JanusWeb powers janusxr.org's in-browser worlds",
+   "sources": [
+    "https://janusxr.org/",
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusxr",
+   "type": "role",
+   "start": 2019,
+   "end": null,
+   "note": "maintains the native client under the JanusXR name",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusxr",
+   "type": "role",
+   "start": 2019,
+   "end": null,
+   "note": "maintains JanusWeb and janusxr.org",
+   "sources": [
+    "https://janusxr.org/about.html"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,445 @@
+{
+ "track": "web3d",
+ "entities": [
+  {
+   "id": "labyrinth",
+   "label": "Labyrinth",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1994,
+    "end": 1995
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Mark Pesce and Tony Parisi's scrappy 1994 prototype 3D web browser whose WWW94 demo willed VRML into existence.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRML"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML",
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "id": "blaxxun-contact",
+   "label": "blaxxun Contact",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1995,
+    "end": 2002
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Black Sun/blaxxun's avatar-filled VRML community client, named straight out of Snow Crash's Black Sun bar.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blaxxun"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "live3d",
+   "label": "Live3D",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1995,
+    "end": 1998
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Paper Software's WebFX reborn as Netscape Live3D, the VRML plugin bundled straight into Navigator at the browser war's peak.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Live3D"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "id": "webspace",
+   "label": "WebSpace Navigator",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1995,
+    "end": 1997
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "SGI and Template Graphics' Inventor-powered viewer, the first commercial VRML browser the world could actually run.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/WebSpace"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "id": "worldview",
+   "label": "WorldView",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1995,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "licensed to Microsoft for Internet Explorer"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Intervista's WorldView put VRML on ordinary Windows PCs and rode Internet Explorer to tens of millions of desktops.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "communityplace",
+   "label": "Sony Community Place",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1996,
+    "end": 2003,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "world's first VRML 2.0 browser released free"
+     },
+     {
+      "year": 2003,
+      "what": "the SAPARi service closes in January"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Sony CSL's multi-user VRML 2.0 browser and server, filling shared worlds with avatars years before 'metaverse' was a pitch deck.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Community_Place"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place",
+    "https://en.wikipedia.org/wiki/SAPARi",
+    "http://www.naturalinnovation.org/vrml/vrml2/marrin_history.htm"
+   ]
+  },
+  {
+   "id": "cosmo",
+   "label": "Cosmo Player",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1996,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "sold with Cosmo Software to Platinum Technology, then CA"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "SGI's polished VRML97 player, the de facto reference browser of the VRML era until corporate hand-offs orphaned it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cosmo_Software"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "id": "freewrl",
+   "label": "FreeWRL",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The long-running open-source VRML/X3D browser that kept the standard runnable when the commercial players vanished.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/FreeWRL"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/FreeWRL"
+   ]
+  },
+  {
+   "id": "cortona",
+   "label": "Cortona3D",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 1999,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "ParallelGraphics' Cortona plugin quietly inherited the VRML userbase after Cosmo's demise and pivoted into industrial 3D documentation.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cortona3D"
+   },
+   "sources": [
+    "https://www.cortona3d.com/"
+   ]
+  },
+  {
+   "id": "vivaty",
+   "label": "Vivaty (Media Machines / Flux)",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2003,
+    "end": 2010,
+    "milestones": [
+     {
+      "year": 2008,
+      "what": "Media Machines rebrands as Vivaty"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Tony Parisi's X3D-powered Flux player grown into Vivaty's in-browser virtual worlds, whose assets Microsoft picked up at shutdown.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Vivaty"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "id": "unity-web-player",
+   "label": "Unity Web Player",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2005,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "deprecated as browsers dropped NPAPI plugins"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The plugin that made real game engines routine inside browsers — until the plugin era itself was abolished.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "id": "x3dom",
+   "label": "X3DOM",
+   "kind": "api",
+   "track": "web3d",
+   "dates": {
+    "start": 2009,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Fraunhofer IGD's framework that dropped X3D scenes straight into the HTML DOM via WebGL — declarative 3D with no plugin at all.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/X3DOM"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3DOM"
+   ]
+  },
+  {
+   "id": "sketchfab",
+   "label": "Sketchfab",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "acquired by Epic Games"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The YouTube of 3D models, which normalized embedding interactive 3D in any web page.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sketchfab"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sketchfab"
+   ]
+  },
+  {
+   "id": "elation",
+   "label": "Elation Engine",
+   "kind": "api",
+   "track": "web3d",
+   "dates": {
+    "start": 2013,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Baicoianu's modular JavaScript game engine, the quiet foundation under JanusWeb's virtual worlds.",
+   "links": {
+    "wikipedia": "https://github.com/jbaicoianu/elation"
+   },
+   "sources": [
+    "https://github.com/jbaicoianu/elation-engine"
+   ]
+  },
+  {
+   "id": "janusvr",
+   "label": "JanusVR",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2014,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "company founded by McCrae and Singh in December"
+     },
+     {
+      "year": 2019,
+      "what": "company folds; code released as open source"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The VR internet browser where webpages are rooms and links are portals, built by a Toronto team who open-sourced it all on the way out.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusvr-james-mccrae-jonathan-ore/",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusxr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "id": "firebox",
+   "label": "FireBox",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2013,
+    "end": 2014
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "James McCrae's 2014 experiment that treated web pages as rooms and hyperlinks as portals — the seed that became JanusVR.",
+   "links": {
+    "official": "https://janusxr.org/#history"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://www.janusvr.com/updates_2014_11.html"
+   ]
+  },
+  {
+   "id": "janusweb",
+   "label": "JanusWeb",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2016,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "James Baicoianu's three.js-based engine that brought JanusVR's portal-linked rooms to any plain web browser, no install required.",
+   "links": {
+    "wikipedia": "https://github.com/jbaicoianu/janusweb"
+   },
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "id": "hubs",
+   "label": "Mozilla Hubs",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2018,
+    "end": 2024,
+    "milestones": [
+     {
+      "year": 2024,
+      "what": "Mozilla shuts it down May 31; Hubs Foundation inherits the code"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Mozilla's open-source WebXR meeting rooms that ran in any browser and hosted nearly ten million visitors before the 2024 shutdown.",
+   "links": {
+    "official": "https://hubsfoundation.org"
+   },
+   "sources": [
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/",
+    "https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs"
+   ]
+  },
+  {
+   "id": "janusxr",
+   "label": "JanusXR",
+   "kind": "product",
+   "track": "web3d",
+   "dates": {
+    "start": 2019,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The community continuation of the Janus vision — an immersive, decentralized web of collaborative 3D spaces, kept alive by its ex-JanusVR builders.",
+   "links": {
+    "official": "https://janusxr.org/"
+   },
+   "sources": [
+    "https://janusxr.org/about.html",
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "id": "you-are-here",
+   "label": "You are here",
+   "kind": "landmark",
+   "track": "web3d",
+   "dates": {
+    "start": 2026,
+    "end": null
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "This station. The line continues.",
+   "links": {
+    "official": "https://janusxr.org/"
+   },
+   "sources": []
+  }
+ ]
+}

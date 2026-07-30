@@ -558,3 +558,25 @@ janus-webpage-typer, janus-webpage-githubactivity { display: block; }
   transform: rotate(-12deg);
   pointer-events: none;
 }
+/* --- history: system map + reading list ------------------------------- */
+.history-map { margin: 2rem 0; }
+.history-map img { width: 100%; height: auto; display: block; border: 1px solid #1f3527; }
+.history-map figcaption { font-size: 0.82rem; color: #5f9e74; margin-top: 0.5rem; }
+.history-media { margin: 2rem 0; }
+.media-list { list-style: none; padding: 0; }
+.media-list li { margin: 0.7rem 0; }
+.media-open { color: #43ff6e; }
+
+/* --- history: per-track line diagrams ---------------------------------- */
+.history-lines { margin: 2rem 0; }
+.history-lines details { margin: 0.6rem 0; border: 1px solid #1f3527; }
+.history-lines summary { padding: 0.5rem 0.8rem; cursor: pointer; color: #7dffa0; }
+.history-lines summary:hover { background: #101711; }
+.history-lines figure { margin: 0; }
+.history-lines img { width: 100%; height: auto; display: block; }
+
+
+/* the station tubes are 3D-mount source content only (selector-mounted
+   Paragraphs in the history pavilion read their markup); the 2D page
+   doesn't render them */
+.history-station { display: none; }

@@ -1,0 +1,3265 @@
+{
+ "track": "meta",
+ "entities": [
+  {
+   "id": "ibm",
+   "label": "IBM",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1911,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2008,
+      "what": "Ran dozens of Second Life islands; interop teleport demo with Linden Lab"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The century-old computing giant that briefly made corporate 'virtual worlds strategy' respectable in the Second Life boom.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/IBM"
+   ]
+  },
+  {
+   "id": "apple",
+   "label": "Apple",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1976,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "Buys NeXT; Jobs returns"
+     },
+     {
+      "year": 2008,
+      "what": "App Store opens, later the battleground of Epic v. Apple"
+     },
+     {
+      "year": 2024,
+      "what": "Vision Pro ships — Apple enters spatial computing"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The company that lost, regained, and monetized Steve Jobs, then arrived late but loud to spatial computing with Vision Pro.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Apple_Inc."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Inc."
+   ]
+  },
+  {
+   "id": "next",
+   "label": "NeXT",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1985,
+    "end": 1997,
+    "milestones": [
+     {
+      "year": 1988,
+      "what": "NeXT Computer ships"
+     },
+     {
+      "year": 1993,
+      "what": "id Software builds Doom on NeXTSTEP workstations"
+     },
+     {
+      "year": 1997,
+      "what": "Acquired by Apple; NeXTSTEP becomes macOS"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Jobs's exile company whose black cubes hosted the creation of Doom and whose OS came home to become macOS.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/NeXT"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/NeXT"
+   ]
+  },
+  {
+   "id": "sun",
+   "label": "Sun Microsystems",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1982,
+    "end": 2010,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "Java launches"
+     },
+     {
+      "year": 1998,
+      "what": "Buys VPL Research's VR patent portfolio"
+     },
+     {
+      "year": 2007,
+      "what": "Project Wonderland open-source virtual world"
+     },
+     {
+      "year": 2010,
+      "what": "Acquired by Oracle"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The workstation-and-Java powerhouse that quietly collected VR patents and virtual-world experiments before vanishing into Oracle.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sun_Microsystems"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sun_Microsystems"
+   ]
+  },
+  {
+   "id": "sgi",
+   "label": "Silicon Graphics (SGI)",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1982,
+    "end": 2009,
+    "milestones": [
+     {
+      "year": 1992,
+      "what": "OpenGL released"
+     },
+     {
+      "year": 1995,
+      "what": "Backs VRML, spun from its Open Inventor tech"
+     },
+     {
+      "year": 2006,
+      "what": "First Chapter 11 bankruptcy"
+     },
+     {
+      "year": 2009,
+      "what": "Second bankruptcy; assets to Rackable; brand later to HPE (2016)"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The 3D-graphics temple of the late 20th century whose machines, OpenGL, and alumni seeded nearly every virtual world that followed.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "id": "netscape",
+   "label": "Netscape",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1994,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "Explosive IPO ignites the dot-com era"
+     },
+     {
+      "year": 1999,
+      "what": "Acquired by AOL"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Jim Clark and Marc Andreessen's browser rocket that made the web mass-market and then was crushed in the browser wars.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Netscape"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Netscape"
+   ]
+  },
+  {
+   "id": "microsoft",
+   "label": "Microsoft",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1975,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "DirectX and Internet Explorer ship"
+     },
+     {
+      "year": 2014,
+      "what": "Buys Mojang/Minecraft for $2.5B"
+     },
+     {
+      "year": 2016,
+      "what": "HoloLens ships"
+     },
+     {
+      "year": 2017,
+      "what": "Buys AltspaceVR (shut down 2023)"
+     },
+     {
+      "year": 2019,
+      "what": "$1B OpenAI partnership begins"
+     },
+     {
+      "year": 2021,
+      "what": "Closes $7.5B ZeniMax deal — id Software becomes Microsoft property"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The platform empire that keeps buying its way into virtual worlds — DirectX, Minecraft, HoloLens, AltspaceVR, id Software — with mixed survival rates for the acquired.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft"
+   ]
+  },
+  {
+   "id": "google",
+   "label": "Google",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1998,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2008,
+      "what": "Lively, Google's own virtual world, launches in July and dies December 31"
+     },
+     {
+      "year": 2014,
+      "what": "Cardboard makes VR a $5 fold-up"
+     },
+     {
+      "year": 2016,
+      "what": "Daydream VR platform (killed 2019)"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The search giant whose virtual-world ventures — Lively, Cardboard, Daydream — form a tidy graveyard of six-month-to-three-year experiments.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Google"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google",
+    "https://en.wikipedia.org/wiki/Google_Lively"
+   ]
+  },
+  {
+   "id": "meta",
+   "label": "Meta (Facebook)",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "Buys Oculus VR for ~$2B"
+     },
+     {
+      "year": 2021,
+      "what": "Renames itself Meta; Reality Labs bets tens of billions on the metaverse"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The social network that bought Oculus, renamed itself after Stephenson's coinage, and spent more on the metaverse than the entire prior industry combined.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Meta_Platforms"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Platforms"
+   ]
+  },
+  {
+   "id": "nvidia",
+   "label": "NVIDIA",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1993,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "GeForce 256 marketed as the first 'GPU'"
+     },
+     {
+      "year": 2000,
+      "what": "Buys rival 3dfx's core assets"
+     },
+     {
+      "year": 2021,
+      "what": "Omniverse pitched as the industrial metaverse platform"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The GPU company that outlived every 90s graphics rival and now sells Omniverse as the simulation substrate for everyone else's metaverse.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Nvidia"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nvidia"
+   ]
+  },
+  {
+   "id": "3dfx",
+   "label": "3dfx Interactive",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1994,
+    "end": 2002,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Voodoo Graphics makes consumer 3D acceleration real"
+     },
+     {
+      "year": 2000,
+      "what": "Sells core assets to Nvidia; bankruptcy follows in 2002"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Voodoo card maker that gave living rooms hardware 3D and then handed its remains to Nvidia.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/3dfx_Interactive"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx_Interactive"
+   ]
+  },
+  {
+   "id": "openai",
+   "label": "OpenAI",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2015,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "Microsoft invests $1B"
+     },
+     {
+      "year": 2022,
+      "what": "ChatGPT launches"
+     },
+     {
+      "year": 2023,
+      "what": "Microsoft partnership deepens to ~$10B"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The AI lab whose Microsoft alliance redirected big-tech ambition from the metaverse to generative AI almost overnight.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenAI"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenAI"
+   ]
+  },
+  {
+   "id": "lucasfilm-games",
+   "label": "Lucasfilm Games / LucasArts",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1982,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1986,
+      "what": "Habitat beta on Commodore 64 via QuantumLink — the first graphical MMO"
+     },
+     {
+      "year": 1990,
+      "what": "Renamed LucasArts"
+     },
+     {
+      "year": 2013,
+      "what": "Disney shuts internal development"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "George Lucas's game studio where Morningstar and Farmer invented the graphical avatar world — and the word 'avatar' usage that stuck.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lucasfilm_Games"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lucasfilm_Games",
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "id": "fujitsu",
+   "label": "Fujitsu",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1935,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1990,
+      "what": "Fujitsu Habitat launches in Japan under license"
+     },
+     {
+      "year": 1995,
+      "what": "WorldsAway brings the Habitat lineage to CompuServe"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The Japanese giant that licensed Habitat and kept the world's first avatar-world lineage alive through the 1990s.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fujitsu"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fujitsu",
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "id": "worlds-inc",
+   "label": "Worlds Inc",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "Worlds Chat and AlphaWorld launch"
+     },
+     {
+      "year": 1997,
+      "what": "Sells Active Worlds after mass layoffs"
+     },
+     {
+      "year": 2012,
+      "what": "Sues Activision Blizzard over virtual-world patents"
+     },
+     {
+      "year": 2022,
+      "what": "Appeals court upholds invalidation of its patents"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "An avatar-world pioneer of 1995 that spent its second act as a patent plaintiff suing the game industry it prefigured.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Worlds,_Inc."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Worlds,_Inc.",
+    "https://www.forbes.com/sites/johngaudiosi/2012/04/13/worlds-inc-explains-why-its-suing-activision-blizzard-over-world-of-warcraft-and-call-of-duty/"
+   ]
+  },
+  {
+   "id": "activeworlds-inc",
+   "label": "Activeworlds Inc",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "Circle of Fire buys Active Worlds and rehires its laid-off team"
+     },
+     {
+      "year": 1999,
+      "what": "Reverse merger; becomes Activeworlds.com Inc on Nasdaq"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The rescue company that bought Active Worlds out of Worlds Inc's collapse and has kept the 1995 universe running ever since.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Active_Worlds"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds",
+    "https://wiki.activeworlds.com/index.php?title=Circle_of_Fire_Studios"
+   ]
+  },
+  {
+   "id": "blaxxun",
+   "label": "blaxxun interactive",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1995,
+    "end": 2002,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "Founded as Black Sun Interactive, named for Snow Crash's club"
+     },
+     {
+      "year": 2002,
+      "what": "Insolvency; assets sold on"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The Munich VRML-community company that literally named itself after Snow Crash's Black Sun and died with the first metaverse wave.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blaxxun"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "electric-communities",
+   "label": "Electric Communities",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1993,
+    "end": 2001,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "E object-capability language built by Mark Miller's team"
+     },
+     {
+      "year": 1999,
+      "what": "Becomes Communities.com"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Habitat founders' startup whose decentralized-world dream failed commercially but whose E language seeded capability security for decades.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Electric_Communities"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Electric_Communities",
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "id": "onlive-technologies",
+   "label": "OnLive! Technologies",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1996,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Traveler launches: floating heads with real-time voice and lip-sync"
+     },
+     {
+      "year": 1999,
+      "what": "Traveler passes to the DigitalSpace community"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The company whose Traveler put live spatial voice into a shared 3D world in 1996, decades before that was table stakes.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Digital_Space_Traveler"
+   },
+   "sources": [
+    "https://damer.com/avatars/traveler.html",
+    "https://archive.org/details/vw_traveler-avatars"
+   ]
+  },
+  {
+   "id": "linden-lab",
+   "label": "Linden Lab",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1999,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "Second Life opens with user-owned content"
+     },
+     {
+      "year": 2017,
+      "what": "Sansar, its VR successor bet (later sold)"
+     },
+     {
+      "year": 2020,
+      "what": "Acquired by an investment group"
+     },
+     {
+      "year": 2024,
+      "what": "Rosedale returns as CTO"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The maker of Second Life, the user-created virtual economy that every later metaverse pitch has been measured against.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Linden_Lab"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Linden_Lab"
+   ]
+  },
+  {
+   "id": "there-inc",
+   "label": "There Inc",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1998,
+    "end": 2010,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "There.com launches the same year as Second Life"
+     },
+     {
+      "year": 2005,
+      "what": "Passes to Makena Technologies"
+     },
+     {
+      "year": 2010,
+      "what": "Shut down (revived 2011 as an 18+ service)"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Will Harvey's polished social world that launched alongside Second Life and lost the long game to it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "id": "imvu",
+   "label": "IMVU",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2004,
+      "what": "Founded by Will Harvey, Eric Ries and others; avatar chat with a creator economy"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The 3D avatar-chat company that quietly outlived flashier virtual worlds and incubated Eric Ries's lean-startup gospel.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/IMVU"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU"
+   ]
+  },
+  {
+   "id": "sulake",
+   "label": "Sulake",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2000,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2000,
+      "what": "Habbo Hotel opens in Finland, then goes global"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The Finnish company whose pixel-hotel Habbo gave tens of millions of teenagers their first virtual world.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sulake"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sulake"
+   ]
+  },
+  {
+   "id": "vrchat-inc",
+   "label": "VRChat Inc",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "Steam early access; user-built worlds explode"
+     },
+     {
+      "year": 2020,
+      "what": "Pandemic-era boom makes it VR's social default"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The company whose anything-goes user-built worlds became the de facto social layer of consumer VR.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRChat"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "id": "id-software",
+   "label": "id Software",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1993,
+      "what": "Doom"
+     },
+     {
+      "year": 1996,
+      "what": "Quake brings true 3D and internet deathmatch"
+     },
+     {
+      "year": 2009,
+      "what": "Acquired by ZeniMax"
+     },
+     {
+      "year": 2021,
+      "what": "Becomes Microsoft property via ZeniMax deal"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Texas studio whose engines and alumni set the technical pace for real-time 3D worlds for two decades.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Id_Software"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Id_Software"
+   ]
+  },
+  {
+   "id": "zenimax",
+   "label": "ZeniMax Media",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1999,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2009,
+      "what": "Acquires id Software"
+     },
+     {
+      "year": 2021,
+      "what": "Acquired by Microsoft for $7.5B"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The holding company that collected id Software and Bethesda, then delivered them both into Microsoft's empire.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/ZeniMax_Media"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZeniMax_Media"
+   ]
+  },
+  {
+   "id": "epic-games",
+   "label": "Epic Games",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "Unreal launches the engine dynasty"
+     },
+     {
+      "year": 2012,
+      "what": "Tencent buys ~48% for $330M"
+     },
+     {
+      "year": 2017,
+      "what": "Fortnite Battle Royale becomes a de facto social world"
+     },
+     {
+      "year": 2020,
+      "what": "Epic v. Apple lawsuit opens the app-store wars"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Tim Sweeney's engine company that turned Fortnite wealth into a declared crusade for an open metaverse — and a courtroom war with Apple.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Epic_Games"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games"
+   ]
+  },
+  {
+   "id": "valve",
+   "label": "Valve",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1996,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "Half-Life"
+     },
+     {
+      "year": 2003,
+      "what": "Steam becomes PC gaming's town square"
+     },
+     {
+      "year": 2016,
+      "what": "SteamVR and the HTC Vive ship"
+     },
+     {
+      "year": 2019,
+      "what": "Valve Index; Half-Life: Alyx follows in 2020"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Microsoft-refugee-founded studio whose Steam platform and VR research made it the quiet kingmaker of PC virtual worlds.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Valve_Corporation"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Valve_Corporation"
+   ]
+  },
+  {
+   "id": "htc",
+   "label": "HTC",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1997,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2016,
+      "what": "Vive ships with room-scale tracking"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The Taiwanese phone maker that bet its second act on the Vive and room-scale VR.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/HTC"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC",
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "id": "unity-technologies",
+   "label": "Unity Technologies",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2005,
+      "what": "Unity engine launches"
+     },
+     {
+      "year": 2020,
+      "what": "IPO"
+     },
+     {
+      "year": 2022,
+      "what": "ironSource merger"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Copenhagen startup whose engine democratized 3D development and quietly powers most social VR, VRChat included.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unity_Technologies"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_Technologies"
+   ]
+  },
+  {
+   "id": "roblox-corporation",
+   "label": "Roblox Corporation",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "Roblox launches"
+     },
+     {
+      "year": 2021,
+      "what": "Direct listing at ~$40B; 'metaverse' enters the S-1"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The company that got an entire generation building and monetizing virtual worlds before anyone told them it was a metaverse.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Roblox_Corporation"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roblox_Corporation"
+   ]
+  },
+  {
+   "id": "mojang",
+   "label": "Mojang",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2009,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2011,
+      "what": "Minecraft 1.0"
+     },
+     {
+      "year": 2014,
+      "what": "Acquired by Microsoft for $2.5B; Notch departs"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Notch's tiny Swedish studio whose blocky sandbox became the largest build-your-own-world in history.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mojang_Studios"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mojang_Studios"
+   ]
+  },
+  {
+   "id": "khronos",
+   "label": "Khronos Group",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2000,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "Takes stewardship of OpenGL from SGI's ARB"
+     },
+     {
+      "year": 2011,
+      "what": "WebGL"
+     },
+     {
+      "year": 2015,
+      "what": "glTF, the 'JPEG of 3D'"
+     },
+     {
+      "year": 2019,
+      "what": "OpenXR 1.0 unifies VR/AR APIs"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The standards consortium that inherited OpenGL and keeps shipping the neutral plumbing — glTF, OpenXR — every metaverse claims to want.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Khronos_Group"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khronos_Group"
+   ]
+  },
+  {
+   "id": "sony",
+   "label": "Sony",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1946,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1994,
+      "what": "PlayStation launches"
+     },
+     {
+      "year": 2008,
+      "what": "PlayStation Home virtual world (closed 2015)"
+     },
+     {
+      "year": 2016,
+      "what": "PlayStation VR ships"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The consumer-electronics titan that ran its own virtual world in PlayStation Home and gave COLLADA to the standards commons.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sony"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sony"
+   ]
+  },
+  {
+   "id": "vpl-research",
+   "label": "VPL Research",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1984,
+    "end": 1990,
+    "milestones": [
+     {
+      "year": 1987,
+      "what": "DataGlove and EyePhone commercialize VR hardware"
+     },
+     {
+      "year": 1990,
+      "what": "Bankruptcy; patents later bought by Sun (1998)"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Jaron Lanier's lab that sold the first commercial VR gear and gave the field its name before collapsing into a patent portfolio.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VPL_Research"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VPL_Research",
+    "https://www.techmonitor.ai/technology/sun_buys_pioneer_virtual_reality_patents_from_vpl_research"
+   ]
+  },
+  {
+   "id": "evans-and-sutherland",
+   "label": "Evans & Sutherland",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1968,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1973,
+      "what": "Pioneering real-time flight simulators and graphics hardware"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Utah firm of Evans and Sutherland whose simulators trained pilots — and whose payroll trained the founders of modern computer graphics.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Evans_%26_Sutherland"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Evans_%26_Sutherland"
+   ]
+  },
+  {
+   "id": "oculus-vr",
+   "label": "Oculus VR",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "Rift Kickstarter raises $2.4M"
+     },
+     {
+      "year": 2014,
+      "what": "Acquired by Facebook for ~$2B"
+     },
+     {
+      "year": 2016,
+      "what": "Rift CV1 ships"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Palmer Luckey's garage-Kickstarter that single-handedly restarted consumer VR and became the seed of Meta's Reality Labs.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_VR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_VR"
+   ]
+  },
+  {
+   "id": "high-fidelity",
+   "label": "High Fidelity",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2013,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "Pivots from open metaverse to spatial audio"
+     },
+     {
+      "year": 2022,
+      "what": "Invests in Linden Lab"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Rosedale's post-Second Life attempt at an open decentralized metaverse that pivoted to selling its best organ: spatial audio.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc.",
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "id": "keen-technologies",
+   "label": "Keen Technologies",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2022,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2022,
+      "what": "Carmack raises $20M for AGI research"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "John Carmack's post-Meta startup, betting that the man who optimized virtual worlds can optimize his way to AGI.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/John_Carmack"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "id": "magic-leap",
+   "label": "Magic Leap",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2010,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "Hires Neal Stephenson as Chief Futurist; $542M Google-led round"
+     },
+     {
+      "year": 2020,
+      "what": "Consumer dream collapses; layoffs and enterprise pivot"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The billions-devouring AR unicorn that hired the author of Snow Crash and still couldn't ship the dream.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Magic_Leap"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magic_Leap",
+    "https://www.prnewswire.com/news-releases/magic-leap-appoints-author-neal-stephenson-as-chief-futurist-300010260.html"
+   ]
+  },
+  {
+   "id": "lamina1",
+   "label": "Lamina1",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2022,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2022,
+      "what": "Stephenson co-founds a blockchain base layer for the open metaverse"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Neal Stephenson's own attempt to build the metaverse infrastructure his 1992 novel accidentally specified.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Neal_Stephenson"
+   },
+   "sources": [
+    "https://www.forbes.com/sites/charliefink/2022/06/09/this-week-in-xr-neal-stephenson-launches-lamina1-imverse-raises-48-m-for-holo-conferences-and-looking-glass-intros-new-65-3d-display/",
+    "https://about.lamina1.com/team/neal-stephenson-founder"
+   ]
+  },
+  {
+   "id": "metaplace",
+   "label": "Metaplace (Areae)",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2006,
+    "end": 2010,
+    "milestones": [
+     {
+      "year": 2010,
+      "what": "Metaplace closes; company sold to Playdom, then Disney"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Raph Koster's try at web-native, user-built virtual worlds — a decade too early for the browser to carry it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Metaplace"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Metaplace"
+   ]
+  },
+  {
+   "id": "playable-worlds",
+   "label": "Playable Worlds",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2019,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2024,
+      "what": "Reveals Stars Reach, a cloud-native simulated-world MMO"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Koster's latest company, rebuilding the living-world MMO on cloud simulation lessons from Ultima Online onward.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Raph_Koster"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://www.playableworlds.com/about/"
+   ]
+  },
+  {
+   "id": "altspacevr",
+   "label": "AltspaceVR",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2013,
+    "end": 2023,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "Near-shutdown, then rescued by Microsoft acquisition"
+     },
+     {
+      "year": 2023,
+      "what": "Microsoft shuts it down"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The social-VR pioneer that Microsoft saved in 2017 and then euthanized in 2023 on the way to abandoning consumer metaverse plans.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/AltspaceVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "id": "realnetworks",
+   "label": "RealNetworks",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "Renamed from Progressive Networks; streaming-media heyday"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The streaming pioneer whose CTO chair was Philip Rosedale's day job while he sketched Second Life.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/RealNetworks"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/RealNetworks"
+   ]
+  },
+  {
+   "id": "origin-systems",
+   "label": "Origin Systems",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1983,
+    "end": 2004,
+    "milestones": [
+     {
+      "year": 1992,
+      "what": "Acquired by Electronic Arts"
+     },
+     {
+      "year": 1997,
+      "what": "Ultima Online proves the commercial MMO"
+     },
+     {
+      "year": 2004,
+      "what": "EA shuts the studio"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Richard Garriott's studio whose Ultima Online turned persistent multiplayer worlds into an industry.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Origin_Systems"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Origin_Systems"
+   ]
+  },
+  {
+   "id": "sony-online-entertainment",
+   "label": "Sony Online Entertainment",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1998,
+    "end": 2015,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "EverQuest"
+     },
+     {
+      "year": 2003,
+      "what": "Star Wars Galaxies"
+     },
+     {
+      "year": 2015,
+      "what": "Sold to Columbus Nova; renamed Daybreak"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Sony's MMO arm that ran EverQuest and Star Wars Galaxies before being sold off and renamed Daybreak.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Daybreak_Game_Company"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Daybreak_Game_Company"
+   ]
+  },
+  {
+   "id": "ion-storm",
+   "label": "Ion Storm",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 1996,
+    "end": 2005,
+    "milestones": [
+     {
+      "year": 2000,
+      "what": "Daikatana flops; Deus Ex triumphs"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The id-alumni studio whose 'design is law' swagger produced both a legendary flop and Deus Ex.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ion_Storm"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ion_Storm"
+   ]
+  },
+  {
+   "id": "activision-blizzard",
+   "label": "Activision Blizzard",
+   "kind": "company",
+   "track": "meta",
+   "dates": {
+    "start": 2008,
+    "end": 2023,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "Sued by Worlds Inc over virtual-world patents"
+     },
+     {
+      "year": 2023,
+      "what": "Absorbed into Microsoft for $68.7B"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The World of Warcraft publisher that beat a virtual-worlds patent troll in court and then sold itself to Microsoft.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Activision_Blizzard"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Activision_Blizzard"
+   ]
+  },
+  {
+   "id": "john-carmack",
+   "label": "John Carmack",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Quake: true 3D plus internet play"
+     },
+     {
+      "year": 2013,
+      "what": "Leaves id for Oculus"
+     },
+     {
+      "year": 2022,
+      "what": "Quits Meta, founds Keen for AGI"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The engine savant whose career — id, Oculus, Meta, AGI — is a one-man index of where real-time worlds were headed next.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/John_Carmack"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "id": "john-romero",
+   "label": "John Romero",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1993,
+      "what": "Doom design and deathmatch culture"
+     },
+     {
+      "year": 2015,
+      "what": "Founds Romero Games"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Doom's rock-star designer whose deathmatch instincts made shared virtual space a blood sport.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/John_Romero"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Romero"
+   ]
+  },
+  {
+   "id": "tim-sweeney",
+   "label": "Tim Sweeney",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "Unreal Engine"
+     },
+     {
+      "year": 2016,
+      "what": "Begins evangelizing an 'open metaverse' publicly"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Epic's founder-for-life who turned Fortnite money into the industry's loudest campaign for an open metaverse.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Tim_Sweeney_(game_developer)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tim_Sweeney_(game_developer)"
+   ]
+  },
+  {
+   "id": "gabe-newell",
+   "label": "Gabe Newell",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1983,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Leaves 13 years at Microsoft to found Valve"
+     },
+     {
+      "year": 2003,
+      "what": "Steam"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Microsoft millionaire who quit to found Valve and ended up owning PC gaming's marketplace.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Gabe_Newell"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gabe_Newell"
+   ]
+  },
+  {
+   "id": "philip-rosedale",
+   "label": "Philip Rosedale",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "Second Life launches"
+     },
+     {
+      "year": 2013,
+      "what": "Founds High Fidelity"
+     },
+     {
+      "year": 2024,
+      "what": "Returns to Linden Lab as CTO"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The man who built Second Life, left to decentralize the metaverse, and came home twenty years later to fix the original.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "id": "palmer-luckey",
+   "label": "Palmer Luckey",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "Rift Kickstarter"
+     },
+     {
+      "year": 2017,
+      "what": "Pushed out of Facebook; founds Anduril"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The teenager whose duct-taped headset revived VR, sold to Facebook for billions, and exited into defense tech.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   ]
+  },
+  {
+   "id": "jaron-lanier",
+   "label": "Jaron Lanier",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1984,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1987,
+      "what": "Popularizes the term 'virtual reality'"
+     },
+     {
+      "year": 2006,
+      "what": "Joins Microsoft, later Microsoft Research"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The dreadlocked VPL founder who named virtual reality, lost the company, and became big tech's in-house humanist critic at Microsoft.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Jaron_Lanier"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jaron_Lanier"
+   ]
+  },
+  {
+   "id": "ivan-sutherland",
+   "label": "Ivan Sutherland",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1963,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1963,
+      "what": "Sketchpad"
+     },
+     {
+      "year": 1965,
+      "what": "'The Ultimate Display' essay"
+     },
+     {
+      "year": 1968,
+      "what": "The Sword of Damocles head-mounted display"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The father of computer graphics whose 1965 'Ultimate Display' essay is the founding document of every virtual world since.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Sutherland"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ivan_Sutherland"
+   ]
+  },
+  {
+   "id": "jim-clark",
+   "label": "Jim Clark",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1982,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1982,
+      "what": "Founds SGI on his Geometry Engine"
+     },
+     {
+      "year": 1994,
+      "what": "Founds Netscape with Andreessen"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Sutherland's student who built the 3D-graphics industry at SGI, then walked out and lit the fuse of the commercial web.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/James_H._Clark"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "id": "marc-andreessen",
+   "label": "Marc Andreessen",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1993,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1993,
+      "what": "Mosaic browser"
+     },
+     {
+      "year": 2009,
+      "what": "Co-founds a16z, later a major VR/metaverse investor"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Mosaic wunderkind who co-founded Netscape and later bankrolled the next generation of virtual-world bets from the VC side.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Marc_Andreessen"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Marc_Andreessen"
+   ]
+  },
+  {
+   "id": "steve-jobs",
+   "label": "Steve Jobs",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1976,
+    "end": 2011,
+    "milestones": [
+     {
+      "year": 1985,
+      "what": "Ousted from Apple; founds NeXT"
+     },
+     {
+      "year": 1997,
+      "what": "Returns via Apple's NeXT acquisition"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Apple's founder whose exile company built the machines Doom was written on — and whose return trip defined the acquisition-as-homecoming.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Steve_Jobs"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "id": "jensen-huang",
+   "label": "Jensen Huang",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1993,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "Ships the 'first GPU'"
+     },
+     {
+      "year": 2021,
+      "what": "Pitches Omniverse and delivers a keynote starring his own digital twin"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "NVIDIA's leather-jacketed co-founder who has run the same company since 1993 and now sells the simulation layer under everyone's metaverse.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Jensen_Huang"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jensen_Huang"
+   ]
+  },
+  {
+   "id": "richard-bartle",
+   "label": "Richard Bartle",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1978,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1978,
+      "what": "Co-creates MUD1 at Essex — the first virtual world"
+     },
+     {
+      "year": 1996,
+      "what": "Player-type taxonomy"
+     },
+     {
+      "year": 2003,
+      "what": "Publishes Designing Virtual Worlds"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Co-author of the very first virtual world, whose player taxonomy is still the field's default anthropology.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Richard_Bartle"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Bartle"
+   ]
+  },
+  {
+   "id": "richard-garriott",
+   "label": "Richard Garriott",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1980,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "Ultima Online popularizes 'avatar'-driven persistent worlds"
+     },
+     {
+      "year": 2008,
+      "what": "Flies to the ISS as a private astronaut"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Lord British himself, who took the avatar from Ultima's mysticism to the first mass-market persistent world.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Richard_Garriott"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Garriott"
+   ]
+  },
+  {
+   "id": "raph-koster",
+   "label": "Raph Koster",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "Lead designer of Ultima Online"
+     },
+     {
+      "year": 2003,
+      "what": "Star Wars Galaxies"
+     },
+     {
+      "year": 2024,
+      "what": "Stars Reach announced"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The designer-theorist whose career — UO, Galaxies, Metaplace, Playable Worlds — is one long argument that virtual worlds should be societies.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Raph_Koster"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "id": "notch",
+   "label": "Markus 'Notch' Persson",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 2009,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2009,
+      "what": "Releases Minecraft alpha"
+     },
+     {
+      "year": 2014,
+      "what": "Sells Mojang to Microsoft and walks away"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The indie coder whose block world became the planet's biggest creative space — and who cashed out of it entirely.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Markus_Persson"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Markus_Persson"
+   ]
+  },
+  {
+   "id": "david-baszucki",
+   "label": "David Baszucki",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "Roblox launches"
+     },
+     {
+      "year": 2021,
+      "what": "Takes Roblox public"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The physics-simulation engineer who founded Roblox and grew a kids' construction toy into a listed metaverse company.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/David_Baszucki"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki"
+   ]
+  },
+  {
+   "id": "chip-morningstar",
+   "label": "Chip Morningstar",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1984,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1986,
+      "what": "Leads Habitat, the first graphical MMO"
+     },
+     {
+      "year": 1990,
+      "what": "Co-authors 'The Lessons of Lucasfilm's Habitat'"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Habitat's project leader, whose Lucasfilm lessons and capability-security work underlie four decades of virtual-world architecture.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chip_Morningstar",
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "id": "randy-farmer",
+   "label": "Randy Farmer",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1985,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1986,
+      "what": "Co-creates Habitat"
+     },
+     {
+      "year": 1995,
+      "what": "WorldsAway continues the Habitat line at Fujitsu"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Habitat's co-creator who kept shipping avatar communities — and the reputation systems they need — for forty years.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Randy_Farmer"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "id": "mark-zuckerberg",
+   "label": "Mark Zuckerberg",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "Buys Oculus"
+     },
+     {
+      "year": 2021,
+      "what": "Renames Facebook to Meta"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The founder who bet his company's name — literally — on the metaverse being the next platform.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mark_Zuckerberg"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Zuckerberg"
+   ]
+  },
+  {
+   "id": "neal-stephenson",
+   "label": "Neal Stephenson",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1992,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1992,
+      "what": "Snow Crash coins 'metaverse'"
+     },
+     {
+      "year": 2014,
+      "what": "Magic Leap Chief Futurist"
+     },
+     {
+      "year": 2022,
+      "what": "Co-founds Lamina1"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The novelist who named the metaverse in 1992 and has since been hired, twice, to help build it for real.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Neal_Stephenson"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neal_Stephenson"
+   ]
+  },
+  {
+   "id": "will-harvey",
+   "label": "Will Harvey",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1998,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "There.com launches"
+     },
+     {
+      "year": 2004,
+      "what": "Co-founds IMVU"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The serial avatar-world founder who built There.com and then IMVU back to back.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Will_Harvey"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "id": "michael-abrash",
+   "label": "Michael Abrash",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 1992,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Quake's rendering with Carmack"
+     },
+     {
+      "year": 2014,
+      "what": "Becomes Oculus Chief Scientist"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The graphics-optimization legend whose resume — Microsoft, id, Valve, Oculus — traces the entire pipeline from software rasterizers to Reality Labs.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Michael_Abrash"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "id": "cory-ondrejka",
+   "label": "Cory Ondrejka",
+   "kind": "person",
+   "track": "meta",
+   "dates": {
+    "start": 2000,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "Architect of Second Life's user-owned content model"
+     },
+     {
+      "year": 2010,
+      "what": "Joins Facebook, later leads mobile engineering"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Second Life's CTO who argued users should own what they build, then took the Linden diaspora's most direct road into Facebook.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "apple",
+   "to": "next",
+   "type": "acquired",
+   "start": 1997,
+   "end": null,
+   "note": "$429M; NeXTSTEP becomes macOS, Jobs returns",
+   "sources": [
+    "https://en.wikipedia.org/wiki/NeXT"
+   ]
+  },
+  {
+   "from": "sun",
+   "to": "vpl-research",
+   "type": "acquired",
+   "start": 1998,
+   "end": null,
+   "note": "Bought VPL's VR patent portfolio post-bankruptcy",
+   "sources": [
+    "https://www.techmonitor.ai/technology/sun_buys_pioneer_virtual_reality_patents_from_vpl_research"
+   ]
+  },
+  {
+   "from": "zenimax",
+   "to": "id-software",
+   "type": "acquired",
+   "start": 2009,
+   "end": null,
+   "note": "id joins Bethesda's parent",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Id_Software"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "zenimax",
+   "type": "acquired",
+   "start": 2021,
+   "end": null,
+   "note": "$7.5B; closed March 2021",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZeniMax_Media"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "mojang",
+   "type": "acquired",
+   "start": 2014,
+   "end": null,
+   "note": "$2.5B for Minecraft",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mojang_Studios"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "altspacevr",
+   "type": "acquired",
+   "start": 2017,
+   "end": null,
+   "note": "Rescued in 2017, shut down March 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "activision-blizzard",
+   "type": "acquired",
+   "start": 2023,
+   "end": null,
+   "note": "$68.7B, closed October 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Activision_Blizzard"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "openai",
+   "type": "partnered",
+   "start": 2019,
+   "end": null,
+   "note": "$1B (2019) deepened to ~$10B (2023); Azure exclusivity",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenAI"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "sony",
+   "type": "competed-with",
+   "start": 2001,
+   "end": null,
+   "note": "Xbox vs PlayStation console wars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Console_war"
+   ]
+  },
+  {
+   "from": "netscape",
+   "to": "microsoft",
+   "type": "competed-with",
+   "start": 1995,
+   "end": 1998,
+   "note": "Browser wars; IE bundling wins, Netscape sold to AOL 1999",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Browser_wars"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "oculus-vr",
+   "type": "acquired",
+   "start": 2014,
+   "end": null,
+   "note": "~$2B; seed of Reality Labs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_VR"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "meta",
+   "type": "competed-with",
+   "start": 2024,
+   "end": null,
+   "note": "Vision Pro vs Quest headsets",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Vision_Pro"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "3dfx",
+   "type": "acquired",
+   "start": 2000,
+   "end": null,
+   "note": "Core graphics assets; 3dfx bankruptcy followed in 2002",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx_Interactive"
+   ]
+  },
+  {
+   "from": "activeworlds-inc",
+   "to": "worlds-inc",
+   "type": "spun-off-from",
+   "start": 1997,
+   "end": null,
+   "note": "Circle of Fire bought Active Worlds and rehired the laid-off team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds",
+    "https://wiki.activeworlds.com/index.php?title=Circle_of_Fire_Studios"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "activision-blizzard",
+   "type": "competed-with",
+   "start": 2012,
+   "end": 2022,
+   "note": "Patent suits over WoW/CoD avatars; patents invalidated on appeal",
+   "sources": [
+    "https://www.forbes.com/sites/johngaudiosi/2012/04/13/worlds-inc-explains-why-its-suing-activision-blizzard-over-world-of-warcraft-and-call-of-duty/",
+    "https://www.globenewswire.com/news-release/2022/03/11/2401824/0/en/U-S-Court-of-Appeals-Upholds-Federal-District-Court-s-Invalidity-Ruling-on-Patent-Eligible-Subject-Matter-Relating-to-Worlds-Inc-s-Patents.html"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "khronos",
+   "type": "standardized",
+   "start": 2006,
+   "end": null,
+   "note": "OpenGL stewardship passes from SGI's ARB to Khronos",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "khronos",
+   "type": "standardized",
+   "start": 2005,
+   "end": null,
+   "note": "COLLADA, created at Sony, handed to Khronos management",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "epic-games",
+   "type": "partnered",
+   "start": 2020,
+   "end": null,
+   "note": "$250M investment in 2020, expanded 2021-22",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games"
+   ]
+  },
+  {
+   "from": "sony-online-entertainment",
+   "to": "sony",
+   "type": "spun-off-from",
+   "start": 2015,
+   "end": null,
+   "note": "Sony division from 1998; sold to Columbus Nova, renamed Daybreak",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Daybreak_Game_Company"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "apple",
+   "type": "competed-with",
+   "start": 2020,
+   "end": 2021,
+   "note": "Epic v. Apple over App Store rules after the Fortnite hotfix; appeals ran to 2025",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games_v._Apple"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "Epic Games Store challenges Steam",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games_Store"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "htc",
+   "type": "partnered",
+   "start": 2015,
+   "end": 2019,
+   "note": "Co-developed the Vive on SteamVR; Valve later shipped its own Index",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "oculus-vr",
+   "type": "partnered",
+   "start": 2013,
+   "end": 2014,
+   "note": "Shared VR research and demos before the Vive split; Abrash defected to Oculus",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift",
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "htc",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2019,
+   "note": "Rift vs Vive, the first modern VR hardware war",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "ibm",
+   "to": "linden-lab",
+   "type": "partnered",
+   "start": 2008,
+   "end": null,
+   "note": "Joint Second Life/OpenSimulator interoperability teleport demo",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenSimulator"
+   ]
+  },
+  {
+   "from": "there-inc",
+   "to": "linden-lab",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2010,
+   "note": "Rival social virtual worlds launched the same year",
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "linden-lab",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2008,
+   "note": "Lively, launched July 2008, framed as a Second Life rival; dead by December 31",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Lively"
+   ]
+  },
+  {
+   "from": "high-fidelity",
+   "to": "linden-lab",
+   "type": "partnered",
+   "start": 2022,
+   "end": null,
+   "note": "High Fidelity invested in Linden Lab; Rosedale returned as advisor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "unity-technologies",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 2010,
+   "end": null,
+   "note": "Unity vs Unreal, the defining engine duopoly",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "vrchat-inc",
+   "to": "unity-technologies",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "VRChat is built on the Unity engine",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "lucasfilm-games",
+   "to": "fujitsu",
+   "type": "licensed",
+   "start": 1990,
+   "end": null,
+   "note": "Habitat licensed to Fujitsu: Fujitsu Habitat (1990), WorldsAway (1995)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "id-software",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 1998,
+   "end": null,
+   "note": "Quake vs Unreal engine wars of the late 90s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Engine"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "vrchat-inc",
+   "type": "influenced",
+   "start": 2014,
+   "end": null,
+   "note": "VRChat widely framed as the social-VR heir to Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "jim-clark",
+   "type": "influenced",
+   "start": 1971,
+   "end": null,
+   "note": "Clark did his Utah PhD under Sutherland before founding SGI",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "richard-bartle",
+   "to": "raph-koster",
+   "type": "influenced",
+   "start": 1990,
+   "end": null,
+   "note": "Koster came up through MUDs (LegendMUD) in the lineage and theory Bartle founded",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://en.wikipedia.org/wiki/Richard_Bartle"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "linden-lab",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "Snow Crash's Metaverse was a direct inspiration for Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Snow_Crash",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "meta",
+   "type": "influenced",
+   "start": 2021,
+   "end": null,
+   "note": "The 'Meta' rebrand is built on Stephenson's 'metaverse' coinage",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Snow_Crash"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "blaxxun",
+   "type": "influenced",
+   "start": 1995,
+   "end": null,
+   "note": "Black Sun Interactive named itself after Snow Crash's Black Sun club",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "id-software",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": 2013,
+   "note": "Co-founder, lead programmer of Doom and Quake",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "cto",
+   "start": 2013,
+   "end": 2019,
+   "note": "CTO through the Facebook acquisition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "meta",
+   "type": "role",
+   "role": "consultant",
+   "start": 2019,
+   "end": 2022,
+   "note": "Consulting CTO for VR; resigned December 2022",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "keen-technologies",
+   "type": "role",
+   "role": "founder",
+   "start": 2022,
+   "end": null,
+   "note": "AGI startup",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-romero",
+   "to": "id-software",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": 1996,
+   "note": "Co-founder; designer of Doom and Quake levels",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Romero"
+   ]
+  },
+  {
+   "from": "john-romero",
+   "to": "ion-storm",
+   "type": "role",
+   "role": "founder",
+   "start": 1996,
+   "end": 2001,
+   "note": "Co-founder; Daikatana era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Romero",
+    "https://en.wikipedia.org/wiki/Ion_Storm"
+   ]
+  },
+  {
+   "from": "tim-sweeney",
+   "to": "epic-games",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": null,
+   "note": "Founder and CEO throughout",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tim_Sweeney_(game_developer)"
+   ]
+  },
+  {
+   "from": "gabe-newell",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 1983,
+   "end": 1996,
+   "note": "13 years; early Windows work",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gabe_Newell"
+   ]
+  },
+  {
+   "from": "gabe-newell",
+   "to": "valve",
+   "type": "role",
+   "role": "founder",
+   "start": 1996,
+   "end": null,
+   "note": "Co-founder with Mike Harrington",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gabe_Newell"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "realnetworks",
+   "type": "role",
+   "role": "cto",
+   "start": 1996,
+   "end": 1999,
+   "note": "Joined when FreeVue was acquired; VP and CTO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "founder",
+   "start": 1999,
+   "end": 2010,
+   "note": "Founder; CEO to 2008, interim CEO 2010",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "high-fidelity",
+   "type": "role",
+   "role": "founder",
+   "start": 2013,
+   "end": null,
+   "note": "Co-founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "consultant",
+   "start": 2022,
+   "end": 2024,
+   "note": "Strategic advisor after High Fidelity's investment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "cto",
+   "start": 2024,
+   "end": null,
+   "note": "Returned as CTO",
+   "sources": [
+    "https://community.secondlife.com/news/featured-news/philip-rosedale-returns-as-cto-to-help-build-the-future-of-second-life-r1547/"
+   ]
+  },
+  {
+   "from": "palmer-luckey",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "founder",
+   "start": 2012,
+   "end": 2017,
+   "note": "Founder; departed Facebook March 2017, then founded Anduril",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   ]
+  },
+  {
+   "from": "jaron-lanier",
+   "to": "vpl-research",
+   "type": "role",
+   "role": "founder",
+   "start": 1984,
+   "end": 1990,
+   "note": "Founder; company bankrupt 1990",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jaron_Lanier",
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "jaron-lanier",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 2006,
+   "end": null,
+   "note": "Microsoft from 2006; Microsoft Research interdisciplinary scientist from 2009",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jaron_Lanier"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "evans-and-sutherland",
+   "type": "role",
+   "role": "founder",
+   "start": 1968,
+   "end": 1974,
+   "note": "Co-founded with David Evans at Utah",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ivan_Sutherland",
+    "https://en.wikipedia.org/wiki/Evans_%26_Sutherland"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "sun",
+   "type": "role",
+   "role": "researcher",
+   "start": 1990,
+   "end": 2009,
+   "note": "Sun Fellow/VP after Sun acquired Sutherland, Sproull & Associates",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ivan_Sutherland"
+   ]
+  },
+  {
+   "from": "jim-clark",
+   "to": "sgi",
+   "type": "role",
+   "role": "founder",
+   "start": 1982,
+   "end": 1994,
+   "note": "Founder; left after board conflicts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "jim-clark",
+   "to": "netscape",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 1999,
+   "note": "Co-founder with Andreessen; chairman to the AOL sale",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "marc-andreessen",
+   "to": "netscape",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 1999,
+   "note": "Co-founder; Mosaic author",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Marc_Andreessen"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "apple",
+   "type": "role",
+   "role": "founder",
+   "start": 1976,
+   "end": 1985,
+   "note": "Co-founder; ousted 1985",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "next",
+   "type": "role",
+   "role": "founder",
+   "start": 1985,
+   "end": 1997,
+   "note": "Founder and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "apple",
+   "type": "role",
+   "role": "ceo",
+   "start": 1997,
+   "end": 2011,
+   "note": "Returned via the NeXT acquisition; CEO until shortly before his death",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "jensen-huang",
+   "to": "nvidia",
+   "type": "role",
+   "role": "founder",
+   "start": 1993,
+   "end": null,
+   "note": "Co-founder and CEO since 1993",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jensen_Huang"
+   ]
+  },
+  {
+   "from": "richard-garriott",
+   "to": "origin-systems",
+   "type": "role",
+   "role": "founder",
+   "start": 1983,
+   "end": 2000,
+   "note": "Co-founder; stayed through EA years until 2000",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Garriott"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "origin-systems",
+   "type": "role",
+   "role": "researcher",
+   "start": 1995,
+   "end": 2000,
+   "note": "Lead designer of Ultima Online",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "sony-online-entertainment",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2000,
+   "end": 2006,
+   "note": "Chief Creative Officer; creative lead on Star Wars Galaxies",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "metaplace",
+   "type": "role",
+   "role": "founder",
+   "start": 2006,
+   "end": 2010,
+   "note": "Founded Areae/Metaplace; sold to Playdom/Disney",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://en.wikipedia.org/wiki/Metaplace"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "playable-worlds",
+   "type": "role",
+   "role": "founder",
+   "start": 2019,
+   "end": null,
+   "note": "Co-founded with Eric Goldberg",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://www.playableworlds.com/about/"
+   ]
+  },
+  {
+   "from": "notch",
+   "to": "mojang",
+   "type": "role",
+   "role": "founder",
+   "start": 2009,
+   "end": 2014,
+   "note": "Founder; left the day the Microsoft deal closed",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Markus_Persson"
+   ]
+  },
+  {
+   "from": "david-baszucki",
+   "to": "roblox-corporation",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "Co-founder (with Erik Cassel) and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "lucasfilm-games",
+   "type": "role",
+   "role": "researcher",
+   "start": 1984,
+   "end": 1988,
+   "note": "Designer/programmer; Habitat project leader",
+   "sources": [
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1993,
+   "end": 2001,
+   "note": "Co-founder; chief scientist through the Communities.com era",
+   "sources": [
+    "http://www.fudco.com/chip/resume.html",
+    "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "lucasfilm-games",
+   "type": "role",
+   "role": "researcher",
+   "start": 1985,
+   "end": 1988,
+   "note": "Co-creator and oracle of Habitat",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1993,
+   "end": 2000,
+   "note": "Co-founder with Morningstar and Crockford",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "fujitsu",
+   "type": "role",
+   "role": "consultant",
+   "start": 1994,
+   "end": 1997,
+   "note": "Designed WorldsAway, Habitat's CompuServe successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "mark-zuckerberg",
+   "to": "meta",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "Founder and CEO; drove the Oculus purchase and metaverse pivot",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Zuckerberg"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "magic-leap",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2014,
+   "end": 2020,
+   "note": "'Chief Futurist'; left amid 2020 layoffs",
+   "sources": [
+    "https://www.prnewswire.com/news-releases/magic-leap-appoints-author-neal-stephenson-as-chief-futurist-300010260.html",
+    "https://en.wikipedia.org/wiki/Neal_Stephenson"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "lamina1",
+   "type": "role",
+   "role": "founder",
+   "start": 2022,
+   "end": null,
+   "note": "Co-founder and chairman with Peter Vessenes",
+   "sources": [
+    "https://about.lamina1.com/team/neal-stephenson-founder"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "there-inc",
+   "type": "role",
+   "role": "founder",
+   "start": 1998,
+   "end": 2004,
+   "note": "Founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "imvu",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": 2007,
+   "note": "Co-founder (with Eric Ries) and CEO to November 2007",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey",
+    "https://en.wikipedia.org/wiki/IMVU"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 1992,
+   "end": 1995,
+   "note": "Windows NT graphics team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "id-software",
+   "type": "role",
+   "role": "researcher",
+   "start": 1995,
+   "end": 1996,
+   "note": "Quake rendering with Carmack",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "valve",
+   "type": "role",
+   "role": "researcher",
+   "start": 2011,
+   "end": 2014,
+   "note": "VR and wearable computing research",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2014,
+   "end": null,
+   "note": "Chief Scientist, continuing into Meta Reality Labs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "cory-ondrejka",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "cto",
+   "start": 2000,
+   "end": 2007,
+   "note": "CTO; architect of user-owned content in Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   ]
+  },
+  {
+   "from": "cory-ondrejka",
+   "to": "meta",
+   "type": "role",
+   "role": "researcher",
+   "start": 2010,
+   "end": 2014,
+   "note": "Facebook engineering; led the mobile rebuild",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,955 @@
+{
+ "track": "hardware",
+ "entities": [
+  {
+   "id": "morton-heilig",
+   "label": "Morton Heilig",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 1957,
+    "end": 1997,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The cinematographer who dreamed of an 'experience theater' built the Sensorama alone and died before the industry he foreshadowed took off.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Morton_Heilig"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Morton_Heilig"
+   ]
+  },
+  {
+   "id": "sega",
+   "label": "Sega",
+   "kind": "company",
+   "track": "hardware",
+   "dates": {
+    "start": 1960,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1994,
+      "what": "cancels Sega VR"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Sega hyped a consumer VR headset for the Genesis and then shelved it, one of the quiet retreats that defined the 90s VR bust.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sega"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sega_VR"
+   ]
+  },
+  {
+   "id": "sensorama",
+   "label": "Sensorama",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1962,
+    "end": 1966,
+    "milestones": [
+     {
+      "year": 1962,
+      "what": "Heilig patents the machine"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Morton Heilig's coin-operated arcade cabinet bathed one viewer in stereoscopic film, stereo sound, vibration, wind, and smells decades before the word 'virtual reality' existed.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sensorama"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sensorama"
+   ]
+  },
+  {
+   "id": "bob-sproull",
+   "label": "Bob Sproull",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 1968,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Sutherland's student collaborator who helped build the Sword of Damocles went on to a storied career at PARC and Sun Labs.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bob_Sproull"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bob_Sproull"
+   ]
+  },
+  {
+   "id": "damocles",
+   "label": "Sword of Damocles",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1968,
+    "end": 1972,
+    "milestones": [
+     {
+      "year": 1968,
+      "what": "first head-tracked see-through HMD demonstrated"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Ivan Sutherland's ceiling-mounted head-mounted display drew wireframe rooms that stayed put as your head turned, founding the entire HMD lineage.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Sword_of_Damocles_(virtual_reality)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Sword_of_Damocles_(virtual_reality)"
+   ]
+  },
+  {
+   "id": "samsung",
+   "label": "Samsung Electronics",
+   "kind": "company",
+   "track": "hardware",
+   "dates": {
+    "start": 1969,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "Gear VR co-developed with Oculus"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "Samsung supplied the OLED panels inside early Rifts and turned its own phones into headsets with the Oculus-powered Gear VR.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Samsung_Electronics"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "id": "scott-fisher",
+   "label": "Scott Fisher",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 1985,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The NASA Ames researcher whose VIEW lab wired gloves, headsets, and 3D audio into the first complete modern VR system.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Scott_Fisher_(technologist)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Scott_Fisher_(technologist)"
+   ]
+  },
+  {
+   "id": "view",
+   "label": "NASA VIEW",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1985,
+    "end": 1990,
+    "milestones": [
+     {
+      "year": 1985,
+      "what": "Scott Fisher founds the VIEW lab at NASA Ames"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "NASA Ames' Virtual Interface Environment Workstation combined a wide-FOV LCD headset, glove input, and 3D audio into the template every later VR system copied.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtual_reality#History"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Scott_Fisher_(technologist)",
+    "https://www.vrs.org.uk/virtual-reality/history.html"
+   ]
+  },
+  {
+   "id": "dataglove",
+   "label": "VPL DataGlove",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1987,
+    "end": 1990,
+    "milestones": [
+     {
+      "year": 1989,
+      "what": "patents underpin Mattel's Power Glove"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "VPL's fiber-optic-sensed glove let a computer see your hand for the first time, and its patents trickled down to a Nintendo toy.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Wired_glove"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wired_glove",
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "id": "jonathan-waldern",
+   "label": "Jonathan Waldern",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 1987,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The British VR PhD who founded W Industries and put Virtuality pods in arcades worldwide, two decades too soon.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtuality_(product)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtuality_(product)",
+    "https://www.vrs.org.uk/dr-jonathan-walden-virtuality-new-reality-promise-two-decades-soon/"
+   ]
+  },
+  {
+   "id": "eyephone",
+   "label": "VPL EyePhone",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1989,
+    "end": 1990,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The first commercially sold VR headset cost as much as a house and needed a quarter-million-dollar rig to drive it, but it made 'virtual reality' a product category.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VPL_Research"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "id": "carolina-cruz-neira",
+   "label": "Carolina Cruz-Neira",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 1991,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "As a PhD student at EVL she co-invented the CAVE, then spent a career building room-scale VR facilities across academia.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Carolina_Cruz-Neira"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Carolina_Cruz-Neira"
+   ]
+  },
+  {
+   "id": "virtuality",
+   "label": "Virtuality",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1991,
+    "end": 1997,
+    "milestones": [
+     {
+      "year": 1991,
+      "what": "1000CS arcade pods launch; Dactyl Nightmare"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Jonathan Waldern's arcade pods gave the 1990s public its first taste of networked, head-tracked VR at four dollars a pop.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtuality_(product)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtuality_(product)"
+   ]
+  },
+  {
+   "id": "cave",
+   "label": "CAVE",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1992,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1992,
+      "what": "debuts at SIGGRAPH"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Instead of strapping a screen to your face, the CAVE turned a whole room into stereo projection surfaces, becoming the workhorse of scientific VR for decades.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment"
+   ]
+  },
+  {
+   "id": "sega-vr",
+   "label": "Sega VR",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1993,
+    "end": 1994,
+    "milestones": [
+     {
+      "year": 1994,
+      "what": "quietly cancelled before release"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Sega's $200 Genesis headset was announced with fanfare and killed amid motion-sickness worries, a ghost of the VR console generation that never came.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sega_VR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sega_VR"
+   ]
+  },
+  {
+   "id": "i-glasses",
+   "label": "Virtual I/O i-glasses",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1995,
+    "end": 1997,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Virtual I/O's lightweight sunglasses-style HMD was the sleeker rival in the brief 1995 consumer headset skirmish before the whole category collapsed.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtual_I/O"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_I/O"
+   ]
+  },
+  {
+   "id": "vfx1",
+   "label": "Forte VFX1 Headgear",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1995,
+    "end": 1997,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The flip-visor VFX1 brought head-tracked Doom and Descent to mid-90s PCs, heroic and doomed at $695 with 263x230 pixels per eye.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VFX1_Headgear"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VFX1_Headgear"
+   ]
+  },
+  {
+   "id": "virtual-boy",
+   "label": "Nintendo Virtual Boy",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 1995,
+    "end": 1996,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "discontinued after under a million units"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Nintendo's red-and-black tabletop 'VR' flop became the industry's cautionary tale, chilling consumer VR investment for over a decade.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtual_Boy"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_Boy"
+   ]
+  },
+  {
+   "id": "smartphone-components",
+   "label": "Smartphone Panel & IMU Supply Chain",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2007,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The iPhone era made small high-density displays, MEMS motion sensors, and mobile SoCs absurdly cheap, quietly ending the VR winter by accident.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Rift"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift",
+    "https://www.ifixit.com/Teardown/Oculus+Rift+Development+Kit+2+Teardown/26076"
+   ]
+  },
+  {
+   "id": "brendan-iribe",
+   "label": "Brendan Iribe",
+   "kind": "person",
+   "track": "hardware",
+   "dates": {
+    "start": 2012,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2018,
+      "what": "leaves Facebook amid PC VR strategy shift"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Oculus' co-founder and first CEO steered the company through Kickstarter and the Facebook sale before exiting as the PC Rift line wound down.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Brendan_Iribe"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Brendan_Iribe"
+   ]
+  },
+  {
+   "id": "rift-dk1",
+   "label": "Oculus Rift DK1",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2013,
+    "end": 2014,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "Kickstarter raises $2.4M"
+     },
+     {
+      "year": 2013,
+      "what": "dev kits ship worldwide"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "A teenager's garage prototype built from a phone panel and hobbyist IMU raised $2.4M on Kickstarter and single-handedly restarted the VR industry.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Rift"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "id": "cardboard",
+   "label": "Google Cardboard",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2014,
+    "end": 2021,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "open-sourced as Google exits"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "A literal folded cardboard box with lenses gave tens of millions their first VR glimpse for a few dollars, both democratizing and cheapening the medium.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Google_Cardboard"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Cardboard"
+   ]
+  },
+  {
+   "id": "gear-vr",
+   "label": "Samsung Gear VR",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2014,
+    "end": 2020,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "Innovator Edition ships"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "A Galaxy phone snapped into Oculus-powered goggles put millions of people into VR and then dead-ended when standalone headsets arrived.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "id": "rift-dk2",
+   "label": "Oculus Rift DK2",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2014,
+    "end": 2016,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "adds positional tracking and low-persistence OLED"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "DK2 added camera-based positional tracking and a low-persistence OLED that teardowns revealed to be a literal Galaxy Note 3 screen.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Rift"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift",
+    "https://www.ifixit.com/Teardown/Oculus+Rift+Development+Kit+2+Teardown/26076"
+   ]
+  },
+  {
+   "id": "daydream",
+   "label": "Google Daydream",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2016,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "discontinued; Google exits mobile VR"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Google's fabric-covered upgrade to Cardboard bet on phone-slot VR just as the industry pivoted to standalone headsets, and died in three years.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Google_Daydream"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Daydream"
+   ]
+  },
+  {
+   "id": "hololens1",
+   "label": "Microsoft HoloLens",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2016,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "surprise reveal alongside Windows 10"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The first untethered see-through holographic computer put spatially mapped AR on real faces, even if its postage-stamp field of view deflated the demos.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_HoloLens"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft_HoloLens"
+   ]
+  },
+  {
+   "id": "htc-vive",
+   "label": "HTC Vive",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2016,
+    "end": 2020,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "unveiled at MWC with Valve"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The Valve-HTC alliance shipped room-scale VR with laser-swept Lighthouse tracking and made walking around a virtual room the new baseline.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/HTC_Vive"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "id": "psvr",
+   "label": "PlayStation VR",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2016,
+    "end": 2023,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "passes 4 million units sold"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Sony strapped VR onto 40 million PS4s with a headset tracked by a colored glowing orb, outselling its PC rivals on sheer install base.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/PlayStation_VR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR"
+   ]
+  },
+  {
+   "id": "rift-cv1",
+   "label": "Oculus Rift CV1",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2016,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2016,
+      "what": "consumer launch, March 28"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The first consumer Rift opened the 2016 tethered VR wars with Touch controllers arriving months later to complete the package.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Rift_CV1"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift_CV1"
+   ]
+  },
+  {
+   "id": "windows-mr",
+   "label": "Windows Mixed Reality",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2017,
+    "end": 2024,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "OEM headsets launch with Fall Creators Update"
+     },
+     {
+      "year": 2024,
+      "what": "removed from Windows 11"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Microsoft's OEM army of inside-out-tracked headsets undercut Rift and Vive on price, then was deprecated and deleted from Windows itself.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Windows_Mixed_Reality"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Windows_Mixed_Reality"
+   ]
+  },
+  {
+   "id": "magic-leap-one",
+   "label": "Magic Leap One",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2018,
+    "end": 2022,
+    "milestones": [
+     {
+      "year": 2018,
+      "what": "ships after ~$2.3B raised in secrecy"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "After years of whale-in-a-gym hype and billions raised, Magic Leap's lightwear goggles landed as a modest AR headset that sold a few thousand units.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Magic_Leap"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magic_Leap"
+   ]
+  },
+  {
+   "id": "oculus-go",
+   "label": "Oculus Go",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2018,
+    "end": 2020,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The $199 phone-free headset proved standalone VR could be cheap and frictionless, even if its 3DoF tracking made it a transitional species.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Go"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Go"
+   ]
+  },
+  {
+   "id": "hololens2",
+   "label": "Microsoft HoloLens 2",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2019,
+    "end": 2024,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "US Army IVAS contract worth up to $21.9B"
+     },
+     {
+      "year": 2024,
+      "what": "production ends"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "HoloLens 2 doubled the field of view, chased enterprise and a massive Army contract, then quietly became the end of Microsoft's headset line.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/HoloLens_2"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/HoloLens_2"
+   ]
+  },
+  {
+   "id": "quest1",
+   "label": "Oculus Quest",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2019,
+    "end": 2020,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "inside-out 6DoF standalone launches at $399"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The first Quest crammed full 6DoF room-scale VR into an untethered $399 box, and the entire industry's roadmap bent toward it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oculus_Quest"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Quest"
+   ]
+  },
+  {
+   "id": "valve-index",
+   "label": "Valve Index",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2019,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2020,
+      "what": "sells out on Half-Life: Alyx announcement"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Valve's own headset paired 144Hz displays with finger-tracking 'knuckles' controllers and sold out for months when Half-Life: Alyx was announced.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Valve_Index"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Valve_Index"
+   ]
+  },
+  {
+   "id": "quest2",
+   "label": "Meta Quest 2",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2020,
+    "end": 2024,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "rebranded from Oculus to Meta Quest 2"
+     },
+     {
+      "year": 2023,
+      "what": "estimated ~20M units sold"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "At $299 the Quest 2 outsold every previous VR headset combined, making standalone VR the default and Facebook-login controversy the price of entry.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Quest_2"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quest_2"
+   ]
+  },
+  {
+   "id": "psvr2",
+   "label": "PlayStation VR2",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2023,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2024,
+      "what": "gains official PC VR support"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Sony's OLED-HDR sequel added inside-out tracking, eye tracking, and headset rumble, arriving into a market the standalone Quest already owned.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/PlayStation_VR2"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR2"
+   ]
+  },
+  {
+   "id": "quest3",
+   "label": "Meta Quest 3",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2023,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2024,
+      "what": "cheaper Quest 3S variant launches"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Quest 3 pivoted the line toward color-passthrough mixed reality, landing months before Apple's Vision Pro at a tenth of the price.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Meta_Quest_3"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Quest_3"
+   ]
+  },
+  {
+   "id": "visionpro",
+   "label": "Apple Vision Pro",
+   "kind": "hardware",
+   "track": "hardware",
+   "dates": {
+    "start": 2024,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "announced at WWDC as 'spatial computing'"
+     },
+     {
+      "year": 2024,
+      "what": "US launch at $3,499"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Apple's $3,499 micro-OLED headset rebranded the field as 'spatial computing' and instantly reset expectations for passthrough quality and eye-hand input.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Apple_Vision_Pro"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Vision_Pro"
+   ]
+  }
+ ]
+}

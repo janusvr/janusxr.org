@@ -1,0 +1,942 @@
+{
+ "meta": {
+  "title": "The timeline of virtual worlds — transit map",
+  "license": "CC-BY-SA-4.0",
+  "attribution": "Adapted from “The timeline of virtual worlds” © Shinki Nishikori, CC BY-SA 4.0. This map is likewise CC BY-SA 4.0.",
+  "credit": "janusxr.org — data lives in data/history/; corrections and new stations welcome."
+ },
+ "zones": [
+  {
+   "id": "1960s",
+   "label": "1960",
+   "start": 1960,
+   "end": 1970,
+   "weight": 0.65
+  },
+  {
+   "id": "1970s",
+   "label": "1970",
+   "start": 1970,
+   "end": 1980,
+   "weight": 0.66
+  },
+  {
+   "id": "1980s",
+   "label": "1980",
+   "start": 1980,
+   "end": 1990,
+   "weight": 0.95
+  },
+  {
+   "id": "1990s",
+   "label": "1990",
+   "start": 1990,
+   "end": 2000,
+   "weight": 1.94
+  },
+  {
+   "id": "2000s",
+   "label": "2000",
+   "start": 2000,
+   "end": 2010,
+   "weight": 1.1
+  },
+  {
+   "id": "2010s",
+   "label": "2010",
+   "start": 2010,
+   "end": 2020,
+   "weight": 1.7
+  },
+  {
+   "id": "2020s",
+   "label": "2020",
+   "start": 2020,
+   "end": 2026,
+   "weight": 1.2
+  },
+  {
+   "id": "future",
+   "label": "the future",
+   "start": 2026,
+   "end": 2036,
+   "weight": 0.45
+  }
+ ],
+ "lines": [
+  {
+   "id": "web3d",
+   "name": "Web3D Line",
+   "color": "#43ff6e",
+   "width": 7,
+   "track": 0.05,
+   "branches": [
+    {
+     "path": [
+      "labyrinth",
+      "epoch-internet"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "epoch-internet",
+      "cosmo",
+      "vivaty",
+      "elation",
+      "epoch-vr",
+      "firebox",
+      "janusvr",
+      "janusweb",
+      "janusxr",
+      "epoch-ai",
+      "you-are-here"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "worldview",
+      "epoch-internet"
+     ],
+     "dy": -56
+    },
+    {
+     "path": [
+      "vrml-browsers",
+      "epoch-internet"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "immersive-web"
+     ],
+     "dy": 28
+    }
+   ]
+  },
+  {
+   "id": "worlds",
+   "name": "Worlds Line",
+   "color": "#ff6ea8",
+   "width": 5,
+   "track": 0.24,
+   "branches": [
+    {
+     "path": [
+      "epoch-pc",
+      "habitat",
+      "epoch-internet",
+      "secondlife",
+      "epoch-broadband",
+      "cloudparty",
+      "epoch-vr",
+      "vrchat",
+      "epoch-ai"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "worldsaway",
+      "epoch-internet"
+     ],
+     "dy": -56
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "horizon"
+     ],
+     "dy": -84
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "altspacevr"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "highfidelity",
+      "epoch-vr"
+     ],
+     "dy": 28
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "neos",
+      "resonite"
+     ],
+     "dy": 84
+    },
+    {
+     "path": [
+      "secondlife",
+      "opensimulator"
+     ],
+     "dy": -56
+    },
+    {
+     "path": [
+      "chat-worlds",
+      "epoch-internet"
+     ],
+     "dy": 56
+    },
+    {
+     "path": [
+      "epoch-broadband",
+      "web-worlds"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "social-vr"
+     ],
+     "dy": 56
+    }
+   ]
+  },
+  {
+   "id": "format",
+   "name": "Format Line",
+   "color": "#5ac8fa",
+   "width": 5,
+   "track": 0.4,
+   "branches": [
+    {
+     "path": [
+      "inventor",
+      "vrml1",
+      "epoch-internet",
+      "vrml97",
+      "x3d",
+      "epoch-broadband",
+      "epoch-vr",
+      "gltf",
+      "epoch-ai"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "collada",
+      "epoch-broadband"
+     ],
+     "dy": 28
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "usd",
+      "epoch-ai"
+     ],
+     "dy": 56
+    },
+    {
+     "path": [
+      "gltf",
+      "vrm"
+     ],
+     "dy": 28
+    }
+   ]
+  },
+  {
+   "id": "enablers",
+   "name": "Enablers Line",
+   "color": "#cdd8d0",
+   "width": 6,
+   "track": 0.56,
+   "branches": [
+    {
+     "path": [
+      "epoch-timesharing",
+      "ibm",
+      "apple",
+      "epoch-pc",
+      "sgi",
+      "sun",
+      "next",
+      "netscape",
+      "epoch-internet",
+      "3dfx",
+      "nvidia",
+      "epoch-broadband",
+      "google",
+      "oculus-vr",
+      "epoch-vr",
+      "meta",
+      "openai",
+      "epoch-ai"
+     ],
+     "dy": 0
+    }
+   ]
+  },
+  {
+   "id": "games",
+   "name": "Games Line",
+   "color": "#ffb347",
+   "width": 5,
+   "track": 0.72,
+   "branches": [
+    {
+     "path": [
+      "spacewar",
+      "epoch-timesharing",
+      "adventure",
+      "mud1",
+      "epoch-pc",
+      "doom",
+      "epoch-internet",
+      "quake",
+      "unreal",
+      "epoch-broadband",
+      "fortnite",
+      "epoch-ai",
+      "uefn"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "mazewar",
+      "epoch-pc"
+     ],
+     "dy": -52
+    },
+    {
+     "path": [
+      "wolfenstein-3d",
+      "doom"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "epoch-internet",
+      "sm64"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "epoch-internet",
+      "ultima-online",
+      "early-mmos",
+      "epoch-broadband",
+      "wow",
+      "ffxiv"
+     ],
+     "dy": 72
+    },
+    {
+     "path": [
+      "quake",
+      "half-life",
+      "counter-strike",
+      "steam",
+      "epoch-broadband"
+     ],
+     "dy": -64
+    },
+    {
+     "path": [
+      "roblox",
+      "epoch-broadband"
+     ],
+     "dy": -28
+    },
+    {
+     "path": [
+      "epoch-broadband",
+      "minecraft"
+     ],
+     "dy": 28
+    },
+    {
+     "path": [
+      "epoch-pc",
+      "muds-moos",
+      "epoch-internet"
+     ],
+     "dy": -28
+    }
+   ]
+  },
+  {
+   "id": "graphics",
+   "name": "Graphics Line",
+   "color": "#b98aff",
+   "width": 5,
+   "track": 0.88,
+   "branches": [
+    {
+     "path": [
+      "irisgl",
+      "opengl",
+      "epoch-internet",
+      "unreal",
+      "opengles",
+      "unity",
+      "webgl",
+      "epoch-vr",
+      "webgpu"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "directx",
+      "epoch-internet"
+     ],
+     "dy": 28
+    },
+    {
+     "path": [
+      "webgl",
+      "three-js",
+      "epoch-vr"
+     ],
+     "dy": -36
+    },
+    {
+     "path": [
+      "epoch-broadband",
+      "cuda",
+      "epoch-ai"
+     ],
+     "dy": 64
+    }
+   ]
+  },
+  {
+   "id": "hardware",
+   "name": "Hardware Line",
+   "color": "#ff5c5c",
+   "width": 5,
+   "track": 0.97,
+   "branches": [
+    {
+     "path": [
+      "epoch-timesharing",
+      "damocles",
+      "vr-lab",
+      "cave",
+      "epoch-internet",
+      "epoch-vr",
+      "rift-dk1",
+      "rift-cv1",
+      "quest2",
+      "epoch-ai",
+      "visionpro"
+     ],
+     "dy": 0
+    },
+    {
+     "path": [
+      "virtual-boy",
+      "epoch-internet"
+     ],
+     "dy": 28
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "headset-war"
+     ],
+     "dy": -56
+    },
+    {
+     "path": [
+      "epoch-vr",
+      "mobile-vr"
+     ],
+     "dy": -84
+    }
+   ]
+  }
+ ],
+ "stations": {
+  "labyrinth": {
+   "year": 1994,
+   "labelSide": "left"
+  },
+  "cosmo": {
+   "dx": 130,
+   "labelSide": "right"
+  },
+  "you-are-here": {
+   "alignWithPrevSlot": true
+  },
+  "adventure": {
+   "label": "Adventure",
+   "dx": 24
+  },
+  "unreal": {
+   "label": "Unreal Engine"
+  },
+  "unity": {
+   "label": "Unity"
+  },
+  "usd": {
+   "label": "USD"
+  },
+  "directx": {
+   "label": "DirectX"
+  },
+  "ibm": {
+   "year": 1964
+  },
+  "meta": {
+   "year": 2021,
+   "label": "Meta"
+  },
+  "google": {
+   "year": 2004
+  },
+  "nvidia": {
+   "year": 1999,
+   "label": "NVIDIA"
+  },
+  "3dfx": {
+   "year": 1996,
+   "label": "3dfx"
+  },
+  "apple": {
+   "year": 1977
+  },
+  "sun": {
+   "year": 1982,
+   "label": "Sun"
+  },
+  "janusvr": {
+   "year": 2015
+  },
+  "openai": {
+   "year": 2022,
+   "label": "OpenAI"
+  },
+  "habitat": {
+   "label": "Habitat"
+  },
+  "vrml97": {
+   "label": "VRML97",
+   "year": 1997
+  },
+  "uefn": {
+   "label": "UEFN"
+  },
+  "sgi": {
+   "label": "SGI"
+  },
+  "rift-dk1": {
+   "label": "Rift DK1"
+  },
+  "rift-cv1": {
+   "label": "Rift CV1",
+   "labelSide": "above"
+  },
+  "quest2": {
+   "label": "Quest 2"
+  },
+  "visionpro": {
+   "label": "Vision Pro"
+  },
+  "vivaty": {
+   "label": "Vivaty"
+  },
+  "mud1": {
+   "label": "MUD1"
+  },
+  "cave": {
+   "label": "CAVE"
+  },
+  "half-life": {
+   "label": "Half-Life"
+  },
+  "counter-strike": {
+   "label": "Counter-Strike",
+   "labelSide": "above"
+  },
+  "three-js": {
+   "label": "three.js"
+  },
+  "virtual-boy": {
+   "label": "Virtual Boy"
+  },
+  "opensimulator": {
+   "label": "OpenSimulator",
+   "labelSide": "right"
+  },
+  "worldview": {
+   "label": "WorldView",
+   "labelSide": "left"
+  },
+  "wow": {
+   "label": "World of Warcraft"
+  },
+  "steam": {
+   "label": "Steam",
+   "dx": 16
+  },
+  "cuda": {
+   "label": "CUDA"
+  },
+  "worldsaway": {
+   "labelSide": "left"
+  },
+  "altspacevr": {
+   "labelSide": "right"
+  },
+  "horizon": {
+   "labelSide": "right"
+  },
+  "highfidelity": {
+   "labelSide": "right"
+  },
+  "neos": {
+   "labelSide": "right",
+   "labelDx": 4
+  },
+  "sm64": {
+   "labelSide": "right"
+  },
+  "minecraft": {
+   "labelSide": "right"
+  },
+  "mazewar": {
+   "labelSide": "left"
+  },
+  "chat-worlds": {
+   "labelSide": "left"
+  },
+  "mobile-vr": {}
+ },
+ "threads": [
+  {
+   "id": "carmack",
+   "name": "John Carmack",
+   "color": "#9fb8a8",
+   "width": 2,
+   "service": "person",
+   "stations": [
+    "doom",
+    "quake",
+    "rift-dk1",
+    "quest2",
+    "meta"
+   ],
+   "entity": "john-carmack"
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "color": "#7aa3c9",
+   "width": 2,
+   "service": "company",
+   "stations": [
+    "epoch-pc",
+    "epoch-internet",
+    "directx",
+    "epoch-broadband",
+    "minecraft",
+    "altspacevr",
+    "openai"
+   ],
+   "entity": "microsoft"
+  },
+  {
+   "id": "rosedale",
+   "name": "Philip Rosedale",
+   "color": "#c9a3b8",
+   "width": 2,
+   "service": "person",
+   "stations": [
+    "secondlife",
+    "highfidelity"
+   ],
+   "entity": "philip-rosedale"
+  },
+  {
+   "id": "sweeney",
+   "name": "Tim Sweeney",
+   "color": "#c9b87a",
+   "width": 2,
+   "service": "person",
+   "stations": [
+    "unreal",
+    "epoch-broadband",
+    "fortnite",
+    "uefn"
+   ],
+   "labelDy": 48,
+   "entity": "tim-sweeney",
+   "labelDx": -10
+  },
+  {
+   "id": "parisi",
+   "name": "Tony Parisi",
+   "color": "#8fc9a8",
+   "width": 2,
+   "service": "person",
+   "stations": [
+    "labyrinth",
+    "worldview",
+    "vivaty",
+    "gltf",
+    "unity"
+   ],
+   "entity": "tony-parisi",
+   "labelDx": -40,
+   "labelDy": -26
+  }
+ ],
+ "ties": [
+  {
+   "from": "sgi",
+   "to": "cosmo"
+  },
+  {
+   "from": "netscape",
+   "to": "vrml-browsers"
+  },
+  {
+   "from": "oculus-vr",
+   "to": "rift-dk1"
+  },
+  {
+   "from": "meta",
+   "to": "horizon"
+  },
+  {
+   "from": "webgl",
+   "to": "janusweb"
+  },
+  {
+   "from": "inventor",
+   "to": "vrml1"
+  },
+  {
+   "from": "gltf",
+   "to": "vrm"
+  },
+  {
+   "from": "ibm",
+   "to": "epoch-timesharing"
+  },
+  {
+   "from": "ibm",
+   "to": "epoch-pc"
+  },
+  {
+   "from": "sgi",
+   "to": "irisgl"
+  },
+  {
+   "from": "sgi",
+   "to": "inventor"
+  },
+  {
+   "from": "apple",
+   "to": "visionpro"
+  },
+  {
+   "from": "next",
+   "to": "doom"
+  }
+ ],
+ "arcs": [
+  {
+   "from": "labyrinth",
+   "to": "vrml1",
+   "label": "Pesce & Parisi",
+   "via": [
+    "mark-pesce",
+    "tony-parisi"
+   ]
+  },
+  {
+   "from": "habitat",
+   "to": "worldsaway",
+   "label": "Randy Farmer",
+   "via": [
+    "randy-farmer"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "next",
+   "label": "Steve Jobs",
+   "bulge": "down",
+   "labelDx": 105,
+   "labelDy": 10,
+   "via": [
+    "steve-jobs"
+   ]
+  }
+ ],
+ "districts": [
+  {
+   "id": "vrml-browsers",
+   "label": "VRML browsers",
+   "year": 1995,
+   "members": [
+    "webspace",
+    "live3d",
+    "communityplace",
+    "blaxxun-contact",
+    "cortona"
+   ],
+   "blurb": "The plugin war to put VRML in the browser.",
+   "contains": [
+    "labyrinth",
+    "worldview",
+    "cosmo"
+   ]
+  },
+  {
+   "id": "chat-worlds",
+   "label": "Chat worlds",
+   "year": 1995,
+   "members": [
+    "worlds-chat",
+    "palace",
+    "alphaworld",
+    "cybertown"
+   ],
+   "blurb": "Avatars hit the consumer internet all at once.",
+   "contains": [
+    "worldsaway"
+   ]
+  },
+  {
+   "id": "web-worlds",
+   "label": "Web worlds",
+   "year": 2006,
+   "members": [
+    "there",
+    "imvu",
+    "habbo",
+    "club-penguin",
+    "gaia-online",
+    "bluemars",
+    "pshome"
+   ],
+   "blurb": "Virtual hangouts of the broadband boom.",
+   "contains": [
+    "secondlife"
+   ]
+  },
+  {
+   "id": "social-vr",
+   "label": "Social VR",
+   "year": 2016,
+   "members": [
+    "sansar",
+    "recroom"
+   ],
+   "blurb": "Worlds rebuilt for headsets.",
+   "contains": [
+    "highfidelity",
+    "vrchat",
+    "neos",
+    "altspacevr"
+   ]
+  },
+  {
+   "id": "muds-moos",
+   "label": "MUDs & MOOs",
+   "year": 1985,
+   "members": [
+    "kesmai",
+    "lambdamoo",
+    "dikumud"
+   ],
+   "blurb": "Text worlds where everything began twice.",
+   "contains": [
+    "mud1"
+   ]
+  },
+  {
+   "id": "early-mmos",
+   "label": "Early MMOs",
+   "year": 1999,
+   "members": [
+    "meridian59",
+    "everquest",
+    "asherons-call",
+    "runescape",
+    "eve"
+   ],
+   "blurb": "Graphical persistent worlds go massive.",
+   "contains": [
+    "ultima-online"
+   ]
+  },
+  {
+   "id": "vr-lab",
+   "label": "VR lab era",
+   "year": 1987,
+   "members": [
+    "view",
+    "dataglove",
+    "eyephone",
+    "virtuality"
+   ],
+   "blurb": "Gloves, goggles, and government money.",
+   "contains": [
+    "cave"
+   ]
+  },
+  {
+   "id": "headset-war",
+   "label": "Headset war",
+   "year": 2016,
+   "members": [
+    "htc-vive",
+    "psvr",
+    "hololens1"
+   ],
+   "blurb": "Everyone ships a headset at once.",
+   "contains": [
+    "rift-cv1"
+   ]
+  },
+  {
+   "id": "mobile-vr",
+   "label": "Mobile VR",
+   "year": 2014,
+   "members": [
+    "gear-vr",
+    "cardboard"
+   ],
+   "blurb": "A phone in a shell, by the tens of millions."
+  },
+  {
+   "id": "immersive-web",
+   "label": "Immersive web",
+   "year": 2015,
+   "members": [
+    "aframe",
+    "hubs"
+   ],
+   "blurb": "WebVR and WebXR make browsers spatial.",
+   "contains": [
+    "elation",
+    "firebox",
+    "janusvr",
+    "janusweb",
+    "janusxr"
+   ]
+  }
+ ]
+}

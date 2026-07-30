@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1074" viewBox="0 0 2400 1074" font-family="DejaVu Sans Mono, Menlo, monospace">
+<rect width="2400" height="1074" fill="#0c0f0c"/>
+<line x1="60" y1="1010" x2="2350" y2="1010" stroke="#1f3527" stroke-width="2"/>
+<line x1="327.85714285714283" y1="1004" x2="327.85714285714283" y2="1016" stroke="#2a4633" stroke-width="2"/>
+<text x="327.85714285714283" y="1034" text-anchor="middle" font-size="12" fill="#3f6b4e" letter-spacing="2">1990</text>
+<line x1="327.85714285714283" y1="140" x2="327.85714285714283" y2="998" stroke="#121a14" stroke-width="1"/>
+<line x1="863.5714285714286" y1="1004" x2="863.5714285714286" y2="1016" stroke="#2a4633" stroke-width="2"/>
+<text x="863.5714285714286" y="1034" text-anchor="middle" font-size="12" fill="#3f6b4e" letter-spacing="2">2000</text>
+<line x1="863.5714285714286" y1="140" x2="863.5714285714286" y2="998" stroke="#121a14" stroke-width="1"/>
+<line x1="1399.2857142857142" y1="1004" x2="1399.2857142857142" y2="1016" stroke="#2a4633" stroke-width="2"/>
+<text x="1399.2857142857142" y="1034" text-anchor="middle" font-size="12" fill="#3f6b4e" letter-spacing="2">2010</text>
+<line x1="1399.2857142857142" y1="140" x2="1399.2857142857142" y2="998" stroke="#121a14" stroke-width="1"/>
+<line x1="1935" y1="1004" x2="1935" y2="1016" stroke="#2a4633" stroke-width="2"/>
+<text x="1935" y="1034" text-anchor="middle" font-size="12" fill="#3f6b4e" letter-spacing="2">2020</text>
+<line x1="1935" y1="140" x2="1935" y2="998" stroke="#121a14" stroke-width="1"/>
+<line x1="1827.857142857143" y1="180" x2="1827.857142857143" y2="470" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 6" opacity="0.8"/>
+<line x1="542.1428571428571" y1="528" x2="542.1428571428571" y2="528" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 6" opacity="0.8"/>
+<line x1="1667.142857142857" y1="296" x2="1667.142857142857" y2="702" stroke="#3b5c48" stroke-width="1.6" stroke-dasharray="4 6" opacity="0.8"/>
+<line x1="167.14285714285714" y1="586" x2="2256.4285714285716" y2="586" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 580 L 2272.4285714285716 586 L 2262.4285714285716 592" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="167.14285714285714" cy="586" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="167.14285714285714" y="610.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">STL</text>
+<line x1="327.85714285714283" y1="412" x2="2256.4285714285716" y2="412" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 406 L 2272.4285714285716 412 L 2262.4285714285716 418" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="327.85714285714283" cy="412" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="327.85714285714283" y="398" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">Wavefront OBJ</text>
+<line x1="435" y1="528" x2="2256.4285714285716" y2="528" stroke="#5ac8fa" stroke-width="6" stroke-linecap="round"/>
+<path d="M 2262.4285714285716 522 L 2272.4285714285716 528 L 2262.4285714285716 534" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="435" cy="528" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="435" y="514" text-anchor="start" font-size="12" font-weight="700" fill="#e8f5ea">Open Inventor</text>
+<line x1="542.1428571428571" y1="528" x2="702.8571428571428" y2="528" stroke="#5ac8fa" stroke-width="6" stroke-linecap="round"/>
+<circle cx="542.1428571428571" cy="528" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="542.1428571428571" y="552.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">VRML 1.0</text>
+<line x1="649.2857142857143" y1="528" x2="917.1428571428571" y2="528" stroke="#5ac8fa" stroke-width="6" stroke-linecap="round"/>
+<circle cx="649.2857142857143" cy="528" r="8" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="649.2857142857143" y="514" text-anchor="start" font-size="17" font-weight="700" fill="#e8f5ea">VRML 2.0 / VRML97</text>
+<line x1="917.1428571428571" y1="528" x2="2256.4285714285716" y2="528" stroke="#5ac8fa" stroke-width="6" stroke-linecap="round"/>
+<path d="M 2262.4285714285716 522 L 2272.4285714285716 528 L 2262.4285714285716 534" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="917.1428571428571" cy="528" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="917.1428571428571" y="552.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">X3D</text>
+<line x1="542.1428571428571" y1="818" x2="2256.4285714285716" y2="818" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 812 L 2272.4285714285716 818 L 2262.4285714285716 824" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="542.1428571428571" cy="818" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="542.1428571428571" y="840.64" text-anchor="start" font-size="12" font-weight="400" fill="#e8f5ea">PLY</text>
+<line x1="595.7142857142857" y1="644" x2="702.8571428571428" y2="644" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<circle cx="595.7142857142857" cy="644" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="595.7142857142857" y="666.64" text-anchor="start" font-size="12" font-weight="400" fill="#e8f5ea">ActiveVRML</text>
+<line x1="1077.857142857143" y1="644" x2="2256.4285714285716" y2="644" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 638 L 2272.4285714285716 644 L 2262.4285714285716 650" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1077.857142857143" cy="644" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1077.857142857143" y="668.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">COLLADA</text>
+<line x1="649.2857142857143" y1="354" x2="2256.4285714285716" y2="354" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 348 L 2272.4285714285716 354 L 2262.4285714285716 360" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="649.2857142857143" cy="354" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="649.2857142857143" y="340" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">FBX</text>
+<line x1="1399.2857142857142" y1="702" x2="2256.4285714285716" y2="702" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 696 L 2272.4285714285716 702 L 2262.4285714285716 708" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1399.2857142857142" cy="702" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1399.2857142857142" y="726.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">three.js</text>
+<line x1="1506.4285714285716" y1="470" x2="2256.4285714285716" y2="470" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 464 L 2272.4285714285716 470 L 2262.4285714285716 476" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1506.4285714285716" cy="470" r="8" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1506.4285714285716" y="456" text-anchor="start" font-size="17" font-weight="700" fill="#e8f5ea">glTF</text>
+<line x1="1667.142857142857" y1="296" x2="2256.4285714285716" y2="296" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 290 L 2272.4285714285716 296 L 2262.4285714285716 302" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1667.142857142857" cy="296" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1667.142857142857" y="282" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">A-Frame</text>
+<line x1="1720.7142857142858" y1="760" x2="2256.4285714285716" y2="760" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 754 L 2272.4285714285716 760 L 2262.4285714285716 766" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1720.7142857142858" cy="760" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1720.7142857142858" y="784.08" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">USD (Universal Scene Description)</text>
+<line x1="1774.2857142857142" y1="238" x2="2256.4285714285716" y2="238" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 232 L 2272.4285714285716 238 L 2262.4285714285716 244" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1774.2857142857142" cy="238" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1774.2857142857142" y="224" text-anchor="start" font-size="14" font-weight="700" fill="#e8f5ea">OpenXR</text>
+<line x1="1827.857142857143" y1="180" x2="2256.4285714285716" y2="180" stroke="#5ac8fa" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 2262.4285714285716 174 L 2272.4285714285716 180 L 2262.4285714285716 186" fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1827.857142857143" cy="180" r="6" fill="#0c0f0c" stroke="#5ac8fa" stroke-width="3"/>
+<text x="1827.857142857143" y="166" text-anchor="start" font-size="12" font-weight="700" fill="#e8f5ea">VRM</text>
+<rect x="60" y="42" width="14" height="34" rx="4" fill="#5ac8fa"/>
+<text x="90" y="68" font-size="30" font-weight="700" fill="#e8f5ea">FORMATS LINE</text>
+<text x="90" y="94" font-size="14" fill="#2a9e4f">line diagram · bar length is a lifespan · dashes are successions · drops are foundations</text>
+<text x="2340" y="1050" text-anchor="end" font-size="12" fill="#2a9e4f">janusxr.org — the virtual worlds history project · CC BY-SA 4.0</text>
+</svg>

@@ -1,0 +1,2366 @@
+{
+ "track": "worlds",
+ "entities": [
+  {
+   "id": "habitat",
+   "label": "Lucasfilm's Habitat",
+   "kind": "game",
+   "track": "worlds",
+   "dates": {
+    "start": 1986,
+    "end": 1988,
+    "milestones": [
+     {
+      "year": 1986,
+      "what": "beta opens on Quantum Link for the Commodore 64"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The 1986 Commodore 64 world that invented the graphical avatar, the online economy, and most of the problems every virtual world has faced since.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "id": "club-caribe",
+   "label": "Club Caribe",
+   "kind": "game",
+   "track": "worlds",
+   "dates": {
+    "start": 1988,
+    "end": 1994,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Habitat scaled down to a virtual island resort so Quantum Link could actually afford to run it, surviving until the Commodore service itself died.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://en.wikipedia.org/wiki/Quantum_Link"
+   ]
+  },
+  {
+   "id": "fujitsu-habitat",
+   "label": "Fujitsu Habitat",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1990,
+    "end": 2006,
+    "milestones": [
+     {
+      "year": 1990,
+      "what": "launches on NIFTY-Serve in Japan, passing 1,000 citizens within months"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Lucasfilm's Habitat licensed to Fujitsu and reborn in Japan, where it quietly outlived its American parent by well over a decade.",
+   "links": {},
+   "sources": [
+    "https://wiki.renoproject.org/index.php/Fujitsu_Habitat_History",
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://en.wikipedia.org/wiki/Nifty_Corporation"
+   ]
+  },
+  {
+   "id": "worldsaway",
+   "label": "WorldsAway",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": 2014,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "Fujitsu sells it off; it lives on as VZones"
+     },
+     {
+      "year": 2014,
+      "what": "the last VZones worlds close in August"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Fujitsu's CompuServe-era Dreamscape, a direct Habitat descendant where avatars could literally carry their heads in their hands.",
+   "links": {},
+   "sources": [
+    "https://www.pcworld.com/article/424450/this-old-tech-remembering-worldsaways-avatars-and-virtual-experiences.html",
+    "https://wiki.renoproject.org/index.php/WorldsAway_Transcripts"
+   ]
+  },
+  {
+   "id": "palace",
+   "label": "The Palace",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": 2001,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "folded into the Softbank-backed Electric Communities/Communities.com group"
+     },
+     {
+      "year": 2001,
+      "what": "official development dies with Communities.com's bankruptcy; fan servers carry on"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Jim Bumgardner's 2D avatar chat of painted rooms and floating prop-heads, the counterculture living room of the 1995 internet.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Palace_(computer_program)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)"
+   ]
+  },
+  {
+   "id": "worlds-chat",
+   "label": "Worlds Chat",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "Worlds Chat Gold ships as a retail CD-ROM"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The April 1995 space-station chat world that beat everyone to 3D avatars, and whose ghost servers still accept the occasional visitor.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Worlds.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Worlds.com",
+    "https://www.classic-computers.org.nz/blog/2022-12-15-chat-memories-part-3.htm"
+   ]
+  },
+  {
+   "id": "alphaworld",
+   "label": "AlphaWorld / Active Worlds",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "renamed Active Worlds under new owner Circle of Fire / Activeworlds Inc"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Ron Britvich's June 1995 frontier where users could claim land and build, creating the first sprawling citizen-built virtual city years before Second Life.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Active_Worlds"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "id": "cybertown",
+   "label": "Cybertown",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": 2012,
+    "milestones": [
+     {
+      "year": 2003,
+      "what": "subscription fees begin the long decline"
+     },
+     {
+      "year": 2019,
+      "what": "former citizens launch a community revival"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A VRML sci-fi city with jobs, houses, and civic ranks that grew past a million registered citizens before going dark in 2012.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/CyberTown"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/CyberTown",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "oz-virtual",
+   "label": "OZ Virtual",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1996,
+    "end": 1999,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "tech spun off as SmartVR; the team's lineage feeds into CCP and EVE Online"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "OZ Interactive's stylish VRML world of motion-captured dancing avatars whose Icelandic alumni went on to seed EVE Online.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OZ_Virtual"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OZ_Virtual"
+   ]
+  },
+  {
+   "id": "onlive-traveler",
+   "label": "OnLive! Traveler",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1996,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "rescued by Bruce Damer's DigitalSpace as Digital Space Traveler"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Floating heads with real-time voice and lip-sync in 1996 — spatial voice chat a full two decades before social VR made it table stakes.",
+   "links": {},
+   "sources": [
+    "https://damer.com/avatars/traveler.html",
+    "https://archive.org/details/VirtualWorldsTimelineImagesFromTheOnliveTravelerVirtualWorld-1996-97"
+   ]
+  },
+  {
+   "id": "community-place",
+   "label": "Sony Community Place",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 1996,
+    "end": 2003,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "world's first VRML 2.0 browser released free"
+     },
+     {
+      "year": 2003,
+      "what": "the SAPARi service closes in January"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Sony's VRML chat system, preloaded on VAIO laptops as SAPARi, that co-wrote the Moving Worlds proposal behind VRML 2.0.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/SAPARi"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/SAPARi",
+    "http://www.naturalinnovation.org/vrml/vrml2/marrin_history.htm"
+   ]
+  },
+  {
+   "id": "there",
+   "label": "There",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2003,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2010,
+      "what": "closes March 9 as the recession guts revenue"
+     },
+     {
+      "year": 2012,
+      "what": "relaunches as a subscription service for adults"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The polished, PG-rated hoverboard-and-buggy world that fought Second Life for the future of avatar socializing and lost gracefully — twice.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)",
+    "https://venturebeat.com/2010/03/03/virtual-world-there-com-shutting-down-march-9/"
+   ]
+  },
+  {
+   "id": "secondlife",
+   "label": "Second Life",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2003,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "mainstream hype peak: real companies and a virtual millionaire"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Linden Lab's user-built universe with a real-money economy that became the household synonym for 'virtual world' and simply never died.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Second_Life"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "id": "opensimulator",
+   "label": "OpenSimulator",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2007,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2008,
+      "what": "Hypergrid links independent grids into a federated metaverse"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The open-source reimplementation of Second Life's server that let anyone run their own grid and federate it with strangers.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenSimulator"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenSimulator"
+   ]
+  },
+  {
+   "id": "imvu",
+   "label": "IMVU",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Room-by-room avatar chat with a massive user-generated catalog, and the startup whose pivots gave Eric Ries the Lean Startup gospel.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/IMVU"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU"
+   ]
+  },
+  {
+   "id": "habbo",
+   "label": "Habbo Hotel",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2000,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Sulake's pixelated Finnish hotel that checked in hundreds of millions of teenagers and taught them what a furni economy was.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Habbo"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habbo"
+   ]
+  },
+  {
+   "id": "club-penguin",
+   "label": "Club Penguin",
+   "kind": "game",
+   "track": "worlds",
+   "dates": {
+    "start": 2005,
+    "end": 2017,
+    "milestones": [
+     {
+      "year": 2007,
+      "what": "Disney buys it for up to $700M"
+     },
+     {
+      "year": 2017,
+      "what": "shut down in March; fan clones later forced offline too"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The waddling penguin world that became an entire generation's first online society before Disney iced it in 2017.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Club_Penguin"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Club_Penguin"
+   ]
+  },
+  {
+   "id": "toontown",
+   "label": "Toontown Online",
+   "kind": "game",
+   "track": "worlds",
+   "dates": {
+    "start": 2003,
+    "end": 2013,
+    "milestones": [
+     {
+      "year": 2013,
+      "what": "fans resurrect it as Toontown Rewritten"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Disney's kid-safe MMO where cartoon citizens fought humorless corporate robots — closed in 2013, resurrected by its own fans.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Toontown_Online"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Toontown_Online"
+   ]
+  },
+  {
+   "id": "gaia-online",
+   "label": "Gaia Online",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2003,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The anime-flavored forum-plus-avatar community that was one of the web's biggest teen hangouts of the mid-2000s.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Gaia_Online"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaia_Online"
+   ]
+  },
+  {
+   "id": "pshome",
+   "label": "PlayStation Home",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2008,
+    "end": 2015,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "closed worldwide March 31 after 41 million users"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Sony's console-bound virtual plaza where PS3 owners queued their avatars for bowling — mocked constantly, mourned genuinely.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/PlayStation_Home"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "id": "bluemars",
+   "label": "Blue Mars",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2009,
+    "end": 2012,
+    "milestones": [
+     {
+      "year": 2011,
+      "what": "PC development ceases; company pivots to iOS"
+     },
+     {
+      "year": 2012,
+      "what": "technology handed to Ball State University"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A CryEngine-powered, Hawaii-built bid to out-render Second Life on a terraformed Mars that ran out of oxygen by 2012.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blue_Mars_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blue_Mars_(video_game)",
+    "http://www.metaversejournal.com/2011/01/15/the-partial-death-and-refocus-of-blue-mars/"
+   ]
+  },
+  {
+   "id": "twinity",
+   "label": "Twinity",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2008,
+    "end": 2021,
+    "milestones": [
+     {
+      "year": 2012,
+      "what": "acquired by ExitReality"
+     },
+     {
+      "year": 2021,
+      "what": "servers taken offline in December"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Metaversum's mirror-world that rebuilt real Berlin, Singapore, and London to scale so your avatar could live at your actual address.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Twinity"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Twinity",
+    "https://www.hypergridbusiness.com/2012/06/troubled-twinity-bought-by-exit-reality/"
+   ]
+  },
+  {
+   "id": "entropia",
+   "label": "Entropia Universe",
+   "kind": "game",
+   "track": "worlds",
+   "dates": {
+    "start": 2003,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2005,
+      "what": "virtual asteroid sells for a record $100,000 real dollars"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "MindArk's sci-fi world with a fixed dollar exchange rate, where virtual real estate deals kept setting real-world Guinness records.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Entropia_Universe"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Entropia_Universe"
+   ]
+  },
+  {
+   "id": "kaneva",
+   "label": "Virtual World of Kaneva",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2006,
+    "end": 2016,
+    "milestones": [
+     {
+      "year": 2016,
+      "what": "world shut down November 14"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "An Atlanta-built world that fused social networking profiles with 3D hangouts a beat too early, closing quietly in 2016.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtual_World_of_Kaneva"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_World_of_Kaneva"
+   ]
+  },
+  {
+   "id": "cloudparty",
+   "label": "Cloud Party",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2012,
+    "end": 2014,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "team acqui-hired by Yahoo in February; world closed"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A no-download, WebGL virtual world that ran inside a browser tab — and even inside Facebook — years before that was normal.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cloud_Party"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cloud_Party"
+   ]
+  },
+  {
+   "id": "janusvr",
+   "label": "JanusVR",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2013,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "company founded by James McCrae and Karan Singh"
+     },
+     {
+      "year": 2019,
+      "what": "company winds down; code open-sourced and continued by the community"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A browser that reimagined the web itself as connected 3D rooms, where hyperlinks became doorways you walk through.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusxr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "id": "hubs",
+   "label": "Mozilla Hubs",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2018,
+    "end": 2024,
+    "milestones": [
+     {
+      "year": 2024,
+      "what": "Mozilla shuts it down May 31; Hubs Foundation inherits the code"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Mozilla's open-source WebXR meeting rooms that ran in any browser and hosted nearly ten million visitors before the 2024 shutdown.",
+   "links": {},
+   "sources": [
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/",
+    "https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs"
+   ]
+  },
+  {
+   "id": "cryptovoxels",
+   "label": "Cryptovoxels / Voxels",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2018,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2022,
+      "what": "renamed Voxels"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Ben Nolan's browser-based voxel city on the Ethereum blockchain, the scrappy indie corner of the NFT land rush.",
+   "links": {},
+   "sources": [
+    "https://www.voxels.com/"
+   ]
+  },
+  {
+   "id": "decentraland",
+   "label": "Decentraland",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2017,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2020,
+      "what": "public launch in February"
+     },
+     {
+      "year": 2021,
+      "what": "virtual land parcels sell for millions in the metaverse boom"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The DAO-governed crypto world whose land deeds sold for millions at the boom's peak while its plazas often sat eerily empty.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Decentraland"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland"
+   ]
+  },
+  {
+   "id": "somnium-space",
+   "label": "Somnium Space",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2018,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "A VR-first blockchain world of persistent land and full-body avatars, best known for its founder's dream of 'live forever' avatar preservation.",
+   "links": {},
+   "sources": [
+    "https://somniumspace.com/"
+   ]
+  },
+  {
+   "id": "sandbox",
+   "label": "The Sandbox",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2018,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "public alpha rides the metaverse boom; Snoop Dogg buys in"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Animoca's voxel metaverse where celebrities and brands bought LAND tokens, the maximalist face of the crypto land grab.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Sandbox_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Sandbox_(video_game)"
+   ]
+  },
+  {
+   "id": "altspacevr",
+   "label": "AltspaceVR",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2015,
+    "end": 2023,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "near-death shutdown reversed by Microsoft acquisition in October"
+     },
+     {
+      "year": 2023,
+      "what": "Microsoft closes it March 10, folding the team into Mesh"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The friendly front porch of early consumer VR — comedy nights and meetups — saved once by Microsoft and later killed by it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/AltspaceVR"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "id": "highfidelity",
+   "label": "High Fidelity",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2013,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "abandons its open-source VR world platform"
+     },
+     {
+      "year": 2020,
+      "what": "relaunches as a spatial-audio company"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Philip Rosedale's open-source, decentralized do-over of Second Life for VR that arrived before the headsets did, then pivoted to selling its spatial audio.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc.",
+    "https://www.hypergridbusiness.com/2019/12/high-fidelity-shutting-down/"
+   ]
+  },
+  {
+   "id": "sansar",
+   "label": "Sansar",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2017,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2020,
+      "what": "Linden Lab sells it to Wookey Project Corp in March"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Linden Lab's 'WordPress for VR' successor bid that never inherited Second Life's crowds and was sold off so Linden could go home again.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sansar_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://roadtovr.com/sansar-spin-off-linden-lab-refocus-second-life/"
+   ]
+  },
+  {
+   "id": "vrchat",
+   "label": "VRChat",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "Steam Early Access opens the floodgates in February"
+     },
+     {
+      "year": 2018,
+      "what": "goes viral, exploding to millions of users"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The anything-goes universe of user-built worlds and avatars that became social VR's chaotic capital city and its longest-running success.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/VRChat"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "id": "recroom",
+   "label": "Rec Room",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2016,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2021,
+      "what": "reaches unicorn status on the back of cross-platform play"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The summer-camp of social VR — paintball, quests, and player-built rooms — that outgrew headsets entirely by going cross-platform.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   ]
+  },
+  {
+   "id": "bigscreen",
+   "label": "Bigscreen",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2016,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "ships the ultralight Bigscreen Beyond headset"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The virtual living room where strangers watch movies together, whose maker then shipped one of the lightest VR headsets ever built.",
+   "links": {},
+   "sources": [
+    "https://www.bigscreenvr.com/"
+   ]
+  },
+  {
+   "id": "neos",
+   "label": "Neos VR",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2018,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "development team departs after the Solirax split; platform left frozen"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Frooxius's astonishing build-everything-in-headset engine where the world editor, avatars, and even the UI were live objects you could grab.",
+   "links": {},
+   "sources": [
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/",
+    "https://www.virtualworlds.museum/exhibits/resonite"
+   ]
+  },
+  {
+   "id": "resonite",
+   "label": "Resonite",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2023,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "launches October 6 and the Neos community migrates en masse"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The clean-slate rebuild Frooxius made after splitting with Neos's publisher, carrying his community and in-world-everything philosophy with him.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Resonite"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite",
+    "https://www.uploadvr.com/resonite-vr-steam-early-access/"
+   ]
+  },
+  {
+   "id": "horizon",
+   "label": "Horizon Worlds",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2021,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2020,
+      "what": "invite-only beta opens"
+     },
+     {
+      "year": 2022,
+      "what": "a legless avatar selfie becomes the metaverse era's defining meme"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Meta's flagship social world, launched with the weight of a corporate rename behind it and forever haunted by one legless screenshot.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   ]
+  },
+  {
+   "id": "facebook-spaces",
+   "label": "Facebook Spaces",
+   "kind": "product",
+   "track": "worlds",
+   "dates": {
+    "start": 2017,
+    "end": 2019,
+    "milestones": [
+     {
+      "year": 2019,
+      "what": "shut down October 25 as Horizon is announced"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Facebook's cartoon-avatar VR hangout for your real friends list, retired after two years to clear the stage for Horizon.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Facebook_Spaces"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook_Spaces",
+    "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   ]
+  },
+  {
+   "id": "lucasfilm-games",
+   "label": "Lucasfilm Games",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1982,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "George Lucas's game studio, which bankrolled the improbable experiment that became the first graphical virtual world.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lucasfilm_Games"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lucasfilm_Games"
+   ]
+  },
+  {
+   "id": "fujitsu",
+   "label": "Fujitsu",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1935,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The Japanese electronics giant that kept the Habitat bloodline alive across two continents long after Lucasfilm moved on.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fujitsu"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fujitsu"
+   ]
+  },
+  {
+   "id": "electric-communities",
+   "label": "Electric Communities",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1994,
+    "end": 2001,
+    "milestones": [
+     {
+      "year": 1999,
+      "what": "renamed Communities.com after absorbing The Palace"
+     },
+     {
+      "year": 2001,
+      "what": "bankruptcy ends official Palace development"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Habitat veterans' deeply ambitious attempt to build a secure, decentralized metaverse in the 1990s, whose E language outlived its worlds.",
+   "links": {},
+   "sources": [
+    "http://www.fudco.com/chip/resume.html",
+    "https://en.wikipedia.org/wiki/Chip_Morningstar",
+    "https://en.wikipedia.org/wiki/Douglas_Crockford"
+   ]
+  },
+  {
+   "id": "worlds-inc",
+   "label": "Worlds Inc",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1995,
+      "what": "ships both Worlds Chat and AlphaWorld within months"
+     },
+     {
+      "year": 2012,
+      "what": "resurfaces as a patent litigant against game giants"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The company that launched two founding 3D worlds in one year, then spent its afterlife suing the industry over metaverse patents.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Worlds.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Worlds.com"
+   ]
+  },
+  {
+   "id": "activeworlds-inc",
+   "label": "Activeworlds Inc",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1997,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The small operation that bought Active Worlds from Worlds Inc in 1997 and has kept the pioneer world's servers humming ever since.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Active_Worlds"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "id": "blaxxun",
+   "label": "blaxxun interactive",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1995,
+    "end": 2002,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "renames from Black Sun Interactive — both names lifted from Snow Crash"
+     },
+     {
+      "year": 2002,
+      "what": "insolvency ends the original company"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Munich VRML pioneer literally named after Snow Crash's metaverse bar, whose multi-user tech powered Cybertown.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blaxxun"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "id": "linden-lab",
+   "label": "Linden Lab",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1999,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Philip Rosedale's San Francisco lab that turned a haptics experiment into Second Life and has stewarded it for over two decades.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Linden_Lab"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Linden_Lab"
+   ]
+  },
+  {
+   "id": "disney",
+   "label": "The Walt Disney Company",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1923,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The entertainment empire that built Toontown, bought Club Penguin, and eventually shuttered both kid-world experiments.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Walt_Disney_Company"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Walt_Disney_Company"
+   ]
+  },
+  {
+   "id": "sony",
+   "label": "Sony",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1946,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "Twice a virtual-world builder: VRML's Community Place in the 90s and the PS3's PlayStation Home a decade later.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sony"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sony"
+   ]
+  },
+  {
+   "id": "microsoft",
+   "label": "Microsoft",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1975,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "acquires AltspaceVR"
+     },
+     {
+      "year": 2023,
+      "what": "shuts AltspaceVR, folding social VR into Mesh"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The giant that rescued AltspaceVR in 2017, then retired it in 2023 in favor of enterprise-flavored Mesh.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft"
+   ]
+  },
+  {
+   "id": "meta",
+   "label": "Meta",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2014,
+      "what": "buys Oculus for $2 billion"
+     },
+     {
+      "year": 2021,
+      "what": "renames from Facebook, betting the company on the metaverse"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": false,
+   "blurb": "The social network that renamed itself after the metaverse and spent tens of billions trying to build one people would visit.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Meta_Platforms"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Platforms"
+   ]
+  },
+  {
+   "id": "mozilla",
+   "label": "Mozilla",
+   "kind": "company",
+   "track": "worlds",
+   "dates": {
+    "start": 1998,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The open-web foundation whose Hubs proved browser-native social VR worked, then handed the keys to its community in 2024.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mozilla"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mozilla",
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/"
+   ]
+  },
+  {
+   "id": "chip-morningstar",
+   "label": "Chip Morningstar",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1985,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Habitat's lead designer, whose 'Lessons of Lucasfilm's Habitat' paper became the founding document of virtual-world design.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chip_Morningstar",
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "id": "randy-farmer",
+   "label": "Randy Farmer",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1985,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Habitat's co-creator and the field's institutional memory, still dispensing avatar-economy wisdom four decades on.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Randy_Farmer"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "id": "jim-bumgardner",
+   "label": "Jim Bumgardner",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The programmer-artist who built The Palace and gave 90s internet culture its prop-wearing floating heads.",
+   "links": {},
+   "sources": [
+    "https://www.palaceplanet.net/news/superscoop/jbum_interview.html",
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)"
+   ]
+  },
+  {
+   "id": "ron-britvich",
+   "label": "Ron Britvich",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The engineer who single-handedly prototyped AlphaWorld and handed ordinary users the power to build a virtual continent.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "id": "bruce-damer",
+   "label": "Bruce Damer",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1994,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1997,
+      "what": "publishes Avatars!, the field's first survey book"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The chronicler and evangelist of the first avatar era, who founded the Contact Consortium and kept Traveler alive through DigitalSpace.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bruce_Damer"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bruce_Damer",
+    "https://damer.com/avatars/traveler.html"
+   ]
+  },
+  {
+   "id": "philip-rosedale",
+   "label": "Philip Rosedale",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1999,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2022,
+      "what": "returns to Second Life as strategic advisor"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The metaverse's most persistent believer, who built Second Life, tried again with High Fidelity, and came back to Second Life anyway.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "id": "will-harvey",
+   "label": "Will Harvey",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 1998,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The teenage game-dev prodigy who founded There and then IMVU, betting twice that avatars were the future of hanging out.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Will_Harvey"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "id": "graham-gaylor",
+   "label": "Graham Gaylor",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "VRChat's founder, who started with a tiny DK1 chat demo and ended up mayor of social VR's biggest city.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "id": "jesse-joudrey",
+   "label": "Jesse Joudrey",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "VRChat's co-founder and CTO, the engineering half of the pair that scaled a hobby chat app into a platform of millions.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "id": "frooxius",
+   "label": "Tomáš \"Frooxius\" Mariančík",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The Czech engine wizard who essentially solo-built Neos VR, then rebuilt his entire vision as Resonite after splitting with his publisher.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite",
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/"
+   ]
+  },
+  {
+   "id": "james-mccrae",
+   "label": "James McCrae",
+   "kind": "person",
+   "track": "worlds",
+   "dates": {
+    "start": 2013,
+    "end": null,
+    "milestones": []
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "The University of Toronto graphics PhD who decided web links should be doors and built JanusVR to prove it.",
+   "links": {},
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusxr-james-mccrae-jonathan-ore/"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "lucasfilm-games",
+   "to": "habitat",
+   "type": "created",
+   "start": 1985,
+   "end": 1988,
+   "note": "developed for Quantum Link",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "habitat",
+   "type": "role",
+   "role": "creator",
+   "start": 1985,
+   "end": 1988,
+   "note": "project leader and designer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "habitat",
+   "type": "role",
+   "role": "creator",
+   "start": 1985,
+   "end": 1988,
+   "note": "co-creator, ran the in-world Oracle",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "club-caribe",
+   "to": "habitat",
+   "type": "succeeded",
+   "start": 1988,
+   "note": "scaled-down relaunch on Quantum Link",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "lucasfilm-games",
+   "to": "club-caribe",
+   "type": "created",
+   "start": 1988,
+   "note": "repackaged Habitat to recoup costs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "fujitsu-habitat",
+   "to": "habitat",
+   "type": "built-on",
+   "start": 1990,
+   "note": "licensed Japanese port of the Habitat codebase",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://wiki.renoproject.org/index.php/Fujitsu_Habitat_History"
+   ]
+  },
+  {
+   "from": "fujitsu",
+   "to": "fujitsu-habitat",
+   "type": "created",
+   "start": 1990,
+   "note": "launched on NIFTY-Serve",
+   "sources": [
+    "https://wiki.renoproject.org/index.php/Fujitsu_Habitat_History"
+   ]
+  },
+  {
+   "from": "fujitsu",
+   "to": "worldsaway",
+   "type": "created",
+   "start": 1995,
+   "note": "via subsidiary Fujitsu Cultural Technologies, for CompuServe",
+   "sources": [
+    "https://www.pcworld.com/article/424450/this-old-tech-remembering-worldsaways-avatars-and-virtual-experiences.html"
+   ]
+  },
+  {
+   "from": "worldsaway",
+   "to": "fujitsu-habitat",
+   "type": "succeeded",
+   "start": 1995,
+   "note": "Fujitsu's western follow-on to its Habitat line",
+   "sources": [
+    "https://www.pcworld.com/article/424450/this-old-tech-remembering-worldsaways-avatars-and-virtual-experiences.html",
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 2000,
+   "note": "co-founder with Farmer and Crockford",
+   "sources": [
+    "http://www.fudco.com/chip/resume.html",
+    "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 2001,
+   "note": "co-founder; stayed through the Communities.com era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "electric-communities",
+   "to": "palace",
+   "type": "acquired",
+   "start": 1998,
+   "note": "Softbank-brokered consolidation; renamed Communities.com",
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)",
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "from": "jim-bumgardner",
+   "to": "palace",
+   "type": "role",
+   "role": "creator",
+   "start": 1994,
+   "end": 2000,
+   "note": "designed and programmed the original client/server",
+   "sources": [
+    "https://www.palaceplanet.net/news/superscoop/jbum_interview.html",
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "worlds-chat",
+   "type": "created",
+   "start": 1995,
+   "note": "launched April 1995",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Worlds.com"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "alphaworld",
+   "type": "created",
+   "start": 1995,
+   "note": "launched June 1995",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "ron-britvich",
+   "to": "alphaworld",
+   "type": "role",
+   "role": "creator",
+   "start": 1994,
+   "end": 1996,
+   "note": "wrote the original AlphaWorld",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "activeworlds-inc",
+   "to": "alphaworld",
+   "type": "acquired",
+   "start": 1997,
+   "note": "Circle of Fire Studios bought the tech from Worlds Inc",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "blaxxun",
+   "to": "cybertown",
+   "type": "acquired",
+   "start": 1996,
+   "note": "became blaxxun's flagship community",
+   "sources": [
+    "https://en.wikipedia.org/wiki/CyberTown",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "community-place",
+   "type": "created",
+   "start": 1996,
+   "note": "first VRML 2.0 browser plus multi-user bureau",
+   "sources": [
+    "https://en.wikipedia.org/wiki/SAPARi",
+    "http://www.naturalinnovation.org/vrml/vrml2/marrin_history.htm"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "pshome",
+   "type": "created",
+   "start": 2008,
+   "end": 2015,
+   "note": "PS3's social world",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "from": "bruce-damer",
+   "to": "onlive-traveler",
+   "type": "acquired",
+   "start": 1999,
+   "note": "his DigitalSpace took over Traveler after OnLive pivoted",
+   "sources": [
+    "https://damer.com/avatars/traveler.html"
+   ]
+  },
+  {
+   "from": "worlds-chat",
+   "to": "palace",
+   "type": "competed-with",
+   "start": 1995,
+   "end": 2000,
+   "note": "rival avatar-chat platforms of the 1995 wave",
+   "sources": [
+    "https://www.classic-computers.org.nz/blog/2022-12-15-chat-memories-part-3.htm"
+   ]
+  },
+  {
+   "from": "alphaworld",
+   "to": "cybertown",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2002,
+   "note": "rival build-your-own 3D communities",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds",
+    "https://en.wikipedia.org/wiki/CyberTown"
+   ]
+  },
+  {
+   "from": "oz-virtual",
+   "to": "onlive-traveler",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1998,
+   "note": "rival avatar worlds of the VRML moment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OZ_Virtual",
+    "https://damer.com/avatars/traveler.html"
+   ]
+  },
+  {
+   "from": "community-place",
+   "to": "cybertown",
+   "type": "competed-with",
+   "start": 1997,
+   "end": 2002,
+   "note": "competing VRML multi-user platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/SAPARi",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "habitat",
+   "to": "secondlife",
+   "type": "influenced",
+   "start": 1986,
+   "note": "avatars, user economy, and emergent-society lessons set the template",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "secondlife",
+   "type": "created",
+   "start": 2003,
+   "note": "launched June 2003",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "founder",
+   "start": 1999,
+   "end": null,
+   "note": "founder; CEO until 2008, advisor again from 2022",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "highfidelity",
+   "type": "role",
+   "role": "founder",
+   "start": 2013,
+   "end": null,
+   "note": "founded after leaving Linden Lab",
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "opensimulator",
+   "to": "secondlife",
+   "type": "built-on",
+   "start": 2007,
+   "note": "open-source server compatible with the Second Life viewer protocol",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenSimulator"
+   ]
+  },
+  {
+   "from": "there",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2010,
+   "note": "the era's defining head-to-head for avatar socializing",
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "there",
+   "type": "role",
+   "role": "founder",
+   "start": 1998,
+   "end": 2004,
+   "note": "founded There Inc",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey",
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "imvu",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "co-founded with Eric Ries and others",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU",
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "from": "imvu",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2004,
+   "end": 2012,
+   "note": "rival avatar platforms with user-generated catalogs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "entropia",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2012,
+   "note": "rival real-money virtual economies",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Entropia_Universe",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "disney",
+   "to": "toontown",
+   "type": "created",
+   "start": 2003,
+   "end": 2013,
+   "note": "Disney's kid MMO; closed September 2013",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Toontown_Online"
+   ]
+  },
+  {
+   "from": "disney",
+   "to": "club-penguin",
+   "type": "acquired",
+   "start": 2007,
+   "note": "bought New Horizon Interactive for up to $700M",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Club_Penguin"
+   ]
+  },
+  {
+   "from": "habbo",
+   "to": "club-penguin",
+   "type": "competed-with",
+   "start": 2005,
+   "end": 2017,
+   "note": "rival kid/teen avatar worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habbo",
+    "https://en.wikipedia.org/wiki/Club_Penguin"
+   ]
+  },
+  {
+   "from": "gaia-online",
+   "to": "habbo",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2012,
+   "note": "rival teen avatar communities on the web",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaia_Online",
+    "https://en.wikipedia.org/wiki/Habbo"
+   ]
+  },
+  {
+   "from": "pshome",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2012,
+   "note": "console walled-garden answer to the PC virtual-world boom",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "from": "bluemars",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2009,
+   "end": 2011,
+   "note": "positioned as a high-fidelity Second Life challenger",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blue_Mars_(video_game)",
+    "http://www.metaversejournal.com/2011/01/15/the-partial-death-and-refocus-of-blue-mars/"
+   ]
+  },
+  {
+   "from": "twinity",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2012,
+   "note": "Berlin's mirror-world rival to SL",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Twinity",
+    "https://www.hypergridbusiness.com/2012/06/troubled-twinity-bought-by-exit-reality/"
+   ]
+  },
+  {
+   "from": "kaneva",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2006,
+   "end": 2012,
+   "note": "social-network-meets-3D-world SL competitor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_World_of_Kaneva"
+   ]
+  },
+  {
+   "from": "cloudparty",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2012,
+   "end": 2014,
+   "note": "browser-based challenge to the download-client incumbents",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cloud_Party"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusvr",
+   "type": "role",
+   "role": "creator",
+   "start": 2013,
+   "end": 2019,
+   "note": "created the immersive web browser; co-founded the company in 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusxr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "from": "mozilla",
+   "to": "hubs",
+   "type": "created",
+   "start": 2018,
+   "end": 2024,
+   "note": "WebXR social rooms; shut down May 2024",
+   "sources": [
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/",
+    "https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "hubs",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2019,
+   "note": "rival visions of the immersive web",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "cryptovoxels",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2022,
+   "note": "rival Ethereum land-parcel worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://www.voxels.com/"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "sandbox",
+   "type": "competed-with",
+   "start": 2021,
+   "end": null,
+   "note": "the two flagship crypto-metaverse land markets",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://en.wikipedia.org/wiki/The_Sandbox_(video_game)"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "somnium-space",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "competing blockchain virtual-land platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://somniumspace.com/"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "altspacevr",
+   "type": "acquired",
+   "start": 2017,
+   "note": "October 2017 rescue acquisition; shut down March 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "from": "graham-gaylor",
+   "to": "vrchat",
+   "type": "role",
+   "role": "founder",
+   "start": 2014,
+   "end": null,
+   "note": "founder and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "jesse-joudrey",
+   "to": "vrchat",
+   "type": "role",
+   "role": "cto",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder and CTO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "frooxius",
+   "to": "neos",
+   "type": "role",
+   "role": "creator",
+   "start": 2018,
+   "end": 2023,
+   "note": "lead developer until the Solirax split",
+   "sources": [
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/",
+    "https://en.wikipedia.org/wiki/Resonite"
+   ]
+  },
+  {
+   "from": "frooxius",
+   "to": "resonite",
+   "type": "role",
+   "role": "creator",
+   "start": 2023,
+   "end": null,
+   "note": "created under his new studio Yellow Dog Man",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite"
+   ]
+  },
+  {
+   "from": "resonite",
+   "to": "neos",
+   "type": "succeeded",
+   "start": 2023,
+   "note": "lead developer and community migrated after the split with publisher Solirax",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite",
+    "https://www.uploadvr.com/resonite-vr-steam-early-access/"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "sansar",
+   "type": "created",
+   "start": 2017,
+   "end": 2020,
+   "note": "next-gen VR platform; sold to Wookey Project in 2020",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://roadtovr.com/sansar-spin-off-linden-lab-refocus-second-life/"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "facebook-spaces",
+   "type": "created",
+   "start": 2017,
+   "end": 2019,
+   "note": "as Facebook; its first social VR app",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook_Spaces"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "horizon",
+   "type": "created",
+   "start": 2021,
+   "note": "flagship metaverse app after the rename",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   ]
+  },
+  {
+   "from": "horizon",
+   "to": "facebook-spaces",
+   "type": "succeeded",
+   "start": 2019,
+   "note": "Spaces was shut down the day Horizon was announced",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook_Spaces",
+    "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "vrchat",
+   "type": "competed-with",
+   "start": 2015,
+   "end": 2023,
+   "note": "core rivals of the social-VR land grab",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "recroom",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2023,
+   "note": "competing social VR hangouts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "highfidelity",
+   "type": "competed-with",
+   "start": 2015,
+   "end": 2019,
+   "note": "rival bids to own social VR's early years",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "facebook-spaces",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2019,
+   "note": "independent vs platform-owned social VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/Facebook_Spaces"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "recroom",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "the two enduring giants of social VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat",
+    "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "neos",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2023,
+   "note": "UGC sandbox rivals; Neos courted VRChat's power creators",
+   "sources": [
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "horizon",
+   "type": "competed-with",
+   "start": 2021,
+   "end": null,
+   "note": "indie incumbent vs Meta's flagship",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Horizon_Worlds",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "sansar",
+   "to": "highfidelity",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2019,
+   "note": "dueling next-gen platforms from Second Life's own lineage",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "sansar",
+   "to": "vrchat",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2020,
+   "note": "polished creator platform vs anarchic UGC juggernaut",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  }
+ ]
+}

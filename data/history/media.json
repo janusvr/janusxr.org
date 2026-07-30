@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "The media shelf — quintessential reading & viewing",
+    "note": "Books, films, and papers that shaped the idea of virtual worlds. Shown on the shelf in the history station and as the reading list in #history."
+  },
+  "items": [
+    { "id": "truenames", "title": "True Names", "year": 1981, "creator": "Vernor Vinge", "kind": "novel",
+      "blurb": "The novella that saw it first: pseudonymous lives in a consensual imagined space, a decade before the web.",
+      "url": "https://en.wikipedia.org/wiki/True_Names",
+      "media_url": "https://openlibrary.org/search?q=true+names+vernor+vinge" },
+    { "id": "tron", "title": "TRON", "year": 1982, "creator": "Steven Lisberger", "kind": "film",
+      "blurb": "Inside the machine as a place — the aesthetic half the industry has been chasing ever since (this site included).",
+      "url": "https://en.wikipedia.org/wiki/Tron",
+      "media_url": "https://www.justwatch.com/us/movie/tron" },
+    { "id": "neuromancer", "title": "Neuromancer", "year": 1984, "creator": "William Gibson", "kind": "novel",
+      "blurb": "Coined cyberspace as a “consensual hallucination” — the word the whole field grew up inside.",
+      "url": "https://en.wikipedia.org/wiki/Neuromancer",
+      "media_url": "https://openlibrary.org/search?q=neuromancer+william+gibson" },
+    { "id": "lessons-habitat", "title": "The Lessons of Lucasfilm's Habitat", "year": 1990, "creator": "Chip Morningstar & Randy Farmer", "kind": "paper",
+      "blurb": "The field's founding postmortem: everything hard about running a world full of people, learned the first time.",
+      "url": "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+      "media_url": "http://www.fudco.com/chip/lessons.html" },
+    { "id": "snowcrash", "title": "Snow Crash", "year": 1992, "creator": "Neal Stephenson", "kind": "novel",
+      "blurb": "Named the Metaverse and the Street; half the companies on the map are trying to build this book.",
+      "url": "https://en.wikipedia.org/wiki/Snow_Crash",
+      "media_url": "https://openlibrary.org/search?q=snow+crash+neal+stephenson" },
+    { "id": "designing-vw", "title": "Designing Virtual Worlds", "year": 2003, "creator": "Richard Bartle", "kind": "paper",
+      "blurb": "MUD1's co-creator writes the discipline down: the definitive text on what worlds are and who they're for.",
+      "url": "https://en.wikipedia.org/wiki/Richard_Bartle",
+      "media_url": "https://openlibrary.org/search?q=designing+virtual+worlds+bartle" },
+    { "id": "sao", "title": "Sword Art Online", "year": 2012, "creator": "Reki Kawahara", "kind": "anime",
+      "blurb": "The series that taught a generation (and half of VRChat) to want full-dive — the trapped-in-the-game story as aspiration.",
+      "url": "https://en.wikipedia.org/wiki/Sword_Art_Online",
+      "media_url": "https://www.justwatch.com/us/tv-show/sword-art-online" },
+    { "id": "rpo", "title": "Ready Player One", "year": 2011, "creator": "Ernest Cline", "kind": "novel",
+      "blurb": "The OASIS brought the metaverse back into boardrooms — nostalgia as world-engine, for better and worse.",
+      "url": "https://en.wikipedia.org/wiki/Ready_Player_One",
+      "media_url": "https://openlibrary.org/search?q=ready+player+one+ernest+cline" }
+  ]
+}

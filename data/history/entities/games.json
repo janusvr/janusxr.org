@@ -1,0 +1,1096 @@
+{
+ "track": "games",
+ "entities": [
+  {
+   "id": "spacewar",
+   "label": "Spacewar!",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1962,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The MIT PDP-1 dueling-rockets demo that proved computers could host shared playful worlds.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Spacewar!"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Spacewar!"
+   ]
+  },
+  {
+   "id": "mazewar",
+   "label": "Maze War",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1973,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "NASA Ames students wired Imlac terminals into the first first-person multiplayer shooter.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Maze_(1973_video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Maze_War"
+   ]
+  },
+  {
+   "id": "adventure",
+   "label": "Colossal Cave Adventure",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1976,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Will Crowther's mapped Kentucky cave in text, the root of every explorable virtual place.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"
+   ]
+  },
+  {
+   "id": "mud1",
+   "label": "MUD1",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1978,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1987,
+      "what": "licensed to CompuServe as British Legends"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Essex University's Multi-User Dungeon, the shared text world that named an entire genre.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/MUD1"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/MUD1"
+   ]
+  },
+  {
+   "id": "roy-trubshaw",
+   "label": "Roy Trubshaw",
+   "kind": "person",
+   "track": "games",
+   "dates": {
+    "start": 1978,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Essex student who wrote the original MUD in 1978 and handed the world to Richard Bartle.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Roy_Trubshaw"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roy_Trubshaw"
+   ]
+  },
+  {
+   "id": "kesmai",
+   "label": "Island of Kesmai",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1985,
+    "end": 1996
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "CompuServe's $6-an-hour roguelike island, one of the first commercial multiplayer online RPGs.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Island_of_Kesmai"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Island_of_Kesmai"
+   ]
+  },
+  {
+   "id": "abermud",
+   "label": "AberMUD",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1987,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Alan Cox's Aberystwyth MUD whose spreading source code seeded the great MUD family trees.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/AberMUD"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/AberMUD"
+   ]
+  },
+  {
+   "id": "knowledge-revolution",
+   "label": "Knowledge Revolution",
+   "kind": "company",
+   "track": "games",
+   "dates": {
+    "start": 1989,
+    "end": 1998,
+    "milestones": [
+     {
+      "year": 1998,
+      "what": "acquired by MacNeal-Schwendler (MSC) for $19.2M"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Baszucki's educational software firm whose Interactive Physics sim was Roblox's conceptual ancestor.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Knowledge_Revolution"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Knowledge_Revolution",
+    "https://en.wikipedia.org/wiki/David_Baszucki"
+   ]
+  },
+  {
+   "id": "tinymud",
+   "label": "TinyMUD",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1989,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Jim Aspnes stripped out combat and let players build rooms, tilting MUDs toward social worlds.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/TinyMUD"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/TinyMUD"
+   ]
+  },
+  {
+   "id": "dikumud",
+   "label": "DikuMUD",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1990,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1991,
+      "what": "source released from the University of Copenhagen"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Copenhagen's class-and-level combat MUD codebase whose DNA runs straight into EverQuest.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/DikuMUD"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/DikuMUD"
+   ]
+  },
+  {
+   "id": "lambdamoo",
+   "label": "LambdaMOO",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1990,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The programmable text mansion at Xerox PARC where online community governance was invented the hard way.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/LambdaMOO"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/LambdaMOO"
+   ]
+  },
+  {
+   "id": "pavel-curtis",
+   "label": "Pavel Curtis",
+   "kind": "person",
+   "track": "games",
+   "dates": {
+    "start": 1990,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Xerox PARC researcher who founded and ran LambdaMOO as a living laboratory of online society.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Curtis"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pavel_Curtis"
+   ]
+  },
+  {
+   "id": "blizzard",
+   "label": "Blizzard Entertainment",
+   "kind": "company",
+   "track": "games",
+   "dates": {
+    "start": 1991,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The Irvine studio whose World of Warcraft defined the mass-market persistent world.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blizzard_Entertainment"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blizzard_Entertainment"
+   ]
+  },
+  {
+   "id": "neverwinter-nights-aol",
+   "label": "Neverwinter Nights (AOL)",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1991,
+    "end": 1997
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Stormfront's AOL D&D world, widely credited as the first graphical MMORPG on a major service.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Neverwinter_Nights_(1991_video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neverwinter_Nights_(1991_video_game)"
+   ]
+  },
+  {
+   "id": "zzt",
+   "label": "ZZT",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1991,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Sweeney's ANSI-art game that shipped with its own world editor, breeding a user-creation community.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/ZZT"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZZT"
+   ]
+  },
+  {
+   "id": "wolfenstein-3d",
+   "label": "Wolfenstein 3D",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1992,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Id's shareware castle run that established the template Doom would detonate a year later.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Wolfenstein_3D"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wolfenstein_3D"
+   ]
+  },
+  {
+   "id": "doom",
+   "label": "Doom",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1993,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1994,
+      "what": "deathmatch and DWANGO dial-up play spread multiplayer culture"
+     },
+     {
+      "year": 1997,
+      "what": "source code released, seeding decades of mods and ports"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The shareware inferno that spawned deathmatch, mod culture, and a decade of 'Doom clones'.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "id": "renderware",
+   "label": "RenderWare",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 1993,
+    "end": 2006,
+    "milestones": [
+     {
+      "year": 2001,
+      "what": "powered Grand Theft Auto III"
+     },
+     {
+      "year": 2004,
+      "what": "Criterion acquired by EA"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Criterion's middleware workhorse of the PS2 era, effectively retired from the market after EA bought it.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/RenderWare"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/RenderWare"
+   ]
+  },
+  {
+   "id": "meridian59",
+   "label": "Meridian 59",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1996,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "The 3DO-published pioneer usually credited as the first 3D MMORPG, a year ahead of Ultima Online.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Meridian_59"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meridian_59"
+   ]
+  },
+  {
+   "id": "quake",
+   "label": "Quake",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1996,
+    "end": null,
+    "milestones": [
+     {
+      "year": 1996,
+      "what": "QuakeWorld brought internet-optimized netplay"
+     },
+     {
+      "year": 1999,
+      "what": "Quake III engine (id Tech 3) licensed for Call of Duty and Medal of Honor"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "True-3D internet deathmatch whose engine, licensed far and wide, became the trunk of the id Tech tree.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Quake_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quake_(video_game)"
+   ]
+  },
+  {
+   "id": "sm64",
+   "label": "Super Mario 64",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1996,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The analog-stick playground that taught the whole industry how to move a camera through 3D space.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Super_Mario_64"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Super_Mario_64"
+   ]
+  },
+  {
+   "id": "ncsoft",
+   "label": "NCSoft",
+   "kind": "company",
+   "track": "games",
+   "dates": {
+    "start": 1997,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The Seoul publisher behind Lineage and Guild Wars that industrialized the Korean MMO.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/NCSoft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/NCSoft"
+   ]
+  },
+  {
+   "id": "ultima-online",
+   "label": "Ultima Online",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1997,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Origin's shard-based fantasy world that put 'massively multiplayer' into the industry's vocabulary.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ultima_Online"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ultima_Online"
+   ]
+  },
+  {
+   "id": "goldsrc",
+   "label": "GoldSrc",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 1,
+   "influence": true,
+   "blurb": "Valve's heavily rebuilt Quake engine, the substrate of Half-Life and the Counter-Strike mod boom.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/GoldSrc"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/GoldSrc"
+   ]
+  },
+  {
+   "id": "half-life",
+   "label": "Half-Life",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Valve's scripted-story shooter whose open mod tools made it a platform as much as a game.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+   ]
+  },
+  {
+   "id": "lineage",
+   "label": "Lineage",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1998,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "NCSoft's castle-siege MMO that built Korea's PC-bang economy and its MMO industry.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lineage_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lineage_(video_game)"
+   ]
+  },
+  {
+   "id": "unreal",
+   "label": "Unreal Engine",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1998,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2015,
+      "what": "UE4 made free with royalties, exploding adoption"
+     },
+     {
+      "year": 2022,
+      "what": "UE5 shipped Nanite and Lumen"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Epic's licensed engine dynasty, from the 1998 shooter Unreal to the substrate of Fortnite and film sets.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unreal_Engine"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Engine"
+   ]
+  },
+  {
+   "id": "asherons-call",
+   "label": "Asheron's Call",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1999,
+    "end": 2017
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Turbine's seamless-world MMO, the third of the big three late-90s MMORPGs, published by Microsoft.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Asheron%27s_Call"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Asheron%27s_Call"
+   ]
+  },
+  {
+   "id": "counter-strike",
+   "label": "Counter-Strike",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1999,
+    "end": null
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The Half-Life mod by two amateurs that became the definitive proof of mod culture's power.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Counter-Strike_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Counter-Strike_(video_game)"
+   ]
+  },
+  {
+   "id": "everquest",
+   "label": "EverQuest",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1999,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "The DikuMUD-descended 3D world that made subscription MMORPGs a mass business before WoW.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/EverQuest"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/EverQuest"
+   ]
+  },
+  {
+   "id": "unreal-tournament",
+   "label": "Unreal Tournament",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 1999,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Epic's arena shooter that met Quake III head-on in the winter of 1999's great FPS duel.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unreal_Tournament"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Tournament"
+   ]
+  },
+  {
+   "id": "runescape",
+   "label": "RuneScape",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2001,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The Gower brothers' browser MMO that quietly amassed hundreds of millions of accounts.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/RuneScape"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/RuneScape"
+   ]
+  },
+  {
+   "id": "ffxi",
+   "label": "Final Fantasy XI",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2002,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Square's cross-platform MMO that put console players and PC players in one world in 2002.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Final_Fantasy_XI"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Final_Fantasy_XI"
+   ]
+  },
+  {
+   "id": "ragnarok-online",
+   "label": "Ragnarok Online",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2002,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Gravity's manhwa-styled MMO that carried Korean online worlds across Asia.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ragnarok_Online"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ragnarok_Online"
+   ]
+  },
+  {
+   "id": "eve",
+   "label": "EVE Online",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2003,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "CCP's single-shard spacefaring sandbox where player politics and economics are the content.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Eve_Online"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eve_Online"
+   ]
+  },
+  {
+   "id": "steam",
+   "label": "Steam",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 2003,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2004,
+      "what": "Half-Life 2 made Steam mandatory, forcing adoption"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Valve's update pipe turned storefront that became the default distribution layer for PC worlds.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Steam_(service)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steam_(service)"
+   ]
+  },
+  {
+   "id": "cryengine",
+   "label": "CryEngine",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2004,
+      "what": "debuted with Far Cry"
+     },
+     {
+      "year": 2007,
+      "what": "Crysis became the graphics benchmark"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Crytek's benchmark-setting engine, licensed outward to worlds as unlikely as Blue Mars.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/CryEngine"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/CryEngine"
+   ]
+  },
+  {
+   "id": "david-helgason",
+   "label": "David Helgason",
+   "kind": "person",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Unity co-founder and CEO through 2014 who preached the democratization of game development.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unity_Technologies"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_Technologies",
+    "https://www.crunchbase.com/person/david-helgason"
+   ]
+  },
+  {
+   "id": "garrys-mod",
+   "label": "Garry's Mod",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "standalone release on Steam"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "A physics sandbox with no goal that became a factory for player-invented game modes.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Garry%27s_Mod"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Garry%27s_Mod"
+   ]
+  },
+  {
+   "id": "roblox",
+   "label": "Roblox",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2006,
+      "what": "public launch"
+     },
+     {
+      "year": 2021,
+      "what": "NYSE direct listing"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "A physics-toy descendant that became the largest user-generated game universe on Earth.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Roblox"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roblox"
+   ]
+  },
+  {
+   "id": "source-engine",
+   "label": "Source Engine",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null
+   },
+   "fame": 2,
+   "influence": true,
+   "blurb": "Valve's Half-Life 2 engine whose SDK powered a generation of mods, from Garry's Mod outward.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Source_(game_engine)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Source_(game_engine)"
+   ]
+  },
+  {
+   "id": "wow",
+   "label": "World of Warcraft",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2004,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2010,
+      "what": "peaked around 12 million subscribers"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Blizzard's polished Azeroth turned the MMORPG from hobbyist niche into global mass culture.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/World_of_Warcraft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/World_of_Warcraft"
+   ]
+  },
+  {
+   "id": "guild-wars",
+   "label": "Guild Wars",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2005,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "ArenaNet's instanced, subscription-free challenger launched into the teeth of the WoW era.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Guild_Wars_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Guild_Wars_(video_game)"
+   ]
+  },
+  {
+   "id": "minecraft",
+   "label": "Minecraft",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2009,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2011,
+      "what": "1.0 release after the paid-alpha phenomenon"
+     },
+     {
+      "year": 2014,
+      "what": "Microsoft acquired Mojang for $2.5B"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "Notch's block world, inspired by Infiniminer, that became the best-selling game ever made.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Minecraft"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Minecraft"
+   ]
+  },
+  {
+   "id": "ffxiv",
+   "label": "Final Fantasy XIV",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2010,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2013,
+      "what": "relaunched as A Realm Reborn after the failed 1.0"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The MMO that died at launch, was rebuilt in public, and returned as one of the genre's biggest worlds.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Final_Fantasy_XIV"
+   ]
+  },
+  {
+   "id": "godot",
+   "label": "Godot",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 2014,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2023,
+      "what": "adoption surge amid Unity's pricing backlash"
+     }
+    ]
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "The MIT-licensed community engine that became the open-source refuge of the engine wars.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Godot_(game_engine)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Godot_(game_engine)"
+   ]
+  },
+  {
+   "id": "fortnite",
+   "label": "Fortnite",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2017,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2017,
+      "what": "pivoted from co-op survival to Battle Royale"
+     },
+     {
+      "year": 2020,
+      "what": "Travis Scott concert drew over 12M concurrent players"
+     }
+    ]
+   },
+   "fame": 3,
+   "influence": true,
+   "blurb": "The survival game that pivoted to battle royale, then pivoted again into a concert hall and creator platform.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fortnite"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fortnite"
+   ]
+  },
+  {
+   "id": "dreams",
+   "label": "Dreams",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2019,
+    "end": null,
+    "milestones": [
+     {
+      "year": 2020,
+      "what": "full PS4 release"
+     },
+     {
+      "year": 2023,
+      "what": "Media Molecule ended live support"
+     }
+    ]
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Media Molecule's console creation suite where players sculpted whole games inside a game.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Dreams_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dreams_(video_game)"
+   ]
+  },
+  {
+   "id": "core",
+   "label": "Core",
+   "kind": "product",
+   "track": "games",
+   "dates": {
+    "start": 2020,
+    "end": null
+   },
+   "fame": 1,
+   "influence": false,
+   "blurb": "Manticore's bid to give Roblox-style creators the fidelity of Unreal Engine.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Core_(video_game)"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Core_(video_game)",
+    "https://www.manticoregames.com/news/manticore-games-opens-alpha-core-platform-players-creators"
+   ]
+  },
+  {
+   "id": "uefn",
+   "label": "Unreal Editor for Fortnite",
+   "kind": "game",
+   "track": "games",
+   "dates": {
+    "start": 2023,
+    "end": null
+   },
+   "fame": 2,
+   "influence": false,
+   "blurb": "Epic put Unreal Engine tooling inside Fortnite and started paying creators from the ecosystem's revenue.",
+   "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   ]
+  }
+ ]
+}

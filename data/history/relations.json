@@ -1,0 +1,5638 @@
+{
+ "relations": [
+  {
+   "from": "sgi",
+   "to": "cosmo",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "from": "netscape",
+   "to": "live3d",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Netscape"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "rift-dk1",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_VR"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "horizon",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Platforms"
+   ]
+  },
+  {
+   "from": "janusweb",
+   "to": "webgl",
+   "type": "built-on",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "vrml1",
+   "to": "inventor",
+   "type": "succeeded",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "vrm",
+   "to": "gltf",
+   "type": "built-on",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRM_(file_format)"
+   ]
+  },
+  {
+   "from": "epoch-timesharing",
+   "to": "ibm",
+   "type": "built-on",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IBM"
+   ]
+  },
+  {
+   "from": "epoch-pc",
+   "to": "ibm",
+   "type": "built-on",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IBM"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "irisgl",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "inventor",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "visionpro",
+   "type": "created",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Inc."
+   ]
+  },
+  {
+   "from": "doom",
+   "to": "next",
+   "type": "built-on",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "from": "vrml1",
+   "to": "inventor",
+   "type": "built-on",
+   "start": 1994,
+   "end": null,
+   "note": "syntax derived from Inventor ASCII format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "mark-pesce",
+   "to": "labyrinth",
+   "type": "created",
+   "start": 1994,
+   "end": null,
+   "note": "co-built prototype 3D web browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "labyrinth",
+   "type": "created",
+   "start": 1994,
+   "end": null,
+   "note": "co-built with Pesce",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "labyrinth",
+   "to": "vrml1",
+   "type": "influenced",
+   "start": 1994,
+   "end": null,
+   "note": "WWW94 demo sparked the www-vrml effort",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "mark-pesce",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "co-instigator, moderated www-vrml list",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Pesce"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "tony-parisi",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "co-creator",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "gavin-bell",
+   "to": "vrml1",
+   "type": "role",
+   "start": 1994,
+   "end": null,
+   "note": "principal spec author, adapted Inventor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "gavin-bell",
+   "to": "sgi",
+   "type": "role",
+   "start": 1992,
+   "end": null,
+   "note": "engineer on Inventor and VRML work",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "vrml97",
+   "to": "vrml1",
+   "type": "succeeded",
+   "start": 1996,
+   "end": null,
+   "note": "added animation, scripting, sound",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "vrml97",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "Moving Worlds proposal with Sony and Mitra",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "co-authored Moving Worlds proposal",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "microsoft",
+   "to": "activevrml",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "reactive-language VRML 2.0 bid",
+   "sources": [
+    "https://www.rigacci.org/docs/biblio/online/vrml/ch11.htm"
+   ]
+  },
+  {
+   "from": "activevrml",
+   "to": "vrml97",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1996,
+   "note": "lost the VRML 2.0 RFP vote to Moving Worlds",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "sgi",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1996,
+   "note": "rival 'Out of This World' VRML 2.0 RFP entry",
+   "sources": [
+    "http://www.agocg.ac.uk/train/vrml2rep/part1/guide1.htm"
+   ]
+  },
+  {
+   "from": "rikk-carey",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "spec co-editor",
+   "sources": [
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "gavin-bell",
+   "to": "vrml97",
+   "type": "role",
+   "start": 1996,
+   "end": null,
+   "note": "spec co-editor",
+   "sources": [
+    "http://www.graphics.stanford.edu/courses/cs248-98-fall/Assignments/Assignment3/VRML2_Specification/"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "web3d-consortium",
+   "to": "vrml97",
+   "type": "standardized",
+   "start": 1997,
+   "end": null,
+   "note": "ISO/IEC 14772",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "x3d",
+   "to": "vrml97",
+   "type": "succeeded",
+   "start": 2001,
+   "end": null,
+   "note": "XML-encoded successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3D"
+   ]
+  },
+  {
+   "from": "web3d-consortium",
+   "to": "x3d",
+   "type": "standardized",
+   "start": 2004,
+   "end": null,
+   "note": "ISO/IEC 19775",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3D"
+   ]
+  },
+  {
+   "from": "kaydara",
+   "to": "fbx",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "native format of FiLMBOX",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "alias",
+   "to": "kaydara",
+   "type": "acquired",
+   "start": 2004,
+   "end": null,
+   "note": "brought FBX to Alias",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "autodesk",
+   "to": "alias",
+   "type": "acquired",
+   "start": 2006,
+   "end": null,
+   "note": "FBX becomes an Autodesk format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alias_Systems_Corporation"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "collada",
+   "type": "created",
+   "start": 2004,
+   "end": null,
+   "note": "born at Sony Computer Entertainment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "collada",
+   "type": "standardized",
+   "start": 2006,
+   "end": null,
+   "note": "adopted and maintained by Khronos",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "collada",
+   "to": "fbx",
+   "type": "competed-with",
+   "start": 2006,
+   "end": null,
+   "note": "open vs proprietary interchange rivalry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA",
+    "https://en.wikipedia.org/wiki/FBX"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "gltf",
+   "type": "standardized",
+   "start": 2015,
+   "end": null,
+   "note": "royalty-free runtime asset format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "from": "collada",
+   "to": "gltf",
+   "type": "influenced",
+   "start": 2012,
+   "end": null,
+   "note": "glTF emerged from the COLLADA working group as its transmission-format successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "gltf",
+   "type": "role",
+   "start": 2012,
+   "end": null,
+   "note": "spec co-editor; named the format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "fabrice-robinet",
+   "to": "gltf",
+   "type": "role",
+   "start": 2012,
+   "end": null,
+   "note": "original creator and lead",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "pixar",
+   "to": "usd",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "open-sourced its production scene format",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "aousd",
+   "to": "usd",
+   "type": "standardized",
+   "start": 2023,
+   "end": null,
+   "note": "alliance formed to write formal USD specs",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "pixar",
+   "to": "aousd",
+   "type": "created",
+   "start": 2023,
+   "end": null,
+   "note": "founded with Adobe, Apple, Autodesk, NVIDIA under the Linux Foundation",
+   "sources": [
+    "https://aousd.org/"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "aousd",
+   "type": "role",
+   "start": 2023,
+   "end": null,
+   "note": "founding member",
+   "sources": [
+    "https://aousd.org/"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "autodesk",
+   "to": "aousd",
+   "type": "role",
+   "start": 2023,
+   "end": null,
+   "note": "founding member",
+   "sources": [
+    "https://aousd.org/"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "apple",
+   "to": "pixar",
+   "type": "partnered",
+   "start": 2018,
+   "end": null,
+   "note": "USDZ AR format unveiled at WWDC 2018",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "gltf",
+   "to": "usd",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "overlapping ecosystems; increasingly framed as complementary delivery vs interchange",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GlTF",
+    "https://en.wikipedia.org/wiki/Universal_Scene_Description"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "openxr",
+   "type": "standardized",
+   "start": 2019,
+   "end": null,
+   "note": "1.0 released 2019",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "from": "neil-trevett",
+   "to": "khronos",
+   "type": "role",
+   "start": 2000,
+   "end": null,
+   "note": "long-time president",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neil_Trevett"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "neil-trevett",
+   "to": "metaverse-standards-forum",
+   "type": "role",
+   "start": 2022,
+   "end": null,
+   "note": "president",
+   "sources": [
+    "https://metaverse-standards.org/"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "khronos",
+   "to": "metaverse-standards-forum",
+   "type": "created",
+   "start": 2022,
+   "end": null,
+   "note": "convened and hosts the forum",
+   "sources": [
+    "https://metaverse-standards.org/"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "webspace",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "with Template Graphics Software",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "webspace",
+   "to": "inventor",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "built with the Open Inventor toolkit",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "webspace",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "first commercial VRML browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "intervista",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "founded VRML startup",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "intervista",
+   "to": "worldview",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "first PC VRML browser plugin",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "worldview",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "implemented VRML on Windows",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "worldview",
+   "type": "licensed",
+   "start": 1997,
+   "end": null,
+   "note": "VRML support shipped with Internet Explorer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "paper-software",
+   "to": "live3d",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "originally released as WebFX",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "netscape",
+   "to": "paper-software",
+   "type": "acquired",
+   "start": 1996,
+   "end": null,
+   "note": "WebFX rebranded Live3D",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "live3d",
+   "to": "vrml1",
+   "type": "built-on",
+   "start": 1995,
+   "end": null,
+   "note": "VRML plugin bundled with Navigator",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D"
+   ]
+  },
+  {
+   "from": "live3d",
+   "to": "worldview",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1998,
+   "note": "VRML plugin wars of the browser era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Live3D",
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "sgi",
+   "type": "spun-off-from",
+   "start": 1997,
+   "end": null,
+   "note": "Cosmo Software subsidiary; sold to Platinum then CA in 1998-99",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "webspace",
+   "type": "succeeded",
+   "start": 1996,
+   "end": null,
+   "note": "SGI's next-generation VRML client",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software",
+    "https://en.wikipedia.org/wiki/WebSpace"
+   ]
+  },
+  {
+   "from": "cosmo",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1996,
+   "end": null,
+   "note": "de facto reference VRML97 implementation",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "communityplace",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "from Sony CSL research",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place"
+   ]
+  },
+  {
+   "from": "communityplace",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1996,
+   "end": null,
+   "note": "multi-user VRML 2.0 browser and server",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place"
+   ]
+  },
+  {
+   "from": "communityplace",
+   "to": "blaxxun-contact",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2001,
+   "note": "rival multi-user VRML community platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Community_Place",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "blaxxun",
+   "to": "blaxxun-contact",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "CyberGate lineage community client",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "blaxxun-contact",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1997,
+   "end": null,
+   "note": "VRML-based avatar communities",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "cortona",
+   "to": "vrml97",
+   "type": "built-on",
+   "start": 1999,
+   "end": null,
+   "note": "ParallelGraphics' VRML plugin",
+   "sources": [
+    "https://www.cortona3d.com/"
+   ]
+  },
+  {
+   "from": "cortona",
+   "to": "cosmo",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "inherited the VRML plugin userbase as Cosmo faded",
+   "sources": [
+    "https://www.cortona3d.com/",
+    "https://en.wikipedia.org/wiki/Cosmo_Software"
+   ]
+  },
+  {
+   "from": "freewrl",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 1998,
+   "end": null,
+   "note": "open-source VRML/X3D browser",
+   "sources": [
+    "https://en.wikipedia.org/wiki/FreeWRL"
+   ]
+  },
+  {
+   "from": "x3dom",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 2009,
+   "end": null,
+   "note": "X3D scenes as live HTML5 DOM via WebGL",
+   "sources": [
+    "https://en.wikipedia.org/wiki/X3DOM"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "vivaty",
+   "type": "created",
+   "start": 2003,
+   "end": null,
+   "note": "founded Media Machines, rebranded Vivaty 2008",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "vivaty",
+   "to": "x3d",
+   "type": "built-on",
+   "start": 2004,
+   "end": null,
+   "note": "Flux player and editor were X3D-based",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "vivaty",
+   "type": "acquired",
+   "start": 2010,
+   "end": null,
+   "note": "Vivaty sold to Microsoft at shutdown, 2010",
+   "sources": [
+    "https://tonyparisi.files.wordpress.com/2012/10/tony-parisi-resume-2012.pdf",
+    "https://gamesbeat.com/vivaty-shuts-down-virtual-world/"
+   ]
+  },
+  {
+   "from": "unity",
+   "to": "unity-web-player",
+   "type": "created",
+   "start": 2005,
+   "end": null,
+   "note": "browser plugin for Unity content",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "tony-parisi",
+   "to": "unity-technologies",
+   "type": "role",
+   "start": 2016,
+   "end": 2022,
+   "note": "Global Head of VR/AR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tony_Parisi_(software_developer)"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "mozilla",
+   "to": "aframe",
+   "type": "created",
+   "start": 2015,
+   "end": null,
+   "note": "built by the MozVR team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "from": "aframe",
+   "to": "three-js",
+   "type": "built-on",
+   "start": 2015,
+   "end": null,
+   "note": "entity-component layer over three.js",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "firebox",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "webpages as rooms, links as portals",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "firebox",
+   "type": "succeeded",
+   "start": 2014,
+   "end": null,
+   "note": "Firebox renamed JanusVR; worlds stayed 'FireBoxRooms'",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder, December 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "karan-singh",
+   "to": "janusvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "elation",
+   "type": "created",
+   "start": 2013,
+   "end": null,
+   "note": "JavaScript game engine",
+   "sources": [
+    "https://github.com/jbaicoianu/elation-engine"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusweb",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "web-native Janus client",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusvr",
+   "type": "role",
+   "start": 2016,
+   "end": 2019,
+   "note": "team member; JanusWeb became JanusVR's official open-source web client",
+   "sources": [
+    "https://janusxr.org/about.html",
+    "https://github.com/jbaicoianu/janusweb"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "janusweb",
+   "to": "elation",
+   "type": "built-on",
+   "start": 2016,
+   "end": null,
+   "note": "built atop the Elation Engine",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusweb",
+   "to": "three-js",
+   "type": "built-on",
+   "start": 2016,
+   "end": null,
+   "note": "renders via three.js and WebGL",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "janusweb",
+   "type": "influenced",
+   "start": 2016,
+   "end": null,
+   "note": "browser-native implementation of JanusVR's portal-linked room format",
+   "sources": [
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "janusxr",
+   "to": "janusvr",
+   "type": "succeeded",
+   "start": 2019,
+   "end": null,
+   "note": "community continuation after the company folded and open-sourced its code",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://janusxr.org/about.html"
+   ]
+  },
+  {
+   "from": "janusxr",
+   "to": "janusweb",
+   "type": "built-on",
+   "start": 2019,
+   "end": null,
+   "note": "JanusWeb powers janusxr.org's in-browser worlds",
+   "sources": [
+    "https://janusxr.org/",
+    "https://github.com/jbaicoianu/janusweb"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusxr",
+   "type": "role",
+   "start": 2019,
+   "end": null,
+   "note": "maintains the native client under the JanusXR name",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "james-baicoianu",
+   "to": "janusxr",
+   "type": "role",
+   "start": 2019,
+   "end": null,
+   "note": "maintains JanusWeb and janusxr.org",
+   "sources": [
+    "https://janusxr.org/about.html"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "adventure",
+   "to": "mud1",
+   "type": "influenced",
+   "start": 1978,
+   "end": null,
+   "note": "Trubshaw and Bartle built MUD in the mold of Adventure/Zork-style text worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/MUD1"
+   ]
+  },
+  {
+   "from": "roy-trubshaw",
+   "to": "mud1",
+   "type": "role",
+   "role": "creator",
+   "start": 1978,
+   "end": 1980,
+   "note": "wrote the original versions, then handed development to Bartle",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roy_Trubshaw"
+   ]
+  },
+  {
+   "from": "richard-bartle",
+   "to": "mud1",
+   "type": "role",
+   "role": "creator",
+   "start": 1978,
+   "end": null,
+   "note": "co-creator; took over development from 1980",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Bartle"
+   ]
+  },
+  {
+   "from": "mud1",
+   "to": "abermud",
+   "type": "influenced",
+   "start": 1987,
+   "end": null,
+   "note": "Alan Cox wrote AberMUD after playing MUD at Essex",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AberMUD"
+   ]
+  },
+  {
+   "from": "kesmai",
+   "to": "mud1",
+   "type": "competed-with",
+   "start": 1987,
+   "end": 1996,
+   "note": "Island of Kesmai and MUD1 (as British Legends) both ran as pay-per-hour worlds on CompuServe",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Island_of_Kesmai",
+    "https://en.wikipedia.org/wiki/MUD1"
+   ]
+  },
+  {
+   "from": "abermud",
+   "to": "tinymud",
+   "type": "influenced",
+   "start": 1989,
+   "end": null,
+   "note": "TinyMUD arose in the wave of AberMUD derivatives, replacing combat with building",
+   "sources": [
+    "https://en.wikipedia.org/wiki/TinyMUD"
+   ]
+  },
+  {
+   "from": "abermud",
+   "to": "dikumud",
+   "type": "influenced",
+   "start": 1990,
+   "end": null,
+   "note": "DikuMUD was written in reaction to AberMUD-family games",
+   "sources": [
+    "https://en.wikipedia.org/wiki/DikuMUD"
+   ]
+  },
+  {
+   "from": "tinymud",
+   "to": "lambdamoo",
+   "type": "influenced",
+   "start": 1990,
+   "end": null,
+   "note": "MOO descends from the TinyMUD social/building lineage",
+   "sources": [
+    "https://en.wikipedia.org/wiki/LambdaMOO",
+    "https://en.wikipedia.org/wiki/TinyMUD"
+   ]
+  },
+  {
+   "from": "pavel-curtis",
+   "to": "lambdamoo",
+   "type": "role",
+   "role": "creator",
+   "start": 1990,
+   "end": null,
+   "note": "founded and administered LambdaMOO at Xerox PARC",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pavel_Curtis"
+   ]
+  },
+  {
+   "from": "dikumud",
+   "to": "everquest",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "EverQuest's designers were Diku players; the resemblance prompted a sworn statement that no Diku code was used",
+   "sources": [
+    "https://en.wikipedia.org/wiki/DikuMUD"
+   ]
+  },
+  {
+   "from": "mud1",
+   "to": "ultima-online",
+   "type": "influenced",
+   "start": 1997,
+   "end": null,
+   "note": "UO's design team, including MUD veteran Raph Koster, carried MUD social design into graphical worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://en.wikipedia.org/wiki/Ultima_Online"
+   ]
+  },
+  {
+   "from": "neverwinter-nights-aol",
+   "to": "everquest",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "genre lineage: the first graphical MMORPG on a major service proved the market later MMOs captured",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Neverwinter_Nights_(1991_video_game)"
+   ]
+  },
+  {
+   "from": "richard-garriott",
+   "to": "ultima-online",
+   "type": "role",
+   "role": "creator",
+   "start": 1995,
+   "end": 2000,
+   "note": "Ultima creator and UO producer at Origin",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Garriott"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "ultima-online",
+   "type": "role",
+   "role": "designer",
+   "start": 1995,
+   "end": 2000,
+   "note": "lead designer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "from": "richard-garriott",
+   "to": "ncsoft",
+   "type": "role",
+   "role": "designer",
+   "start": 2001,
+   "end": 2009,
+   "note": "led NCsoft Austin and Tabula Rasa after leaving Origin",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Garriott"
+   ]
+  },
+  {
+   "from": "meridian59",
+   "to": "ultima-online",
+   "type": "competed-with",
+   "start": 1997,
+   "end": null,
+   "note": "first-generation graphical MMORPG rivals",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meridian_59",
+    "https://en.wikipedia.org/wiki/Ultima_Online"
+   ]
+  },
+  {
+   "from": "everquest",
+   "to": "ultima-online",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "3D EQ rapidly overtook UO's subscriber counts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/EverQuest"
+   ]
+  },
+  {
+   "from": "everquest",
+   "to": "asherons-call",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "two of the 'big three' late-90s MMORPGs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Asheron%27s_Call"
+   ]
+  },
+  {
+   "from": "asherons-call",
+   "to": "ultima-online",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "the 'big three' era of MMORPG competition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Asheron%27s_Call"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "everquest",
+   "type": "created",
+   "start": 1999,
+   "end": null,
+   "note": "developed by Verant Interactive; became the Sony Online Entertainment flagship",
+   "sources": [
+    "https://en.wikipedia.org/wiki/EverQuest"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "asherons-call",
+   "type": "partnered",
+   "start": 1999,
+   "end": 2004,
+   "note": "Microsoft published Turbine's Asheron's Call",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Asheron%27s_Call"
+   ]
+  },
+  {
+   "from": "everquest",
+   "to": "wow",
+   "type": "influenced",
+   "start": 2004,
+   "end": null,
+   "note": "WoW's designers were avid EverQuest players and refined its formula",
+   "sources": [
+    "https://en.wikipedia.org/wiki/World_of_Warcraft"
+   ]
+  },
+  {
+   "from": "blizzard",
+   "to": "wow",
+   "type": "created",
+   "start": 2004,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/World_of_Warcraft"
+   ]
+  },
+  {
+   "from": "ncsoft",
+   "to": "lineage",
+   "type": "created",
+   "start": 1998,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lineage_(video_game)"
+   ]
+  },
+  {
+   "from": "ncsoft",
+   "to": "guild-wars",
+   "type": "created",
+   "start": 2005,
+   "end": null,
+   "note": "developed by subsidiary ArenaNet",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Guild_Wars_(video_game)"
+   ]
+  },
+  {
+   "from": "wow",
+   "to": "everquest",
+   "type": "competed-with",
+   "start": 2004,
+   "end": null,
+   "note": "WoW's launch ended EQ's market leadership",
+   "sources": [
+    "https://en.wikipedia.org/wiki/World_of_Warcraft"
+   ]
+  },
+  {
+   "from": "wow",
+   "to": "guild-wars",
+   "type": "competed-with",
+   "start": 2005,
+   "end": null,
+   "note": "Guild Wars pitched no-subscription play against WoW",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Guild_Wars_(video_game)"
+   ]
+  },
+  {
+   "from": "wow",
+   "to": "ffxi",
+   "type": "competed-with",
+   "start": 2004,
+   "end": null,
+   "note": "subscription MMO market of the mid-2000s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Final_Fantasy_XI"
+   ]
+  },
+  {
+   "from": "runescape",
+   "to": "wow",
+   "type": "competed-with",
+   "start": 2004,
+   "end": null,
+   "note": "free browser MMO thrived through the WoW era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/RuneScape"
+   ]
+  },
+  {
+   "from": "eve",
+   "to": "wow",
+   "type": "competed-with",
+   "start": 2004,
+   "end": null,
+   "note": "carved out a sandbox niche in the subscription-MMO era WoW dominated",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eve_Online"
+   ]
+  },
+  {
+   "from": "lineage",
+   "to": "ragnarok-online",
+   "type": "competed-with",
+   "start": 2002,
+   "end": null,
+   "note": "Korean MMO market rivals",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ragnarok_Online",
+    "https://en.wikipedia.org/wiki/Lineage_(video_game)"
+   ]
+  },
+  {
+   "from": "wow",
+   "to": "ffxiv",
+   "type": "influenced",
+   "start": 2010,
+   "end": null,
+   "note": "Yoshida's A Realm Reborn team openly studied WoW's design",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Final_Fantasy_XIV"
+   ]
+  },
+  {
+   "from": "ffxiv",
+   "to": "ffxi",
+   "type": "succeeded",
+   "start": 2010,
+   "end": null,
+   "note": "Square Enix's second MMO in the franchise",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Final_Fantasy_XIV"
+   ]
+  },
+  {
+   "from": "spacewar",
+   "to": "mazewar",
+   "type": "influenced",
+   "start": 1973,
+   "end": null,
+   "note": "genre lineage from the first multiplayer computer game to the first networked FPS",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Spacewar!",
+    "https://en.wikipedia.org/wiki/Maze_War"
+   ]
+  },
+  {
+   "from": "mazewar",
+   "to": "doom",
+   "type": "influenced",
+   "start": 1993,
+   "end": null,
+   "note": "Maze War is the progenitor of the first-person-shooter form Doom perfected",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Maze_War"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "id-software",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": 2013,
+   "note": "co-founder and lead engine programmer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-romero",
+   "to": "id-software",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": 1996,
+   "note": "co-founder and designer of Doom and Quake",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Romero"
+   ]
+  },
+  {
+   "from": "id-software",
+   "to": "wolfenstein-3d",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wolfenstein_3D"
+   ]
+  },
+  {
+   "from": "id-software",
+   "to": "doom",
+   "type": "created",
+   "start": 1993,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "from": "id-software",
+   "to": "quake",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quake_(video_game)"
+   ]
+  },
+  {
+   "from": "doom",
+   "to": "wolfenstein-3d",
+   "type": "succeeded",
+   "start": 1993,
+   "end": null,
+   "note": "id's next-generation shooter",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "from": "quake",
+   "to": "doom",
+   "type": "succeeded",
+   "start": 1996,
+   "end": null,
+   "note": "full 3D and client-server internet play",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quake_(video_game)"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "quake",
+   "type": "licensed",
+   "start": 1996,
+   "end": null,
+   "note": "licensed the Quake engine from id Software to build Half-Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GoldSrc"
+   ]
+  },
+  {
+   "from": "goldsrc",
+   "to": "quake",
+   "type": "forked-from",
+   "start": 1996,
+   "end": null,
+   "note": "GoldSrc is a heavily modified Quake engine derivative",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GoldSrc"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "goldsrc",
+   "type": "created",
+   "start": 1998,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GoldSrc"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "half-life",
+   "type": "created",
+   "start": 1998,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+   ]
+  },
+  {
+   "from": "half-life",
+   "to": "goldsrc",
+   "type": "built-on",
+   "start": 1998,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GoldSrc"
+   ]
+  },
+  {
+   "from": "counter-strike",
+   "to": "goldsrc",
+   "type": "built-on",
+   "start": 1999,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Counter-Strike_(video_game)"
+   ]
+  },
+  {
+   "from": "counter-strike",
+   "to": "half-life",
+   "type": "forked-from",
+   "start": 1999,
+   "end": null,
+   "note": "began as a Half-Life mod by Minh Le and Jess Cliffe",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Counter-Strike_(video_game)"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "counter-strike",
+   "type": "acquired",
+   "start": 2000,
+   "end": null,
+   "note": "acquired the rights and hired its creators",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Counter-Strike_(video_game)"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "steam",
+   "type": "created",
+   "start": 2003,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steam_(service)"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "source-engine",
+   "type": "created",
+   "start": 2004,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Source_(game_engine)"
+   ]
+  },
+  {
+   "from": "source-engine",
+   "to": "goldsrc",
+   "type": "succeeded",
+   "start": 2004,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Source_(game_engine)"
+   ]
+  },
+  {
+   "from": "garrys-mod",
+   "to": "source-engine",
+   "type": "built-on",
+   "start": 2004,
+   "end": null,
+   "note": "Source mod turned standalone hit in 2006",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Garry%27s_Mod"
+   ]
+  },
+  {
+   "from": "tim-sweeney",
+   "to": "epic-games",
+   "type": "role",
+   "role": "founder",
+   "start": 1991,
+   "end": null,
+   "note": "founded as Potomac Computer Systems; CEO since",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tim_Sweeney"
+   ]
+  },
+  {
+   "from": "tim-sweeney",
+   "to": "zzt",
+   "type": "role",
+   "role": "creator",
+   "start": 1991,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZZT"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "zzt",
+   "type": "created",
+   "start": 1991,
+   "end": null,
+   "note": "released under Epic's original name, Potomac Computer Systems",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZZT"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "unreal",
+   "type": "created",
+   "start": 1998,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Engine"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "unreal-tournament",
+   "type": "created",
+   "start": 1999,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Tournament"
+   ]
+  },
+  {
+   "from": "unreal-tournament",
+   "to": "unreal",
+   "type": "built-on",
+   "start": 1999,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Tournament"
+   ]
+  },
+  {
+   "from": "unreal-tournament",
+   "to": "quake",
+   "type": "competed-with",
+   "start": 1999,
+   "end": null,
+   "note": "UT vs Quake III Arena, the arena-shooter showdown of 1999",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Tournament"
+   ]
+  },
+  {
+   "from": "unreal",
+   "to": "quake",
+   "type": "competed-with",
+   "start": 1998,
+   "end": null,
+   "note": "Unreal vs Quake defined the first engine-licensing war",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Engine"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "id-software",
+   "type": "acquired",
+   "start": 2021,
+   "end": null,
+   "note": "via the ZeniMax Media acquisition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Id_Software"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "valve",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "Epic Games Store challenged Steam's storefront dominance",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games_Store"
+   ]
+  },
+  {
+   "from": "nintendo",
+   "to": "sm64",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Super_Mario_64"
+   ]
+  },
+  {
+   "from": "david-helgason",
+   "to": "unity-technologies",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": 2014,
+   "note": "co-founded Unity Technologies (as Over the Edge); CEO until 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_Technologies"
+   ]
+  },
+  {
+   "from": "unity",
+   "to": "unreal",
+   "type": "competed-with",
+   "start": 2010,
+   "end": null,
+   "note": "the defining engine war of the 2010s and beyond",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "godot",
+   "to": "unity",
+   "type": "competed-with",
+   "start": 2014,
+   "end": null,
+   "note": "open-source alternative; surged during Unity's 2023 runtime-fee backlash",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Godot_(game_engine)"
+   ]
+  },
+  {
+   "from": "cryengine",
+   "to": "unreal",
+   "type": "competed-with",
+   "start": 2004,
+   "end": null,
+   "note": "high-end licensed-engine rivalry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/CryEngine"
+   ]
+  },
+  {
+   "from": "renderware",
+   "to": "unreal",
+   "type": "competed-with",
+   "start": 2000,
+   "end": 2006,
+   "note": "licensed middleware market of the early 2000s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/RenderWare"
+   ]
+  },
+  {
+   "from": "bluemars",
+   "to": "cryengine",
+   "type": "built-on",
+   "start": 2009,
+   "end": null,
+   "note": "virtual world built on CryEngine 2",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blue_Mars_(video_game)"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "unity",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "unity",
+   "type": "built-on",
+   "start": 2015,
+   "end": 2023,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "from": "horizon",
+   "to": "unity",
+   "type": "built-on",
+   "start": 2021,
+   "end": 2025,
+   "note": "replaced by Meta's in-house Horizon Engine in 2025",
+   "sources": [
+    "https://www.uploadvr.com/meta-horizon-engine-horizon-worlds-tech/"
+   ]
+  },
+  {
+   "from": "mojang",
+   "to": "minecraft",
+   "type": "created",
+   "start": 2009,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Minecraft"
+   ]
+  },
+  {
+   "from": "notch",
+   "to": "minecraft",
+   "type": "role",
+   "role": "creator",
+   "start": 2009,
+   "end": 2011,
+   "note": "sole developer until handing lead to Jens Bergensten after 1.0",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Markus_Persson"
+   ]
+  },
+  {
+   "from": "notch",
+   "to": "mojang",
+   "type": "role",
+   "role": "founder",
+   "start": 2009,
+   "end": 2014,
+   "note": "left when Microsoft acquired Mojang",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Markus_Persson"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "mojang",
+   "type": "acquired",
+   "start": 2014,
+   "end": null,
+   "note": "$2.5 billion",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mojang_Studios"
+   ]
+  },
+  {
+   "from": "minecraft",
+   "to": "fortnite",
+   "type": "influenced",
+   "start": 2011,
+   "end": null,
+   "note": "Fortnite was famously pitched as 'Minecraft meets Left 4 Dead'",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fortnite:_Save_the_World"
+   ]
+  },
+  {
+   "from": "minecraft",
+   "to": "roblox",
+   "type": "competed-with",
+   "start": 2011,
+   "end": null,
+   "note": "the long UGC-platform rivalry for young builders",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roblox"
+   ]
+  },
+  {
+   "from": "fortnite",
+   "to": "roblox",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "Fortnite Creative and UEFN chase Roblox's creator economy",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   ]
+  },
+  {
+   "from": "david-baszucki",
+   "to": "roblox",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "co-founded with Erik Cassel; CEO since",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki"
+   ]
+  },
+  {
+   "from": "david-baszucki",
+   "to": "knowledge-revolution",
+   "type": "role",
+   "role": "founder",
+   "start": 1989,
+   "end": 1998,
+   "note": "co-founded with Greg Baszucki; sold to MSC in 1998",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki",
+    "https://en.wikipedia.org/wiki/Knowledge_Revolution"
+   ]
+  },
+  {
+   "from": "knowledge-revolution",
+   "to": "roblox",
+   "type": "influenced",
+   "start": 2004,
+   "end": null,
+   "note": "students playing freely with Interactive Physics inspired Baszucki and Cassel to build Roblox",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki",
+    "https://en.wikipedia.org/wiki/Knowledge_Revolution"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "fortnite",
+   "type": "created",
+   "start": 2017,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fortnite"
+   ]
+  },
+  {
+   "from": "fortnite",
+   "to": "unreal",
+   "type": "built-on",
+   "start": 2017,
+   "end": null,
+   "note": "flagship showcase of Unreal Engine 4, then 5",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fortnite"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "uefn",
+   "type": "created",
+   "start": 2023,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   ]
+  },
+  {
+   "from": "uefn",
+   "to": "unreal",
+   "type": "built-on",
+   "start": 2023,
+   "end": null,
+   "note": "Unreal Engine tooling repackaged for Fortnite islands",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   ]
+  },
+  {
+   "from": "uefn",
+   "to": "fortnite",
+   "type": "built-on",
+   "start": 2023,
+   "end": null,
+   "note": "creator tooling publishing directly into Fortnite",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Editor_for_Fortnite"
+   ]
+  },
+  {
+   "from": "core",
+   "to": "unreal",
+   "type": "built-on",
+   "start": 2020,
+   "end": null,
+   "note": "Manticore's creator platform built on Unreal Engine 4",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Core_(video_game)",
+    "https://www.unrealengine.com/en-US/developer-interviews/built-on-unreal-engine-core-aims-to-make-game-development-accessible-to-the-masses"
+   ]
+  },
+  {
+   "from": "core",
+   "to": "roblox",
+   "type": "competed-with",
+   "start": 2020,
+   "end": null,
+   "note": "aimed at the Roblox creator-economy model with higher fidelity",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Core_(video_game)"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "dreams",
+   "type": "created",
+   "start": 2019,
+   "end": null,
+   "note": "developed by Sony's Media Molecule",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dreams_(video_game)"
+   ]
+  },
+  {
+   "from": "meridian59",
+   "to": "everquest",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "pioneered the 3D client-server MMORPG model EverQuest scaled up",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meridian_59"
+   ]
+  },
+  {
+   "from": "ultima-online",
+   "to": "everquest",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "proved the mass persistent-world market EverQuest raced into",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ultima_Online"
+   ]
+  },
+  {
+   "from": "doom",
+   "to": "quake",
+   "type": "influenced",
+   "start": 1996,
+   "end": null,
+   "note": "Doom's deathmatch and mod culture set the agenda Quake took online",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "from": "zzt",
+   "to": "unreal",
+   "type": "influenced",
+   "start": 1998,
+   "end": null,
+   "note": "Sweeney's editor-first ZZT ethos carried into Epic's tooling tradition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZZT"
+   ]
+  },
+  {
+   "from": "half-life",
+   "to": "counter-strike",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "Valve's open SDK and mod support made Counter-Strike possible",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+   ]
+  },
+  {
+   "from": "garrys-mod",
+   "to": "roblox",
+   "type": "competed-with",
+   "start": 2006,
+   "end": null,
+   "note": "parallel sandbox-creation cultures on PC",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Garry%27s_Mod"
+   ]
+  },
+  {
+   "from": "wolfenstein-3d",
+   "to": "doom",
+   "type": "influenced",
+   "start": 1993,
+   "end": null,
+   "note": "established the fast first-person formula Doom detonated",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wolfenstein_3D"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "sketchpad",
+   "type": "created",
+   "start": 1963,
+   "end": 1963,
+   "note": "MIT PhD thesis",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sketchpad"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "evans-sutherland",
+   "type": "role",
+   "role": "founder",
+   "start": 1968,
+   "end": null,
+   "note": "co-founded with David Evans",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Evans_%26_Sutherland"
+   ]
+  },
+  {
+   "from": "david-evans",
+   "to": "evans-sutherland",
+   "type": "role",
+   "role": "founder",
+   "start": 1968,
+   "end": 1998,
+   "note": "co-founder and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_C._Evans"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "jim-clark",
+   "type": "influenced",
+   "start": 1974,
+   "end": null,
+   "note": "Clark's PhD advisor at Utah",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "jim-clark",
+   "to": "sgi",
+   "type": "role",
+   "role": "founder",
+   "start": 1982,
+   "end": 1994,
+   "note": "founded on his Geometry Engine work",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "jim-clark",
+   "to": "netscape",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 1999,
+   "note": "co-founded with Marc Andreessen after leaving SGI",
+   "sources": [
+    "https://en.wikipedia.org/wiki/James_H._Clark"
+   ]
+  },
+  {
+   "from": "kurt-akeley",
+   "to": "sgi",
+   "type": "role",
+   "role": "founder",
+   "start": 1982,
+   "end": null,
+   "note": "co-founder, later chief graphics architect",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kurt_Akeley"
+   ]
+  },
+  {
+   "from": "kurt-akeley",
+   "to": "realityengine",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "lead architect",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kurt_Akeley"
+   ]
+  },
+  {
+   "from": "kurt-akeley",
+   "to": "opengl",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "co-authored the spec with Mark Segal",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kurt_Akeley"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "realityengine",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "flagship graphics supercomputer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/RealityEngine"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "opengl",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "opened IRIS GL to fight the workstation wars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL"
+   ]
+  },
+  {
+   "from": "opengl",
+   "to": "irisgl",
+   "type": "succeeded",
+   "start": 1992,
+   "end": null,
+   "note": "cleaned-up, vendor-neutral descendant",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IRIS_GL"
+   ]
+  },
+  {
+   "from": "opengl-arb",
+   "to": "opengl",
+   "type": "standardized",
+   "start": 1992,
+   "end": 2006,
+   "note": "governed the spec by member vote",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_Architecture_Review_Board"
+   ]
+  },
+  {
+   "from": "opengl-arb",
+   "to": "khronos",
+   "type": "merged-into",
+   "start": 2006,
+   "end": null,
+   "note": "OpenGL control passed to Khronos",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_Architecture_Review_Board"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "opengl",
+   "type": "standardized",
+   "start": 2006,
+   "end": null,
+   "note": "steward since the ARB handoff",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khronos_Group"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "opengl-arb",
+   "type": "partnered",
+   "start": 1992,
+   "end": 2003,
+   "note": "founding member; left the ARB in 2003",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL"
+   ]
+  },
+  {
+   "from": "phigs",
+   "to": "opengl",
+   "type": "competed-with",
+   "start": 1992,
+   "end": 1997,
+   "note": "ISO standard lost to OpenGL's immediate mode",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PHIGS"
+   ]
+  },
+  {
+   "from": "sun",
+   "to": "sgi",
+   "type": "competed-with",
+   "start": 1982,
+   "end": 2009,
+   "note": "Unix workstation wars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Silicon_Graphics"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "directx",
+   "type": "created",
+   "start": 1995,
+   "end": null,
+   "note": "Windows game platform push",
+   "sources": [
+    "https://en.wikipedia.org/wiki/DirectX"
+   ]
+  },
+  {
+   "from": "directx",
+   "to": "opengl",
+   "type": "competed-with",
+   "start": 1996,
+   "end": null,
+   "note": "the defining 3D API war of the 90s-2000s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Direct3D"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "sgi",
+   "type": "partnered",
+   "start": 1997,
+   "end": 1999,
+   "note": "Fahrenheit joint project",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fahrenheit_(graphics_API)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "fahrenheit",
+   "type": "created",
+   "start": 1997,
+   "end": 2000,
+   "note": "co-developer; quietly let it die",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fahrenheit_(graphics_API)"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "fahrenheit",
+   "type": "created",
+   "start": 1997,
+   "end": 1999,
+   "note": "co-developer; withdrew in 1999",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fahrenheit_(graphics_API)"
+   ]
+  },
+  {
+   "from": "quake",
+   "to": "opengl",
+   "type": "built-on",
+   "start": 1997,
+   "end": null,
+   "note": "GLQuake's OpenGL mini-driver drove consumer OpenGL adoption",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quake_(video_game)"
+   ]
+  },
+  {
+   "from": "doom",
+   "to": "directx",
+   "type": "built-on",
+   "start": 1996,
+   "end": null,
+   "note": "Doom 95, Microsoft's DirectX showcase port",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+   ]
+  },
+  {
+   "from": "gary-tarolli",
+   "to": "3dfx",
+   "type": "role",
+   "role": "cto",
+   "start": 1994,
+   "end": 2000,
+   "note": "co-founder, ex-SGI",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "gary-tarolli",
+   "to": "sgi",
+   "type": "role",
+   "role": "engineer",
+   "start": null,
+   "end": 1994,
+   "note": "graphics engineer before founding 3dfx",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "3dfx",
+   "type": "influenced",
+   "start": 1994,
+   "end": null,
+   "note": "founded by former SGI engineers",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "3dfx",
+   "to": "voodoo-graphics",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "first consumer 3D hit",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Voodoo_Graphics"
+   ]
+  },
+  {
+   "from": "3dfx",
+   "to": "glide",
+   "type": "created",
+   "start": 1996,
+   "end": null,
+   "note": "proprietary API for Voodoo hardware",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glide_(API)"
+   ]
+  },
+  {
+   "from": "opengl",
+   "to": "glide",
+   "type": "influenced",
+   "start": 1996,
+   "end": null,
+   "note": "Glide modeled on a trimmed OpenGL subset",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glide_(API)"
+   ]
+  },
+  {
+   "from": "glide",
+   "to": "directx",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2000,
+   "note": "proprietary fast path vs Microsoft's standard",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glide_(API)"
+   ]
+  },
+  {
+   "from": "3dfx",
+   "to": "stb-systems",
+   "type": "acquired",
+   "start": 1999,
+   "end": null,
+   "note": "announced Dec 1998; alienated board partners, hastening the fall",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx",
+    "https://en.wikipedia.org/wiki/STB_Systems"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "3dfx",
+   "type": "acquired",
+   "start": 2000,
+   "end": null,
+   "note": "bought assets and patents in bankruptcy",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "3dfx",
+   "to": "nvidia",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2000,
+   "note": "the defining consumer 3D rivalry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "3dfx",
+   "to": "ati",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2000,
+   "note": "consumer 3D card wars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/3dfx"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "ati",
+   "type": "competed-with",
+   "start": 1998,
+   "end": 2006,
+   "note": "GeForce vs Radeon",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ATI_Technologies"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "amd",
+   "type": "competed-with",
+   "start": 2006,
+   "end": null,
+   "note": "GPU duopoly after the ATI acquisition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AMD"
+   ]
+  },
+  {
+   "from": "jensen-huang",
+   "to": "nvidia",
+   "type": "role",
+   "role": "ceo",
+   "start": 1993,
+   "end": null,
+   "note": "co-founder, CEO since day one",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jensen_Huang"
+   ]
+  },
+  {
+   "from": "chris-malachowsky",
+   "to": "nvidia",
+   "type": "role",
+   "role": "founder",
+   "start": 1993,
+   "end": null,
+   "note": "co-founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chris_Malachowsky"
+   ]
+  },
+  {
+   "from": "curtis-priem",
+   "to": "nvidia",
+   "type": "role",
+   "role": "cto",
+   "start": 1993,
+   "end": 2003,
+   "note": "co-founder and founding CTO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Curtis_Priem"
+   ]
+  },
+  {
+   "from": "chris-malachowsky",
+   "to": "sun",
+   "type": "role",
+   "role": "engineer",
+   "start": null,
+   "end": 1993,
+   "note": "co-invented Sun's GX graphics architecture",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chris_Malachowsky"
+   ]
+  },
+  {
+   "from": "curtis-priem",
+   "to": "sun",
+   "type": "role",
+   "role": "engineer",
+   "start": null,
+   "end": 1993,
+   "note": "senior graphics chip engineer, GX architect",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Curtis_Priem"
+   ]
+  },
+  {
+   "from": "jensen-huang",
+   "to": "amd",
+   "type": "role",
+   "role": "engineer",
+   "start": 1983,
+   "end": 1985,
+   "note": "microprocessor designer before LSI Logic",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jensen_Huang"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "riva-128",
+   "type": "created",
+   "start": 1997,
+   "end": null,
+   "note": "the chip that saved the company",
+   "sources": [
+    "https://en.wikipedia.org/wiki/RIVA_128"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "geforce-256",
+   "type": "created",
+   "start": 1999,
+   "end": null,
+   "note": "hardware T&L, branded the first GPU",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GeForce_256"
+   ]
+  },
+  {
+   "from": "geforce-256",
+   "to": "riva-128",
+   "type": "succeeded",
+   "start": 1999,
+   "end": null,
+   "note": "via the RIVA TNT line",
+   "sources": [
+    "https://en.wikipedia.org/wiki/GeForce_256"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "cuda",
+   "type": "created",
+   "start": 2006,
+   "end": null,
+   "note": "opened the GPU to general compute",
+   "sources": [
+    "https://en.wikipedia.org/wiki/CUDA"
+   ]
+  },
+  {
+   "from": "nvidia",
+   "to": "openai",
+   "type": "partnered",
+   "start": 2016,
+   "end": null,
+   "note": "Huang hand-delivered the first DGX-1 to OpenAI",
+   "sources": [
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-reminisces-about-the-time-jensen-huang-donated-a-dgx-1-to-openai-shares-photo-gallery"
+   ]
+  },
+  {
+   "from": "ati",
+   "to": "radeon",
+   "type": "created",
+   "start": 2000,
+   "end": null,
+   "note": "flagship GPU line",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Radeon"
+   ]
+  },
+  {
+   "from": "amd",
+   "to": "ati",
+   "type": "acquired",
+   "start": 2006,
+   "end": null,
+   "note": "$5.4B deal; brand retired 2010",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ATI_Technologies"
+   ]
+  },
+  {
+   "from": "s3",
+   "to": "3dfx",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2000,
+   "note": "lost the consumer 3D transition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/S3_Graphics"
+   ]
+  },
+  {
+   "from": "s3",
+   "to": "microsoft",
+   "type": "licensed",
+   "start": 1998,
+   "end": null,
+   "note": "S3TC became DXTC in DirectX 6",
+   "sources": [
+    "https://en.wikipedia.org/wiki/S3_Texture_Compression"
+   ]
+  },
+  {
+   "from": "ibm",
+   "to": "vga",
+   "type": "created",
+   "start": 1987,
+   "end": null,
+   "note": "shipped with the PS/2 line",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Video_Graphics_Array"
+   ]
+  },
+  {
+   "from": "amd",
+   "to": "mantle",
+   "type": "created",
+   "start": 2013,
+   "end": 2015,
+   "note": "low-overhead API with DICE",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mantle_(API)"
+   ]
+  },
+  {
+   "from": "vulkan",
+   "to": "mantle",
+   "type": "built-on",
+   "start": 2016,
+   "end": null,
+   "note": "AMD donated Mantle to Khronos as the starting point",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "vulkan",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "announced as glNext, released Feb 2016",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "from": "vulkan",
+   "to": "opengl",
+   "type": "succeeded",
+   "start": 2016,
+   "end": null,
+   "note": "explicit next-generation successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "from": "vulkan",
+   "to": "metal",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "cross-platform vs Apple-only",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "from": "vulkan",
+   "to": "directx",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "vs Direct3D 12",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vulkan"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "metal",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "debuted at WWDC for iOS",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Metal_(API)"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "opengles",
+   "type": "created",
+   "start": 2003,
+   "end": null,
+   "note": "embedded-systems profile",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_ES"
+   ]
+  },
+  {
+   "from": "opengles",
+   "to": "opengl",
+   "type": "forked-from",
+   "start": 2003,
+   "end": null,
+   "note": "trimmed subset for embedded and mobile",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL_ES"
+   ]
+  },
+  {
+   "from": "webgl",
+   "to": "opengles",
+   "type": "built-on",
+   "start": 2011,
+   "end": null,
+   "note": "WebGL 1.0 wraps OpenGL ES 2.0",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGL"
+   ]
+  },
+  {
+   "from": "khronos",
+   "to": "webgl",
+   "type": "standardized",
+   "start": 2011,
+   "end": null,
+   "note": "spec developed in a Khronos working group",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGL"
+   ]
+  },
+  {
+   "from": "vladimir-vukicevic",
+   "to": "webgl",
+   "type": "created",
+   "start": 2006,
+   "end": null,
+   "note": "Canvas 3D prototype at Mozilla became WebGL",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGL"
+   ]
+  },
+  {
+   "from": "vladimir-vukicevic",
+   "to": "mozilla",
+   "type": "role",
+   "role": "engineer",
+   "start": null,
+   "end": null,
+   "note": "graphics engineer behind Canvas 3D, WebGL, WebVR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Vladimir_Vuki%C4%87evi%C4%87"
+   ]
+  },
+  {
+   "from": "webgpu",
+   "to": "webgl",
+   "type": "succeeded",
+   "start": 2017,
+   "end": null,
+   "note": "W3C effort; shipped in Chrome 113 in 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "webgpu",
+   "to": "vulkan",
+   "type": "built-on",
+   "start": 2017,
+   "end": null,
+   "note": "implemented atop native APIs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "webgpu",
+   "to": "metal",
+   "type": "built-on",
+   "start": 2017,
+   "end": null,
+   "note": "Apple's Metal-flavored proposal shaped the API",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "webgpu",
+   "to": "directx",
+   "type": "built-on",
+   "start": 2017,
+   "end": null,
+   "note": "runs atop Direct3D 12 on Windows",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "webgpu",
+   "type": "created",
+   "start": 2017,
+   "end": null,
+   "note": "initial WebKit proposal",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "webgpu",
+   "type": "created",
+   "start": 2017,
+   "end": null,
+   "note": "Dawn implementation, first to ship in Chrome",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebGPU"
+   ]
+  },
+  {
+   "from": "ricardo-cabello",
+   "to": "three-js",
+   "type": "created",
+   "start": 2010,
+   "end": null,
+   "note": "released on GitHub, April 2010",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three.js"
+   ]
+  },
+  {
+   "from": "three-js",
+   "to": "webgl",
+   "type": "built-on",
+   "start": 2010,
+   "end": null,
+   "note": "WebGL renderer added soon after launch",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three.js"
+   ]
+  },
+  {
+   "from": "aframe",
+   "to": "webvr",
+   "type": "built-on",
+   "start": 2015,
+   "end": null,
+   "note": "built for the WebVR era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)"
+   ]
+  },
+  {
+   "from": "vladimir-vukicevic",
+   "to": "webvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "conceived WebVR at Mozilla, spring 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebVR"
+   ]
+  },
+  {
+   "from": "brandon-jones",
+   "to": "webvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "brought WebVR to Chrome",
+   "sources": [
+    "https://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html",
+    "https://en.wikipedia.org/wiki/WebVR"
+   ]
+  },
+  {
+   "from": "mozilla",
+   "to": "webvr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "originated in Mozilla's VR team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebVR"
+   ]
+  },
+  {
+   "from": "brandon-jones",
+   "to": "google",
+   "type": "role",
+   "role": "engineer",
+   "start": null,
+   "end": null,
+   "note": "WebGL/WebVR/WebXR engineer on Chrome",
+   "sources": [
+    "https://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html"
+   ]
+  },
+  {
+   "from": "webxr",
+   "to": "webvr",
+   "type": "succeeded",
+   "start": 2018,
+   "end": null,
+   "note": "replaced WebVR, adding AR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebXR"
+   ]
+  },
+  {
+   "from": "brandon-jones",
+   "to": "webxr",
+   "type": "created",
+   "start": 2018,
+   "end": null,
+   "note": "spec editor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/WebXR"
+   ]
+  },
+  {
+   "from": "morton-heilig",
+   "to": "sensorama",
+   "type": "created",
+   "start": 1962,
+   "end": null,
+   "note": "built and patented it single-handedly",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sensorama"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "damocles",
+   "type": "created",
+   "start": 1968,
+   "end": null,
+   "note": "first head-tracked HMD, at Harvard/Utah",
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Sword_of_Damocles_(virtual_reality)"
+   ]
+  },
+  {
+   "from": "bob-sproull",
+   "to": "damocles",
+   "type": "created",
+   "start": 1968,
+   "end": null,
+   "note": "student collaborator who co-built the system",
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Sword_of_Damocles_(virtual_reality)"
+   ]
+  },
+  {
+   "from": "damocles",
+   "to": "view",
+   "type": "influenced",
+   "start": 1985,
+   "end": null,
+   "note": "Sutherland's HMD concept underpins NASA's headset work",
+   "sources": [
+    "https://www.vrs.org.uk/virtual-reality/history.html"
+   ]
+  },
+  {
+   "from": "scott-fisher",
+   "to": "view",
+   "type": "role",
+   "start": 1985,
+   "end": 1990,
+   "note": "founded and led the VIEW lab at NASA Ames",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Scott_Fisher_(technologist)"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "jaron-lanier",
+   "to": "vpl-research",
+   "type": "created",
+   "start": 1984,
+   "end": null,
+   "note": "founded VPL, the first VR hardware company",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "vpl-research",
+   "to": "dataglove",
+   "type": "created",
+   "start": 1987,
+   "end": null,
+   "note": "commercialized Zimmerman's optical-flex glove",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wired_glove"
+   ]
+  },
+  {
+   "from": "vpl-research",
+   "to": "eyephone",
+   "type": "created",
+   "start": 1989,
+   "end": null,
+   "note": "first commercially sold VR HMD",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "vpl-research",
+   "to": "view",
+   "type": "partnered",
+   "start": 1985,
+   "end": 1990,
+   "note": "NASA commissioned DataGloves for the VIEW lab",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wired_glove",
+    "https://en.wikipedia.org/wiki/Scott_Fisher_(technologist)"
+   ]
+  },
+  {
+   "from": "vpl-research",
+   "to": "nintendo",
+   "type": "licensed",
+   "start": 1989,
+   "end": null,
+   "note": "DataGlove patents underpinned Mattel's Power Glove NES accessory",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Power_Glove"
+   ]
+  },
+  {
+   "from": "sun",
+   "to": "vpl-research",
+   "type": "acquired",
+   "start": 1998,
+   "end": null,
+   "note": "bought VPL's VR patent portfolio post-bankruptcy",
+   "sources": [
+    "https://www.jaronlanier.com/sun.html",
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "carolina-cruz-neira",
+   "to": "cave",
+   "type": "created",
+   "start": 1992,
+   "end": null,
+   "note": "with Tom DeFanti and Dan Sandin at EVL, UIC",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment"
+   ]
+  },
+  {
+   "from": "jonathan-waldern",
+   "to": "virtuality",
+   "type": "created",
+   "start": 1991,
+   "end": null,
+   "note": "via W Industries, founded 1987",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtuality_(product)"
+   ]
+  },
+  {
+   "from": "sega",
+   "to": "sega-vr",
+   "type": "created",
+   "start": 1993,
+   "end": 1994,
+   "note": "announced for Genesis, cancelled before release",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sega_VR"
+   ]
+  },
+  {
+   "from": "nintendo",
+   "to": "virtual-boy",
+   "type": "created",
+   "start": 1995,
+   "end": 1996,
+   "note": "Gunpei Yokoi's last Nintendo console",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_Boy"
+   ]
+  },
+  {
+   "from": "vfx1",
+   "to": "i-glasses",
+   "type": "competed-with",
+   "start": 1995,
+   "end": 1997,
+   "note": "rival consumer PC HMDs of the mid-90s bubble",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VFX1_Headgear",
+    "https://en.wikipedia.org/wiki/Virtual_I/O"
+   ]
+  },
+  {
+   "from": "palmer-luckey",
+   "to": "oculus-vr",
+   "type": "created",
+   "start": 2012,
+   "end": null,
+   "note": "founded to ship his garage Rift prototypes",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   ]
+  },
+  {
+   "from": "palmer-luckey",
+   "to": "oculus-vr",
+   "type": "role",
+   "start": 2012,
+   "end": 2017,
+   "note": "founder; departed Facebook in 2017",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "john-carmack",
+   "to": "oculus-vr",
+   "type": "role",
+   "start": 2013,
+   "end": 2022,
+   "note": "CTO 2013, consulting CTO 2019, resigned Dec 2022",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "brendan-iribe",
+   "to": "oculus-vr",
+   "type": "role",
+   "start": 2012,
+   "end": 2018,
+   "note": "co-founder and CEO; left Facebook 2018",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Brendan_Iribe"
+   ],
+   "role": "member"
+  },
+  {
+   "from": "oculus-vr",
+   "to": "rift-dk2",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "rift-cv1",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "first consumer Rift",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift_CV1"
+   ]
+  },
+  {
+   "from": "rift-dk2",
+   "to": "rift-dk1",
+   "type": "succeeded",
+   "start": 2014,
+   "end": null,
+   "note": "adds positional tracking and OLED",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "from": "rift-cv1",
+   "to": "rift-dk2",
+   "type": "succeeded",
+   "start": 2016,
+   "end": null,
+   "note": "consumer version of the dev-kit line",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift_CV1"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "oculus-vr",
+   "type": "acquired",
+   "start": 2014,
+   "end": null,
+   "note": "~$2B Facebook acquisition, March 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_(brand)"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "meta",
+   "type": "merged-into",
+   "start": 2021,
+   "end": null,
+   "note": "Oculus brand retired for Meta Quest",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_(brand)"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "oculus-vr",
+   "type": "partnered",
+   "start": 2013,
+   "end": 2014,
+   "note": "shared VR research (low-persistence displays, demo room) before becoming rivals",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "from": "rift-dk1",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2013,
+   "end": null,
+   "note": "cheap phone LCD plus hobbyist IMU made a $300 HMD possible",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "from": "rift-dk2",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "teardown revealed a Galaxy Note 3 display panel inside",
+   "sources": [
+    "https://www.ifixit.com/Teardown/Oculus+Rift+Development+Kit+2+Teardown/26076"
+   ]
+  },
+  {
+   "from": "gear-vr",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "a Galaxy phone is the display, sensor, and computer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "from": "cardboard",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "any smartphone becomes the headset",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Cardboard"
+   ]
+  },
+  {
+   "from": "oculus-go",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2018,
+   "end": null,
+   "note": "Snapdragon 821 phone SoC",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Go"
+   ]
+  },
+  {
+   "from": "quest1",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2019,
+   "end": null,
+   "note": "Snapdragon 835 phone SoC",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Quest"
+   ]
+  },
+  {
+   "from": "quest2",
+   "to": "smartphone-components",
+   "type": "built-on",
+   "start": 2020,
+   "end": null,
+   "note": "Snapdragon XR2, derived from mobile silicon",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quest_2"
+   ]
+  },
+  {
+   "from": "samsung",
+   "to": "gear-vr",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "from": "samsung",
+   "to": "oculus-vr",
+   "type": "partnered",
+   "start": 2014,
+   "end": 2020,
+   "note": "Oculus software plus Samsung phones/displays in Gear VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "cardboard",
+   "type": "created",
+   "start": 2014,
+   "end": null,
+   "note": "20% project unveiled at I/O",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Cardboard"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "daydream",
+   "type": "created",
+   "start": 2016,
+   "end": 2019,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Daydream"
+   ]
+  },
+  {
+   "from": "daydream",
+   "to": "cardboard",
+   "type": "succeeded",
+   "start": 2016,
+   "end": null,
+   "note": "premium successor platform to Cardboard",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Daydream"
+   ]
+  },
+  {
+   "from": "gear-vr",
+   "to": "daydream",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2019,
+   "note": "the phone-slot mobile VR dead end",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Daydream",
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "from": "htc",
+   "to": "htc-vive",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "manufactured the headset",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "htc",
+   "type": "partnered",
+   "start": 2015,
+   "end": null,
+   "note": "SteamVR software and Lighthouse tracking in the Vive",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "psvr",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "Project Morpheus becomes PlayStation VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "psvr2",
+   "type": "created",
+   "start": 2023,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR2"
+   ]
+  },
+  {
+   "from": "psvr2",
+   "to": "psvr",
+   "type": "succeeded",
+   "start": 2023,
+   "end": null,
+   "note": "inside-out tracking replaces the light-orb camera rig",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR2"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "windows-mr",
+   "type": "created",
+   "start": 2017,
+   "end": 2024,
+   "note": "platform plus OEM headsets from Acer, HP, Lenovo, Samsung",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Windows_Mixed_Reality"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "hololens1",
+   "type": "created",
+   "start": 2016,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft_HoloLens"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "hololens2",
+   "type": "created",
+   "start": 2019,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HoloLens_2"
+   ]
+  },
+  {
+   "from": "hololens2",
+   "to": "hololens1",
+   "type": "succeeded",
+   "start": 2019,
+   "end": null,
+   "note": "wider FOV, articulated hand tracking",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HoloLens_2"
+   ]
+  },
+  {
+   "from": "magic-leap",
+   "to": "magic-leap-one",
+   "type": "created",
+   "start": 2018,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magic_Leap"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "magic-leap",
+   "type": "partnered",
+   "start": 2014,
+   "end": null,
+   "note": "led the $542M investment round",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magic_Leap"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "oculus-go",
+   "type": "created",
+   "start": 2018,
+   "end": null,
+   "note": "built with Xiaomi",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Go"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "quest1",
+   "type": "created",
+   "start": 2019,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Quest"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "quest2",
+   "type": "created",
+   "start": 2020,
+   "end": null,
+   "note": "launched as Oculus Quest 2, rebranded Meta Quest 2",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quest_2"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "quest3",
+   "type": "created",
+   "start": 2023,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Quest_3"
+   ]
+  },
+  {
+   "from": "quest1",
+   "to": "oculus-go",
+   "type": "succeeded",
+   "start": 2019,
+   "end": null,
+   "note": "6DoF standalone replaced the 3DoF Go",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oculus_Quest",
+    "https://en.wikipedia.org/wiki/Oculus_Go"
+   ]
+  },
+  {
+   "from": "quest2",
+   "to": "quest1",
+   "type": "succeeded",
+   "start": 2020,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Quest_2"
+   ]
+  },
+  {
+   "from": "quest3",
+   "to": "quest2",
+   "type": "succeeded",
+   "start": 2023,
+   "end": null,
+   "note": "adds color-passthrough mixed reality",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meta_Quest_3"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "valve-index",
+   "type": "created",
+   "start": 2019,
+   "end": null,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Valve_Index"
+   ]
+  },
+  {
+   "from": "rift-cv1",
+   "to": "htc-vive",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2019,
+   "note": "the 2016 tethered PC VR war",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive",
+    "https://en.wikipedia.org/wiki/Oculus_Rift_CV1"
+   ]
+  },
+  {
+   "from": "rift-cv1",
+   "to": "psvr",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2019,
+   "note": "PC versus console VR in the 2016 launch window",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR"
+   ]
+  },
+  {
+   "from": "htc-vive",
+   "to": "psvr",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2020,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR",
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "windows-mr",
+   "to": "htc-vive",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2020,
+   "note": "cheaper inside-out-tracked PC headsets versus Lighthouse rigs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Windows_Mixed_Reality"
+   ]
+  },
+  {
+   "from": "valve-index",
+   "to": "quest1",
+   "type": "competed-with",
+   "start": 2019,
+   "end": 2020,
+   "note": "premium tethered versus cheap standalone, launched weeks apart",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Valve_Index",
+    "https://en.wikipedia.org/wiki/Oculus_Quest"
+   ]
+  },
+  {
+   "from": "psvr2",
+   "to": "quest2",
+   "type": "competed-with",
+   "start": 2023,
+   "end": null,
+   "note": "console-tethered versus dominant standalone",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_VR2"
+   ]
+  },
+  {
+   "from": "hololens1",
+   "to": "magic-leap-one",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2020,
+   "note": "the first AR headset rivalry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magic_Leap",
+    "https://en.wikipedia.org/wiki/Microsoft_HoloLens"
+   ]
+  },
+  {
+   "from": "visionpro",
+   "to": "quest3",
+   "type": "competed-with",
+   "start": 2024,
+   "end": null,
+   "note": "mixed-reality flagships at $3,499 versus $499",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Vision_Pro",
+    "https://en.wikipedia.org/wiki/Meta_Quest_3"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "openxr",
+   "type": "standardized",
+   "start": 2019,
+   "end": null,
+   "note": "shipped one of the first OpenXR 1.0 runtimes for WMR and HoloLens 2",
+   "sources": [
+    "https://www.khronos.org/news/press/khronos-releases-openxr-1.0-specification-establishing-a-foundation-for-the-ar-and-vr-ecosystem",
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "openxr",
+   "type": "standardized",
+   "start": 2020,
+   "end": null,
+   "note": "Quest and Rift runtimes adopt OpenXR; proprietary APIs later deprecated",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "openxr",
+   "type": "standardized",
+   "start": 2020,
+   "end": null,
+   "note": "SteamVR ships an OpenXR runtime",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenXR"
+   ]
+  },
+  {
+   "from": "lucasfilm-games",
+   "to": "habitat",
+   "type": "created",
+   "start": 1985,
+   "end": 1988,
+   "note": "developed for Quantum Link",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "habitat",
+   "type": "role",
+   "role": "creator",
+   "start": 1985,
+   "end": 1988,
+   "note": "project leader and designer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "habitat",
+   "type": "role",
+   "role": "creator",
+   "start": 1985,
+   "end": 1988,
+   "note": "co-creator, ran the in-world Oracle",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "club-caribe",
+   "to": "habitat",
+   "type": "succeeded",
+   "start": 1988,
+   "note": "scaled-down relaunch on Quantum Link",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "lucasfilm-games",
+   "to": "club-caribe",
+   "type": "created",
+   "start": 1988,
+   "note": "repackaged Habitat to recoup costs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "fujitsu-habitat",
+   "to": "habitat",
+   "type": "built-on",
+   "start": 1990,
+   "note": "licensed Japanese port of the Habitat codebase",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://wiki.renoproject.org/index.php/Fujitsu_Habitat_History"
+   ]
+  },
+  {
+   "from": "fujitsu",
+   "to": "fujitsu-habitat",
+   "type": "created",
+   "start": 1990,
+   "note": "launched on NIFTY-Serve",
+   "sources": [
+    "https://wiki.renoproject.org/index.php/Fujitsu_Habitat_History"
+   ]
+  },
+  {
+   "from": "fujitsu",
+   "to": "worldsaway",
+   "type": "created",
+   "start": 1995,
+   "note": "via subsidiary Fujitsu Cultural Technologies, for CompuServe",
+   "sources": [
+    "https://www.pcworld.com/article/424450/this-old-tech-remembering-worldsaways-avatars-and-virtual-experiences.html"
+   ]
+  },
+  {
+   "from": "worldsaway",
+   "to": "fujitsu-habitat",
+   "type": "succeeded",
+   "start": 1995,
+   "note": "Fujitsu's western follow-on to its Habitat line",
+   "sources": [
+    "https://www.pcworld.com/article/424450/this-old-tech-remembering-worldsaways-avatars-and-virtual-experiences.html",
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 2000,
+   "note": "co-founder with Farmer and Crockford",
+   "sources": [
+    "http://www.fudco.com/chip/resume.html",
+    "https://en.wikipedia.org/wiki/Chip_Morningstar"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "electric-communities",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 2001,
+   "note": "co-founder; stayed through the Communities.com era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "electric-communities",
+   "to": "palace",
+   "type": "acquired",
+   "start": 1998,
+   "note": "Softbank-brokered consolidation; renamed Communities.com",
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)",
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "from": "jim-bumgardner",
+   "to": "palace",
+   "type": "role",
+   "role": "creator",
+   "start": 1994,
+   "end": 2000,
+   "note": "designed and programmed the original client/server",
+   "sources": [
+    "https://www.palaceplanet.net/news/superscoop/jbum_interview.html",
+    "https://en.wikipedia.org/wiki/The_Palace_(computer_program)"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "worlds-chat",
+   "type": "created",
+   "start": 1995,
+   "note": "launched April 1995",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Worlds.com"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "alphaworld",
+   "type": "created",
+   "start": 1995,
+   "note": "launched June 1995",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "ron-britvich",
+   "to": "alphaworld",
+   "type": "role",
+   "role": "creator",
+   "start": 1994,
+   "end": 1996,
+   "note": "wrote the original AlphaWorld",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "activeworlds-inc",
+   "to": "alphaworld",
+   "type": "acquired",
+   "start": 1997,
+   "note": "Circle of Fire Studios bought the tech from Worlds Inc",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds"
+   ]
+  },
+  {
+   "from": "blaxxun",
+   "to": "cybertown",
+   "type": "acquired",
+   "start": 1996,
+   "note": "became blaxxun's flagship community",
+   "sources": [
+    "https://en.wikipedia.org/wiki/CyberTown",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "pshome",
+   "type": "created",
+   "start": 2008,
+   "end": 2015,
+   "note": "PS3's social world",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "from": "bruce-damer",
+   "to": "onlive-traveler",
+   "type": "acquired",
+   "start": 1999,
+   "note": "his DigitalSpace took over Traveler after OnLive pivoted",
+   "sources": [
+    "https://damer.com/avatars/traveler.html"
+   ]
+  },
+  {
+   "from": "worlds-chat",
+   "to": "palace",
+   "type": "competed-with",
+   "start": 1995,
+   "end": 2000,
+   "note": "rival avatar-chat platforms of the 1995 wave",
+   "sources": [
+    "https://www.classic-computers.org.nz/blog/2022-12-15-chat-memories-part-3.htm"
+   ]
+  },
+  {
+   "from": "alphaworld",
+   "to": "cybertown",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 2002,
+   "note": "rival build-your-own 3D communities",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds",
+    "https://en.wikipedia.org/wiki/CyberTown"
+   ]
+  },
+  {
+   "from": "oz-virtual",
+   "to": "onlive-traveler",
+   "type": "competed-with",
+   "start": 1996,
+   "end": 1998,
+   "note": "rival avatar worlds of the VRML moment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OZ_Virtual",
+    "https://damer.com/avatars/traveler.html"
+   ]
+  },
+  {
+   "from": "communityplace",
+   "to": "cybertown",
+   "type": "competed-with",
+   "start": 1997,
+   "end": 2002,
+   "note": "competing VRML multi-user platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/SAPARi",
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "habitat",
+   "to": "secondlife",
+   "type": "influenced",
+   "start": 1986,
+   "note": "avatars, user economy, and emergent-society lessons set the template",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "secondlife",
+   "type": "created",
+   "start": 2003,
+   "note": "launched June 2003",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "founder",
+   "start": 1999,
+   "end": null,
+   "note": "founder; CEO until 2008, advisor again from 2022",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "high-fidelity",
+   "type": "role",
+   "role": "founder",
+   "start": 2013,
+   "end": null,
+   "note": "founded after leaving Linden Lab",
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "opensimulator",
+   "to": "secondlife",
+   "type": "built-on",
+   "start": 2007,
+   "note": "open-source server compatible with the Second Life viewer protocol",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenSimulator"
+   ]
+  },
+  {
+   "from": "there",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2010,
+   "note": "the era's defining head-to-head for avatar socializing",
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "there",
+   "type": "role",
+   "role": "founder",
+   "start": 1998,
+   "end": 2004,
+   "note": "founded There Inc",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey",
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "imvu",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "co-founded with Eric Ries and others",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU",
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "from": "imvu",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2004,
+   "end": 2012,
+   "note": "rival avatar platforms with user-generated catalogs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/IMVU",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "entropia",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2012,
+   "note": "rival real-money virtual economies",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Entropia_Universe",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "disney",
+   "to": "toontown",
+   "type": "created",
+   "start": 2003,
+   "end": 2013,
+   "note": "Disney's kid MMO; closed September 2013",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Toontown_Online"
+   ]
+  },
+  {
+   "from": "disney",
+   "to": "club-penguin",
+   "type": "acquired",
+   "start": 2007,
+   "note": "bought New Horizon Interactive for up to $700M",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Club_Penguin"
+   ]
+  },
+  {
+   "from": "habbo",
+   "to": "club-penguin",
+   "type": "competed-with",
+   "start": 2005,
+   "end": 2017,
+   "note": "rival kid/teen avatar worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habbo",
+    "https://en.wikipedia.org/wiki/Club_Penguin"
+   ]
+  },
+  {
+   "from": "gaia-online",
+   "to": "habbo",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2012,
+   "note": "rival teen avatar communities on the web",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaia_Online",
+    "https://en.wikipedia.org/wiki/Habbo"
+   ]
+  },
+  {
+   "from": "pshome",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2012,
+   "note": "console walled-garden answer to the PC virtual-world boom",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "from": "bluemars",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2009,
+   "end": 2011,
+   "note": "positioned as a high-fidelity Second Life challenger",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blue_Mars_(video_game)",
+    "http://www.metaversejournal.com/2011/01/15/the-partial-death-and-refocus-of-blue-mars/"
+   ]
+  },
+  {
+   "from": "twinity",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2012,
+   "note": "Berlin's mirror-world rival to SL",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Twinity",
+    "https://www.hypergridbusiness.com/2012/06/troubled-twinity-bought-by-exit-reality/"
+   ]
+  },
+  {
+   "from": "kaneva",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2006,
+   "end": 2012,
+   "note": "social-network-meets-3D-world SL competitor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtual_World_of_Kaneva"
+   ]
+  },
+  {
+   "from": "cloudparty",
+   "to": "secondlife",
+   "type": "competed-with",
+   "start": 2012,
+   "end": 2014,
+   "note": "browser-based challenge to the download-client incumbents",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cloud_Party"
+   ]
+  },
+  {
+   "from": "james-mccrae",
+   "to": "janusvr",
+   "type": "role",
+   "role": "creator",
+   "start": 2013,
+   "end": 2019,
+   "note": "created the immersive web browser; co-founded the company in 2014",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://magazine.utoronto.ca/research-ideas/technology/surfing-the-net-is-old-school-soon-we-may-inhabit-it-janusxr-james-mccrae-jonathan-ore/"
+   ]
+  },
+  {
+   "from": "mozilla",
+   "to": "hubs",
+   "type": "created",
+   "start": 2018,
+   "end": 2024,
+   "note": "WebXR social rooms; shut down May 2024",
+   "sources": [
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/",
+    "https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs"
+   ]
+  },
+  {
+   "from": "janusvr",
+   "to": "hubs",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2019,
+   "note": "rival visions of the immersive web",
+   "sources": [
+    "https://en.wikipedia.org/wiki/JanusVR",
+    "https://roadtovr.com/mozilla-hubs-shutdown-web-xr/"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "cryptovoxels",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2022,
+   "note": "rival Ethereum land-parcel worlds",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://www.voxels.com/"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "sandbox",
+   "type": "competed-with",
+   "start": 2021,
+   "end": null,
+   "note": "the two flagship crypto-metaverse land markets",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://en.wikipedia.org/wiki/The_Sandbox_(video_game)"
+   ]
+  },
+  {
+   "from": "decentraland",
+   "to": "somnium-space",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "competing blockchain virtual-land platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Decentraland",
+    "https://somniumspace.com/"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "altspacevr",
+   "type": "acquired",
+   "start": 2017,
+   "note": "October 2017 rescue acquisition; shut down March 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR"
+   ]
+  },
+  {
+   "from": "graham-gaylor",
+   "to": "vrchat",
+   "type": "role",
+   "role": "founder",
+   "start": 2014,
+   "end": null,
+   "note": "founder and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "jesse-joudrey",
+   "to": "vrchat",
+   "type": "role",
+   "role": "cto",
+   "start": 2014,
+   "end": null,
+   "note": "co-founder and CTO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "frooxius",
+   "to": "neos",
+   "type": "role",
+   "role": "creator",
+   "start": 2018,
+   "end": 2023,
+   "note": "lead developer until the Solirax split",
+   "sources": [
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/",
+    "https://en.wikipedia.org/wiki/Resonite"
+   ]
+  },
+  {
+   "from": "frooxius",
+   "to": "resonite",
+   "type": "role",
+   "role": "creator",
+   "start": 2023,
+   "end": null,
+   "note": "created under his new studio Yellow Dog Man",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite"
+   ]
+  },
+  {
+   "from": "resonite",
+   "to": "neos",
+   "type": "succeeded",
+   "start": 2023,
+   "note": "lead developer and community migrated after the split with publisher Solirax",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Resonite",
+    "https://www.uploadvr.com/resonite-vr-steam-early-access/"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "sansar",
+   "type": "created",
+   "start": 2017,
+   "end": 2020,
+   "note": "next-gen VR platform; sold to Wookey Project in 2020",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://roadtovr.com/sansar-spin-off-linden-lab-refocus-second-life/"
+   ]
+  },
+  {
+   "from": "meta",
+   "to": "facebook-spaces",
+   "type": "created",
+   "start": 2017,
+   "end": 2019,
+   "note": "as Facebook; its first social VR app",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook_Spaces"
+   ]
+  },
+  {
+   "from": "horizon",
+   "to": "facebook-spaces",
+   "type": "succeeded",
+   "start": 2019,
+   "note": "Spaces was shut down the day Horizon was announced",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook_Spaces",
+    "https://en.wikipedia.org/wiki/Horizon_Worlds"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "vrchat",
+   "type": "competed-with",
+   "start": 2015,
+   "end": 2023,
+   "note": "core rivals of the social-VR land grab",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "recroom",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2023,
+   "note": "competing social VR hangouts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "highfidelity",
+   "type": "competed-with",
+   "start": 2015,
+   "end": 2019,
+   "note": "rival bids to own social VR's early years",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "altspacevr",
+   "to": "facebook-spaces",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2019,
+   "note": "independent vs platform-owned social VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/AltspaceVR",
+    "https://en.wikipedia.org/wiki/Facebook_Spaces"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "recroom",
+   "type": "competed-with",
+   "start": 2016,
+   "end": null,
+   "note": "the two enduring giants of social VR",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat",
+    "https://en.wikipedia.org/wiki/Rec_Room_(video_game)"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "neos",
+   "type": "competed-with",
+   "start": 2018,
+   "end": 2023,
+   "note": "UGC sandbox rivals; Neos courted VRChat's power creators",
+   "sources": [
+    "https://roadtovr.com/neos-vr-spiritual-successor-resonite-reveal-steamvr/",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "vrchat",
+   "to": "horizon",
+   "type": "competed-with",
+   "start": 2021,
+   "end": null,
+   "note": "indie incumbent vs Meta's flagship",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Horizon_Worlds",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "sansar",
+   "to": "highfidelity",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2019,
+   "note": "dueling next-gen platforms from Second Life's own lineage",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "sansar",
+   "to": "vrchat",
+   "type": "competed-with",
+   "start": 2017,
+   "end": 2020,
+   "note": "polished creator platform vs anarchic UGC juggernaut",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar_(video_game)",
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "next",
+   "type": "acquired",
+   "start": 1997,
+   "end": null,
+   "note": "$429M; NeXTSTEP becomes macOS, Jobs returns",
+   "sources": [
+    "https://en.wikipedia.org/wiki/NeXT"
+   ]
+  },
+  {
+   "from": "zenimax",
+   "to": "id-software",
+   "type": "acquired",
+   "start": 2009,
+   "end": null,
+   "note": "id joins Bethesda's parent",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Id_Software"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "zenimax",
+   "type": "acquired",
+   "start": 2021,
+   "end": null,
+   "note": "$7.5B; closed March 2021",
+   "sources": [
+    "https://en.wikipedia.org/wiki/ZeniMax_Media"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "activision-blizzard",
+   "type": "acquired",
+   "start": 2023,
+   "end": null,
+   "note": "$68.7B, closed October 2023",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Activision_Blizzard"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "openai",
+   "type": "partnered",
+   "start": 2019,
+   "end": null,
+   "note": "$1B (2019) deepened to ~$10B (2023); Azure exclusivity",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenAI"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "sony",
+   "type": "competed-with",
+   "start": 2001,
+   "end": null,
+   "note": "Xbox vs PlayStation console wars",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Console_war"
+   ]
+  },
+  {
+   "from": "netscape",
+   "to": "microsoft",
+   "type": "competed-with",
+   "start": 1995,
+   "end": 1998,
+   "note": "Browser wars; IE bundling wins, Netscape sold to AOL 1999",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Browser_wars"
+   ]
+  },
+  {
+   "from": "apple",
+   "to": "meta",
+   "type": "competed-with",
+   "start": 2024,
+   "end": null,
+   "note": "Vision Pro vs Quest headsets",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Apple_Vision_Pro"
+   ]
+  },
+  {
+   "from": "activeworlds-inc",
+   "to": "worlds-inc",
+   "type": "spun-off-from",
+   "start": 1997,
+   "end": null,
+   "note": "Circle of Fire bought Active Worlds and rehired the laid-off team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Active_Worlds",
+    "https://wiki.activeworlds.com/index.php?title=Circle_of_Fire_Studios"
+   ]
+  },
+  {
+   "from": "worlds-inc",
+   "to": "activision-blizzard",
+   "type": "competed-with",
+   "start": 2012,
+   "end": 2022,
+   "note": "Patent suits over WoW/CoD avatars; patents invalidated on appeal",
+   "sources": [
+    "https://www.forbes.com/sites/johngaudiosi/2012/04/13/worlds-inc-explains-why-its-suing-activision-blizzard-over-world-of-warcraft-and-call-of-duty/",
+    "https://www.globenewswire.com/news-release/2022/03/11/2401824/0/en/U-S-Court-of-Appeals-Upholds-Federal-District-Court-s-Invalidity-Ruling-on-Patent-Eligible-Subject-Matter-Relating-to-Worlds-Inc-s-Patents.html"
+   ]
+  },
+  {
+   "from": "sgi",
+   "to": "khronos",
+   "type": "standardized",
+   "start": 2006,
+   "end": null,
+   "note": "OpenGL stewardship passes from SGI's ARB to Khronos",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenGL"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "khronos",
+   "type": "standardized",
+   "start": 2005,
+   "end": null,
+   "note": "COLLADA, created at Sony, handed to Khronos management",
+   "sources": [
+    "https://en.wikipedia.org/wiki/COLLADA"
+   ]
+  },
+  {
+   "from": "sony",
+   "to": "epic-games",
+   "type": "partnered",
+   "start": 2020,
+   "end": null,
+   "note": "$250M investment in 2020, expanded 2021-22",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games"
+   ]
+  },
+  {
+   "from": "sony-online-entertainment",
+   "to": "sony",
+   "type": "spun-off-from",
+   "start": 2015,
+   "end": null,
+   "note": "Sony division from 1998; sold to Columbus Nova, renamed Daybreak",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Daybreak_Game_Company"
+   ]
+  },
+  {
+   "from": "epic-games",
+   "to": "apple",
+   "type": "competed-with",
+   "start": 2020,
+   "end": 2021,
+   "note": "Epic v. Apple over App Store rules after the Fortnite hotfix; appeals ran to 2025",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games_v._Apple"
+   ]
+  },
+  {
+   "from": "valve",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 2018,
+   "end": null,
+   "note": "Epic Games Store challenges Steam",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Epic_Games_Store"
+   ]
+  },
+  {
+   "from": "oculus-vr",
+   "to": "htc",
+   "type": "competed-with",
+   "start": 2016,
+   "end": 2019,
+   "note": "Rift vs Vive, the first modern VR hardware war",
+   "sources": [
+    "https://en.wikipedia.org/wiki/HTC_Vive"
+   ]
+  },
+  {
+   "from": "ibm",
+   "to": "linden-lab",
+   "type": "partnered",
+   "start": 2008,
+   "end": null,
+   "note": "Joint Second Life/OpenSimulator interoperability teleport demo",
+   "sources": [
+    "https://en.wikipedia.org/wiki/OpenSimulator"
+   ]
+  },
+  {
+   "from": "there-inc",
+   "to": "linden-lab",
+   "type": "competed-with",
+   "start": 2003,
+   "end": 2010,
+   "note": "Rival social virtual worlds launched the same year",
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "from": "google",
+   "to": "linden-lab",
+   "type": "competed-with",
+   "start": 2008,
+   "end": 2008,
+   "note": "Lively, launched July 2008, framed as a Second Life rival; dead by December 31",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Google_Lively"
+   ]
+  },
+  {
+   "from": "high-fidelity",
+   "to": "linden-lab",
+   "type": "partnered",
+   "start": 2022,
+   "end": null,
+   "note": "High Fidelity invested in Linden Lab; Rosedale returned as advisor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "unity-technologies",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 2010,
+   "end": null,
+   "note": "Unity vs Unreal, the defining engine duopoly",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "vrchat-inc",
+   "to": "unity-technologies",
+   "type": "built-on",
+   "start": 2014,
+   "end": null,
+   "note": "VRChat is built on the Unity engine",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "lucasfilm-games",
+   "to": "fujitsu",
+   "type": "licensed",
+   "start": 1990,
+   "end": null,
+   "note": "Habitat licensed to Fujitsu: Fujitsu Habitat (1990), WorldsAway (1995)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Habitat_(video_game)"
+   ]
+  },
+  {
+   "from": "id-software",
+   "to": "epic-games",
+   "type": "competed-with",
+   "start": 1998,
+   "end": null,
+   "note": "Quake vs Unreal engine wars of the late 90s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unreal_Engine"
+   ]
+  },
+  {
+   "from": "linden-lab",
+   "to": "vrchat-inc",
+   "type": "influenced",
+   "start": 2014,
+   "end": null,
+   "note": "VRChat widely framed as the social-VR heir to Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRChat"
+   ]
+  },
+  {
+   "from": "richard-bartle",
+   "to": "raph-koster",
+   "type": "influenced",
+   "start": 1990,
+   "end": null,
+   "note": "Koster came up through MUDs (LegendMUD) in the lineage and theory Bartle founded",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://en.wikipedia.org/wiki/Richard_Bartle"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "linden-lab",
+   "type": "influenced",
+   "start": 1999,
+   "end": null,
+   "note": "Snow Crash's Metaverse was a direct inspiration for Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Snow_Crash",
+    "https://en.wikipedia.org/wiki/Second_Life"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "meta",
+   "type": "influenced",
+   "start": 2021,
+   "end": null,
+   "note": "The 'Meta' rebrand is built on Stephenson's 'metaverse' coinage",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Snow_Crash"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "blaxxun",
+   "type": "influenced",
+   "start": 1995,
+   "end": null,
+   "note": "Black Sun Interactive named itself after Snow Crash's Black Sun club",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blaxxun"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "cto",
+   "start": 2013,
+   "end": 2019,
+   "note": "CTO through the Facebook acquisition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "meta",
+   "type": "role",
+   "role": "consultant",
+   "start": 2019,
+   "end": 2022,
+   "note": "Consulting CTO for VR; resigned December 2022",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "keen-technologies",
+   "type": "role",
+   "role": "founder",
+   "start": 2022,
+   "end": null,
+   "note": "AGI startup",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-romero",
+   "to": "ion-storm",
+   "type": "role",
+   "role": "founder",
+   "start": 1996,
+   "end": 2001,
+   "note": "Co-founder; Daikatana era",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Romero",
+    "https://en.wikipedia.org/wiki/Ion_Storm"
+   ]
+  },
+  {
+   "from": "gabe-newell",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 1983,
+   "end": 1996,
+   "note": "13 years; early Windows work",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gabe_Newell"
+   ]
+  },
+  {
+   "from": "gabe-newell",
+   "to": "valve",
+   "type": "role",
+   "role": "founder",
+   "start": 1996,
+   "end": null,
+   "note": "Co-founder with Mike Harrington",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gabe_Newell"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "realnetworks",
+   "type": "role",
+   "role": "cto",
+   "start": 1996,
+   "end": 1999,
+   "note": "Joined when FreeVue was acquired; VP and CTO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "high-fidelity",
+   "type": "role",
+   "role": "founder",
+   "start": 2013,
+   "end": null,
+   "note": "Co-founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "consultant",
+   "start": 2022,
+   "end": 2024,
+   "note": "Strategic advisor after High Fidelity's investment",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philip_Rosedale"
+   ]
+  },
+  {
+   "from": "philip-rosedale",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "cto",
+   "start": 2024,
+   "end": null,
+   "note": "Returned as CTO",
+   "sources": [
+    "https://community.secondlife.com/news/featured-news/philip-rosedale-returns-as-cto-to-help-build-the-future-of-second-life-r1547/"
+   ]
+  },
+  {
+   "from": "palmer-luckey",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "founder",
+   "start": 2012,
+   "end": 2017,
+   "note": "Founder; departed Facebook March 2017, then founded Anduril",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Palmer_Luckey"
+   ]
+  },
+  {
+   "from": "jaron-lanier",
+   "to": "vpl-research",
+   "type": "role",
+   "role": "founder",
+   "start": 1984,
+   "end": 1990,
+   "note": "Founder; company bankrupt 1990",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jaron_Lanier",
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "jaron-lanier",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 2006,
+   "end": null,
+   "note": "Microsoft from 2006; Microsoft Research interdisciplinary scientist from 2009",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jaron_Lanier"
+   ]
+  },
+  {
+   "from": "ivan-sutherland",
+   "to": "sun",
+   "type": "role",
+   "role": "researcher",
+   "start": 1990,
+   "end": 2009,
+   "note": "Sun Fellow/VP after Sun acquired Sutherland, Sproull & Associates",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ivan_Sutherland"
+   ]
+  },
+  {
+   "from": "marc-andreessen",
+   "to": "netscape",
+   "type": "role",
+   "role": "founder",
+   "start": 1994,
+   "end": 1999,
+   "note": "Co-founder; Mosaic author",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Marc_Andreessen"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "apple",
+   "type": "role",
+   "role": "founder",
+   "start": 1976,
+   "end": 1985,
+   "note": "Co-founder; ousted 1985",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "next",
+   "type": "role",
+   "role": "founder",
+   "start": 1985,
+   "end": 1997,
+   "note": "Founder and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "steve-jobs",
+   "to": "apple",
+   "type": "role",
+   "role": "ceo",
+   "start": 1997,
+   "end": 2011,
+   "note": "Returned via the NeXT acquisition; CEO until shortly before his death",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Steve_Jobs"
+   ]
+  },
+  {
+   "from": "jensen-huang",
+   "to": "nvidia",
+   "type": "role",
+   "role": "founder",
+   "start": 1993,
+   "end": null,
+   "note": "Co-founder and CEO since 1993",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jensen_Huang"
+   ]
+  },
+  {
+   "from": "richard-garriott",
+   "to": "origin-systems",
+   "type": "role",
+   "role": "founder",
+   "start": 1983,
+   "end": 2000,
+   "note": "Co-founder; stayed through EA years until 2000",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Richard_Garriott"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "origin-systems",
+   "type": "role",
+   "role": "researcher",
+   "start": 1995,
+   "end": 2000,
+   "note": "Lead designer of Ultima Online",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "sony-online-entertainment",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2000,
+   "end": 2006,
+   "note": "Chief Creative Officer; creative lead on Star Wars Galaxies",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "metaplace",
+   "type": "role",
+   "role": "founder",
+   "start": 2006,
+   "end": 2010,
+   "note": "Founded Areae/Metaplace; sold to Playdom/Disney",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://en.wikipedia.org/wiki/Metaplace"
+   ]
+  },
+  {
+   "from": "raph-koster",
+   "to": "playable-worlds",
+   "type": "role",
+   "role": "founder",
+   "start": 2019,
+   "end": null,
+   "note": "Co-founded with Eric Goldberg",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raph_Koster",
+    "https://www.playableworlds.com/about/"
+   ]
+  },
+  {
+   "from": "david-baszucki",
+   "to": "roblox-corporation",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "Co-founder (with Erik Cassel) and CEO",
+   "sources": [
+    "https://en.wikipedia.org/wiki/David_Baszucki"
+   ]
+  },
+  {
+   "from": "chip-morningstar",
+   "to": "lucasfilm-games",
+   "type": "role",
+   "role": "researcher",
+   "start": 1984,
+   "end": 1988,
+   "note": "Designer/programmer; Habitat project leader",
+   "sources": [
+    "http://www.fudco.com/chip/resume.html"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "lucasfilm-games",
+   "type": "role",
+   "role": "researcher",
+   "start": 1985,
+   "end": 1988,
+   "note": "Co-creator and oracle of Habitat",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "randy-farmer",
+   "to": "fujitsu",
+   "type": "role",
+   "role": "consultant",
+   "start": 1994,
+   "end": 1997,
+   "note": "Designed WorldsAway, Habitat's CompuServe successor",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Randy_Farmer"
+   ]
+  },
+  {
+   "from": "mark-zuckerberg",
+   "to": "meta",
+   "type": "role",
+   "role": "founder",
+   "start": 2004,
+   "end": null,
+   "note": "Founder and CEO; drove the Oculus purchase and metaverse pivot",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mark_Zuckerberg"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "magic-leap",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2014,
+   "end": 2020,
+   "note": "'Chief Futurist'; left amid 2020 layoffs",
+   "sources": [
+    "https://www.prnewswire.com/news-releases/magic-leap-appoints-author-neal-stephenson-as-chief-futurist-300010260.html",
+    "https://en.wikipedia.org/wiki/Neal_Stephenson"
+   ]
+  },
+  {
+   "from": "neal-stephenson",
+   "to": "lamina1",
+   "type": "role",
+   "role": "founder",
+   "start": 2022,
+   "end": null,
+   "note": "Co-founder and chairman with Peter Vessenes",
+   "sources": [
+    "https://about.lamina1.com/team/neal-stephenson-founder"
+   ]
+  },
+  {
+   "from": "will-harvey",
+   "to": "there-inc",
+   "type": "role",
+   "role": "founder",
+   "start": 1998,
+   "end": 2004,
+   "note": "Founder",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Will_Harvey"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "microsoft",
+   "type": "role",
+   "role": "researcher",
+   "start": 1992,
+   "end": 1995,
+   "note": "Windows NT graphics team",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "id-software",
+   "type": "role",
+   "role": "researcher",
+   "start": 1995,
+   "end": 1996,
+   "note": "Quake rendering with Carmack",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "valve",
+   "type": "role",
+   "role": "researcher",
+   "start": 2011,
+   "end": 2014,
+   "note": "VR and wearable computing research",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "michael-abrash",
+   "to": "oculus-vr",
+   "type": "role",
+   "role": "chief-scientist",
+   "start": 2014,
+   "end": null,
+   "note": "Chief Scientist, continuing into Meta Reality Labs",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Michael_Abrash"
+   ]
+  },
+  {
+   "from": "cory-ondrejka",
+   "to": "linden-lab",
+   "type": "role",
+   "role": "cto",
+   "start": 2000,
+   "end": 2007,
+   "note": "CTO; architect of user-owned content in Second Life",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   ]
+  },
+  {
+   "from": "cory-ondrejka",
+   "to": "meta",
+   "type": "role",
+   "role": "researcher",
+   "start": 2010,
+   "end": 2014,
+   "note": "Facebook engineering; led the mobile rebuild",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cory_Ondrejka"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "doom",
+   "type": "created",
+   "start": 1993,
+   "note": "lead programmer",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "quake",
+   "type": "created",
+   "start": 1996,
+   "note": "engine author",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack"
+   ]
+  },
+  {
+   "from": "john-carmack",
+   "to": "rift-dk1",
+   "type": "influenced",
+   "start": 2012,
+   "note": "demoed the Rift prototype at E3 2012, launching the revival",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Carmack",
+    "https://en.wikipedia.org/wiki/Oculus_Rift"
+   ]
+  },
+  {
+   "from": "high-fidelity",
+   "to": "highfidelity",
+   "type": "created",
+   "start": 2013,
+   "note": "company and platform share the name",
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Fidelity,_Inc."
+   ]
+  },
+  {
+   "from": "unity-technologies",
+   "to": "unity",
+   "type": "created",
+   "start": 2005,
+   "note": "",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+   ]
+  },
+  {
+   "from": "microsoft",
+   "to": "minecraft",
+   "type": "acquired",
+   "start": 2014,
+   "note": "via the $2.5B Mojang acquisition",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mojang_Studios"
+   ]
+  },
+  {
+   "from": "webspace",
+   "to": "live3d",
+   "type": "competed-with",
+   "note": "first-wave VRML browsers, SGI/TGS vs Netscape",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "live3d",
+   "to": "communityplace",
+   "type": "competed-with",
+   "note": "Netscape vs Sony in the VRML plugin war",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "cortona",
+   "to": "blaxxun-contact",
+   "type": "competed-with",
+   "note": "the surviving VRML clients of the late 90s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VRML"
+   ]
+  },
+  {
+   "from": "there",
+   "to": "imvu",
+   "type": "competed-with",
+   "note": "mid-2000s avatar hangouts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/There_(virtual_world)"
+   ]
+  },
+  {
+   "from": "bluemars",
+   "to": "pshome",
+   "type": "competed-with",
+   "note": "late-2000s virtual world platforms",
+   "sources": [
+    "https://en.wikipedia.org/wiki/PlayStation_Home"
+   ]
+  },
+  {
+   "from": "sansar",
+   "to": "recroom",
+   "type": "competed-with",
+   "note": "the social-VR field of 2016-17",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sansar"
+   ]
+  },
+  {
+   "from": "lambdamoo",
+   "to": "dikumud",
+   "type": "competed-with",
+   "note": "the two great MUD family branches of the early 90s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/MUD"
+   ]
+  },
+  {
+   "from": "kesmai",
+   "to": "dikumud",
+   "type": "competed-with",
+   "note": "commercial vs open text-world scenes",
+   "sources": [
+    "https://en.wikipedia.org/wiki/MUD"
+   ]
+  },
+  {
+   "from": "runescape",
+   "to": "everquest",
+   "type": "competed-with",
+   "note": "the post-EQ MMO market",
+   "sources": [
+    "https://en.wikipedia.org/wiki/RuneScape"
+   ]
+  },
+  {
+   "from": "eve",
+   "to": "everquest",
+   "type": "competed-with",
+   "note": "launched into an EverQuest-dominated market",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eve_Online"
+   ]
+  },
+  {
+   "from": "view",
+   "to": "dataglove",
+   "type": "built-on",
+   "note": "NASA's VIEW lab used VPL's DataGlove",
+   "sources": [
+    "https://en.wikipedia.org/wiki/VPL_Research"
+   ]
+  },
+  {
+   "from": "virtuality",
+   "to": "eyephone",
+   "type": "competed-with",
+   "note": "arcade VR vs lab VR at the turn of the 90s",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Virtuality_(product)"
+   ]
+  },
+  {
+   "from": "hololens1",
+   "to": "htc-vive",
+   "type": "competed-with",
+   "note": "the 2016 headset field, AR flank",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft_HoloLens"
+   ]
+  },
+  {
+   "from": "gear-vr",
+   "to": "cardboard",
+   "type": "competed-with",
+   "note": "phone-powered VR, premium vs paper",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Samsung_Gear_VR"
+   ]
+  },
+  {
+   "from": "hubs",
+   "to": "aframe",
+   "type": "built-on",
+   "note": "Hubs is built with A-Frame",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mozilla_Hubs"
+   ]
+  }
+ ]
+}
