@@ -7,10 +7,10 @@ station. Tracked as its own project, distinct from the site spec (SPEC.md at
 the repo root); the site consumes this project's outputs.
 
 Lineage: [janusxr.org issue #1](https://github.com/janusvr/janusxr.org/issues/1)
-(the history exhibit as a transit system), building on Shinki Nishikori's
-["The timeline of virtual worlds"](https://creativecommons.org/licenses/by-sa/4.0/)
-(CC BY-SA 4.0). All data and derived posters in this project are likewise
-**CC BY-SA 4.0**.
+(the history exhibit as a transit system), building on an earlier CC BY-SA
+timeline chart whose author has asked not to be credited by name (a request
+CC BY-SA 3(a)(3) obliges us to honor). All data and derived posters in this
+project are **CC BY-SA 4.0**.
 
 ## Architecture: three layers
 

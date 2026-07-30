@@ -721,7 +721,7 @@ GLBs ?v=11.
 
 Issue #1 called for the history exhibit's centerpiece: metaverse history as
 a transit system map. We now have it, built from existing documentation as
-the issue insists — Shinki Nishikori's "The timeline of virtual worlds"
+the issue insists — a CC BY-SA timeline chart
 chart (CC BY-SA 4.0), transcribed as a **node graph**
 (`data/history/graph.json`): seven ordered lines (Web3D, Worlds, Games,
 Format, Graphics, Hardware, Company), ~90 stations with fame/influence
@@ -1366,3 +1366,11 @@ link in the map caption now points at data/history/. And the build
 section's editor card shed its step-by-step tutorial synopsis — it
 says what matters (simple in-world building tools, taught hands-on at
 the green button) in three lines instead of eight.
+
+## 2026-07-30 — Attribution, withdrawn by request
+
+The author of the chart our history map grew from has asked not to be
+cited, a request CC BY-SA section 3(a)(3) obliges us to honor. The
+name is removed from the rendered posters, the page caption, and both
+specs; the derivative's own CC BY-SA 4.0 licensing is unchanged, as is
+the share-alike obligation it carries.
