@@ -67,7 +67,8 @@ room.onLoad = function() {
   // editor bay: the big green button opens the editor and walks you through it
   var editBtn = room.objects['edit-button'];
   var tutPanel = room.objects['mount-edit-tutorial'];
-  var tut = { active: false, step: 0, timer: null, base: null, flags: {}, advancing: false, editorOpen: false };
+  var tut = { active: false, chapter: 'editor', done: { editor: false, markup: false },
+              step: 0, stepAt: 0, timer: null, base: null, flags: {}, advancing: false, editorOpen: false };
 
   function tutCtl() { return (typeof getEditorController == 'function') ? getEditorController() : null; }
   function tutUiBtn() { return document.querySelector('janus-ui-editor-button'); }
@@ -93,7 +94,7 @@ room.onLoad = function() {
     } catch (e) {}
   }
 
-  var tutSteps = [
+  var tutEditorSteps = [
     { t: 'pick something up',
       h: '<b>RIGHT-CLICK</b> the pink cube — or any of its friends — to select it for editing.',
       enter: function() {},
@@ -168,15 +169,57 @@ room.onLoad = function() {
         return tut.flags.pasting && !c.roomedit.object; } }
   ];
 
+  var tutMarkupSteps = [
+    { t: 'the living source',
+      h: 'The big panel here is this room&#39;s actual markup, updating live. <b>RIGHT-CLICK</b> one of the shapes beside it to select it for editing.',
+      enter: function() {},
+      check: function(c) { var o = c.roomedit.object; return !!(o && o.js_id && o.js_id.indexOf('play-') === 0); } },
+    { t: 'watch pos rewrite itself',
+      h: 'Drag the <b>arrows</b> and keep an eye on the panel &mdash; the object&#39;s <b>pos</b> attribute rewrites as you move it.',
+      enter: function(c) { var o = c.roomedit.object; tut.base = o ? tutSnap(o.pos) : null; },
+      check: function(c) { var o = c.roomedit.object; return !!(o && tut.base && tutRecent(tutInput.gizmoAt) && tutDelta(tutSnap(o.pos), tut.base) > 0.25); } },
+    { t: 'watch col follow',
+      h: 'Press <b>TAB</b> until the mode reaches <b>col</b>, repaint with the wheel &mdash; and see the <b>col</b> attribute follow.',
+      enter: function() { tut.base = null; },
+      check: function(c) {
+        var o = c.roomedit.object;
+        if (!o || tutMode(c) != 'col') return false;
+        if (!tut.base) { tut.base = tutSnapCol(o.col); return false; }
+        return tutDelta(tutSnapCol(o.col), tut.base) > 0.06; } },
+    { t: 'worlds are documents',
+      h: 'Everything in every Janus world is this: readable, editable markup. <b>View Source</b> works on worlds.',
+      enter: function() {},
+      check: function() { return (Date.now() - tut.stepAt) > 6000; } }
+  ];
+
+  var tutChapters = {
+    editor: { title: 'editor tour', steps: tutEditorSteps },
+    markup: { title: 'markup tour', steps: tutMarkupSteps }
+  };
+  function tutCurSteps() { return tutChapters[tut.chapter].steps; }
+
   var tutIdleHTML = '<h4>the editor bay</h4>' +
     '<p>Everything on this floor is editable — and so is the rest of the 3D web.</p>' +
     '<p class="media-open">press the green button below for a guided tour</p>';
   var tutPausedHTML = '<h4>editor closed</h4>' +
     '<p>The tour is paused. Press <b>F1</b> or the green button to reopen the editor and pick up where you left off.</p>';
-  var tutDoneHTML = '<h4>you know the editor now ✓</h4>' +
-    '<p><b>F1</b> toggles it anywhere. <b>DELETE</b> removes what you are editing. ' +
-    'Everything you just learned works in every Janus world.</p>' +
-    '<p class="media-open"><a href="/docs/editor/">the full editor guide</a></p>';
+  function tutDoneHTML() {
+    var other = (tut.chapter == 'editor') ? 'markup' : 'editor';
+    if (!tut.done[other]) {
+      if (other == 'markup') {
+        return '<h4>chapter 1 complete ✓</h4>' +
+          '<p>Next door in the <b>markup hall</b>, a big panel shows this room&#39;s living source &mdash; ' +
+          'chapter 2 teaches you to read it. Press the green button beside it.</p>';
+      }
+      return '<h4>chapter 2 complete ✓</h4>' +
+        '<p>Now learn the hands: the <b>editor bay</b> next door walks you through moving, painting, ' +
+        'and copying, by gizmo and by wheel. Press its green button.</p>';
+    }
+    return '<h4>you know the editor and the source ✓</h4>' +
+      '<p><b>F1</b> toggles the editor anywhere. <b>DELETE</b> removes what you are editing. ' +
+      'Every Janus world is readable, editable markup &mdash; go build.</p>' +
+      '<p class="media-open"><a href="/docs/editor/">the full editor guide</a></p>';
+  }
 
   function tutFade(from, to, ms, done) {
     if (!tutPanel) { if (done) done(); return; }
@@ -191,19 +234,21 @@ room.onLoad = function() {
     if (tutPanel) tutPanel.text = '<div class="tut-card">' + html + '</div>';
   }
   function tutShow(done) {
-    var html;
-    if (tut.step >= tutSteps.length) {
-      html = tutDoneHTML;
+    var html, steps = tutCurSteps();
+    if (tut.step >= steps.length) {
+      html = tutDoneHTML();
     } else {
-      var s = tutSteps[tut.step];
-      html = '<h4>editor tour · ' + (tut.step + 1) + '/' + tutSteps.length + ' · ' + s.t + '</h4>' +
+      var s = steps[tut.step];
+      html = '<h4>' + tutChapters[tut.chapter].title + ' · ' + (tut.step + 1) + '/' + steps.length + ' · ' + s.t + '</h4>' +
         '<p>' + s.h + '</p>';
     }
     tutSetPanel(html);
   }
   function tutEnter() {
     var c = tutCtl();
-    if (tut.step < tutSteps.length && c) tutSteps[tut.step].enter(c);
+    tut.stepAt = Date.now();
+    var steps = tutCurSteps();
+    if (tut.step < steps.length && c) steps[tut.step].enter(c);
     tutShow(false);
   }
   function tutAdvance() {
@@ -215,9 +260,10 @@ room.onLoad = function() {
       tut.advancing = false;
       if (!tut.active) { if (tutCheck) tutCheck.visible = false; return; }
       tut.step++;
-      if (tut.step >= tutSteps.length) {
+      if (tut.step >= tutCurSteps().length) {
         // graduation: card alone (check goes away with the step beat), held
         // in view, then fade out, park on the pedestal, fade back in
+        tut.done[tut.chapter] = true;
         if (tutCheck) tutCheck.visible = false;
         tutShow(false);
         tut.active = false;
@@ -244,11 +290,12 @@ room.onLoad = function() {
     tutBindUiBtn();
     tutBindManip(c);
     if (!tut.editorOpen) { tutSetPanel(tutPausedHTML); return; }
-    var s = tutSteps[tut.step];
+    var s = tutCurSteps()[tut.step];
     if (s && s.check(c)) tutAdvance();
   }
-  function tutStart() {
+  function tutStart(chapter) {
     tut.active = true;
+    tut.chapter = chapter || 'editor';
     tut.step = 0;
     tut.flags = {};
     if (tut.timer) clearInterval(tut.timer);
@@ -371,19 +418,59 @@ room.onLoad = function() {
 
   room.addEventListener('edit', function() { tut.flags.edited = true; });
   tutSetPanel(tutIdleHTML);
-  if (editBtn) {
-    editBtn.addEventListener('click', function() {
+  // both bays carry a start button; each starts its own chapter, pressing
+  // the same button mid-chapter shuts the tour down, pressing the OTHER
+  // bay's button switches chapters (editor UI stays open)
+  function tutWireButton(btn, chapter) {
+    if (!btn) return;
+    btn.addEventListener('click', function() {
       var b = tutUiBtn();
       tutBindUiBtn();
-      if (!tut.active) {
-        if (b && b.activate) { b.activate(); tut.editorOpen = true; }
-        tutStart();
-      } else {
+      if (tut.active && tut.chapter == chapter) {
         tutStop(true);
         if (b && b.deactivate) { b.deactivate(); tut.editorOpen = false; }
+      } else {
+        if (tut.active) tutStop(false);
+        if (b && b.activate) { b.activate(); tut.editorOpen = true; }
+        tutStart(chapter);
       }
-      editBtn.col = '#eafff0';
-      setTimeout(function() { editBtn.col = '#43ff6e'; }, 150);
+      btn.col = '#eafff0';
+      setTimeout(function() { btn.col = '#43ff6e'; }, 150);
     });
   }
+  tutWireButton(editBtn, 'editor');
+  tutWireButton(room.objects['mk-button'], 'markup');
+
+  // markup hall: the room's live source as a world-anchored panel. The
+  // xrmenu-popup renders the editor app's source view (read-only, jmldark,
+  // xml-highlighted); scene_changed reconciliation keeps it current for
+  // free. Created once the editor app's elements are defined - the webui
+  // loads lazily on first Enter.
+  (function() {
+    var anchor = room.objects['markup-panel-anchor'];
+    if (!anchor) return;
+    var tries = 0;
+    var iv = setInterval(function() {
+      var ready = window.elation && elation.elements.janus && elation.elements.janus.ui &&
+                  elation.elements.janus.ui.editor && elation.elements.janus.ui.editor.source;
+      if (ready) {
+        clearInterval(iv);
+        // pickable so the panel receives mouse/controller raycast events
+        // (wheel scroll, click-to-select, typing); collidable false so it
+        // never blocks movement. Not readonly: edits made here flow through
+        // room.updateSource and reshape the world live - the whole point of
+        // the markup hall.
+        anchor.createObject('xrmenu-popup', {
+          content: 'janus-ui-editor-source',
+          contentattrs: { theme: 'jmldark', embedded: 1 },
+          width: 1120,
+          height: 700,
+          pickable: true,
+          collidable: false,
+        });
+      } else if (++tries > 240) {
+        clearInterval(iv);
+      }
+    }, 500);
+  })();
 };

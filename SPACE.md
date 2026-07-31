@@ -186,6 +186,16 @@ because `locked` walks the ancestor chain; the rest of the station
 webui itself loads lazily on first Enter (`js/reveal.js`) and hides
 again on exit — the 2D page never shows engine chrome.
 
+**The markup hall** (second bay, bearings ~104-120°): a ~3.2m
+world-anchored panel (`markup-panel-anchor` + xrmenu-popup) renders the
+room's live JML source — the editor app's CodeMirror view, read-only,
+jmldark-themed, reconciled on every scene change — labeled LIVE SOURCE,
+beside its own green tour button (`mk-button`) and a two-piece mini
+playground (`play-mk-*`). The tutorial is two chapters enterable from
+either bay: the editor bay teaches the hands, the markup hall teaches
+the source, and each chapter's graduation card points at the other
+until both are done.
+
 ### 5.3.1 The balcony
 
 A curved walkway wrapping Main Street's south end, continuing the arc of the

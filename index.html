@@ -34,7 +34,7 @@
     <AssetImage id="sky-up"    src="room/skybox/up.png" />
     <AssetImage id="sky-down"  src="room/skybox/down.png" />
     <AssetImage id="history-map" src="assets/history-map.png?v=15" />
-    <AssetScript src="room/lobby.js?v=31" />
+    <AssetScript src="room/lobby.js?v=34" />
   </Assets>
   <Room js_id="plaza" thirdperson="true" defaultlights="false" ambient="0.02 0.02 0.02" pos="0 0 35" fwd="0 0 -1"
         skybox_front_id="sky-front" skybox_back_id="sky-back" skybox_left_id="sky-left"
@@ -119,6 +119,15 @@
     <Paragraph lighting="false" js_id="mount-build-deploy" selector="#build-deploy" css="css/phosphor.css?v=4" back_col="#0c0f0c" pos="17.48 1.85 3.08" fwd="0.985 0 0.174" scale="1.8 1.1 1" width="660" height="400" />
   </Object>
 
+  <Object js_id="markup-bay" pos="0 0 20">
+    <Object js_id="markup-panel-anchor" locked="true" pos="21.60 2.1 8.73" fwd="-0.927 0 -0.375" scale="3.2 3.2 3.2" />
+    <Text js_id="markup-panel-label" locked="true" pos="21.60 3.45 8.73" fwd="-0.927 0 -0.375" col="#43ff6e" emissive="#43ff6e" scale="0.4 0.4 1">LIVE SOURCE</Text>
+    <Object id="cube" js_id="mk-pedestal" locked="true" pos="19.14 0.5 9.34" scale="0.9 1.0 0.9" col="#1a231c" collision_id="cube" />
+    <Object id="cube" js_id="mk-button" locked="true" pos="19.14 1.11 9.34" scale="0.42 0.22 0.42" col="#43ff6e" emissive="#155c28" emissive_intensity="0.8" collision_id="cube" collision_scale="1.4 1.8 1.4" />
+    <Text js_id="mk-button-label" locked="true" pos="19.14 1.58 9.34" fwd="-0.899 0 -0.438" col="#43ff6e" emissive="#2a9e4f" scale="0.28 0.28 1">MARKUP TOUR</Text>
+    <Object id="cube"   js_id="play-mk-cube"   pos="18.98 0.3 6.91"  scale="0.6 0.6 0.6" col="#ffb347" collision_id="cube" />
+    <Object id="sphere" js_id="play-mk-sphere" pos="17.91 0.35 7.97" scale="0.7 0.7 0.7" col="#b98aff" collision_id="cube" />
+  </Object>
   <Object js_id="editor-bay" pos="0 0 20">
     <Object id="cube" js_id="edit-pedestal" locked="true" pos="21.62 0.5 1.89" scale="0.9 1.0 0.9" col="#1a231c" collision_id="cube" />
     <Object id="cube" js_id="edit-button" locked="true" pos="21.62 1.11 1.89" scale="0.42 0.22 0.42" col="#43ff6e" emissive="#155c28" emissive_intensity="0.8" collision_id="cube" collision_scale="1.4 1.8 1.4" />
