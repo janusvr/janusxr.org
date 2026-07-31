@@ -10,9 +10,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://janusxr.org/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<!-- HTML-in-Canvas origin trial (janusxr.org + subdomains, expires 2026-10-19):
+     native DOM rasterization for in-world UI panels. Browsers without the
+     feature fall back to the SVG pipeline automatically. -->
+<meta http-equiv="origin-trial" content="AsWPK/hi6VkiuZ6MndMSw8dtDqLs1cOfgQSp26DwuJQoW1YO869mtMVkZjS3HpZPS0LLfw74plzwtYzh1WdLtw4AAABkeyJvcmlnaW4iOiJodHRwczovL2phbnVzeHIub3JnOjQ0MyIsImZlYXR1cmUiOiJIVE1MSW5DYW52YXMiLCJleHBpcnkiOjE3OTI0NTQ0MDAsImlzU3ViZG9tYWluIjp0cnVlfQ==">
 <link rel="stylesheet" href="css/phosphor.css">
 <!-- dev build; switch to https://web.janusxr.org/<version>/janusweb.js on release -->
-<script async src="janusweb-dev/janusweb.js"></script>
+<script async src="janusweb-dev/janusweb.js?v=2"></script>
 <script defer src="js/site.js"></script>
 <script defer src="js/reveal.js"></script>
 </head>
