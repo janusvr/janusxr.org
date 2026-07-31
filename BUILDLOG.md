@@ -1374,3 +1374,318 @@ cited, a request CC BY-SA section 3(a)(3) obliges us to honor. The
 name is removed from the rendered posters, the page caption, and both
 specs; the derivative's own CC BY-SA 4.0 licensing is unchanged, as is
 the share-alike obligation it carries.
+
+## 2026-07-30 — The source becomes a place
+
+The markup hall now shows the room's living source in-world: the
+editor app's real CodeMirror view — xml-highlighted, jmldark-themed —
+rendered onto a three-meter panel through xrmenu-popup's foreignObject
+pipeline, reconciling on every scene change. Getting CodeMirror
+through that pipeline took two engine fixes it was always going to
+need: HTML serialization emits &nbsp; (undefined in XML — one
+non-breaking space killed the whole render, and CodeMirror lines are
+full of them), and the data URI was raw concatenation (any # or %
+truncated it). Entities are now numeric, the payload is encoded once,
+and the stylesheet blob is XML-escaped at collection instead of
+pre-encoded. xrmenu-popup grew contentattrs (its content tag can now
+receive attributes) and pickable/collidable pass-through so a phase-1
+display panel neither eats picks nor blocks walking; the source view
+grew readonly/theme/embedded plumbing (readOnly nocursor, hint addons
+skipped, fills its container).
+
+And per James, the tour became two chapters enterable from either
+end: the editor bay teaches the hands, the markup hall — with its own
+green button and mini playground — teaches the source by readout
+(drag a cube, watch pos rewrite; repaint, watch col follow). Each
+chapter's graduation points at the other until both are done, then
+the grand card: every Janus world is readable, editable markup.
+Phase 2 (touching the panel itself) waits on keyboard and wheel
+proxying. lobby.js at ?v=32, webui chain at v8.
+
+## 2026-07-30 — Two bugs from the markup hall, one of them mine twice over
+
+James's first in-world session with the source panel surfaced two
+bugs. First: xrmenu blindly prepended the CORS proxy to every
+stylesheet URL, which breaks the moment you test from localhost — the
+proxy can't reach your dev server. The assets system already knows
+when to bypass (blob:, data:, already-proxied, same-origin), so that
+logic is now a shared helper, elation.engine.assets.getProxiedURL(),
+and xrmenu's shadow stylesheets, the pipeline's stylesheet collector,
+and the image inliner all route through it — the last of which also
+retires a hardcoded p.janusvr.com proxy hack that predates the
+configurable corsproxy.
+
+Second: "Error generating image from HTML," panel black. The console
+dump James pasted showed the data URI in the OLD unencoded shape —
+which turned out to be the honest truth: the entity/encoding fix the
+previous entry describes had never actually landed. The patch script
+asserted on a later edit AFTER doing the updateCanvas replacement
+in memory, died, and never wrote the file; the "verification" grep
+then matched an unrelated encodeURIComponent(data in the bundle.
+Lesson relearned: verify the source, not a string that happens to
+appear in a megabyte of bundle. The fix is now really in (grep shows
+it at elements.js:692 and :705), the bundle is rebuilt, and a
+headless CDP harness proves the whole chain end-to-end: enter the
+world, wait for the staging container, pierce its shadow root, sample
+the canvas — 162 CodeMirror lines, jmldark applied, 97% of pixels
+lit, zero pipeline errors. The panel screenshot shows the room's
+FireBoxRoom source, syntax-lit, line-numbered. janusweb.js now loads
+with ?v=2 so bundle rebuilds can't hide behind the browser cache.
+
+## 2026-07-30 — The cache-buster breaks the workers
+
+The ?v=2 added one entry ago immediately claimed a victim: every
+worker died at birth with "HTMLElement is not defined." The engine's
+worker threads bootstrap by importScripts-ing a suffixed sibling of
+the main bundle (janusweb.js → janusweb.assetworker.js, a DOM-free
+build) — but the suffix swap matched against a regex anchored on
+.js$, which "janusweb.js?v=2" no longer satisfies. The swap silently
+no-oped and the workers imported the full DOM bundle, which defines
+custom elements at load and promptly dereferenced HTMLElement in a
+context that has none. worker.js now splits the query string off
+before the suffix match and reattaches it after, so cache-busting
+the main script propagates to the worker builds instead of breaking
+them. Verified headless with CDP attached to the worker targets this
+time — the earlier harness only listened to the page, which is
+exactly how this one slipped through — four workers up clean, world
+geometry loading through them, source panel still lit.
+
+## 2026-07-30 — The panel learns to listen
+
+Phase 2 of the source panel: scroll and select, through the engine's
+own event plumbing so a VR controller ray drives it the same way a
+mouse does. The picking system already delivered wheel deltas,
+buttons, and modifiers to the plane's object events — xrmenu just
+dropped them on the floor, building synthetic events with coordinates
+only. Now it carries everything through, marks the events composed
+(so they cross the staging container's shadow boundary to the
+document-level drag handlers CodeMirror installs mid-selection), and
+— because untrusted events never trigger native scrolling — walks up
+from the target and scrolls the nearest scrollable element itself,
+deltas normalized to pixels.
+
+Scrolling exposed two pipeline gaps in sequence. First, scroll state
+is invisible to both the serializer and the mutation observer: the
+foreignObject snapshot always rendered from the top, and small
+scrolls didn't even trigger a re-render. The pipeline now listens for
+scroll in the capture phase, folds a scroll signature into its
+dirty-check, and at serialize time shifts each scrolled element's
+children into place with the observer paused. Second, the obvious way
+to shift them — transform: translate — silently reordered painting:
+a transform mints a stacking context, which flattened CodeMirror's
+z-indexes and hid every line number behind its own gutter. Relative
+position offsets do the same job without touching paint order.
+
+Along the way: the shipped event-clone whitelist gained 'buttons'
+(drag detection dies without it — CodeMirror ends a selection the
+moment a move event reports no held buttons), the view now tracks
+held-button state so the picker can stamp it onto the mousemove
+events it synthesizes per-frame, and the embedded editor CSS chain
+finally constrains the tab panes — before that, CodeMirror quietly
+grew to full content height inside the clipped container and nothing
+was ever scrollable, which the overflow clip disguised as a working
+panel. Read-only mode switched from 'nocursor' to true: the buffer
+still can't be edited, but clicks place a visible cursor and drags
+select, kept visible by CSS since the engine reclaims keyboard focus
+after every click. The panel plane is now pickable (still not
+collidable). Verified headless end to end: scrolled canvas renders
+mid-file with line numbers, click sets the cursor, drag selects 202
+characters of skybox markup. Keyboard input remains phase 3.
+lobby.js at ?v=33, webui chain at v9.
+
+## 2026-07-30 — Debounce becomes throttle
+
+James clocked the scroll lag for what it was: the canvas refresh was
+a trailing debounce - a 50ms timer that reset on every change, so a
+continuous stream (exactly what scrolling is) starved it until the
+stream went quiet, then rendered once. Now it's a throttle: render
+immediately when idle, and at a capped ~10fps cadence while changes
+keep coming, with updateCanvas's dirty-check still skipping no-op
+frames. Profiling along the way showed the full SVG round trip is
+only ~30-50ms even under software rendering - the pipeline was never
+too slow to stream, it just wasn't being asked to. Also dropped the
+requestAnimationFrame wrap (and the old requestIdleCallback): the
+canvas feeds a texture whose upload already syncs with the render
+loop via asset_update, so waiting for a 3D frame before rasterizing
+just stacked the two costs - under a heavy scene that alone added
+most of a second of latency.
+
+## 2026-07-30 — The panel stops flinching
+
+Three fixes from James's second hands-on pass. Mouse-out blanked the
+panel or forgot its scroll: handleMouseOut was removing the staging
+container from the DOM entirely, which destroys layout - every
+scroll position zeroes, and a re-render caught while detached
+serializes an unlaid-out tree into a blank texture. The container
+now stays attached for life and parks with pointer-events: none
+(a stronger no-interference guarantee than the old z-index -1000,
+which could still swallow events over bare regions of the page).
+
+The mysterious 20-30px dead strip at the top - content drawn lower
+than the hit-testing thought it was - bisected to the serialization
+wrapper: the page stylesheets' body rules apply to the snapshot
+document's own body element, but compute to zero on the live staging
+container, so the rendered content sat 54px below its interactive
+twin. The wrapper body now zeroes its margin and padding inline;
+content renders at row 0, exactly where elementFromPoint looks.
+
+And the refresh cap dropped from 100ms to 16ms: profiling showed the
+throttle self-limits safely - all renders funnel through a single
+Image whose src reassignment aborts any in-flight load, so a slow
+round trip just lowers the effective rate instead of stacking work.
+Headless: alignment row 0, scroll position survives a park/return
+cycle, drag still selects, and the panel streams frames continuously
+during a 1.2s scroll even under software rendering.
+
+## 2026-07-30 — The panel takes the keyboard
+
+60fps was too much for the SVG round trip - renders queued behind it
+and the pausing came back - so the refresh cap settled at 30fps.
+And the panel got focus management, James's design: click the editor
+in-world and the real hidden textarea in the staging DOM silently
+takes focus, so keyboard events flow to CodeMirror - arrows walk the
+source, PgUp/PgDn scroll it, ctrl-C copies. CodeMirror focuses its
+own input on mousedown; xrmenu just notices (a task later - webkit
+CodeMirror defers its ensureFocus) and defends the focus from the
+engine view, which reclaims it after every click. While the panel
+holds focus the player is disabled - the controls system listens on
+window, so focus alone wouldn't stop WASD from strafing the typist -
+using the same player.disable()/enable() idiom the chat input has
+always used. A trusted mousedown anywhere while the pointer is off
+the plane hands everything back: blur, player re-enabled. Verified
+headless through the real plane-event path this time (the popup
+instance fished out of the scene graph): focus lands in the
+textarea, ArrowDown moves the cursor line 12 → 13, outside click
+releases. That test also caught its own lesson: skipping
+handleMouseOver left the container at pointer-events none and
+nothing hit - the mouseover/out lifecycle is a real part of the
+event contract, not decoration.
+
+## 2026-07-30 — Sync was never on a branch; it was shallow
+
+James reported no sync in either direction and suspected last month's
+editor work was orphaned on a branch. Verified: editor-improvements
+is fully merged, every fix is in the served build. The real story:
+the whole sync layer only knew about DIRECT children of the room -
+getObjectSummaries didn't recurse, the reconciler only matched
+elements whose parent was <Room>, and updateSource iterated only
+top-level parsed objects while the parser nests grouped elements
+under _children. Every object in both tutorial bays lives inside a
+group, so every test James could possibly run hit the blind spot.
+
+Making it recursive exposed four buried serializer bugs in
+summarizeXML, each found by measuring the buffer the reconciler
+produced: attribute values weren't XML-escaped (a Paragraph's
+runtime css property - an entire stylesheet - truncated its own
+attribute at the first quote and poisoned the document); colors
+serialized as float triples, rewriting every authored #rrggbb;
+attributes over 1000 chars turned one-line elements into thousands
+of lines; and booleans that construct false against an undeclared
+default sprayed attr="false" everywhere. The reconciler also grew
+semantic attribute comparison (numeric tolerance, hex-vs-triple
+colors) so formatting differences stop reading as edits, guards
+against volunteering runtime-managed attributes (persist,
+collision_trigger, redundant orientation aliases) into markup the
+author never wrote, a rule that unmatched source elements are only
+deleted when no live object bears their js_id, and a hold-off so a
+hand edit sitting in the apply debounce can't be reverted by a
+scene refresh racing it. First-sync churn went 11,825 lines → 29,
+all of them true statements about live state (animated transforms,
+script-assigned attributes).
+
+Auto-hints turned out to need no exile: show-hint accepts a
+container, so the embedded panel now hosts its autocomplete popup
+inside the staging shadow tree - rendered in the texture like
+everything else - resolved lazily since the element isn't in its
+final tree when options are built. Verified headless: drag a grouped
+object, its line rewrites; recolor it in the source, the object
+changes; do both in sequence, neither stomps the other. webui chain
+at v11.
+
+## 2026-07-30 — The room that turned around
+
+James: "after I interact with the editor, my WASD controls are
+backwards. what did you do, claude." What I did was make source
+editing work, which armed a dormant bug: updateSource has always
+re-applied every <Room> attribute to the live room, and our room
+authors fwd="0 0 -1" - a load-time spawn directive saying which way
+you face when you arrive. Reapplied mid-session it means "orient the
+room thing to face -Z," which rotates the entire world 180° around
+the player. The plaza is symmetric enough that the flip is invisible;
+the only tell is that forward is now backward. Headless repro made it
+unambiguous: one source edit took the room's quaternion from identity
+to (0,1,0,0). updateSource now skips the spawn/transform directives
+(pos, fwd, up, orientation, dirs) when applying <Room> edits - fog,
+ambient, skybox and friends still apply live. One reload clears any
+already-flipped session.
+
+## 2026-07-30 — Correction: it worked in June, and the room left its envelope
+
+James pushed back on "the sync layer was always shallow," and the
+git record proves him right. June 7-12 (848358f, 9ba8fd9, bf7dd46,
+2f28bd4) built the reconcile system, and its own commit message
+declares the scope: "per-object serialization of the persistent
+top-level objects." In June the site's room WAS flat - every object
+a direct child - so the system worked completely, as remembered.
+What changed was the room, not the code: July 22 (7692a39) put
+fwd="0 0 -1" on the <Room> tag, arming the room-flip in
+updateSource's ancient room-attr loop, and July 23 (5ae5bfe)
+grouped the whole room into movable wrappers, silently moving
+nearly every object outside the sync system's designed scope. The
+editor/markup bays (July 26-28) nested everything else. No
+regression fired; the data walked out of the design envelope, and
+the panel work happened to be where someone finally looked.
+
+Today's changes extend the June machinery in place rather than
+replace it - same summaries/reconcile/apply pipeline, now recursive
+and semantically compared. Reviewing for collateral turned up one
+real find: the new oversized-attribute gate in summarizeXML would
+also have dropped long single-token values (data-URI srcs) from
+room exports; it now only skips values that contain whitespace,
+which stylesheet blobs always do and data URIs never do.
+
+## 2026-07-30 — The browser learns to draw our panels
+
+Chrome's HTML-in-Canvas API (origin trial, 148-150) does natively what
+the SVG-foreignObject pipeline has been simulating: rasterize live DOM
+into a canvas, with real hit testing on top. The elements base now has
+two backends behind one feature detection. On the element backend the
+staging container becomes a layoutsubtree canvas whose direct child is
+the element itself; the browser lays it out, suppresses its display,
+fires a per-frame paint event when its rendering changes, and
+drawElementImage rasterizes it - serialization, entity fixups,
+stylesheet inlining, image data-URI rewriting, scroll compensation,
+and the refresh throttle are all bypassed. Rendering is visibly better:
+real font rasterization, page styles applying directly. The SVG path
+remains, permanent, for every browser without the API.
+
+The empirical potholes, since the docs don't mention them: paint
+records only exist for canvases that actually render, so the staging
+canvas hides behind the page via z-index - opacity:0 makes every
+capture come out blank and visibility:hidden kills the records
+entirely; a 2D context can only draw its own canvas's children; and
+drawElementImage outside a paint-event window throws. Hence the
+two-canvas split: a staging canvas whose bitmap is cleared after every
+copy (so raising it for hit testing shows nothing) feeding a plain
+texture canvas the engine uploads as before.
+
+Tier 2, native desktop input: while the 3D pointer is on a panel (not
+VR, not pointer-locked), xrmenu projects the plane's quad through the
+camera each frame and parks the live element's hit target there with a
+CSS matrix3d - transforms on layoutsubtree children move the hit
+target without touching the rendered texture. The browser then
+delivers real events: native wheel with momentum, keyboard, IME,
+context menus, and focus that doesn't need defending. One deep
+gotcha: widgets that do their own coordinate math (CodeMirror
+subtracts bounding rects from clientX/Y as if space were flat)
+mis-map positions under perspective - a known CM limitation with
+transformed ancestors. The fix is a capture-phase shim that swallows
+trusted pointer events and re-dispatches them at inverse-homography
+coordinates with the transform momentarily cleared, so widget math
+sees untransformed space. Verified end to end with trusted CDP input:
+click lands on the right character, drag selects 292 chars, wheel
+scrolls CodeMirror natively, End key travels the line, focus parks
+the player. Paragraph unification and same-origin websurface textures
+are scoped in the plan for later tiers. Dev needs
+chrome://flags/#canvas-draw-element; production will need an
+origin-trial token; every other browser silently keeps the SVG path.
