@@ -457,9 +457,11 @@ room.onLoad = function() {
         clearInterval(iv);
         // pickable so the panel receives mouse/controller raycast events
         // (wheel scroll, click-to-select, typing); collidable false so it
-        // never blocks movement. Not readonly: edits made here flow through
-        // room.updateSource and reshape the world live - the whole point of
-        // the markup hall.
+        // never blocks movement. focusable: clicking engages the panel -
+        // outline, pointer released, player parked, keyboard captured -
+        // until a click lands anywhere that isn't the panel. Not readonly:
+        // edits made here flow through room.updateSource and reshape the
+        // world live - the whole point of the markup hall.
         anchor.createObject('xrmenu-popup', {
           content: 'janus-ui-editor-source',
           contentattrs: { theme: 'jmldark', embedded: 1 },
@@ -467,6 +469,8 @@ room.onLoad = function() {
           height: 700,
           pickable: true,
           collidable: false,
+          focusable: true,
+          outlinecol: '#43ff6e',
         });
       } else if (++tries > 240) {
         clearInterval(iv);

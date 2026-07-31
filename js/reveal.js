@@ -112,7 +112,7 @@
         showui: false,
         showchat: false,
         crosshair: false,
-        uiconfig: 'janusweb-dev/media/assets/webui/default.json?v=13'
+        uiconfig: 'janusweb-dev/media/assets/webui/default.json?v=16'
       }).then(onEngineStart, function () { /* init failed: stay 2D */ });
     } catch (e) { /* stay 2D */ }
   }

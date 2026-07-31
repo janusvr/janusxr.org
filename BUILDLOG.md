@@ -1689,3 +1689,75 @@ the player. Paragraph unification and same-origin websurface textures
 are scoped in the plan for later tiers. Dev needs
 chrome://flags/#canvas-draw-element; production will need an
 origin-trial token; every other browser silently keeps the SVG path.
+
+## 2026-07-31 — Two kinds of panel
+
+James split xrmenu's interaction model in two, and the seam is
+exactly right. A plain panel (the default) is a pickable button
+surface: proxied mouse events, live rerendering, never the keyboard.
+A focusable panel works the way websurfaces always have: clicking it
+ENGAGES - a colored outline plane lights up behind it, pointer lock
+is released, the player parks, and keyboard focus lands in the
+hidden DOM element - and it stays engaged until a click lands
+anywhere that isn't the panel, which hands everything back: blur,
+player re-enabled, pointer lockable again, outline off. The
+hover-based implicit focus dance this replaces was never quite
+trustworthy; an explicit mode with a visible engaged state is
+something you can feel. The markup hall's editor is focusable=true
+with a phosphor-green outline; the VOIP picker and future button
+panels stay plain. Verified headless: click → outline/park/capture,
+arrows walk the buffer while engaged, click-away restores the world.
+
+## 2026-07-31 — Field report from the markup hall, three fixes
+
+James's first locked-pointer walkthrough of the focusable panel found
+three interacting bugs. The accidental five-line scroll-and-select on
+first click: engagement fired on mousedown, releasing pointer lock
+mid-gesture - the real cursor materialized at screen center with the
+button still held, and the native shim read that as a drag, yanking
+the selection (and CodeMirror's auto-scroll) toward center. Engage
+now waits for the click, after the gesture is over. The mouse
+re-locking and WASD still driving the player: the same click that
+engaged also ran the engine's lock-on-click, which re-locked and
+un-parked - engagement now disables the controls system's pointer-
+lock acquisition entirely (which also releases the held lock) and
+restores it on disengage, so clicking back into the scene re-locks
+exactly once, on purpose. And the free-cursor misalignment James
+called out - unlocked mouse events landing relative to the top-left
+of the screen - was the raised staging surface itself: an invisible
+1120x700 hit target parked at 0,0 swallowing real input over that
+region of the page. The staging surface is now pointer-events none
+at all times; synthetic hit-testing flips it on only for the
+synchronous elementFromPoint lookup, and in native mode it's the
+projected, transformed element that opts back in - so real events
+either hit the panel where it visually is, or pass through to the
+3D scene, never a phantom at the origin.
+
+## 2026-07-31 — The projection was the poison
+
+James's second report (same first-click selection, typed text landing
+away from the cursor, the cursor sometimes rendering as a giant line)
+converged on one root cause: keeping the perspective matrix3d applied
+while CodeMirror is live corrupts its coordinate caches - CM measures
+its own geometry on every keystroke, and under the projection those
+measurements come back in screen space. The native-pointer transform
+is now off by default (kept behind an experimental nativepointer
+attribute); synthetic picking through the engine's raycast delivers
+correct coordinates for locked AND free cursors alike, real keyboard
+focus still gives native typing and IME, and the only casualties are
+wheel momentum and context menus.
+
+The first-click scroll-and-select finally gave up its real mechanism,
+which had nothing to do with engagement timing: CodeMirror's hidden
+textarea focuses without preventScroll, and when focus arrives before
+the textarea has been repositioned to the new cursor, the browser's
+scroll-into-view yanks the scroller several lines; meanwhile
+pointer-locked mouselook with the button still held sweeps the center
+pick across the panel, which the drag machinery faithfully turns into
+a selection across the jump. Two fixes: the vendored CodeMirror now
+focuses its textarea with preventScroll (it manages cursor visibility
+itself), and synthetic mousemoves strip their buttons while the
+pointer is locked - an invisible cursor never drags deliberately.
+Verified: scrollTop holds steady through a click at scroll 300,
+typed characters land exactly at the cursor, cursor renders at
+normal height, engage/disengage cycle intact.
