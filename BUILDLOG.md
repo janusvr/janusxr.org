@@ -1761,3 +1761,32 @@ pointer is locked - an invisible cursor never drags deliberately.
 Verified: scrollTop holds steady through a click at scroll 300,
 typed characters land exactly at the cursor, cursor renders at
 normal height, engage/disengage cycle intact.
+
+## 2026-09-04 — Lines with actual width
+
+The `<linesegments>` element finally renders line width. GL lines
+ignore linewidth on every modern driver, so the element now builds a
+THREE.LineSegments2 with a LineMaterial — instanced quads per segment,
+width in CSS pixels (or meters with the new worldunits flag). James
+added the fat-line classes to the engine's three-extras bundle;
+janusweb now dev-links to ~/src/elation-engine (manual symlink — npm
+link and npm install each prune what the other placed, so the link is
+laid by hand) and the elation/components/engine hardlink tree was
+recut against the checkout.
+
+Two mechanisms mattered. setPositions allocates a fresh GPU buffer
+every call, so updateLine fills the interleaved instance buffer in
+place when the segment count is unchanged — the flat vertex-pair
+layout the element already built is byte-identical to the instanced
+start/end layout, so the old fill loop survived intact. And the
+teleporter's trick of hiding the unused arc tail by zeroing segments
+would have drawn a fat dot at the world origin (a zero-length fat
+segment still rasterizes its caps); the element grew setLineCount,
+which truncates via instanceCount, and the teleporter uses it.
+
+LineMaterial needs its resolution uniform fed by hand; the element
+reads the renderer's drawing buffer size on create and on window
+resize, unhooking on thing_destroy. Verified headless under
+SwiftShader: 12px red X, 1px default line, and a 3-segment buffer
+truncated to 1 drawing exactly one line. Build 1.7.6 rebuilt;
+janusweb-dev still points at 1.7.4 until James flips it.
