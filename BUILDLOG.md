@@ -1790,3 +1790,25 @@ resize, unhooking on thing_destroy. Verified headless under
 SwiftShader: 12px red X, 1px default line, and a 3-segment buffer
 truncated to 1 drawing exactly one line. Build 1.7.6 rebuilt;
 janusweb-dev still points at 1.7.4 until James flips it.
+
+## 2026-09-15 — The brushes were new but the painter was old
+
+James updated the brush assets expecting the three.js upgrade had
+brought the latest three-icosa along — it hadn't: npm's newest
+publish (0.4.2-alpha.18, June 2025) is what the engine had, and
+upstream main has fifteen months of unpublished work past it — brush
+rendering fixes (Rain, NeonPulse, HyperGrid, DanceFloor, MylarTube,
+Disco tangents) and the new authoritative brush render-state and
+culling API. The engine now pins three-icosa to the upstream commit
+by sha (github: dependency; the repo commits its dist, so no build
+step), build:addons regenerated the bundle — +6065 lines, hardlink
+inode preserved, so the janusweb tree picked it up without recutting
+— and the alpha.18-era guard subclass survives unchanged: upstream
+still ships beforeRoot/afterRoot with the isTiltGltf guards commented
+out, so ordinary glTFs would still get brush-mangled without it.
+
+Verified headless: all_brushes.glb through the full janusweb pipeline
+(assetworker parse included) renders varied brush materials, with all
+414 brush shader and texture fetches served 200 from James's updated
+local brush directory. Upstream's own dist viewer run side-by-side
+emits identical loader chatter. Build 1.7.6 rebuilt.
